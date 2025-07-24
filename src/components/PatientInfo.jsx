@@ -1,16 +1,22 @@
+import { Card, CardHeader, CardTitle, CardContent } from "./ui/Card";
+
 const PatientInfo = ({ info }) => {
   return (
-    <section style={{ marginBottom: 20 }}>
-      <h2>Patient Information</h2>
-      <dl>
-        {Object.entries(info).map(([label, value]) => (
-          <div key={label} style={{ marginBottom: 4 }}>
-            <dt style={{ fontWeight: "bold", display: "inline" }}>{label}: </dt>
-            <dd style={{ display: "inline" }}>{value}</dd>
-          </div>
-        ))}
-      </dl>
-    </section>
+    <Card className="mb-4">
+      <CardHeader>
+        <CardTitle>Patient Information</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <dl className="grid gap-y-1">
+          {Object.entries(info).map(([label, value]) => (
+            <div key={label} className="flex gap-2">
+              <dt className="font-medium w-40">{label}:</dt>
+              <dd>{value}</dd>
+            </div>
+          ))}
+        </dl>
+      </CardContent>
+    </Card>
   );
 };
 

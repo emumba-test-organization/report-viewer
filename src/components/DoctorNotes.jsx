@@ -1,17 +1,15 @@
+import { Card, CardHeader, CardTitle, CardContent } from "./ui/Card";
+
 const DoctorNotes = ({ notes }) => {
   return (
-    <section style={{ marginBottom: 20 }}>
-      <h2>Doctor’s Notes</h2>
-      <p
-        style={{
-          background: "#fafafa",
-          padding: "10px",
-          borderLeft: "4px solid #00539C",
-        }}
-      >
-        {notes}
-      </p>
-    </section>
+    <Card className="mb-4">
+      <CardHeader>
+        <CardTitle>Doctor’s Notes</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <p className="border-l-4 border-primary pl-3 bg-muted/50 py-2">{notes}</p>
+      </CardContent>
+    </Card>
   );
 };
 
