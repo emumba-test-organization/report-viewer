@@ -1,0 +1,32 @@
+{
+  "patient_info": {
+    "Name": "John Doe",
+    "Patient ID": "123456",
+    "Date of Birth": "1980-05-15",
+    "Gender": "Male",
+    "Date of Report": "2025-07-23"
+  },
+  "test_results": [
+    {
+      "Test": "Hemoglobin",
+      "Result": "13.5 g/dL",
+      "Reference Range": "13.0 \u2013 17.0 g/dL"
+    },
+    {
+      "Test": "White Blood Cells",
+      "Result": "6.2 \u00d7103/\u00b5L",
+      "Reference Range": "4.0 \u2013 11.0 \u00d7103/\u00b5L"
+    },
+    {
+      "Test": "Platelets",
+      "Result": "250 \u00d7103/\u00b5L",
+      "Reference Range": "150 \u2013 450 \u00d7103/\u00b5L"
+    },
+    {
+      "Test": "Glucose (Fasting)",
+      "Result": "95 mg/dL",
+      "Reference Range": "70 \u2013 100 mg/dL"
+    }
+  ],
+  "doctor_notes": "The patient\u2019s complete blood count is within normal limits. \n      Fasting glucose is slightly elevated but still within the acceptable range\u2014recommend annual monitoring.\n      No immediate follow\u2011up tests required at this time."
+}
