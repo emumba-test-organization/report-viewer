@@ -1,32 +1,215 @@
 {
-  "patient_info": {
-    "Name": "John Doe",
-    "Patient ID": "123456",
-    "Date of Birth": "1980-05-15",
-    "Gender": "Male",
-    "Date of Report": "2025-07-23"
-  },
-  "test_results": [
-    {
-      "Test": "Hemoglobin",
-      "Result": "13.5 g/dL",
-      "Reference Range": "13.0 \u2013 17.0 g/dL"
+  "preface": {
+    "header": {
+      "name": "Doe, Jane A.",
+      "createdOn": "11/02/2024",
+      "doctor": "Virginia N. Smith, M.D.",
+      "clinic": "Precision Medical Center",
+      "client": "uMETHOD"
     },
-    {
-      "Test": "White Blood Cells",
-      "Result": "6.2 \u00d7103/\u00b5L",
-      "Reference Range": "4.0 \u2013 11.0 \u00d7103/\u00b5L"
-    },
-    {
-      "Test": "Platelets",
-      "Result": "250 \u00d7103/\u00b5L",
-      "Reference Range": "150 \u2013 450 \u00d7103/\u00b5L"
-    },
-    {
-      "Test": "Glucose (Fasting)",
-      "Result": "95 mg/dL",
-      "Reference Range": "70 \u2013 100 mg/dL"
+    "title": "Preface",
+    "purposeParagraphs": [
+      "Based on the information you've provided \u2014 \r\nblood test results, your medical history, your family history, or other indicators \u2014\r\nit makes sense to initiate a program that addresses the factors that drive cognitive impairment.\r\nSymptoms of cognitive impairment may include the inability to focus,\r\nmake decisions, find words, or remember names, faces, or places. \r\n40% of all adults over the age of 65 have some memory loss \u2014 so you are not alone. \r\nHowever, there is hope for those concerned about experiencing some memory loss.",
+      "This report contains an assessment of where you stand now and \r\nhas been created specifically for you."
+    ],
+    "statisticCallout": "\r\n40% of all adults over the age of 65 have some memory loss \u2014 so you are not alone",
+    "aboutParagraphs": [
+      "Multiple medical issues often contribute to memory loss.\r\nThe\r\ncare plan\r\nuses information such as your \r\nlab results, medical history, diet, and lifestyle to identify issues \r\nthat may be causing your memory concerns. \r\nYour medical information is combined with medical research to create a \r\ncustomized treatment plan designed to address your specific issues. \r\nYour plan may help slow memory decline and stabilize memory function \r\nassociated with mild cognitive impairment (MCI) or \r\nearly dementia [ 1-4 ] ."
+    ],
+    "reading": {
+      "intro": [
+        "Let's get started on a path to lasting brain health!",
+        "As noted above, many medical factors can often contribute to memory loss, \r\nincluding your lab results, medical history, medications, diet, and lifestyle. \r\nHere is what this report covers:"
+      ],
+      "steps": [
+        {
+          "title": "Overview of Risk Factors",
+          "description": "It gives a brief overview of the risk factors that are within an optimal range, as well as the factors that are not in a good range and may be contributing to cognitive impairment or memory loss."
+        },
+        {
+          "title": "Personalized Action Plan",
+          "description": "Next, it presents a personalized action plan for reducing the impact of these risk factors."
+        },
+        {
+          "title": "In-Depth Insights",
+          "description": "Lastly, for those interested in the details, it describes how the risk factors related to your blood tests can contribute to cognitive impairment or memory loss."
+        }
+      ]
     }
-  ],
-  "doctor_notes": "The patient\u2019s complete blood count is within normal limits. \n      Fasting glucose is slightly elevated but still within the acceptable range\u2014recommend annual monitoring.\n      No immediate follow\u2011up tests required at this time."
+  },
+  "healthReport": {
+    "header": {
+      "name": "Doe, Jane A.",
+      "createdOn": "11/02/2024",
+      "doctor": "Virginia N. Smith, M.D.",
+      "clinic": "Precision Medical Center",
+      "client": "uMETHOD"
+    },
+    "title": "Current Status",
+    "currentStatus": {
+      "overview": {
+        "Gender": {
+          "value": "Female",
+          "annotations": []
+        },
+        "Age": {
+          "value": "69",
+          "annotations": []
+        },
+        "DOB": {
+          "value": "3/02/1955",
+          "annotations": []
+        },
+        "BP": {
+          "value": "121/61",
+          "annotations": [
+            "old"
+          ]
+        },
+        "Height": {
+          "value": "5'2\"",
+          "annotations": []
+        },
+        "Weight": {
+          "value": "193 lbs",
+          "annotations": [
+            "old"
+          ]
+        },
+        "BMI": {
+          "value": "35.3",
+          "annotations": [
+            "old"
+          ]
+        },
+        "Girth": {
+          "value": "44.2\"",
+          "annotations": [
+            "est.",
+            "old"
+          ]
+        },
+        "Postmenopausal": {
+          "value": "Yes",
+          "annotations": []
+        }
+      }
+    },
+    "healthStatusSections": [
+      {
+        "title": "Optimal",
+        "count": 11,
+        "description": "These factors are within optimal range, unlikely to be contributing to cognitive impairment or memory loss",
+        "factors": [
+          "no inflammation",
+          "no infections",
+          "no diabetes type 2",
+          "vitamin E level",
+          "sodium level",
+          "hormonal balance",
+          "diet",
+          "non-smoker",
+          "no atrial fibrillation",
+          "no heart disease",
+          "liver function"
+        ]
+      },
+      {
+        "title": "Caution",
+        "count": 10,
+        "description": "These factors may be contributing somewhat to cognitive impairment or memory loss",
+        "factors": [
+          "kidney disease",
+          "obesity",
+          "homocysteine level",
+          "vitamin D level",
+          "hearing loss",
+          "essential metals imbalance",
+          "depression",
+          "high blood pressure",
+          "thyroid level",
+          "blood sugar level"
+        ]
+      },
+      {
+        "title": "At Risk",
+        "count": 7,
+        "description": "These factors are likely to be significantly contributing to cognitive impairment or memory loss",
+        "factors": [
+          "multimorbidity",
+          "poor sleep quality",
+          "inadequate exercise",
+          "cholesterol level",
+          "insulin level",
+          "insulin resistance",
+          "anticholinergic cognitive burden"
+        ]
+      },
+      {
+        "title": "Unknown",
+        "count": 1,
+        "description": "There is not enough data to determine if this factor is contributing to cognitive impairment",
+        "factors": [
+          "stress"
+        ]
+      }
+    ]
+  },
+  "actionPlan": {
+    "title": "Your Action Plan - Start Today!",
+    "intro": [
+      "The previous sections identified risk factors that may be contributing to cognitive impairment or memory loss. This section is your action plan for reducing the impact of some of those risk factors, broken up into these areas:",
+      "The more of this action plan you follow, the better your likelihood of positively impacting your brain health."
+    ],
+    "steps": [
+      "prescription medications and supplements",
+      "lifestyle, and",
+      "what you eat."
+    ],
+    "medications": [
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "levothyroxine",
+        "dosageDetails": "25 mcg, tablet, every day",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "fT3",
+            "currentLevel": "2.3\u00a0pg/mL"
+          },
+          {
+            "action": "To lower your level of",
+            "name": "TSH",
+            "currentLevel": "3.0\u00a0\u00b5IU/mL"
+          }
+        ],
+        "guidance": "Take on an empty stomach, 1/2 to 1 hour before breakfast.  Avoid taking supplements or medications that contain calcium, magnesium, or zinc (such as antacids) for 4 hours afterwards."
+      },
+      {
+        "medication": "lecanemab",
+        "dosageDetails": "Assess eligibility",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "Likely mild Cognitive Impairment",
+            "currentUsage": "taking donepezil"
+          }
+        ],
+        "guidance": "Discuss appropriateness & eligibility for lecanemab with your doctor."
+      }
+    ]
+  }
 }
