@@ -1,18 +1,20 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { AlertCircle } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
 import Header from "./shared/Header";
 import { Badge } from "./ui/badge";
 
-const ActionPlan = ({ data }: { data: unknown }) => {
+const ActionPlan = ({ data }: { data: any }) => {
   console.log(data);
   const { title, intro, steps, medications } = data;
 
   const formattedSteps = steps
-    .map((s) =>
+    .map((s: any) =>
       s
         .replace(/,$/, "")
         .trim()
-        .replace(/^./, (c) => c.toUpperCase())
+        .replace(/^./, (c: any) => c.toUpperCase())
     )
     .join(", ")
     .replace(/, ([^,]*)$/, " & $1");
@@ -73,7 +75,7 @@ const ActionPlan = ({ data }: { data: unknown }) => {
           </div>
 
           {/* Data Rows */}
-          {medications.map((med, idx) => (
+          {medications.map((med: any, idx: any) => (
             <div
               key={idx}
               className={`grid grid-cols-12 gap-4 p-4 ${
@@ -89,7 +91,7 @@ const ActionPlan = ({ data }: { data: unknown }) => {
               {/* Purpose (Reasoning) */}
               <div className="col-span-3">
                 <div className="space-y-1 text-xs">
-                  {med.reasoning.map((entry, j) => (
+                  {med.reasoning.map((entry: any, j: any) => (
                     <div key={j}>
                       <div>
                         {entry?.action} {entry?.name}

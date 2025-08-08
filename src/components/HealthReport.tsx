@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { AlertTriangle, Diamond, Check, HelpCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
@@ -11,8 +12,10 @@ const iconMap = {
   Unknown: HelpCircle,
 };
 
-const HealthReport = ({ data }: { data: unknown }) => {
-  const { header, currentStatus, healthStatusSections } = data;
+type SectionTitle = keyof typeof iconMap;
+
+const HealthReport = ({ data }: { data: any }) => {
+  const { currentStatus, healthStatusSections } = data;
   const overview = currentStatus?.overview;
 
   console.log(overview.Postmenopausal.value);
@@ -58,7 +61,7 @@ const HealthReport = ({ data }: { data: unknown }) => {
         <div>
           <h3 className="font-semibold mb-2">Overview</h3>
           <div className="flex border rounded overflow-hidden divide-x">
-            {overviewEntries.map(({ label, value, annotations }) => (
+            {overviewEntries.map(({ label, value }) => (
               <div key={label} className="p-2">
                 <span className="text-gray-600 block">{label}</span>
                 <span className="font-semibold">{value}</span>
@@ -71,7 +74,7 @@ const HealthReport = ({ data }: { data: unknown }) => {
         <div>
           <h3 className="font-semibold mb-2">Body Measurements</h3>
           <div className="flex border rounded overflow-hidden divide-x">
-            {measurementEntries.map(({ label, value, annotations }) => (
+            {measurementEntries.map(({ label, value }) => (
               <div key={label} className="p-2">
                 <span className="text-gray-600 block">{label}</span>
                 <span className="font-semibold">{value}</span>
@@ -84,7 +87,7 @@ const HealthReport = ({ data }: { data: unknown }) => {
         <div>
           <h3 className="font-semibold mb-2">Vitals</h3>
           <div className="flex border rounded overflow-hidden p-2">
-            {vitalsEntries.map(({ label, value, annotations }) => (
+            {vitalsEntries.map(({ label, value }) => (
               <div key={label}>
                 <span className="text-gray-600 block">{label}</span>
                 <span className="font-semibold">{value}</span>
@@ -99,21 +102,25 @@ const HealthReport = ({ data }: { data: unknown }) => {
 
       {/* At Risk Section */}
       {console.log(healthStatusSections)}
-      {healthStatusSections.map((section) => {
-        const Icon = iconMap[section.title] || HelpCircle;
-        const bgClass = {
+
+      {healthStatusSections.map((section: any) => {
+        const key = section.title as SectionTitle;
+        const Icon = iconMap[key] ?? HelpCircle;
+        const bgMap: Record<SectionTitle, string> = {
           "At Risk": "bg-red-600",
           Caution: "bg-orange-500",
           Optimal: "bg-green-600",
           Unknown: "bg-gray-500",
-        }[section.title];
+        };
+        const bgClass = bgMap[key] ?? "";
 
-        const textClass = {
+        const textMap: Record<SectionTitle, string> = {
           "At Risk": "text-red-600",
           Caution: "text-orange-500",
           Optimal: "text-green-600",
           Unknown: "text-gray-500",
-        }[section.title];
+        };
+        const textClass = textMap[key] ?? "";
 
         console.log(bgClass);
 
@@ -138,7 +145,7 @@ const HealthReport = ({ data }: { data: unknown }) => {
               {/* Factors */}
               <div className="p-4">
                 <div className="flex flex-wrap gap-1">
-                  {section.factors.map((factor, idx) => (
+                  {section.factors.map((factor: any, idx: any) => (
                     <Badge
                       key={idx}
                       variant="outline"

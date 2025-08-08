@@ -1,7 +1,9 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Brain, FileText, Clock, CheckCircle } from "lucide-react";
 import Header from "./shared/Header";
 
-const Preface = ({ data }: { data: unknown }) => {
+const Preface = ({ data }: { data: any }) => {
   const { purposeParagraphs, aboutParagraphs, reading } = data;
   return (
     <div className="w-[210mm] h-[297mm] mx-auto p-6 bg-white">
@@ -18,7 +20,7 @@ const Preface = ({ data }: { data: unknown }) => {
             Purpose of This Report
           </h3>
           <div className="space-y-4 text-xs text-gray-700 leading-relaxed">
-            {purposeParagraphs.map((p, i) => (
+            {purposeParagraphs.map((p: any, i: any) => (
               <p key={i}>{p}</p>
             ))}
             {/* <p>
@@ -60,7 +62,7 @@ const Preface = ({ data }: { data: unknown }) => {
             About RestoreU Method
           </h3>
           <div className="space-y-4 text-xs text-gray-700 leading-relaxed">
-            {aboutParagraphs.map((p, i) => (
+            {aboutParagraphs.map((p: any, i: any) => (
               <p key={i}>{p}</p>
             ))}
           </div>
@@ -129,7 +131,7 @@ const Preface = ({ data }: { data: unknown }) => {
             <h3 className="text-lg font-bold text-black mb-4 border-b-2 border-black pb-2">
               Reading This Report
             </h3>
-            {reading.intro.map((p, i) => (
+            {reading.intro.map((p: any, i: any) => (
               <p key={i} className="text-xs text-gray-600 mb-4">
                 {p}
               </p>
@@ -199,7 +201,7 @@ const Preface = ({ data }: { data: unknown }) => {
               </div>
             </div> */}
             <div className="space-y-6">
-              {reading.steps.map(({ title, description }, idx) => (
+              {reading.steps.map(({ title, description }: any, idx: any) => (
                 <div key={idx} className="flex gap-4">
                   <div className="flex-shrink-0 w-6 h-6 bg-blue-600 text-white rounded-full flex items-center justify-center text-xs font-bold">
                     {idx + 1}
