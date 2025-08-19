@@ -39,7 +39,6 @@ type Report = {
 };
 
 function App({ report = reportJson }: { report?: Report }) {
-  console.log("report: ", report, reportJson);
   return (
     <div>
       <Preface data={report?.preface} />

@@ -33,7 +33,6 @@ const HealthReport = ({ data }: { data: HealthReportData }) => {
   const { currentStatus, healthStatusSections } = data;
   const overview = currentStatus?.overview;
 
-  console.log(overview.Postmenopausal.value);
   const overviewEntries = [
     {
       label: "Gender",
@@ -132,8 +131,6 @@ const HealthReport = ({ data }: { data: HealthReportData }) => {
           Optimal: "text-green-600",
           Unknown: "text-gray-500",
         }[section.title];
-
-        console.log(bgClass);
 
         return (
           <Card key={section.title} className="mb-4 p-0 rounded-none">

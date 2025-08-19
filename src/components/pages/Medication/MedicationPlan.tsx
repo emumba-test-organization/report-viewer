@@ -23,7 +23,6 @@ export type MedicationType = {
 };
 
 const MedicationPlan = ({ data }: { data: MedicationType }) => {
-  console.log(data);
   const { title, intro, steps, medications } = data;
 
   const formattedSteps = steps
