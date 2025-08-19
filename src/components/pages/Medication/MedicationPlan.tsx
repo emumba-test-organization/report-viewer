@@ -13,11 +13,11 @@ export type MedicationType = {
     dosageDetails: string;
     reasoning: {
       action: string;
-      name: string;
+      name?: string;
       currentValue?: string;
     }[];
     guidance: string;
-    alreadyTaking: "Yes" | "No";
+    alreadyTaking?: string;
   }[];
   supplements: SupplementData;
 };

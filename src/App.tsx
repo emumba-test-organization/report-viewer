@@ -1,7 +1,7 @@
-import { useEffect, useState } from "react";
 import "./App.css";
-import HealthReport from "./components/HealthReport";
-import Preface from "./components/Preface";
+import reportJson from "./report.json";
+import HealthReport, { type HealthReportData } from "./components/HealthReport";
+import Preface, { type PrefaceData } from "./components/Preface";
 import {
   MedicationPlan,
   CurrentMedication,
@@ -25,8 +25,8 @@ import Cognition, {
 } from "./components/pages/Cognition/Cognition";
 
 type Report = {
-  preface: unknown; // Replace 'any' with the actual type if known
-  healthReport: unknown;
+  preface: PrefaceData;
+  healthReport: HealthReportData;
   actionPlan: MedicationType;
   lifestyle: LifestyleData;
   nutrition: {
@@ -38,22 +38,8 @@ type Report = {
   cognitiveFunction: CognitionData;
 };
 
-function App() {
-  const [report, setReport] = useState<Report | null>(null);
-
-  useEffect(() => {
-    fetch("/report.json")
-      .then((res) => res.json())
-      .then(setReport)
-      .catch((err) => console.error("Failed to load report:", err));
-  }, []);
-
-  useEffect(() => {
-    console.log("Report loaded:", report);
-  }, [report]);
-
-  if (!report) return <p>Loading report…</p>;
-
+function App({ report = reportJson }: { report?: Report }) {
+  console.log("report: ", report, reportJson);
   return (
     <div>
       <Preface data={report?.preface} />

@@ -3,7 +3,7 @@ import { CircleCheckIcon, CircleXIcon } from "lucide-react";
 export type NutritionRecommendationsData = {
   header: string;
   header_intro: string;
-  mind_diet_title: string;
+  mind_diet_title?: string;
   mind_diet_intro: string;
   recommended_instructions: string;
   recommended_diet: {

@@ -10,13 +10,13 @@ export type SupplementData = {
     reasoning: {
       action: string;
       entries: {
-        name: string;
+        name?: string;
         currentValue?: string;
         currentLevel?: string;
       }[];
     };
     guidance: string;
-    alreadyTaking: "Yes" | "No";
+    alreadyTaking?: string;
   }[];
 };
 

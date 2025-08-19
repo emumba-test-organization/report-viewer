@@ -4,6 +4,24 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/shared/Header";
 
+export type HealthReportData = {
+  title: string;
+  currentStatus: {
+    overview: {
+      [key: string]: {
+        value: string;
+        annotations: string[];
+      };
+    };
+  };
+  healthStatusSections: {
+    title: string;
+    description: string;
+    factors: string[];
+    count: number;
+  }[];
+};
+
 const iconMap = {
   "At Risk": AlertTriangle,
   Caution: Diamond,
@@ -11,8 +29,8 @@ const iconMap = {
   Unknown: HelpCircle,
 };
 
-const HealthReport = ({ data }: { data: unknown }) => {
-  const { header, currentStatus, healthStatusSections } = data;
+const HealthReport = ({ data }: { data: HealthReportData }) => {
+  const { currentStatus, healthStatusSections } = data;
   const overview = currentStatus?.overview;
 
   console.log(overview.Postmenopausal.value);
@@ -58,7 +76,7 @@ const HealthReport = ({ data }: { data: unknown }) => {
         <div>
           <h3 className="font-semibold mb-2">Overview</h3>
           <div className="flex border rounded overflow-hidden divide-x">
-            {overviewEntries.map(({ label, value, annotations }) => (
+            {overviewEntries.map(({ label, value }) => (
               <div key={label} className="p-2">
                 <span className="text-gray-600 block">{label}</span>
                 <span className="font-semibold">{value}</span>
@@ -71,7 +89,7 @@ const HealthReport = ({ data }: { data: unknown }) => {
         <div>
           <h3 className="font-semibold mb-2">Body Measurements</h3>
           <div className="flex border rounded overflow-hidden divide-x">
-            {measurementEntries.map(({ label, value, annotations }) => (
+            {measurementEntries.map(({ label, value }) => (
               <div key={label} className="p-2">
                 <span className="text-gray-600 block">{label}</span>
                 <span className="font-semibold">{value}</span>
@@ -84,7 +102,7 @@ const HealthReport = ({ data }: { data: unknown }) => {
         <div>
           <h3 className="font-semibold mb-2">Vitals</h3>
           <div className="flex border rounded overflow-hidden p-2">
-            {vitalsEntries.map(({ label, value, annotations }) => (
+            {vitalsEntries.map(({ label, value }) => (
               <div key={label}>
                 <span className="text-gray-600 block">{label}</span>
                 <span className="font-semibold">{value}</span>
@@ -98,9 +116,9 @@ const HealthReport = ({ data }: { data: unknown }) => {
       <h3 className="text-xl font-bold text-gray-900 mb-6">Health Status</h3>
 
       {/* At Risk Section */}
-      {console.log(healthStatusSections)}
       {healthStatusSections.map((section) => {
-        const Icon = iconMap[section.title] || HelpCircle;
+        const Icon =
+          iconMap[section.title as keyof typeof iconMap] || HelpCircle;
         const bgClass = {
           "At Risk": "bg-red-600",
           Caution: "bg-orange-500",
