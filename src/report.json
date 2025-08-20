@@ -175,7 +175,7 @@
           {
             "action": "To raise your level of",
             "name": "Vitamin B12",
-            "currentLevel": "139 pg/mL"
+            "currentLevel": "139\u00a0pg/mL"
           }
         ],
         "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
@@ -188,7 +188,7 @@
           {
             "action": "To raise your level of",
             "name": "fT3",
-            "currentLevel": "2.3 pg/mL"
+            "currentLevel": "2.3\u00a0pg/mL"
           },
           {
             "action": "To lower your level of",

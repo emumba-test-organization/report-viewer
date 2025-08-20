@@ -5,6 +5,24 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/shared/Header";
 
+export type HealthReportData = {
+  title: string;
+  currentStatus: {
+    overview: {
+      [key: string]: {
+        value: string;
+        annotations: string[];
+      };
+    };
+  };
+  healthStatusSections: {
+    title: string;
+    description: string;
+    factors: string[];
+    count: number;
+  }[];
+};
+
 const iconMap = {
   "At Risk": AlertTriangle,
   Caution: Diamond,

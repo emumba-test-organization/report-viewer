@@ -2,10 +2,29 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { AlertCircle } from "lucide-react";
 import { Checkbox } from "@/components/ui/checkbox";
-import Header from "./shared/Header";
-import { Badge } from "./ui/badge";
+import Header from "../../shared/Header";
+import { Badge } from "../../ui/badge";
+import type { SupplementData } from "./SupplementPlan";
 
-const ActionPlan = ({ data }: { data: any }) => {
+export type MedicationType = {
+  title: string;
+  intro: string[];
+  steps: string[];
+  medications: {
+    medication: string;
+    dosageDetails: string;
+    reasoning: {
+      action: string;
+      name?: string;
+      currentValue?: string;
+    }[];
+    guidance: string;
+    alreadyTaking?: string;
+  }[];
+  supplements: SupplementData;
+};
+
+const MedicationPlan = ({ data }: { data: MedicationType }) => {
   console.log(data);
   const { title, intro, steps, medications } = data;
 
@@ -137,4 +156,4 @@ const ActionPlan = ({ data }: { data: any }) => {
   );
 };
 
-export default ActionPlan;
+export default MedicationPlan;

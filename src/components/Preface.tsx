@@ -3,7 +3,17 @@
 import { Brain, FileText, Clock, CheckCircle } from "lucide-react";
 import Header from "./shared/Header";
 
-const Preface = ({ data }: { data: any }) => {
+export type PrefaceData = {
+  title: string;
+  purposeParagraphs: string[];
+  aboutParagraphs: string[];
+  reading: {
+    intro: string[];
+    steps: { title: string; description: string }[];
+  };
+};
+
+const Preface = ({ data }: { data: PrefaceData }) => {
   const { purposeParagraphs, aboutParagraphs, reading } = data;
   return (
     <div className="w-[210mm] h-[297mm] mx-auto p-6 bg-white">
