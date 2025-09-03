@@ -63,7 +63,7 @@ const functionLimits = {
 const Cognition = ({ data }: Props) => {
   const { title, intro, factors } = data;
   return (
-    <div className="w-[250mm] mx-auto p-6 bg-white">
+    <div className="w-[210mm] mx-auto p-6 bg-white">
       <div className="mb-8">
         <h1 className="text-4xl font-bold text-gray-900 mb-4 pb-2">
           {title || "Cognition"}

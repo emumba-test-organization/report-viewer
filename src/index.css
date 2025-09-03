@@ -139,18 +139,3 @@
   size: A4;
   margin: 20mm 10mm;
 }
-
-@media print {
-  /* Prevent breaking inside these blocks */
-  .no-break {
-    page-break-inside: avoid;
-    break-inside: avoid-column;
-    break-inside: avoid-page;
-  }
-
-  /* Force a page break before this element */
-  .page-break {
-    page-break-before: always;
-    break-before: page;
-  }
-}

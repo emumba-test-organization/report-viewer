@@ -1,9 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-/* eslint-disable @typescript-eslint/no-unused-vars */
 import { AlertTriangle, Diamond, Check, HelpCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import Header from "@/components/shared/Header";
+import A4Page from "../../shared/A4Page";
 
 export type HealthReportData = {
   title: string;
@@ -36,7 +35,6 @@ const HealthReport = ({ data }: { data: any }) => {
   const { currentStatus, healthStatusSections } = data;
   const overview = currentStatus?.overview;
 
-  console.log(overview.Postmenopausal.value);
   const overviewEntries = [
     {
       label: "Gender",
@@ -67,9 +65,7 @@ const HealthReport = ({ data }: { data: any }) => {
   }));
 
   return (
-    <div className="w-[210mm] h-[297mm] mx-auto p-6 bg-white">
-      <Header />
-
+    <A4Page>
       {/* Current Status Title */}
       <h2 className="text-3xl font-bold text-gray-900 mb-8">{data?.title}</h2>
 
@@ -119,7 +115,6 @@ const HealthReport = ({ data }: { data: any }) => {
       <h3 className="text-xl font-bold text-gray-900 mb-6">Health Status</h3>
 
       {/* At Risk Section */}
-      {console.log(healthStatusSections)}
 
       {healthStatusSections.map((section: any) => {
         const key = section.title as SectionTitle;
@@ -139,8 +134,6 @@ const HealthReport = ({ data }: { data: any }) => {
           Unknown: "text-gray-500",
         };
         const textClass = textMap[key] ?? "";
-
-        console.log(bgClass);
 
         return (
           <Card key={section.title} className="mb-4 p-0 rounded-none">
@@ -179,7 +172,7 @@ const HealthReport = ({ data }: { data: any }) => {
           </Card>
         );
       })}
-    </div>
+    </A4Page>
   );
 };
 

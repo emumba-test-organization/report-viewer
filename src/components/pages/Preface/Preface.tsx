@@ -1,7 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Brain, FileText, Clock, CheckCircle } from "lucide-react";
-import Header from "./shared/Header";
+import A4Page from "../../shared/A4Page";
 
 export type PrefaceData = {
   title: string;
@@ -16,9 +16,7 @@ export type PrefaceData = {
 const Preface = ({ data }: { data: PrefaceData }) => {
   const { purposeParagraphs, aboutParagraphs, reading } = data;
   return (
-    <div className="w-[210mm] h-[297mm] mx-auto p-6 bg-white">
-      <Header />
-
+    <A4Page>
       {/* Preface Title */}
       <h2 className="text-3xl font-bold text-gray-900 mb-8">{data?.title}</h2>
 
@@ -228,7 +226,7 @@ const Preface = ({ data }: { data: PrefaceData }) => {
           </div>
         </div>
       </div>
-    </div>
+    </A4Page>
   );
 };
 
