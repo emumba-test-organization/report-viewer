@@ -125,6 +125,10 @@
           "vitamin D level",
           "hearing loss",
           "essential metals imbalance",
+          "essential metals imbalance",
+          "essential metals imbalance",
+          "essential metals imbalance",
+          "essential metals imbalance",
           "depression",
           "high blood pressure",
           "thyroid level",
@@ -142,6 +146,11 @@
           "cholesterol level",
           "insulin level",
           "insulin resistance",
+          "anticholinergic cognitive burden",
+          "anticholinergic cognitive burden",
+          "anticholinergic cognitive burden",
+          "anticholinergic cognitive burden",
+          "anticholinergic cognitive burden",
           "anticholinergic cognitive burden"
         ]
       },
@@ -150,6 +159,18 @@
         "count": 1,
         "description": "There is not enough data to determine if this\r\n                            factor is contributing to cognitive impairment",
         "factors": [
+          "stress"
+        ]
+      },
+      {
+        "title": "Unknown",
+        "count": 1,
+        "description": "There is not enough data to determine if this\r\n                            factor is contributing to cognitive impairment",
+        "factors": [
+          "stress",
+          "stress",
+          "stress",
+          "stress",
           "stress"
         ]
       }

@@ -1,7 +1,4 @@
 import "./App.css";
-import HealthReport, {
-  type HealthReportData,
-} from "./components/pages/HealthReport/HealthReport";
 import Preface, { type PrefaceData } from "./components/pages/Preface/Preface";
 import {
   CurrentMedication,
@@ -31,6 +28,10 @@ import {
   type MedicationType,
 } from "./components/pages/ActionPlan";
 import { SupplementPlan } from "./components/pages/Supplements";
+import {
+  PaginatedHealthReport,
+  type HealthReportData,
+} from "./components/pages/HealthReport";
 
 type Report = {
   preface: PrefaceData;
@@ -61,7 +62,8 @@ function App() {
   return (
     <div>
       <Preface data={report?.preface} />
-      <HealthReport data={report?.healthReport} />
+      {/* <HealthReport data={report?.healthReport} /> */}
+      <PaginatedHealthReport data={report?.healthReport} />
       <ContentWithTables
         data={report?.actionPlan}
         preContentComponent={ActionPlan}
@@ -72,8 +74,6 @@ function App() {
         preContentComponent={CurrentMedication}
         tablesComponent={CurrentMedicationTables}
       />
-
-      {/* <CurrentMedication data={report?.currentMedication} /> */}
       <SupplementPlan supplements={report?.actionPlan?.supplements} />
       <Lifestyle data={report?.lifestyle} />
       <div className="w-[210mm] h-[297mm] mx-auto p-6 bg-white">

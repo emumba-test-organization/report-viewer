@@ -4,24 +4,6 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import A4Page from "../../shared/A4Page";
 
-export type HealthReportData = {
-  title: string;
-  currentStatus: {
-    overview: {
-      [key: string]: {
-        value: string;
-        annotations: string[];
-      };
-    };
-  };
-  healthStatusSections: {
-    title: string;
-    description: string;
-    factors: string[];
-    count: number;
-  }[];
-};
-
 const iconMap = {
   "At Risk": AlertTriangle,
   Caution: Diamond,
@@ -114,8 +96,6 @@ const HealthReport = ({ data }: { data: any }) => {
       {/* Health Status */}
       <h3 className="text-xl font-bold text-gray-900 mb-6">Health Status</h3>
 
-      {/* At Risk Section */}
-
       {healthStatusSections.map((section: any) => {
         const key = section.title as SectionTitle;
         const Icon = iconMap[key] ?? HelpCircle;
@@ -136,6 +116,7 @@ const HealthReport = ({ data }: { data: any }) => {
         const textClass = textMap[key] ?? "";
 
         return (
+          // Section Card
           <Card key={section.title} className="mb-4 p-0 rounded-none">
             <CardContent className="p-0">
               {/* Section Header */}
