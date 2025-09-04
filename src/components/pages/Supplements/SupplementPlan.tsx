@@ -1,3 +1,4 @@
+import A4Page from "@/components/shared/A4Page";
 import { Badge } from "@/components/ui/badge";
 import { AlertCircle, Lightbulb } from "lucide-react";
 
@@ -28,7 +29,7 @@ const SupplementPlan = ({ supplements }: { supplements: SupplementData }) => {
   const { title, intro, meds: medications } = supplements;
 
   return (
-    <div className="w-[210mm] h-[297mm] mx-auto p-6 bg-white">
+    <A4Page>
       <div className="mb-8">
         <h3 className="text-xl font-bold text-gray-900 mb-4 border-b-2 border-gray-300 pb-2">
           {title}
@@ -80,6 +81,41 @@ const SupplementPlan = ({ supplements }: { supplements: SupplementData }) => {
                 Ask your physician if any medications should be changed before
                 starting the non-prescription medications newly recommended here
               </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-violet-900 p-4 mb-6 mt-6">
+          <div className="flex items-start gap-3">
+            <Lightbulb className="w-5 h-5 text-white mt-0.5 flex-shrink-0" />
+            <div className="text-xs">
+              <p className="font-bold text-white mb-1">
+                Tips for Buying Supplements
+              </p>
+              <p className="text-white">
+                We've seen that high-quality supplements typically give better
+                results than economy ones from your local store. We suggest:
+              </p>
+              <ol className="list-decimal pl-3 mt-1 text-white">
+                <li>
+                  Buy them through your doctor, at your doctor&apos;s office, or
+                  with a prescription, if applicable.
+                </li>
+                <li>
+                  Buy from a health food store or specialty vitamin shop. Seek
+                  expert guidance there.
+                </li>
+                <li>
+                  Buy them online. Consider Web sites such as Designs for
+                  Health, Gaia Herbs, Life Extension, Metagenics (using a
+                  'Practitioner Code' from your doctor), Pure Encapsulations, or
+                  WholeScripts.
+                </li>
+                <li>
+                  And, if you cannot find the recommended dosage, buy the
+                  supplement with the closest lower dosage.
+                </li>
+              </ol>
             </div>
           </div>
         </div>
@@ -147,43 +183,8 @@ const SupplementPlan = ({ supplements }: { supplements: SupplementData }) => {
             </div>
           ))}
         </div>
-
-        <div className="bg-violet-900 p-4 mb-6 mt-6">
-          <div className="flex items-start gap-3">
-            <Lightbulb className="w-5 h-5 text-white mt-0.5 flex-shrink-0" />
-            <div className="text-xs">
-              <p className="font-bold text-white mb-1">
-                Tips for Buying Supplements
-              </p>
-              <p className="text-white">
-                We've seen that high-quality supplements typically give better
-                results than economy ones from your local store. We suggest:
-              </p>
-              <ol className="list-decimal pl-3 mt-1 text-white">
-                <li>
-                  Buy them through your doctor, at your doctor&apos;s office, or
-                  with a prescription, if applicable.
-                </li>
-                <li>
-                  Buy from a health food store or specialty vitamin shop. Seek
-                  expert guidance there.
-                </li>
-                <li>
-                  Buy them online. Consider Web sites such as Designs for
-                  Health, Gaia Herbs, Life Extension, Metagenics (using a
-                  'Practitioner Code' from your doctor), Pure Encapsulations, or
-                  WholeScripts.
-                </li>
-                <li>
-                  And, if you cannot find the recommended dosage, buy the
-                  supplement with the closest lower dosage.
-                </li>
-              </ol>
-            </div>
-          </div>
-        </div>
       </div>
-    </div>
+    </A4Page>
   );
 };
 

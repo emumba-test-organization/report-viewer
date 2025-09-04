@@ -1,8 +1,8 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { AlertTriangle, Diamond, Check, HelpCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import Header from "@/components/shared/Header";
+import A4Page from "../../shared/A4Page";
 
 export type HealthReportData = {
   title: string;
@@ -29,7 +29,9 @@ const iconMap = {
   Unknown: HelpCircle,
 };
 
-const HealthReport = ({ data }: { data: HealthReportData }) => {
+type SectionTitle = keyof typeof iconMap;
+
+const HealthReport = ({ data }: { data: any }) => {
   const { currentStatus, healthStatusSections } = data;
   const overview = currentStatus?.overview;
 
@@ -63,9 +65,7 @@ const HealthReport = ({ data }: { data: HealthReportData }) => {
   }));
 
   return (
-    <div className="w-[210mm] h-[297mm] mx-auto p-6 bg-white">
-      <Header />
-
+    <A4Page>
       {/* Current Status Title */}
       <h2 className="text-3xl font-bold text-gray-900 mb-8">{data?.title}</h2>
 
@@ -115,22 +115,25 @@ const HealthReport = ({ data }: { data: HealthReportData }) => {
       <h3 className="text-xl font-bold text-gray-900 mb-6">Health Status</h3>
 
       {/* At Risk Section */}
-      {healthStatusSections.map((section) => {
-        const Icon =
-          iconMap[section.title as keyof typeof iconMap] || HelpCircle;
-        const bgClass = {
+
+      {healthStatusSections.map((section: any) => {
+        const key = section.title as SectionTitle;
+        const Icon = iconMap[key] ?? HelpCircle;
+        const bgMap: Record<SectionTitle, string> = {
           "At Risk": "bg-red-600",
           Caution: "bg-orange-500",
           Optimal: "bg-green-600",
           Unknown: "bg-gray-500",
-        }[section.title];
+        };
+        const bgClass = bgMap[key] ?? "";
 
-        const textClass = {
+        const textMap: Record<SectionTitle, string> = {
           "At Risk": "text-red-600",
           Caution: "text-orange-500",
           Optimal: "text-green-600",
           Unknown: "text-gray-500",
-        }[section.title];
+        };
+        const textClass = textMap[key] ?? "";
 
         return (
           <Card key={section.title} className="mb-4 p-0 rounded-none">
@@ -153,7 +156,7 @@ const HealthReport = ({ data }: { data: HealthReportData }) => {
               {/* Factors */}
               <div className="p-4">
                 <div className="flex flex-wrap gap-1">
-                  {section.factors.map((factor, idx) => (
+                  {section.factors.map((factor: any, idx: any) => (
                     <Badge
                       key={idx}
                       variant="outline"
@@ -169,7 +172,7 @@ const HealthReport = ({ data }: { data: HealthReportData }) => {
           </Card>
         );
       })}
-    </div>
+    </A4Page>
   );
 };
 
