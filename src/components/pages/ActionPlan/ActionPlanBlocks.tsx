@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { AlertCircle } from "lucide-react";
-import Header from "../../shared/Header";
 import { forwardRef } from "react";
+import type { BlockProps } from "../HealthReport/types";
+import { Checkbox } from "@/components/ui/checkbox";
 
-const ActionPlan = forwardRef<HTMLDivElement, { data: any }>(
-  ({ data }, ref) => {
+export const ActionPlanBlock = forwardRef<HTMLDivElement, BlockProps>(
+  ({ data, blockId, setRef }, ref) => {
     const { title, intro, steps } = data;
 
     const formattedSteps = steps
@@ -17,8 +18,10 @@ const ActionPlan = forwardRef<HTMLDivElement, { data: any }>(
       .join(", ")
       .replace(/, ([^,]*)$/, " & $1");
     return (
-      <div className="w-[210mm] mx-auto p-6 pb-0 bg-white" ref={ref}>
-        <Header />
+      <div
+        ref={setRef ? setRef(blockId) : ref}
+        className="action-plan-main-block mb-8"
+      >
         {/* Title */}
         <h2 className="text-3xl font-bold text-gray-900 mb-6">{title}</h2>
         {/* Introduction with inline steps */}
@@ -56,11 +59,59 @@ const ActionPlan = forwardRef<HTMLDivElement, { data: any }>(
               </div>
             </div>
           </div>
-          {/* Medication Table */}
         </div>
       </div>
     );
   }
 );
 
-export default ActionPlan;
+export const MedicationTableHeader = forwardRef<HTMLDivElement, BlockProps>(
+  ({ blockId, setRef }, ref) => (
+    <div
+      className="medication-table-header p-4 flex flex-row text-xs font-bold bg-gray-100 border-b-2 border-gray-300"
+      ref={setRef ? setRef(blockId) : ref}
+    >
+      <div className="flex-1">Medication</div>
+      <div className="flex-1">Purpose</div>
+      <div className="flex-1">Instructions</div>
+      <div className="flex-1">Already Taking?</div>
+    </div>
+  )
+);
+
+export const MedicationRow = forwardRef<HTMLDivElement, BlockProps>(
+  ({ section: med, blockId, setRef }, ref) => (
+    <div
+      className="medication-row flex flex-row border border-gray-200"
+      ref={setRef ? setRef(blockId) : ref}
+    >
+      <div className="p-4 flex-1 text-xs">
+        <div className="font-semibold">{med.medication}</div>
+        <div className="text-gray-600">{med.dosageDetails}</div>
+      </div>
+      <div className="p-4 flex-1 text-xs">
+        {med.reasoning.map((e: any, j: any) => (
+          <div key={j} className="mb-1">
+            {e.action} {e.name}
+            {e.currentValue && (
+              <div className="text-gray-600 text-xs">
+                Currently: <strong>{e.currentValue}</strong>
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+      <div className="p-4 flex-1 text-xs">{med.guidance}</div>
+      <div className="p-4 flex-1 text-xs">
+        <label className="flex items-center gap-2 mb-1">
+          <Checkbox defaultChecked={med.alreadyTaking === "Yes"} />
+          <span>Yes</span>
+        </label>
+        <label className="flex items-center gap-2">
+          <Checkbox defaultChecked={med.alreadyTaking === "No"} />
+          <span>No</span>
+        </label>
+      </div>
+    </div>
+  )
+);

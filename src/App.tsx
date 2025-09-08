@@ -5,7 +5,7 @@ import {
   CurrentMedicationTables,
   type CurrentMedicationData,
 } from "./components/pages/CurrentMedication";
-import Lifestyle, { type LifestyleData } from "./components/pages/Lifestyle";
+// import Lifestyle, { type LifestyleData } from "./components/pages/Lifestyle";
 import {
   NutritionConsumption,
   NutritionRecommendation,
@@ -23,8 +23,8 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import ContentWithTables from "./components/shared/ContentWithTables";
 import {
-  ActionPlan,
-  ActionPlanTables,
+  // ActionPlan,
+  // ActionPlanTables,
   type MedicationType,
 } from "./components/pages/ActionPlan";
 import { SupplementPlan } from "./components/pages/Supplements";
@@ -32,6 +32,9 @@ import {
   PaginatedHealthReport,
   type HealthReportData,
 } from "./components/pages/HealthReport";
+import type { LifestyleData } from "./components/pages/Lifestyle";
+import PaginatedActionPlan from "./components/pages/ActionPlan/PaginatedActionPlan";
+// import PaginatedActionPlan from "./components/pages/ActionPlan/PaginatedActionPlan";
 
 type Report = {
   preface: PrefaceData;
@@ -64,18 +67,20 @@ function App() {
       <Preface data={report?.preface} />
       {/* <HealthReport data={report?.healthReport} /> */}
       <PaginatedHealthReport data={report?.healthReport} />
-      <ContentWithTables
+      {/* <PaginatedActionPlanTest /> */}
+      <PaginatedActionPlan data={report?.actionPlan} />
+      {/* <ContentWithTables
         data={report?.actionPlan}
         preContentComponent={ActionPlan}
         tablesComponent={ActionPlanTables}
-      />
+      /> */}
       <ContentWithTables
         data={report?.currentMedication}
         preContentComponent={CurrentMedication}
         tablesComponent={CurrentMedicationTables}
       />
       <SupplementPlan supplements={report?.actionPlan?.supplements} />
-      <Lifestyle data={report?.lifestyle} />
+      {/* <Lifestyle data={report?.lifestyle} /> */}
       <div className="w-[210mm] h-[297mm] mx-auto p-6 bg-white">
         <NutritionSummary data={report?.nutrition?.summary} />
         <NutritionConsumption data={report?.nutrition?.consumption} />

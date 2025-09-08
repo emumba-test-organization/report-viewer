@@ -4,9 +4,9 @@ import { useRef, useState } from "react";
 // Hook for measuring element heights
 export const useMeasuredHeight = () => {
   const [heights, setHeights] = useState<Record<string, number>>({});
-  const refs = useRef<Record<string, HTMLElement | null>>({});
+  const refs = useRef<Record<string, HTMLElement>>({});
 
-  const measureHeight = (id: any, element: any) => {
+  const measureHeight = (id: string, element: HTMLElement) => {
     if (element && element.offsetHeight) {
       setHeights((prev) => ({
         ...prev,
@@ -15,9 +15,9 @@ export const useMeasuredHeight = () => {
     }
   };
 
-  const setRef = (id: any) => (element: any) => {
-    refs.current[id] = element;
+  const setRef = (id: string) => (element: HTMLElement | null) => {
     if (element) {
+      refs.current[id] = element;
       const resizeObserver = new ResizeObserver(() => {
         measureHeight(id, element);
       });

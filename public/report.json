@@ -97,6 +97,32 @@
     },
     "healthStatusSections": [
       {
+        "title": "Unknown",
+        "count": 1,
+        "description": "There is not enough data to determine if this\r\n                            factor is contributing to cognitive impairment",
+        "factors": [
+          "stress"
+        ]
+      },
+      {
+        "title": "Optimal",
+        "count": 11,
+        "description": "These factors are within optimal range,\r\n                            unlikely to be contributing to cognitive impairment or memory loss",
+        "factors": [
+          "no inflammation",
+          "no infections",
+          "no diabetes type 2",
+          "vitamin E level",
+          "sodium level",
+          "hormonal balance",
+          "diet",
+          "non-smoker",
+          "no atrial fibrillation",
+          "no heart disease",
+          "liver function"
+        ]
+      },
+      {
         "title": "Optimal",
         "count": 11,
         "description": "These factors are within optimal range,\r\n                            unlikely to be contributing to cognitive impairment or memory loss",
@@ -155,6 +181,25 @@
         ]
       },
       {
+        "title": "At Risk",
+        "count": 7,
+        "description": "These factors are likely to be significantly\r\n                            contributing to cognitive impairment or memory loss",
+        "factors": [
+          "multimorbidity",
+          "poor sleep quality",
+          "inadequate exercise",
+          "cholesterol level",
+          "insulin level",
+          "insulin resistance",
+          "anticholinergic cognitive burden",
+          "anticholinergic cognitive burden",
+          "anticholinergic cognitive burden",
+          "anticholinergic cognitive burden",
+          "anticholinergic cognitive burden",
+          "anticholinergic cognitive burden"
+        ]
+      },
+      {
         "title": "Unknown",
         "count": 1,
         "description": "There is not enough data to determine if this\r\n                            factor is contributing to cognitive impairment",
@@ -188,6 +233,396 @@
       "what you eat."
     ],
     "medications": [
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
       {
         "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
         "dosageDetails": "1 mg/1 mL, intramuscular",
