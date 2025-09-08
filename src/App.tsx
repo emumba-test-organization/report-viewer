@@ -23,6 +23,7 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import ContentWithTables from "./components/shared/ContentWithTables";
 import {
+  ActionPlan,
   // ActionPlan,
   // ActionPlanTables,
   type MedicationType,
@@ -34,6 +35,7 @@ import {
 } from "./components/pages/HealthReport";
 import type { LifestyleData } from "./components/pages/Lifestyle";
 import PaginatedActionPlan from "./components/pages/ActionPlan/PaginatedActionPlan";
+import HealthReport from "./components/pages/HealthReport/HealthReport";
 // import PaginatedActionPlan from "./components/pages/ActionPlan/PaginatedActionPlan";
 
 type Report = {
@@ -65,10 +67,11 @@ function App() {
   return (
     <div>
       <Preface data={report?.preface} />
-      {/* <HealthReport data={report?.healthReport} /> */}
-      <PaginatedHealthReport data={report?.healthReport} />
+      <HealthReport data={report?.healthReport} />
+      {/* <PaginatedHealthReport data={report?.healthReport} /> */}
       {/* <PaginatedActionPlanTest /> */}
-      <PaginatedActionPlan data={report?.actionPlan} />
+      {/* <PaginatedActionPlan data={report?.actionPlan} /> */}
+      <ActionPlan data={report?.actionPlan} />
       {/* <ContentWithTables
         data={report?.actionPlan}
         preContentComponent={ActionPlan}
