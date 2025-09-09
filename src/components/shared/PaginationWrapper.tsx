@@ -10,21 +10,30 @@ export interface BlockConfig {
   data?: any;
 }
 
+export type BlockProps = {
+  data: any;
+  section?: any;
+  blockId: string;
+  setRef?: (id: string) => (element: HTMLElement | null) => void;
+};
+
 export interface BlockRenderer {
-  (
-    block: BlockConfig,
-    key: string | number,
-    forMeasurement?: boolean
-  ): ReactNode;
+  (block: BlockConfig, key: string | number): ReactNode;
 }
 
-export interface PaginationWrapperProps {
+// Types for table configuration
+export interface TableConfig {
+  headerType: string; // The block type for the header (e.g., 'medication-header')
+  rowTypes: string[]; // Array of block types that belong to this table (e.g., ['medication-row'])
+  headerId: string; // Base ID for the header block
+}
+
+interface PaginationWrapperProps {
   data: any;
   createBlocks: (data: any) => BlockConfig[];
   renderBlock: BlockRenderer;
   contentHeight?: number;
-  children?: ReactNode;
-  onPagesCalculated?: (pages: BlockConfig[][], totalPages: number) => void;
+  tables?: TableConfig[]; // New prop for table configurations
 }
 
 // Default page dimensions and measurements
@@ -39,29 +48,13 @@ const DEFAULT_CONTENT_HEIGHT =
   DEFAULT_SAFETY_MARGIN -
   DEFAULT_MARGIN * 2;
 
-// Mock A4Page component for demonstration
-// const A4Page: React.FC<{ children: ReactNode }> = ({ children }) => (
-//   <div
-//     className="bg-white shadow-lg mx-auto relative mb-8"
-//     style={{
-//       width: "794px",
-//       height: "1122.52px",
-//       padding: "40px",
-//       boxSizing: "border-box",
-//       pageBreakAfter: "always",
-//     }}
-//   >
-//     <div style={{ height: "100%", overflow: "hidden" }}>{children}</div>
-//   </div>
-// );
-
 // Generic Pagination Wrapper Component
 export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
   data,
   createBlocks,
   renderBlock,
   contentHeight = DEFAULT_CONTENT_HEIGHT,
-  onPagesCalculated,
+  tables = [], // Default to empty array if no tables
 }) => {
   const { heights, setRef } = useMeasuredHeight();
   const [pages, setPages] = useState<BlockConfig[][]>([]);
@@ -74,6 +67,44 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
     setBlocks(atomicBlocks);
   }, [data, createBlocks]);
 
+  // Helper function to find which table a block belongs to
+  const findTableForBlock = (blockType: string): TableConfig | undefined => {
+    return tables.find(
+      (table) =>
+        table.rowTypes.includes(blockType) || table.headerType === blockType
+    );
+  };
+
+  // Helper function to check if current page needs a header for a specific table
+  const pageNeedsTableHeader = (
+    currentPage: BlockConfig[],
+    tableConfig: TableConfig
+  ): boolean => {
+    // Check if page already has this table's header
+    const hasHeader = currentPage.some(
+      (block) => block.type === tableConfig.headerType
+    );
+
+    // Check if page has or will have rows from this table
+    const hasRows = currentPage.some((block) =>
+      tableConfig.rowTypes.includes(block.type)
+    );
+
+    return hasRows && !hasHeader;
+  };
+
+  // Helper function to create a header block for a table
+  const createHeaderBlock = (
+    tableConfig: TableConfig,
+    pageIndex: number
+  ): BlockConfig => {
+    return {
+      id: `${tableConfig.headerId}-page-${pageIndex}`,
+      type: tableConfig.headerType,
+      data: undefined,
+    };
+  };
+
   // Calculate pages based on measured heights
   useEffect(() => {
     if (Object.keys(heights).length === blocks.length && blocks.length > 0) {
@@ -84,18 +115,63 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
 
       blocks.forEach((block) => {
         const blockHeight = heights[block.id] || 0;
+        const tableConfig = findTableForBlock(block.type);
 
-        // If this block would overflow the current page
-        if (
-          currentPageHeight + blockHeight > contentHeight &&
-          currentPage.length > 0
-        ) {
-          calculatedPages.push([...currentPage]);
-          currentPage = [block];
-          currentPageHeight = blockHeight;
-        } else {
+        // Special handling for table rows
+        if (tableConfig && tableConfig.rowTypes.includes(block.type)) {
+          const headerHeight = heights[tableConfig.headerId] || 0;
+
+          // Check if we need to add header
+          const needsHeader = !currentPage.some(
+            (b) => b.type === tableConfig.headerType
+          );
+
+          let totalHeightNeeded = blockHeight;
+          if (needsHeader) {
+            totalHeightNeeded += headerHeight;
+          }
+
+          // If this would overflow and we have content, start new page
+          if (
+            currentPageHeight + totalHeightNeeded > contentHeight &&
+            currentPage.length > 0
+          ) {
+            calculatedPages.push([...currentPage]);
+            currentPage = [];
+            currentPageHeight = 0;
+
+            // Add header to new page since we're starting with a table row
+            const headerBlock = createHeaderBlock(
+              tableConfig,
+              calculatedPages.length
+            );
+            currentPage.push(headerBlock);
+            currentPageHeight += headerHeight;
+          } else if (needsHeader) {
+            // Add header to current page if needed
+            const headerBlock = createHeaderBlock(
+              tableConfig,
+              calculatedPages.length
+            );
+            currentPage.push(headerBlock);
+            currentPageHeight += headerHeight;
+          }
+
           currentPage.push(block);
           currentPageHeight += blockHeight;
+        } else {
+          // Handle non-table blocks (including standalone headers) normally
+          if (
+            currentPageHeight + blockHeight > contentHeight &&
+            currentPage.length > 0
+          ) {
+            calculatedPages.push([...currentPage]);
+            currentPage = [block];
+            currentPageHeight = blockHeight;
+          } else {
+            currentPage.push(block);
+            currentPageHeight += blockHeight;
+          }
         }
       });
 
@@ -104,20 +180,39 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
         calculatedPages.push(currentPage);
       }
 
-      setPages(calculatedPages);
+      // Post-process pages to ensure all table sections have proper headers
+      const finalPages = calculatedPages.map((page, pageIndex) => {
+        const processedPage = [...page];
+
+        // For each table configuration, check if this page needs a header
+        tables.forEach((tableConfig) => {
+          if (pageNeedsTableHeader(processedPage, tableConfig)) {
+            // const headerHeight = heights[tableConfig.headerId] || 0;
+
+            // Find the first row of this table type
+            const firstRowIndex = processedPage.findIndex((block) =>
+              tableConfig.rowTypes.includes(block.type)
+            );
+
+            if (firstRowIndex !== -1) {
+              // Insert header before the first row
+              const headerBlock = createHeaderBlock(tableConfig, pageIndex);
+              processedPage.splice(firstRowIndex, 0, headerBlock);
+            }
+          }
+        });
+
+        return processedPage;
+      });
+
+      setPages(finalPages);
       setMeasured(true);
-
-      // Call the callback if provided
-      onPagesCalculated?.(calculatedPages, calculatedPages.length);
     }
-  }, [heights, blocks, contentHeight, onPagesCalculated]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [heights, blocks, contentHeight]);
 
-  const renderBlockWithProps = (
-    block: BlockConfig,
-    key: string | number,
-    forMeasurement = false
-  ) => {
-    return renderBlock(block, key, forMeasurement);
+  const renderBlockWithProps = (block: BlockConfig, key: string | number) => {
+    return renderBlock(block, key);
   };
 
   return (
@@ -126,11 +221,7 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
         // Measurement phase - render all content to measure heights
         <A4Page>
           {blocks.map((block, index) => {
-            const blockWithRef = renderBlock(
-              block,
-              index,
-              true // forMeasurement = true
-            );
+            const blockWithRef = renderBlock(block, index);
 
             // Clone the element and add the ref for measurement
             return React.cloneElement(blockWithRef as React.ReactElement<any>, {
@@ -145,7 +236,7 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
           {pages.map((pageContent, pageIndex) => (
             <A4Page key={pageIndex}>
               {pageContent.map((block, blockIndex) =>
-                renderBlockWithProps(block, `${pageIndex}-${blockIndex}`, false)
+                renderBlockWithProps(block, `${pageIndex}-${blockIndex}`)
               )}
             </A4Page>
           ))}
@@ -154,203 +245,3 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
     </>
   );
 };
-
-// // Example usage with Health Report
-// const HealthReportBlocks = {
-//   TitleBlock: ({ data, ...props }: any) => (
-//     <div {...props} className="title-block mb-8">
-//       <h2 className="text-3xl font-bold text-gray-900">{data?.title}</h2>
-//     </div>
-//   ),
-
-//   OverviewBlock: ({ data, ...props }: any) => (
-//     <div {...props} className="overview-block mb-6">
-//       <div className="p-4 bg-gray-50 rounded">
-//         <h3 className="font-semibold mb-2">Overview</h3>
-//         <p className="text-sm text-gray-600">
-//           Patient overview information would go here...
-//         </p>
-//       </div>
-//     </div>
-//   ),
-
-//   HealthStatusTitleBlock: ({ ...props }: any) => (
-//     <div {...props} className="health-status-title-block mb-6">
-//       <h3 className="text-xl font-bold text-gray-900">Health Status</h3>
-//     </div>
-//   ),
-
-//   HealthStatusSectionBlock: ({ section, ...props }: any) => (
-//     <div {...props} className="health-status-section-block mb-4">
-//       <div className="p-4 border border-gray-200 rounded">
-//         <h4 className="font-bold text-lg mb-2">
-//           {section?.title || "Health Section"}
-//         </h4>
-//         <p className="text-sm text-gray-600 mb-2">{section?.description}</p>
-//         <div className="text-sm">
-//           Count: {section?.count || 0} | Factors:{" "}
-//           {section?.factors?.length || 0} items
-//         </div>
-//       </div>
-//     </div>
-//   ),
-// };
-
-// // Example Health Report component using the wrapper
-// const ExampleHealthReport = ({ data }: { data: any }) => {
-//   const createHealthBlocks = (data: any): BlockConfig[] => [
-//     { id: "title", type: "title", data: data },
-//     { id: "overview", type: "overview", data: data },
-//     { id: "health-status-title", type: "health-status-title" },
-//     ...(data.healthStatusSections || []).map((section: any, index: number) => ({
-//       id: `health-section-${index}`,
-//       type: "health-section",
-//       data: section,
-//     })),
-//   ];
-
-//   const renderHealthBlock: BlockRenderer = (
-//     block,
-//     key,
-//     forMeasurement = false
-//   ) => {
-//     const commonProps = {
-//       key,
-//       blockId: block.id,
-//       // Don't pass setRef here - it's handled by the wrapper
-//     };
-
-//     switch (block.type) {
-//       case "title":
-//         return (
-//           <HealthReportBlocks.TitleBlock {...commonProps} data={block.data} />
-//         );
-//       case "overview":
-//         return (
-//           <HealthReportBlocks.OverviewBlock
-//             {...commonProps}
-//             data={block.data}
-//           />
-//         );
-//       case "health-status-title":
-//         return <HealthReportBlocks.HealthStatusTitleBlock {...commonProps} />;
-//       case "health-section":
-//         return (
-//           <HealthReportBlocks.HealthStatusSectionBlock
-//             {...commonProps}
-//             section={block.data}
-//           />
-//         );
-//       default:
-//         return null;
-//     }
-//   };
-
-//   const handlePagesCalculated = (
-//     pages: BlockConfig[][],
-//     totalPages: number
-//   ) => {
-//     console.log(`Health Report paginated into ${totalPages} pages`);
-//   };
-
-//   return (
-//     <PaginationWrapper
-//       data={data}
-//       createBlocks={createHealthBlocks}
-//       renderBlock={renderHealthBlock}
-//       onPagesCalculated={handlePagesCalculated}
-//     />
-//   );
-// };
-
-// // Mock data for demonstration
-// const mockHealthData = {
-//   title: "Health Status Report",
-//   healthStatusSections: [
-//     {
-//       title: "At Risk",
-//       description: "Factors that may increase health risks",
-//       count: 3,
-//       factors: ["High Cholesterol", "Family History", "Sedentary Lifestyle"],
-//     },
-//     {
-//       title: "Optimal",
-//       description: "Well-maintained health factors",
-//       count: 8,
-//       factors: ["Blood Pressure", "Weight", "Heart Rate", "Exercise"],
-//     },
-//   ],
-// };
-
-// // Demo component
-// const PaginationDemo = () => {
-//   const [showDemo, setShowDemo] = useState(false);
-
-//   return (
-//     <div className="max-w-4xl mx-auto p-4 bg-gray-50 min-h-screen">
-//       <div className="mb-6">
-//         <h1 className="text-2xl font-bold mb-4">Generic Pagination Wrapper</h1>
-//         <p className="text-gray-600 mb-4">
-//           This wrapper handles all pagination logic and can be reused across
-//           different components.
-//         </p>
-//         <button
-//           onClick={() => setShowDemo(!showDemo)}
-//           className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600 transition-colors"
-//         >
-//           {showDemo ? "Hide Demo" : "Show Demo"}
-//         </button>
-//       </div>
-
-//       {showDemo && <ExampleHealthReport data={mockHealthData} />}
-
-//       <div className="mt-8 p-6 bg-white rounded-lg shadow">
-//         <h2 className="text-lg font-semibold mb-4">Usage Instructions:</h2>
-//         <div className="space-y-4 text-sm">
-//           <div>
-//             <h3 className="font-semibold">
-//               1. Create your block configuration function:
-//             </h3>
-//             <pre className="bg-gray-100 p-2 rounded mt-2 text-xs overflow-x-auto">
-//               {`const createBlocks = (data) => [
-//   { id: "title", type: "title", data: data },
-//   { id: "overview", type: "overview", data: data },
-//   // ... more blocks
-// ];`}
-//             </pre>
-//           </div>
-
-//           <div>
-//             <h3 className="font-semibold">
-//               2. Create your block renderer function:
-//             </h3>
-//             <pre className="bg-gray-100 p-2 rounded mt-2 text-xs overflow-x-auto">
-//               {`const renderBlock = (block, key, forMeasurement) => {
-//   switch (block.type) {
-//     case "title":
-//       return <TitleBlock data={block.data} />;
-//     // ... more cases
-//   }
-// };`}
-//             </pre>
-//           </div>
-
-//           <div>
-//             <h3 className="font-semibold">3. Use the PaginationWrapper:</h3>
-//             <pre className="bg-gray-100 p-2 rounded mt-2 text-xs overflow-x-auto">
-//               {`<PaginationWrapper
-//   data={yourData}
-//   createBlocks={createBlocks}
-//   renderBlock={renderBlock}
-//   contentHeight={customHeight} // optional
-//   onPagesCalculated={handlePages} // optional
-// />`}
-//             </pre>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default PaginationDemo;

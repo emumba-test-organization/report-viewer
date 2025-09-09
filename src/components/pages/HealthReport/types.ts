@@ -16,10 +16,3 @@ export type HealthReportData = {
     count: number;
   }[];
 };
-
-export type BlockProps = {
-  data: any;
-  section?: any;
-  blockId: string;
-  setRef?: (id: string) => (element: HTMLElement | null) => void;
-};

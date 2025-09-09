@@ -1,42 +1,23 @@
 import "./App.css";
 import Preface, { type PrefaceData } from "./components/pages/Preface/Preface";
-import {
-  CurrentMedication,
-  CurrentMedicationTables,
-  type CurrentMedicationData,
-} from "./components/pages/CurrentMedication";
+import { type CurrentMedicationData } from "./components/pages/CurrentMedication";
 // import Lifestyle, { type LifestyleData } from "./components/pages/Lifestyle";
 import {
-  NutritionConsumption,
-  NutritionRecommendation,
   type NutritionRecommendationsData,
   type NutritionConsumptionData,
 } from "./components/pages/Nutrition";
-import {
-  NutritionSummary,
-  type NutritionSummaryData,
-} from "./components/pages/Nutrition";
+import { type NutritionSummaryData } from "./components/pages/Nutrition";
 import Cognition, {
   type CognitionData,
 } from "./components/pages/Cognition/Cognition";
 import { useEffect, useState } from "react";
 import "./App.css";
-import ContentWithTables from "./components/shared/ContentWithTables";
-import {
-  ActionPlan,
-  // ActionPlan,
-  // ActionPlanTables,
-  type MedicationType,
-} from "./components/pages/ActionPlan";
-import { SupplementPlan } from "./components/pages/Supplements";
-import {
-  PaginatedHealthReport,
-  type HealthReportData,
-} from "./components/pages/HealthReport";
+import { ActionPlan, type MedicationType } from "./components/pages/ActionPlan";
+// import { SupplementPlan } from "./components/pages/Supplements";
+import { type HealthReportData } from "./components/pages/HealthReport";
 import type { LifestyleData } from "./components/pages/Lifestyle";
-import PaginatedActionPlan from "./components/pages/ActionPlan/PaginatedActionPlan";
 import HealthReport from "./components/pages/HealthReport/HealthReport";
-// import PaginatedActionPlan from "./components/pages/ActionPlan/PaginatedActionPlan";
+import NutritionAndDiet from "./components/pages/Nutrition/NutritionAndDiet";
 
 type Report = {
   preface: PrefaceData;
@@ -68,35 +49,17 @@ function App() {
     <div>
       <Preface data={report?.preface} />
       <HealthReport data={report?.healthReport} />
-      {/* <PaginatedHealthReport data={report?.healthReport} /> */}
-      {/* <PaginatedActionPlanTest /> */}
-      {/* <PaginatedActionPlan data={report?.actionPlan} /> */}
       <ActionPlan data={report?.actionPlan} />
       {/* <ContentWithTables
-        data={report?.actionPlan}
-        preContentComponent={ActionPlan}
-        tablesComponent={ActionPlanTables}
-      /> */}
-      <ContentWithTables
         data={report?.currentMedication}
         preContentComponent={CurrentMedication}
         tablesComponent={CurrentMedicationTables}
       />
-      <SupplementPlan supplements={report?.actionPlan?.supplements} />
+      <SupplementPlan supplements={report?.actionPlan?.supplements} /> */}
+      <NutritionAndDiet data={report?.nutrition} />
       {/* <Lifestyle data={report?.lifestyle} /> */}
-      <div className="w-[210mm] h-[297mm] mx-auto p-6 bg-white">
-        <NutritionSummary data={report?.nutrition?.summary} />
-        <NutritionConsumption data={report?.nutrition?.consumption} />
-      </div>
-      <NutritionRecommendation data={report?.nutrition?.recommendations} />
+      {/* <NutritionRecommendation data={report?.nutrition?.recommendations} /> */}
       <Cognition data={report?.cognitiveFunction} />
-
-      <div className={`w-[210mm] h-[${297}mm] mx-auto p-6 bg-white`}>
-        another page
-      </div>
-      <div className="w-[210mm] h-[297mm] mx-auto p-6 bg-white">
-        another page 2
-      </div>
     </div>
   );
 }

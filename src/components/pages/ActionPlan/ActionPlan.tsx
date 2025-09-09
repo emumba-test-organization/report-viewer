@@ -2,6 +2,7 @@ import {
   PaginationWrapper,
   type BlockConfig,
   type BlockRenderer,
+  type TableConfig,
 } from "@/components/shared/PaginationWrapper";
 import {
   ActionPlanBlock,
@@ -46,11 +47,20 @@ const ActionPlan = ({ data }: { data: any }) => {
     }
   };
 
+  const tableConfigs: TableConfig[] = [
+    {
+      headerType: "medication-header",
+      rowTypes: ["medication-row"],
+      headerId: "medicationHeader",
+    },
+  ];
+
   return (
     <PaginationWrapper
       data={data}
       createBlocks={createHealthBlocks}
       renderBlock={renderHealthBlock}
+      tables={tableConfigs}
     />
   );
 };

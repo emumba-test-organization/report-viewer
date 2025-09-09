@@ -1,9 +1,9 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { Badge } from "@/components/ui/badge";
 import React from "react";
-import type { BlockProps } from "./types";
 import { Card, CardContent } from "@/components/ui/card";
 import { AlertTriangle, Check, Diamond, HelpCircle } from "lucide-react";
+import type { BlockProps } from "@/components/shared/PaginationWrapper";
 
 const iconMap = {
   "At Risk": AlertTriangle,

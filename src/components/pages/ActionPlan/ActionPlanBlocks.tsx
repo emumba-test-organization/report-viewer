@@ -1,8 +1,8 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { AlertCircle } from "lucide-react";
 import { forwardRef } from "react";
-import type { BlockProps } from "../HealthReport/types";
 import { Checkbox } from "@/components/ui/checkbox";
+import type { BlockProps } from "@/components/shared/PaginationWrapper";
 
 export const ActionPlanBlock = forwardRef<HTMLDivElement, BlockProps>(
   ({ data, blockId, setRef }, ref) => {
