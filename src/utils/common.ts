@@ -2,10 +2,12 @@
 const SAFETY_MARGIN = 60;
 const A4_HEIGHT_PX = 1123;
 const HEADER_HEIGHT_PX = 36;
+const PDF_MARGIN = 48; // 0.5 inch margin at bottom
 
 export function paginate(heights: number[], preContentHeightPx: number) {
+  console.log("heights", heights, preContentHeightPx)
   const effectiveMaxFirstPage =
-    A4_HEIGHT_PX - preContentHeightPx - SAFETY_MARGIN; // First page max height
+    A4_HEIGHT_PX - preContentHeightPx - PDF_MARGIN - SAFETY_MARGIN; // First page max height
   const effectiveMaxNextPages =
     A4_HEIGHT_PX - HEADER_HEIGHT_PX - SAFETY_MARGIN - 100; // Subsequent pages max height
 
@@ -28,7 +30,7 @@ export function paginate(heights: number[], preContentHeightPx: number) {
       isFirstPage = false; // Switch to next pages after the first one
     }
 
-    current.push(i);
+    current.push(h);
     sum += h;
   });
 

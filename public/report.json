@@ -152,6 +152,41 @@
         "factors": [
           "stress"
         ]
+      },
+      {
+        "title": "Optimal",
+        "count": 11,
+        "description": "These factors are within optimal range,\r\n                            unlikely to be contributing to cognitive impairment or memory loss",
+        "factors": [
+          "no inflammation",
+          "no infections",
+          "no diabetes type 2",
+          "vitamin E level",
+          "sodium level",
+          "hormonal balance",
+          "diet",
+          "non-smoker",
+          "no atrial fibrillation",
+          "no heart disease",
+          "liver function"
+        ]
+      },
+      {
+        "title": "Optimal",
+        "count": 12,
+        "description": "These factors are within optimal range,\r\n                            unlikely to be contributing to cognitive impairment or memory loss",
+        "factors": [
+          "no inflammation",
+          "no infections",
+          "no diabetes type 2",
+          "hormonal balance",
+          "diet",
+          "non-smoker",
+          "no atrial fibrillation",
+          "no heart disease",
+          "liver function",
+          "stress"
+        ]
       }
     ]
   },
@@ -167,6 +202,241 @@
       "what you eat."
     ],
     "medications": [
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "levothyroxine",
+        "dosageDetails": "25 mcg, tablet, every day",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "fT3",
+            "currentLevel": "2.3\u00a0pg/mL"
+          },
+          {
+            "action": "To lower your level of",
+            "name": "TSH",
+            "currentLevel": ""
+          },
+          {
+            "action": "(3.0\u00a0\ufffdIU/mL)",
+            "currentUsage": ""
+          }
+        ],
+        "guidance": "Take on an empty stomach, 1/2 to 1 hour before breakfast. Avoid taking supplements or\r\n                            medications that contain calcium, magnesium, or zinc (such as antacids) for 4 hours\r\n                            afterwards."
+      },
+      {
+        "medication": "lecanemab",
+        "dosageDetails": "Assess eligibility",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "Likely mild Cognitive Impairment",
+            "currentUsage": "taking donepezil"
+          }
+        ],
+        "guidance": "Discuss appropriateness & eligibility for lecanemab with your doctor."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "levothyroxine",
+        "dosageDetails": "25 mcg, tablet, every day",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "fT3",
+            "currentLevel": "2.3\u00a0pg/mL"
+          },
+          {
+            "action": "To lower your level of",
+            "name": "TSH",
+            "currentLevel": ""
+          },
+          {
+            "action": "(3.0\u00a0\ufffdIU/mL)",
+            "currentUsage": ""
+          }
+        ],
+        "guidance": "Take on an empty stomach, 1/2 to 1 hour before breakfast. Avoid taking supplements or\r\n                            medications that contain calcium, magnesium, or zinc (such as antacids) for 4 hours\r\n                            afterwards."
+      },
+      {
+        "medication": "lecanemab",
+        "dosageDetails": "Assess eligibility",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "Likely mild Cognitive Impairment",
+            "currentUsage": "taking donepezil"
+          }
+        ],
+        "guidance": "Discuss appropriateness & eligibility for lecanemab with your doctor."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "levothyroxine",
+        "dosageDetails": "25 mcg, tablet, every day",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "fT3",
+            "currentLevel": "2.3\u00a0pg/mL"
+          },
+          {
+            "action": "To lower your level of",
+            "name": "TSH",
+            "currentLevel": ""
+          },
+          {
+            "action": "(3.0\u00a0\ufffdIU/mL)",
+            "currentUsage": ""
+          }
+        ],
+        "guidance": "Take on an empty stomach, 1/2 to 1 hour before breakfast. Avoid taking supplements or\r\n                            medications that contain calcium, magnesium, or zinc (such as antacids) for 4 hours\r\n                            afterwards."
+      },
+      {
+        "medication": "lecanemab",
+        "dosageDetails": "Assess eligibility",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "Likely mild Cognitive Impairment",
+            "currentUsage": "taking donepezil"
+          }
+        ],
+        "guidance": "Discuss appropriateness & eligibility for lecanemab with your doctor."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "levothyroxine",
+        "dosageDetails": "25 mcg, tablet, every day",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "fT3",
+            "currentLevel": "2.3\u00a0pg/mL"
+          },
+          {
+            "action": "To lower your level of",
+            "name": "TSH",
+            "currentLevel": ""
+          },
+          {
+            "action": "(3.0\u00a0\ufffdIU/mL)",
+            "currentUsage": ""
+          }
+        ],
+        "guidance": "Take on an empty stomach, 1/2 to 1 hour before breakfast. Avoid taking supplements or\r\n                            medications that contain calcium, magnesium, or zinc (such as antacids) for 4 hours\r\n                            afterwards."
+      },
+      {
+        "medication": "lecanemab",
+        "dosageDetails": "Assess eligibility",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "Likely mild Cognitive Impairment",
+            "currentUsage": "taking donepezil"
+          }
+        ],
+        "guidance": "Discuss appropriateness & eligibility for lecanemab with your doctor."
+      },
+      {
+        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
+        "dosageDetails": "1 mg/1 mL, intramuscular",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "Vitamin B12",
+            "currentLevel": "139\u00a0pg/mL"
+          }
+        ],
+        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+      },
+      {
+        "medication": "levothyroxine",
+        "dosageDetails": "25 mcg, tablet, every day",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "name": "fT3",
+            "currentLevel": "2.3\u00a0pg/mL"
+          },
+          {
+            "action": "To lower your level of",
+            "name": "TSH",
+            "currentLevel": ""
+          },
+          {
+            "action": "(3.0\u00a0\ufffdIU/mL)",
+            "currentUsage": ""
+          }
+        ],
+        "guidance": "Take on an empty stomach, 1/2 to 1 hour before breakfast. Avoid taking supplements or\r\n                            medications that contain calcium, magnesium, or zinc (such as antacids) for 4 hours\r\n                            afterwards."
+      },
+      {
+        "medication": "lecanemab",
+        "dosageDetails": "Assess eligibility",
+        "alreadyTaking": "",
+        "reasoning": [
+          {
+            "action": "Likely mild Cognitive Impairment",
+            "currentUsage": "taking donepezil"
+          }
+        ],
+        "guidance": "Discuss appropriateness & eligibility for lecanemab with your doctor."
+      },
       {
         "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
         "dosageDetails": "1 mg/1 mL, intramuscular",

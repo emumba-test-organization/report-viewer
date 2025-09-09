@@ -2,7 +2,9 @@
 import { AlertTriangle, Diamond, Check, HelpCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import A4Page from "../../shared/A4Page";
+// import A4Page from "../../shared/A4Page";
+import { useEffect, useRef } from "react";
+import { usePdfLayout } from "@/utils/PdfLayoutHelper/PdfLayoutHook";
 
 export type HealthReportData = {
   title: string;
@@ -34,6 +36,23 @@ type SectionTitle = keyof typeof iconMap;
 const HealthReport = ({ data }: { data: any }) => {
   const { currentStatus, healthStatusSections } = data;
   const overview = currentStatus?.overview;
+  const containerRef = useRef<HTMLElement>(null);
+  const { analyzeLayout, overflowingElements, currentPageOccupied } =
+    usePdfLayout();
+
+  console.log("overflow: ", currentPageOccupied);
+  overflowingElements.forEach((el) => {
+    console.log(el);
+  });
+
+  const currentPageOccupiedValue = currentPageOccupied[0];
+
+  useEffect(() => {
+    console.log("currentPageHeight start start", currentPageOccupiedValue);
+    if (containerRef.current && currentPageOccupiedValue !== undefined) {
+      analyzeLayout(containerRef, 1);
+    }
+  }, [currentPageOccupiedValue]);
 
   const overviewEntries = [
     {
@@ -65,12 +84,17 @@ const HealthReport = ({ data }: { data: any }) => {
   }));
 
   return (
-    <A4Page>
+    <div
+      className="w-[210mm] screen:mx-auto screen:p-6 bg-white break-inside-auto"
+      ref={containerRef}
+    >
       {/* Current Status Title */}
-      <h2 className="text-3xl font-bold text-gray-900 mb-8">{data?.title}</h2>
+      <h2 className="text-3xl font-bold text-gray-900 mb-8 break-inside-avoid break-after-avoid">
+        {data?.title}
+      </h2>
 
       {/* Overview and Body Measurements */}
-      <div className="flex flex-wrap gap-2 text-sm">
+      <div className="flex flex-wrap gap-2 text-sm break-inside-avoid">
         {/* Overview */}
         <div>
           <h3 className="font-semibold mb-2">Overview</h3>
@@ -112,67 +136,78 @@ const HealthReport = ({ data }: { data: any }) => {
       </div>
 
       {/* Health Status */}
-      <h3 className="text-xl font-bold text-gray-900 mb-6">Health Status</h3>
+      <h3 className="text-xl font-bold text-gray-900 mb-6 break-inside-avoid">
+        Health Status
+      </h3>
 
       {/* At Risk Section */}
 
-      {healthStatusSections.map((section: any) => {
-        const key = section.title as SectionTitle;
-        const Icon = iconMap[key] ?? HelpCircle;
-        const bgMap: Record<SectionTitle, string> = {
-          "At Risk": "bg-red-600",
-          Caution: "bg-orange-500",
-          Optimal: "bg-green-600",
-          Unknown: "bg-gray-500",
-        };
-        const bgClass = bgMap[key] ?? "";
+      <div className="break-inside-auto">
+        {healthStatusSections.map((section: any, idx: number) => {
+          const key = section.title as SectionTitle;
+          const Icon = iconMap[key] ?? HelpCircle;
+          const bgMap: Record<SectionTitle, string> = {
+            "At Risk": "bg-red-600",
+            Caution: "bg-orange-500",
+            Optimal: "bg-green-600",
+            Unknown: "bg-gray-500",
+          };
+          const bgClass = bgMap[key] ?? "";
 
-        const textMap: Record<SectionTitle, string> = {
-          "At Risk": "text-red-600",
-          Caution: "text-orange-500",
-          Optimal: "text-green-600",
-          Unknown: "text-gray-500",
-        };
-        const textClass = textMap[key] ?? "";
+          const textMap: Record<SectionTitle, string> = {
+            "At Risk": "text-red-600",
+            Caution: "text-orange-500",
+            Optimal: "text-green-600",
+            Unknown: "text-gray-500",
+          };
+          const textClass = textMap[key] ?? "";
 
-        return (
-          <Card key={section.title} className="mb-4 p-0 rounded-none">
-            <CardContent className="p-0">
-              {/* Section Header */}
-              <div className={`${bgClass} text-white px-2 py-1`}>
-                <div className="flex items-center gap-3">
-                  <div
-                    className={`bg-white ${textClass} rounded px-2 py-1 font-bold text-lg`}
-                  >
-                    {String(section.count).padStart(2, "0")}
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-lg">{section.title}</h4>
-                    <p className="text-sm opacity-90">{section.description}</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Factors */}
-              <div className="p-4">
-                <div className="flex flex-wrap gap-1">
-                  {section.factors.map((factor: any, idx: any) => (
-                    <Badge
-                      key={idx}
-                      variant="outline"
-                      className="flex items-center gap-1 text-sm px-3 py-1 rounded-full"
+          return (
+            <Card
+              key={section.title}
+              className={`${
+                idx < healthStatusSections.length - 1 ? "mb-4" : ""
+              } p-0 rounded-none break-inside-avoid`}
+            >
+              <CardContent className="p-0">
+                {/* Section Header */}
+                <div className={`${bgClass} text-white px-2 py-1`}>
+                  <div className="flex items-center gap-3">
+                    <div
+                      className={`bg-white ${textClass} rounded px-2 py-1 font-bold text-lg`}
                     >
-                      <Icon className={`w-4 h-4 ${textClass}`} />
-                      {factor}
-                    </Badge>
-                  ))}
+                      {String(section.count).padStart(2, "0")}
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-lg">{section.title}</h4>
+                      <p className="text-sm opacity-90">
+                        {section.description}
+                      </p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </CardContent>
-          </Card>
-        );
-      })}
-    </A4Page>
+
+                {/* Factors */}
+                <div className="p-4">
+                  <div className="flex flex-wrap gap-1">
+                    {section.factors.map((factor: any, idx: any) => (
+                      <Badge
+                        key={idx}
+                        variant="outline"
+                        className="flex items-center gap-1 text-sm px-3 py-1 rounded-full"
+                      >
+                        <Icon className={`w-4 h-4 ${textClass}`} />
+                        {factor}
+                      </Badge>
+                    ))}
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          );
+        })}
+      </div>
+    </div>
   );
 };
 
