@@ -312,20 +312,20 @@ export const RecommendationsRow = forwardRef<HTMLDivElement, BlockProps>(
       >
         {recommendation.recommended.foodGroup && (
           <div className="grid grid-cols-2">
-            <div className="p-3 border-gray-300 border-1 border-t-0">
+            <div className="p-3 border-gray-300 border-1 border-t-0 border-l-green-600 border-r-gray-300">
               {recommendation.recommended.foodGroup}
             </div>
-            <div className="p-3 border-gray-300 border-1 border-t-0">
+            <div className="p-3 border-gray-300 border-1 border-t-0 border-r-green-600 border-l-gray-300">
               {recommendation.recommended.frequency}
             </div>
           </div>
         )}
         {recommendation.discouraged?.foodGroup && (
           <div className="grid grid-cols-2">
-            <div className="p-3 border-gray-300 border-1 border-t-0">
+            <div className="p-3 border-gray-300 border-1 border-t-0 border-l-red-800 border-r-gray-300">
               {recommendation.discouraged?.foodGroup}
             </div>
-            <div className="p-3 border-gray-300 border-1 border-t-0">
+            <div className="p-3 border-gray-300 border-1 border-t-0 border-r-red-800 border-l-gray-300">
               {recommendation.discouraged?.frequency}
             </div>
           </div>

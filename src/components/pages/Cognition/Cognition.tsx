@@ -1,21 +1,6 @@
 import Spectrum from "@/components/shared/Spectrum";
 import { Badge } from "@/components/ui/badge";
-
-export type CognitionData = {
-  title: string;
-  intro: string;
-  factors: {
-    section: string;
-    entries: {
-      description: string;
-      severity: string;
-      measurement: string;
-      currentLevel: string;
-      targetLevel: string;
-      image: string | null;
-    }[];
-  }[];
-};
+import type { CognitionData } from "./types";
 
 type Props = {
   data: CognitionData;
@@ -62,6 +47,7 @@ const functionLimits = {
 
 const Cognition = ({ data }: Props) => {
   const { title, intro, factors } = data;
+  console.log("Factors:", factors);
   return (
     <div className="w-[210mm] mx-auto p-6 bg-white">
       <div className="mb-8">

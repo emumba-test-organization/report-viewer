@@ -86,7 +86,7 @@ export const MedicationTableHeader = forwardRef<HTMLDivElement, BlockProps>(
 export const MedicationRow = forwardRef<
   HTMLDivElement,
   BlockProps<MedicationType["medications"][number]>
->(({ index, section: med, blockId, setRef }, ref) => {
+>(({ index, data: med, blockId, setRef }, ref) => {
   const isEven = index ? index % 2 === 0 : true;
   const rowClass = isEven ? "bg-white" : "bg-gray-100";
 

@@ -5,12 +5,9 @@ import { type CurrentMedicationData } from "./components/pages/CurrentMedication
 import {
   type NutritionRecommendationsData,
   type NutritionConsumptionData,
-  NutritionRecommendation,
 } from "./components/pages/Nutrition";
 import { type NutritionSummaryData } from "./components/pages/Nutrition";
-import Cognition, {
-  type CognitionData,
-} from "./components/pages/Cognition/Cognition";
+// import Cognition from "./components/pages/Cognition/Cognition";
 import { useEffect, useState } from "react";
 import "./App.css";
 import { ActionPlan, type MedicationType } from "./components/pages/ActionPlan";
@@ -21,11 +18,12 @@ import HealthReport from "./components/pages/HealthReport/HealthReport";
 import NutritionAndDiet from "./components/pages/Nutrition/NutritionAndDiet";
 // import Lifestyle from "./components/pages/Lifestyle";
 import { SupplementPlan } from "./components/pages/Supplements";
-import { Allergies } from "./components/pages/Allergies";
 import type { AllergiesData } from "./components/pages/Allergies/types";
 import type { ComorbiditiesData } from "./components/pages/Comorbidities/types";
-import { Comorbidities } from "./components/pages/Comorbidities";
 import { KnownMedicalConditions } from "./components/pages/KnownMedicalConditions";
+import type { CognitionData } from "./components/pages/Cognition";
+import CognitionPage from "./components/pages/Cognition/CognitionPage";
+// import type { CognitionData } from "./components/pages/Cognition/types";
 
 export type Report = {
   preface: PrefaceData;
@@ -68,10 +66,7 @@ function App() {
       <SupplementPlan supplements={report?.actionPlan?.supplements} />
       <NutritionAndDiet data={report?.nutrition} />
       {/* <Lifestyle data={report?.lifestyle} /> */}
-      <NutritionRecommendation data={report?.nutrition?.recommendations} />
-      <Cognition data={report?.cognitiveFunction} />
-      {/* <Allergies data={report?.allergies} />
-      <Comorbidities data={report?.reportedProblems} /> */}
+      <CognitionPage data={report?.cognitiveFunction} />
       <KnownMedicalConditions data={report} />
     </div>
   );

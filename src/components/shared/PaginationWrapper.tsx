@@ -16,6 +16,7 @@ export type BlockProps<T = any> = {
   section?: T;
   blockId: string;
   setRef?: (id: string) => (element: HTMLElement | null) => void;
+  className?: string;
 };
 
 export interface BlockRenderer {
@@ -40,15 +41,12 @@ interface PaginationWrapperProps {
 
 // Default page dimensions and measurements
 const DEFAULT_PAGE_HEIGHT = 1122.52;
-const DEFAULT_MARGIN = 40;
+// const DEFAULT_MARGIN = 40;
 const DEFAULT_HEADER_HEIGHT = 36;
-const DEFAULT_SAFETY_MARGIN = 160;
+const DEFAULT_SAFETY_MARGIN = 180;
 
 const DEFAULT_CONTENT_HEIGHT =
-  DEFAULT_PAGE_HEIGHT -
-  DEFAULT_HEADER_HEIGHT -
-  DEFAULT_SAFETY_MARGIN -
-  DEFAULT_MARGIN * 2;
+  DEFAULT_PAGE_HEIGHT - DEFAULT_HEADER_HEIGHT - DEFAULT_SAFETY_MARGIN;
 
 // Generic Pagination Wrapper Component
 export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
@@ -110,12 +108,12 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
   // Calculate pages based on measured heights
   useEffect(() => {
     if (Object.keys(heights).length === blocks.length && blocks.length > 0) {
-      console.log("Measured Heights:", heights);
       const calculatedPages: BlockConfig[][] = [];
       let currentPage: BlockConfig[] = [];
       let currentPageHeight = 0;
 
-      blocks.forEach((block) => {
+      for (let i = 0; i < blocks.length; i++) {
+        const block = blocks[i];
         const blockHeight = heights[block.id] || 0;
         const tableConfig = findTableForBlock(block.type);
 
@@ -150,13 +148,29 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
             currentPage.push(headerBlock);
             currentPageHeight += headerHeight;
           } else if (needsHeader) {
-            // Add header to current page if needed
-            const headerBlock = createHeaderBlock(
-              tableConfig,
-              calculatedPages.length
-            );
-            currentPage.push(headerBlock);
-            currentPageHeight += headerHeight;
+            // Check if header + first row can fit on current page
+            // If not, move both to next page to avoid orphaned header
+            if (currentPageHeight + totalHeightNeeded > contentHeight) {
+              // Start new page with header + row
+              calculatedPages.push([...currentPage]);
+              currentPage = [];
+              currentPageHeight = 0;
+
+              const headerBlock = createHeaderBlock(
+                tableConfig,
+                calculatedPages.length
+              );
+              currentPage.push(headerBlock);
+              currentPageHeight += headerHeight;
+            } else {
+              // Add header to current page
+              const headerBlock = createHeaderBlock(
+                tableConfig,
+                calculatedPages.length
+              );
+              currentPage.push(headerBlock);
+              currentPageHeight += headerHeight;
+            }
           }
 
           currentPage.push(block);
@@ -175,7 +189,7 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
             currentPageHeight += blockHeight;
           }
         }
-      });
+      }
 
       // Add the last page if it has content
       if (currentPage.length > 0) {
@@ -183,14 +197,13 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
       }
 
       // Post-process pages to ensure all table sections have proper headers
+      // and remove any orphaned headers
       const finalPages = calculatedPages.map((page, pageIndex) => {
-        const processedPage = [...page];
+        let processedPage = [...page];
 
         // For each table configuration, check if this page needs a header
         tables.forEach((tableConfig) => {
           if (pageNeedsTableHeader(processedPage, tableConfig)) {
-            // const headerHeight = heights[tableConfig.headerId] || 0;
-
             // Find the first row of this table type
             const firstRowIndex = processedPage.findIndex((block) =>
               tableConfig.rowTypes.includes(block.type)
@@ -204,6 +217,27 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
           }
         });
 
+        // Remove orphaned headers (headers without any following rows)
+        processedPage = processedPage.filter((block, index) => {
+          const tableConfig = findTableForBlock(block.type);
+
+          // If this is a header block
+          if (tableConfig && block.type === tableConfig.headerType) {
+            // Check if there are any rows of this table type after this header on this page
+            const hasRowsAfter = processedPage
+              .slice(index + 1)
+              .some((laterBlock) =>
+                tableConfig.rowTypes.includes(laterBlock.type)
+              );
+
+            // Keep the header only if it has rows after it
+            return hasRowsAfter;
+          }
+
+          // Keep all non-header blocks
+          return true;
+        });
+
         return processedPage;
       });
 
@@ -213,7 +247,11 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [heights, blocks, contentHeight]);
 
-  const renderBlockWithProps = (block: BlockConfig, key: string | number, index?: number) => {
+  const renderBlockWithProps = (
+    block: BlockConfig,
+    key: string | number,
+    index?: number
+  ) => {
     return renderBlock(block, key, index);
   };
 
@@ -238,7 +276,11 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
           {pages.map((pageContent, pageIndex) => (
             <A4Page key={pageIndex}>
               {pageContent.map((block, blockIndex) =>
-                renderBlockWithProps(block, `${pageIndex}-${blockIndex}`, blockIndex)
+                renderBlockWithProps(
+                  block,
+                  `${pageIndex}-${blockIndex}`,
+                  blockIndex
+                )
               )}
             </A4Page>
           ))}

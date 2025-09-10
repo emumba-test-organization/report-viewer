@@ -46,7 +46,6 @@ const PaginatedActionPlan = ({ data }: { data: any }) => {
 
   useEffect(() => {
     if (Object.keys(heights).length === blocks.length && blocks.length > 0) {
-      console.log("Measured Heights:", heights);
       const calculatedPages = [];
       let currentPage: any[] = [];
       let currentPageHeight = 0;
@@ -168,13 +167,7 @@ const PaginatedActionPlan = ({ data }: { data: any }) => {
       case "medication-header":
         return <MedicationTableHeader data={undefined} {...commonProps} />;
       case "medication-row":
-        return (
-          <MedicationRow
-            data={block.data}
-            {...commonProps}
-            section={block.data}
-          />
-        );
+        return <MedicationRow data={block.data} {...commonProps} />;
       default:
         return null;
     }
