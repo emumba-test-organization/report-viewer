@@ -10,15 +10,16 @@ export interface BlockConfig {
   data?: any;
 }
 
-export type BlockProps = {
-  data: any;
-  section?: any;
+export type BlockProps<T = any> = {
+  index?: number;
+  data: T;
+  section?: T;
   blockId: string;
   setRef?: (id: string) => (element: HTMLElement | null) => void;
 };
 
 export interface BlockRenderer {
-  (block: BlockConfig, key: string | number): ReactNode;
+  (block: BlockConfig, key: string | number, index?: number): ReactNode;
 }
 
 // Types for table configuration
@@ -212,8 +213,8 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [heights, blocks, contentHeight]);
 
-  const renderBlockWithProps = (block: BlockConfig, key: string | number) => {
-    return renderBlock(block, key);
+  const renderBlockWithProps = (block: BlockConfig, key: string | number, index?: number) => {
+    return renderBlock(block, key, index);
   };
 
   return (
@@ -237,7 +238,7 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
           {pages.map((pageContent, pageIndex) => (
             <A4Page key={pageIndex}>
               {pageContent.map((block, blockIndex) =>
-                renderBlockWithProps(block, `${pageIndex}-${blockIndex}`)
+                renderBlockWithProps(block, `${pageIndex}-${blockIndex}`, blockIndex)
               )}
             </A4Page>
           ))}

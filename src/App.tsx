@@ -19,6 +19,8 @@ import { type HealthReportData } from "./components/pages/HealthReport";
 import type { LifestyleData } from "./components/pages/Lifestyle";
 import HealthReport from "./components/pages/HealthReport/HealthReport";
 import NutritionAndDiet from "./components/pages/Nutrition/NutritionAndDiet";
+// import Lifestyle from "./components/pages/Lifestyle";
+import { SupplementPlan } from "./components/pages/Supplements";
 
 type Report = {
   preface: PrefaceData;
@@ -55,8 +57,8 @@ function App() {
         data={report?.currentMedication}
         preContentComponent={CurrentMedication}
         tablesComponent={CurrentMedicationTables}
-      />
-      <SupplementPlan supplements={report?.actionPlan?.supplements} /> */}
+      /> */}
+      <SupplementPlan supplements={report?.actionPlan?.supplements} />
       <NutritionAndDiet data={report?.nutrition} />
       {/* <Lifestyle data={report?.lifestyle} /> */}
       <NutritionRecommendation data={report?.nutrition?.recommendations} />

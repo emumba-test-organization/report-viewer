@@ -7,13 +7,20 @@ export type MedicationType = {
   medications: {
     medication: string;
     dosageDetails: string;
-    reasoning: {
-      action: string;
-      name?: string;
-      currentValue?: string;
-    }[];
+    reasoning: Action[];
     guidance: string;
     alreadyTaking?: string;
   }[];
   supplements: SupplementData;
+};
+
+type Action = {
+  action: string;
+  reasons: Reason[];
+};
+type Reason = {
+  name?: string;
+  action?: string;
+  currentValue?: string;
+  currentLevel?: string;
 };

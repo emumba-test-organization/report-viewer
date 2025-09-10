@@ -22,7 +22,7 @@ const ActionPlan = ({ data }: { data: any }) => {
     })),
   ];
 
-  const renderHealthBlock: BlockRenderer = (block, key) => {
+  const renderHealthBlock: BlockRenderer = (block, key, index) => {
     const commonProps = {
       key,
       blockId: block.id,
@@ -37,7 +37,8 @@ const ActionPlan = ({ data }: { data: any }) => {
       case "medication-row":
         return (
           <MedicationRow
-            data={undefined}
+            index={index}
+            data={block.data}
             {...commonProps}
             section={block.data}
           />

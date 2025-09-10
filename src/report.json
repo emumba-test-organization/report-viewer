@@ -174,8 +174,12 @@
         "reasoning": [
           {
             "action": "To raise your level of",
-            "name": "Vitamin B12",
-            "currentLevel": "139\u00a0pg/mL"
+            "reasons": [
+              {
+                "name": "Vitamin B12",
+                "currentLevel": "139\u00a0pg/mL"
+              }
+            ]
           }
         ],
         "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
@@ -187,17 +191,21 @@
         "reasoning": [
           {
             "action": "To raise your level of",
-            "name": "fT3",
-            "currentLevel": "2.3\u00a0pg/mL"
+            "reasons": [
+              {
+                "name": "fT3",
+                "currentLevel": "2.3\u00a0pg/mL"
+              }
+            ]
           },
           {
             "action": "To lower your level of",
-            "name": "TSH",
-            "currentLevel": ""
-          },
-          {
-            "action": "(3.0\u00a0\ufffdIU/mL)",
-            "currentUsage": ""
+            "reasons": [
+              {
+                "name": "TSH",
+                "currentLevel": "3.0\u00a0\ufffdIU/mL"
+              }
+            ]
           }
         ],
         "guidance": "Take on an empty stomach, 1/2 to 1 hour before breakfast. Avoid taking supplements or\r\n                            medications that contain calcium, magnesium, or zinc (such as antacids) for 4 hours\r\n                            afterwards."
@@ -208,8 +216,8 @@
         "alreadyTaking": "",
         "reasoning": [
           {
-            "action": "Likely mild Cognitive Impairment",
-            "currentUsage": "taking donepezil"
+            "action": "Likely mild Cognitive Impairment (taking donepezil).",
+            "reasons": []
           }
         ],
         "guidance": "Discuss appropriateness & eligibility for lecanemab with your doctor."
@@ -227,82 +235,92 @@
         {
           "medication": "vitamin D3/K2 cholecalciferol;menatetrenone",
           "dosageDetails": "4000 IU/600 mcg, 1 capsule, every day",
-          "reasoning": {
-            "action": "To raise your level of",
-            "entries": [
-              {
-                "name": "Vitamin D",
-                "currentLevel": "24.8\u00a0ng/mL"
-              },
-              {
-                "action": "Vitamin K2 enhances absorption of\r\n                                cholecalciferol.",
-                "currentUsage": ""
-              }
-            ]
-          },
+          "reasoning": [
+            {
+              "action": "To raise your level of",
+              "reasons": [
+                {
+                  "name": "Vitamin D",
+                  "currentLevel": "24.8\u00a0ng/mL"
+                }
+              ]
+            },
+            {
+              "action": "Vitamin K2 enhances absorption of\r\n                                cholecalciferol.",
+              "reasons": []
+            }
+          ],
           "guidance": "Best taken at the largest meal of the day, and along with calcium and magnesium (if\r\n                                those are among current medications)."
         },
         {
           "medication": "N-acetylcysteine (NAC)",
           "dosageDetails": "500 mg, 1 capsule, every day",
-          "reasoning": {
-            "action": "To lower your levels of",
-            "entries": [
-              {
-                "name": "Homocysteine",
-                "currentLevel": "13\u00a0\ufffdmol/L"
-              },
-              {
-                "name": "Glucose",
-                "currentLevel": "96\u00a0mg/dL"
-              },
-              {
-                "name": "Insulin",
-                "currentLevel": "15.7\u00a0\ufffdIU/mL"
-              }
-            ]
-          },
+          "reasoning": [
+            {
+              "action": "To lower your levels of",
+              "reasons": [
+                {
+                  "name": "Homocysteine",
+                  "currentLevel": "13\u00a0\ufffdmol/L"
+                },
+                {
+                  "name": "Glucose",
+                  "currentLevel": "96\u00a0mg/dL"
+                },
+                {
+                  "name": "Insulin",
+                  "currentLevel": "15.7\u00a0\ufffdIU/mL"
+                }
+              ]
+            }
+          ],
           "guidance": "Best taken either 30 minutes before, or two hours after, eating to avoid competing with\r\n                                protein for absorption."
         },
         {
           "medication": "resveratrol",
           "dosageDetails": "100 mg, 1 capsule, twice daily",
-          "reasoning": {
-            "action": "ApoE gene indicates increased risk of Alzheimer's disease.",
-            "entries": []
-          },
+          "reasoning": [
+            {
+              "action": "ApoE gene indicates increased risk of Alzheimer's disease.",
+              "reasons": []
+            }
+          ],
           "guidance": "Best taken with a fatty meal, to increase absorption."
         },
         {
           "medication": "alpha-lipoic acid (ALA)",
           "dosageDetails": "500 mg, 1 tablet, every day",
-          "reasoning": {
-            "action": "To lower your levels of",
-            "entries": [
-              {
-                "name": "Glucose",
-                "currentLevel": "96\u00a0mg/dL"
-              },
-              {
-                "name": "Insulin",
-                "currentLevel": "15.7\u00a0\ufffdIU/mL"
-              }
-            ]
-          },
+          "reasoning": [
+            {
+              "action": "To lower your levels of",
+              "reasons": [
+                {
+                  "name": "Glucose",
+                  "currentLevel": "96\u00a0mg/dL"
+                },
+                {
+                  "name": "Insulin",
+                  "currentLevel": "15.7\u00a0\ufffdIU/mL"
+                }
+              ]
+            }
+          ],
           "guidance": "Best taken on an empty stomach: 1 hour before or 2 hours after eating."
         },
         {
           "medication": "berberine",
           "dosageDetails": "500 mg, twice daily",
-          "reasoning": {
-            "action": "To lower your level of",
-            "entries": [
-              {
-                "name": "Glucose",
-                "currentLevel": "96\u00a0mg/dL"
-              }
-            ]
-          },
+          "reasoning": [
+            {
+              "action": "To lower your level of",
+              "reasons": [
+                {
+                  "name": "Glucose",
+                  "currentLevel": "96\u00a0mg/dL"
+                }
+              ]
+            }
+          ],
           "guidance": "Ramp up slowly: 1 capsule/day the 1st week; then 2 capsules/day."
         }
       ]
