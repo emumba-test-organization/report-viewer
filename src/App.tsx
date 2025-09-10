@@ -21,8 +21,13 @@ import HealthReport from "./components/pages/HealthReport/HealthReport";
 import NutritionAndDiet from "./components/pages/Nutrition/NutritionAndDiet";
 // import Lifestyle from "./components/pages/Lifestyle";
 import { SupplementPlan } from "./components/pages/Supplements";
+import { Allergies } from "./components/pages/Allergies";
+import type { AllergiesData } from "./components/pages/Allergies/types";
+import type { ComorbiditiesData } from "./components/pages/Comorbidities/types";
+import { Comorbidities } from "./components/pages/Comorbidities";
+import { KnownMedicalConditions } from "./components/pages/KnownMedicalConditions";
 
-type Report = {
+export type Report = {
   preface: PrefaceData;
   healthReport: HealthReportData;
   actionPlan: MedicationType;
@@ -34,6 +39,8 @@ type Report = {
   };
   currentMedication: CurrentMedicationData;
   cognitiveFunction: CognitionData;
+  allergies: AllergiesData;
+  reportedProblems: ComorbiditiesData;
 };
 
 function App() {
@@ -63,6 +70,9 @@ function App() {
       {/* <Lifestyle data={report?.lifestyle} /> */}
       <NutritionRecommendation data={report?.nutrition?.recommendations} />
       <Cognition data={report?.cognitiveFunction} />
+      {/* <Allergies data={report?.allergies} />
+      <Comorbidities data={report?.reportedProblems} /> */}
+      <KnownMedicalConditions data={report} />
     </div>
   );
 }

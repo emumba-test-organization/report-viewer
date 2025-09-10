@@ -809,5 +809,58 @@
         ]
       }
     ]
+  },
+  "allergies": {
+    "title": "Known Allergies",
+    "description": "People can have allergies to what they take in (like certain\r\n                                                    medications or foods)\r\n                                                    and to things around them (like pets, pollen, or mold).\r\n                                                    These are the allergies you told us about, if any.\r\n                                                    Let us know if there's anything you'd like to add, change, or\r\n                                                    remove.",
+    "headers": [
+      "Type",
+      "Allergen",
+      "Reaction or Symptom"
+    ],
+    "rows": [
+      {
+        "type": "Medication",
+        "allergen": "codeine",
+        "reaction": ""
+      },
+      {
+        "type": "Medication",
+        "allergen": "fluorometholone",
+        "reaction": ""
+      },
+      {
+        "type": "Non-medication",
+        "allergen": "pollen",
+        "reaction": "runny nose"
+      },
+      {
+        "type": "Non-medication",
+        "allergen": "mold",
+        "reaction": "coughing"
+      }
+    ]
+  },
+  "reportedProblems": {
+    "title": "Current Comorbidities",
+    "description": "Active medical conditions are known as comorbidities. These include\r\n                                                    any diseases, ongoing infections,\r\n                                                    problems that cause you pain, and anything you consider a problem\r\n                                                    you'd discuss with your\r\n                                                    doctor. Let your doctor know if there's anything you'd like to\r\n                                                    add, change, or remove.",
+    "headers": [
+      "Comorbidity",
+      "Date Diagnosed"
+    ],
+    "rows": [
+      {
+        "comorbidity": "Wearing Hearing Aids",
+        "dateDiagnosed": "3/24/2015"
+      },
+      {
+        "comorbidity": "Occasional Abdominal Pain",
+        "dateDiagnosed": "2/15/2022"
+      },
+      {
+        "comorbidity": "Lower Back Pain",
+        "dateDiagnosed": "11/01/2020"
+      }
+    ]
   }
 }

@@ -170,7 +170,7 @@ const PaginatedActionPlan = ({ data }: { data: any }) => {
       case "medication-row":
         return (
           <MedicationRow
-            data={undefined}
+            data={block.data}
             {...commonProps}
             section={block.data}
           />

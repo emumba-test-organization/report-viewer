@@ -1,0 +1,1 @@
+export { default as Allergies } from "./Allergies";

@@ -1,0 +1,1 @@
+export { default as Comorbidities } from "./Comorbidities";
