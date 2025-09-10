@@ -1,12 +1,17 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import type { BlockProps } from "@/components/shared/PaginationWrapper";
 import { Badge } from "@/components/ui/badge";
-import { CircleAlertIcon, LightbulbIcon } from "lucide-react";
+import {
+  CircleAlertIcon,
+  CircleCheckIcon,
+  CircleXIcon,
+  LightbulbIcon,
+} from "lucide-react";
 import { forwardRef } from "react";
 
 export const NutritionTitleBlock = forwardRef<HTMLDivElement, BlockProps>(
   ({ data, blockId, setRef }, ref) => (
-    <div ref={setRef ? setRef(blockId) : ref} className="title-block">
+    <div ref={setRef ? setRef(blockId) : ref}>
       <h2 className="text-3xl font-bold text-gray-900 mb-8">
         {data?.summary?.title}
       </h2>
@@ -18,7 +23,7 @@ export const DietaryConsumptionTitleBlock = forwardRef<
   HTMLDivElement,
   BlockProps
 >(({ data, blockId, setRef }, ref) => (
-  <div ref={setRef ? setRef(blockId) : ref} className="title-block">
+  <div ref={setRef ? setRef(blockId) : ref}>
     <h2 className="text-3xl font-bold text-gray-900 mb-8 mt-5">
       {data?.consumption?.title}
     </h2>
@@ -185,6 +190,146 @@ export const DeficienciesRow = forwardRef<HTMLDivElement, BlockProps>(
             </p>
           )}
         </div>
+      </div>
+    );
+  }
+);
+
+export const BalancedNutritionTitleBlock = forwardRef<
+  HTMLDivElement,
+  BlockProps
+>(({ data, blockId, setRef }, ref) => {
+  console.log("BalancedNutritionTitleBlock data:", data);
+  return (
+    <div ref={setRef ? setRef(blockId) : ref}>
+      <h2 className="text-xl font-bold text-gray-900 mb-4 border-b-2 border-gray-300 pb-2 mt-5">
+        {data.recommendations.header || "Nutrition & Diet"}
+      </h2>
+    </div>
+  );
+});
+
+export const BalancedNutritionIntroBlock = forwardRef<
+  HTMLDivElement,
+  BlockProps
+>(({ data, blockId, setRef }, ref) => (
+  <div ref={setRef ? setRef(blockId) : ref}>
+    <h2 className="text-xl font-bold text-gray-900 mb-4 border-b-2 border-gray-300 pb-2 mt-5">
+      {data.recommendations.header || "Nutrition & Diet"}
+    </h2>
+    <p className="text-xs text-gray-700 mb-2">
+      {data.recommendations.header_intro || ""}
+    </p>
+  </div>
+));
+
+export const MindDietIntroBlock = forwardRef<HTMLDivElement, BlockProps>(
+  ({ data, blockId, setRef }, ref) => (
+    <div ref={setRef ? setRef(blockId) : ref}>
+      <h3 className="text-md font-semibold text-gray-900 mb-2">
+        {data.mind_diet_title || "MIND Diet: Recommendations and Progress"}
+      </h3>
+      <p className="text-xs text-gray-700 mb-5">
+        {data.recommendations.mind_diet_intro || ""}
+      </p>
+    </div>
+  )
+);
+
+export const RecommendationsHeaderBlock = forwardRef<
+  HTMLDivElement,
+  BlockProps
+>(({ data, blockId, setRef }, ref) => (
+  <div ref={setRef ? setRef(blockId) : ref} className="grid grid-cols-2 gap-4">
+    <div className="bg-green-600 flex flex-col justify-between">
+      <div className="grid grid-cols-[22px_1fr] gap-x-3 p-3">
+        <CircleCheckIcon
+          strokeWidth={2.5}
+          size={22}
+          color="white"
+          className=""
+        />
+        <p className="text-white font-bold leading-none">Recommended</p>
+        <p className="text-white text-sm col-start-2">
+          {data?.recommendations?.recommended_instructions}
+        </p>
+      </div>
+      <div className="grid grid-cols-2 bg-gray-300 font-bold text-xs text-gray-900">
+        {data?.recommendations?.recommended_diet?.headers?.map(
+          (header: any, index: any) => {
+            return (
+              <div
+                key={index}
+                className={`p-3 ${
+                  index === 0
+                    ? "border-l-green-600 border-r-gray-400 border-x-1"
+                    : "border-r-green-600 border-r-1"
+                }`}
+              >
+                {header}
+              </div>
+            );
+          }
+        )}
+      </div>
+    </div>
+    <div className="bg-red-800 flex flex-col justify-between">
+      <div className="grid grid-cols-[22px_1fr] gap-x-3 p-3">
+        <CircleXIcon strokeWidth={2.5} size={22} color="white" className="" />
+        <p className="text-white font-bold leading-none">Not Recommended</p>
+        <p className="text-white text-sm col-start-2">
+          {data?.recommendations?.discouraged_instructions || ""}
+        </p>
+      </div>
+      <div className="grid grid-cols-2 bg-gray-300 font-bold text-xs text-gray-900">
+        {data?.recommendations?.discouraged_diet?.headers?.map(
+          (header: any, index: any) => {
+            return (
+              <div
+                key={index}
+                className={`p-3 ${
+                  index === 0
+                    ? "border-l-red-600 border-r-gray-400 border-x-1"
+                    : "border-r-red-600 border-r-1"
+                }`}
+              >
+                {header}
+              </div>
+            );
+          }
+        )}
+      </div>
+    </div>
+  </div>
+));
+
+export const RecommendationsRow = forwardRef<HTMLDivElement, BlockProps>(
+  ({ data: recommendation, blockId, setRef }, ref) => {
+    return (
+      <div
+        ref={setRef ? setRef(blockId) : ref}
+        className="grid grid-cols-2 gap-4 text-xs"
+      >
+        {recommendation.recommended.foodGroup && (
+          <div className="grid grid-cols-2">
+            <div className="p-3 border-gray-300 border-1 border-t-0">
+              {recommendation.recommended.foodGroup}
+            </div>
+            <div className="p-3 border-gray-300 border-1 border-t-0">
+              {recommendation.recommended.frequency}
+            </div>
+          </div>
+        )}
+        {recommendation.discouraged?.foodGroup && (
+          <div className="grid grid-cols-2">
+            <div className="p-3 border-gray-300 border-1 border-t-0">
+              {recommendation.discouraged?.foodGroup}
+            </div>
+            <div className="p-3 border-gray-300 border-1 border-t-0">
+              {recommendation.discouraged?.frequency}
+            </div>
+          </div>
+        )}
       </div>
     );
   }

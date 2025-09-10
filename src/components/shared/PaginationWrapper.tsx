@@ -26,6 +26,7 @@ export interface TableConfig {
   headerType: string; // The block type for the header (e.g., 'medication-header')
   rowTypes: string[]; // Array of block types that belong to this table (e.g., ['medication-row'])
   headerId: string; // Base ID for the header block
+  headerData?: any; // Optional data for the header block
 }
 
 interface PaginationWrapperProps {
@@ -101,7 +102,7 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
     return {
       id: `${tableConfig.headerId}-page-${pageIndex}`,
       type: tableConfig.headerType,
-      data: undefined,
+      data: tableConfig?.headerData || undefined,
     };
   };
 

@@ -5,6 +5,7 @@ import { type CurrentMedicationData } from "./components/pages/CurrentMedication
 import {
   type NutritionRecommendationsData,
   type NutritionConsumptionData,
+  NutritionRecommendation,
 } from "./components/pages/Nutrition";
 import { type NutritionSummaryData } from "./components/pages/Nutrition";
 import Cognition, {
@@ -58,7 +59,7 @@ function App() {
       <SupplementPlan supplements={report?.actionPlan?.supplements} /> */}
       <NutritionAndDiet data={report?.nutrition} />
       {/* <Lifestyle data={report?.lifestyle} /> */}
-      {/* <NutritionRecommendation data={report?.nutrition?.recommendations} /> */}
+      <NutritionRecommendation data={report?.nutrition?.recommendations} />
       <Cognition data={report?.cognitiveFunction} />
     </div>
   );

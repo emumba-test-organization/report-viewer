@@ -5,6 +5,7 @@ import {
   type TableConfig,
 } from "@/components/shared/PaginationWrapper";
 import {
+  BalancedNutritionIntroBlock,
   DeficienciesHeader,
   DeficienciesRow,
   DietaryConsumptionHeaderBlock,
@@ -12,11 +13,38 @@ import {
   DietaryConsumptionRow,
   DietaryConsumptionTitleBlock,
   DietaryWarningBlock,
+  MindDietIntroBlock,
   NutritionTitleBlock,
+  RecommendationsHeaderBlock,
+  RecommendationsRow,
 } from "./NutritionBlocks";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const NutritionAndDiet = ({ data }: { data: any }) => {
+  const createRecommendationBlocks = (data: any): BlockConfig[] => {
+    const blocks: BlockConfig[] = [];
+
+    // Find the maximum number of entries to handle different array lengths
+    const maxEntries = Math.max(
+      data.recommendations.recommended_diet.entries.length,
+      data.recommendations.discouraged_diet.entries.length
+    );
+
+    // Create combined row blocks
+    for (let i = 0; i < maxEntries; i++) {
+      blocks.push({
+        id: `diet-recommendation-row-${i}`,
+        type: "diet-recommendation-row",
+        data: {
+          recommended: data.recommendations.recommended_diet.entries[i] || null,
+          discouraged: data.recommendations.discouraged_diet.entries[i] || null,
+        },
+      });
+    }
+
+    return blocks;
+  };
+
   const createNutritionBlocks = (data: any): BlockConfig[] => [
     { id: "nutritionTitle", type: "nutritionTitle", data: data },
     { id: "dietaryWarning", type: "dietaryWarning", data: data },
@@ -42,6 +70,15 @@ const NutritionAndDiet = ({ data }: { data: any }) => {
       type: "dietary-consumption-row",
       data: section,
     })),
+    {
+      id: "balancedNutritionIntro",
+      type: "balancedNutritionIntro",
+      data: data,
+    },
+    // { id: "mindDietTitle", type: "mindDietTitle", data: data },
+    { id: "mindDietIntro", type: "mindDietIntro", data: data },
+    { id: "recommendationsHeader", type: "recommendations-header", data: data },
+    ...createRecommendationBlocks(data),
   ];
   const renderNutritionBlock: BlockRenderer = (block, key) => {
     const commonProps = {
@@ -85,6 +122,18 @@ const NutritionAndDiet = ({ data }: { data: any }) => {
             section={block.data}
           />
         );
+      case "balancedNutritionIntro":
+        return (
+          <BalancedNutritionIntroBlock data={block.data} {...commonProps} />
+        );
+      case "mindDietIntro":
+        return <MindDietIntroBlock data={block.data} {...commonProps} />;
+      case "recommendations-header":
+        return (
+          <RecommendationsHeaderBlock data={block.data} {...commonProps} />
+        );
+      case "diet-recommendation-row":
+        return <RecommendationsRow data={block.data} {...commonProps} />;
       default:
         return null;
     }
@@ -96,11 +145,16 @@ const NutritionAndDiet = ({ data }: { data: any }) => {
       rowTypes: ["deficiency-row"],
       headerId: "deficiencyHeader",
     },
-    // You can add more table configurations here:
     {
       headerType: "dietary-consumption-header",
       rowTypes: ["dietary-consumption-row"],
       headerId: "dietaryConsumptionHeader",
+    },
+    {
+      headerType: "recommendations-header",
+      rowTypes: ["diet-recommendation-row"],
+      headerId: "recommendationsHeader",
+      headerData: data,
     },
   ];
 
