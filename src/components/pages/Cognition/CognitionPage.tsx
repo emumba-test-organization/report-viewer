@@ -101,8 +101,6 @@ const CognitionPage = ({ data }: { data: CognitionData }) => {
       });
     });
 
-    console.log("Generated blocks:", blocks);
-
     return blocks;
   };
 

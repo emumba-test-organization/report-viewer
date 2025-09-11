@@ -233,50 +233,6 @@
       ],
       "meds": [
         {
-          "medication": "vitamin D3/K2 cholecalciferol;menatetrenone",
-          "dosageDetails": "4000 IU/600 mcg, 1 capsule, every day",
-          "reasoning": [
-            {
-              "action": "To raise your level of",
-              "reasons": [
-                {
-                  "name": "Vitamin D",
-                  "currentLevel": "24.8\u00a0ng/mL"
-                }
-              ]
-            },
-            {
-              "action": "Vitamin K2 enhances absorption of\r\n                                cholecalciferol.",
-              "reasons": []
-            }
-          ],
-          "guidance": "Best taken at the largest meal of the day, and along with calcium and magnesium (if\r\n                                those are among current medications)."
-        },
-        {
-          "medication": "N-acetylcysteine (NAC)",
-          "dosageDetails": "500 mg, 1 capsule, every day",
-          "reasoning": [
-            {
-              "action": "To lower your levels of",
-              "reasons": [
-                {
-                  "name": "Homocysteine",
-                  "currentLevel": "13\u00a0\ufffdmol/L"
-                },
-                {
-                  "name": "Glucose",
-                  "currentLevel": "96\u00a0mg/dL"
-                },
-                {
-                  "name": "Insulin",
-                  "currentLevel": "15.7\u00a0\ufffdIU/mL"
-                }
-              ]
-            }
-          ],
-          "guidance": "Best taken either 30 minutes before, or two hours after, eating to avoid competing with\r\n                                protein for absorption."
-        },
-        {
           "medication": "resveratrol",
           "dosageDetails": "100 mg, 1 capsule, twice daily",
           "reasoning": [

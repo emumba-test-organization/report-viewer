@@ -7,23 +7,19 @@ import {
   type NutritionConsumptionData,
 } from "./components/pages/Nutrition";
 import { type NutritionSummaryData } from "./components/pages/Nutrition";
-// import Cognition from "./components/pages/Cognition/Cognition";
 import { useEffect, useState } from "react";
 import "./App.css";
 import { ActionPlan, type MedicationType } from "./components/pages/ActionPlan";
-// import { SupplementPlan } from "./components/pages/Supplements";
 import { type HealthReportData } from "./components/pages/HealthReport";
 import type { LifestyleData } from "./components/pages/Lifestyle";
 import HealthReport from "./components/pages/HealthReport/HealthReport";
 import NutritionAndDiet from "./components/pages/Nutrition/NutritionAndDiet";
-// import Lifestyle from "./components/pages/Lifestyle";
 import { SupplementPlan } from "./components/pages/Supplements";
 import type { AllergiesData } from "./components/pages/Allergies/types";
 import type { ComorbiditiesData } from "./components/pages/Comorbidities/types";
 import { KnownMedicalConditions } from "./components/pages/KnownMedicalConditions";
 import type { CognitionData } from "./components/pages/Cognition";
 import CognitionPage from "./components/pages/Cognition/CognitionPage";
-// import type { CognitionData } from "./components/pages/Cognition/types";
 
 export type Report = {
   preface: PrefaceData;
@@ -58,12 +54,7 @@ function App() {
       <Preface data={report?.preface} />
       <HealthReport data={report?.healthReport} />
       <ActionPlan data={report?.actionPlan} />
-      {/* <ContentWithTables
-        data={report?.currentMedication}
-        preContentComponent={CurrentMedication}
-        tablesComponent={CurrentMedicationTables}
-      /> */}
-      <SupplementPlan supplements={report?.actionPlan?.supplements} />
+      <SupplementPlan data={report?.actionPlan?.supplements} />
       <NutritionAndDiet data={report?.nutrition} />
       {/* <Lifestyle data={report?.lifestyle} /> */}
       <CognitionPage data={report?.cognitiveFunction} />

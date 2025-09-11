@@ -29,6 +29,7 @@ export const DietaryConsumptionTitleBlock = forwardRef<
     </h2>
   </div>
 ));
+
 export const DietaryConsumptionInsightBlock = forwardRef<
   HTMLDivElement,
   BlockProps
