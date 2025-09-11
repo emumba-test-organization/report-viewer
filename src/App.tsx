@@ -1,7 +1,7 @@
 import "./App.css";
 import Preface, { type PrefaceData } from "./components/pages/Preface/Preface";
 import { type CurrentMedicationData } from "./components/pages/CurrentMedication";
-// import Lifestyle, { type LifestyleData } from "./components/pages/Lifestyle";
+import Lifestyle, { type LifestyleData } from "./components/pages/Lifestyle";
 import {
   type NutritionRecommendationsData,
   type NutritionConsumptionData,
@@ -11,7 +11,6 @@ import { useEffect, useState } from "react";
 import "./App.css";
 import { ActionPlan, type MedicationType } from "./components/pages/ActionPlan";
 import { type HealthReportData } from "./components/pages/HealthReport";
-import type { LifestyleData } from "./components/pages/Lifestyle";
 import HealthReport from "./components/pages/HealthReport/HealthReport";
 import NutritionAndDiet from "./components/pages/Nutrition/NutritionAndDiet";
 import { SupplementPlan } from "./components/pages/Supplements";
@@ -56,7 +55,7 @@ function App() {
       <ActionPlan data={report?.actionPlan} />
       <SupplementPlan data={report?.actionPlan?.supplements} />
       <NutritionAndDiet data={report?.nutrition} />
-      {/* <Lifestyle data={report?.lifestyle} /> */}
+      <Lifestyle data={report?.lifestyle} />
       <CognitionPage data={report?.cognitiveFunction} />
       <KnownMedicalConditions data={report} />
     </div>
