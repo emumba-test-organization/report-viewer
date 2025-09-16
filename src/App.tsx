@@ -8,7 +8,6 @@ import {
 } from "./components/pages/Nutrition";
 import { type NutritionSummaryData } from "./components/pages/Nutrition";
 import { useEffect, useState } from "react";
-import "./App.css";
 import { ActionPlan, type MedicationType } from "./components/pages/ActionPlan";
 import { type HealthReportData } from "./components/pages/HealthReport";
 import HealthReport from "./components/pages/HealthReport/HealthReport";
@@ -19,6 +18,13 @@ import type { ComorbiditiesData } from "./components/pages/Comorbidities/types";
 import { KnownMedicalConditions } from "./components/pages/KnownMedicalConditions";
 import type { CognitionData } from "./components/pages/Cognition";
 import CognitionPage from "./components/pages/Cognition/CognitionPage";
+import {
+  DietaryRecommendations,
+  type DietaryRecommendationsData,
+} from "./components/pages/DietaryRecommendations";
+import { Footnotes, type FootnotesData } from "./components/pages/Footnotes";
+import { MedicationPlanner } from "./components/pages/MedicationPlanner";
+import { MedicationChecklist } from "./components/pages/MedicationChecklist";
 
 export type Report = {
   preface: PrefaceData;
@@ -30,10 +36,12 @@ export type Report = {
     consumption: NutritionConsumptionData;
     recommendations: NutritionRecommendationsData;
   };
+  dietaryRecommendations: DietaryRecommendationsData;
   currentMedication: CurrentMedicationData;
   cognitiveFunction: CognitionData;
   allergies: AllergiesData;
   reportedProblems: ComorbiditiesData;
+  footnotes: FootnotesData;
 };
 
 function App() {
@@ -56,8 +64,12 @@ function App() {
       <SupplementPlan data={report?.actionPlan?.supplements} />
       <NutritionAndDiet data={report?.nutrition} />
       <Lifestyle data={report?.lifestyle} />
+      <DietaryRecommendations data={report?.dietaryRecommendations} />
       <CognitionPage data={report?.cognitiveFunction} />
       <KnownMedicalConditions data={report} />
+      <Footnotes data={report?.footnotes} />
+      <MedicationPlanner />
+      <MedicationChecklist />
     </div>
   );
 }

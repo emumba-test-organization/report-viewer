@@ -1,0 +1,527 @@
+[
+  {
+    "date": "2025-11-07",
+    "day": "Monday",
+    "schedule": {
+      "Morning": [
+        {
+          "name": "Methylcobalamin",
+          "dosage": "1 mg/mL",
+          "instructions": "Intramuscular injection",
+          "isSOS": false,
+          "type": "Injection"
+        },
+        {
+          "name": "Levothyroxine",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Resveratrol",
+          "dosage": "100 mg, 1 capsule",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral capsule"
+        },
+        {
+          "name": "Chlorpheniramine / Chlor-Trimeton",
+          "dosage": "4 mg",
+          "instructions": "Oral, as needed",
+          "isSOS": true,
+          "type": "Oral tablet"
+        }
+      ],
+      "Afternoon": [
+        {
+          "name": "Vitamin D3/K2 (chole)",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Lecanemab",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Duloxetine (Cymbalta)",
+          "dosage": "20 mg tablet",
+          "instructions": "Oral, once daily",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Fluocinolone Acetonide Otic Solution",
+          "dosage": "25 mcg",
+          "instructions": "",
+          "isSOS": true,
+          "type": "Solution"
+        }
+      ],
+      "Evening": [
+        {
+          "name": "Alpha-lipoic acid (ALA)",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        }
+      ]
+    }
+  },
+  {
+    "date": "2025-11-08",
+    "day": "Tuesday",
+    "schedule": {
+      "Morning": [
+        {
+          "name": "Methylcobalamin",
+          "dosage": "1 mg/mL",
+          "instructions": "Intramuscular injection",
+          "isSOS": false,
+          "type": "Injection"
+        },
+        {
+          "name": "Levothyroxine",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Resveratrol",
+          "dosage": "100 mg, 1 capsule",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral capsule"
+        },
+        {
+          "name": "Chlorpheniramine / Chlor-Trimeton",
+          "dosage": "4 mg",
+          "instructions": "Oral, as needed",
+          "isSOS": true,
+          "type": "Oral tablet"
+        }
+      ],
+      "Afternoon": [
+        {
+          "name": "Vitamin D3/K2 (chole)",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Lecanemab",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Duloxetine (Cymbalta)",
+          "dosage": "20 mg tablet",
+          "instructions": "Oral, once daily",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Fluocinolone Acetonide Otic Solution",
+          "dosage": "25 mcg",
+          "instructions": "",
+          "isSOS": true,
+          "type": "Solution"
+        }
+      ],
+      "Evening": [
+        {
+          "name": "Alpha-lipoic acid (ALA)",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        }
+      ]
+    }
+  },
+  {
+    "date": "2025-11-09",
+    "day": "Wednesday",
+    "schedule": {
+      "Morning": [
+        {
+          "name": "Methylcobalamin",
+          "dosage": "1 mg/mL",
+          "instructions": "Intramuscular injection",
+          "isSOS": false,
+          "type": "Injection"
+        },
+        {
+          "name": "Levothyroxine",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Resveratrol",
+          "dosage": "100 mg, 1 capsule",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral capsule"
+        },
+        {
+          "name": "Chlorpheniramine / Chlor-Trimeton",
+          "dosage": "4 mg",
+          "instructions": "Oral, as needed",
+          "isSOS": true,
+          "type": "Oral tablet"
+        }
+      ],
+      "Afternoon": [
+        {
+          "name": "Vitamin D3/K2 (chole)",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Lecanemab",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Duloxetine (Cymbalta)",
+          "dosage": "20 mg tablet",
+          "instructions": "Oral, once daily",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Fluocinolone Acetonide Otic Solution",
+          "dosage": "25 mcg",
+          "instructions": "",
+          "isSOS": true,
+          "type": "Solution"
+        }
+      ],
+      "Evening": [
+        {
+          "name": "Alpha-lipoic acid (ALA)",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        }
+      ]
+    }
+  },
+  {
+    "date": "2025-11-10",
+    "day": "Thursday",
+    "schedule": {
+      "Morning": [
+        {
+          "name": "Methylcobalamin",
+          "dosage": "1 mg/mL",
+          "instructions": "Intramuscular injection",
+          "isSOS": false,
+          "type": "Injection"
+        },
+        {
+          "name": "Levothyroxine",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Resveratrol",
+          "dosage": "100 mg, 1 capsule",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral capsule"
+        },
+        {
+          "name": "Chlorpheniramine / Chlor-Trimeton",
+          "dosage": "4 mg",
+          "instructions": "Oral, as needed",
+          "isSOS": true,
+          "type": "Oral tablet"
+        }
+      ],
+      "Afternoon": [
+        {
+          "name": "Vitamin D3/K2 (chole)",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Lecanemab",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Duloxetine (Cymbalta)",
+          "dosage": "20 mg tablet",
+          "instructions": "Oral, once daily",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Fluocinolone Acetonide Otic Solution",
+          "dosage": "25 mcg",
+          "instructions": "",
+          "isSOS": true,
+          "type": "Solution"
+        }
+      ],
+      "Evening": [
+        {
+          "name": "Alpha-lipoic acid (ALA)",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        }
+      ]
+    }
+  },
+  {
+    "date": "2025-11-11",
+    "day": "Friday",
+    "schedule": {
+      "Morning": [
+        {
+          "name": "Methylcobalamin",
+          "dosage": "1 mg/mL",
+          "instructions": "Intramuscular injection",
+          "isSOS": false,
+          "type": "Injection"
+        },
+        {
+          "name": "Levothyroxine",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Resveratrol",
+          "dosage": "100 mg, 1 capsule",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral capsule"
+        },
+        {
+          "name": "Chlorpheniramine / Chlor-Trimeton",
+          "dosage": "4 mg",
+          "instructions": "Oral, as needed",
+          "isSOS": true,
+          "type": "Oral tablet"
+        }
+      ],
+      "Afternoon": [
+        {
+          "name": "Vitamin D3/K2 (chole)",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Lecanemab",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Duloxetine (Cymbalta)",
+          "dosage": "20 mg tablet",
+          "instructions": "Oral, once daily",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Fluocinolone Acetonide Otic Solution",
+          "dosage": "25 mcg",
+          "instructions": "",
+          "isSOS": true,
+          "type": "Solution"
+        }
+      ],
+      "Evening": [
+        {
+          "name": "Alpha-lipoic acid (ALA)",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        }
+      ]
+    }
+  },
+  {
+    "date": "2025-11-12",
+    "day": "Saturday",
+    "schedule": {
+      "Morning": [
+        {
+          "name": "Methylcobalamin",
+          "dosage": "1 mg/mL",
+          "instructions": "Intramuscular injection",
+          "isSOS": false,
+          "type": "Injection"
+        },
+        {
+          "name": "Levothyroxine",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Resveratrol",
+          "dosage": "100 mg, 1 capsule",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral capsule"
+        },
+        {
+          "name": "Chlorpheniramine / Chlor-Trimeton",
+          "dosage": "4 mg",
+          "instructions": "Oral, as needed",
+          "isSOS": true,
+          "type": "Oral tablet"
+        }
+      ],
+      "Afternoon": [
+        {
+          "name": "Vitamin D3/K2 (chole)",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Lecanemab",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Duloxetine (Cymbalta)",
+          "dosage": "20 mg tablet",
+          "instructions": "Oral, once daily",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Fluocinolone Acetonide Otic Solution",
+          "dosage": "25 mcg",
+          "instructions": "",
+          "isSOS": true,
+          "type": "Solution"
+        }
+      ],
+      "Evening": [
+        {
+          "name": "Alpha-lipoic acid (ALA)",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        }
+      ]
+    }
+  },
+  {
+    "date": "2025-11-13",
+    "day": "Sunday",
+    "schedule": {
+      "Morning": [
+        {
+          "name": "Methylcobalamin",
+          "dosage": "1 mg/mL",
+          "instructions": "Intramuscular injection",
+          "isSOS": false,
+          "type": "Injection"
+        },
+        {
+          "name": "Levothyroxine",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Resveratrol",
+          "dosage": "100 mg, 1 capsule",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral capsule"
+        },
+        {
+          "name": "Chlorpheniramine / Chlor-Trimeton",
+          "dosage": "4 mg",
+          "instructions": "Oral, as needed",
+          "isSOS": true,
+          "type": "Oral tablet"
+        }
+      ],
+      "Afternoon": [
+        {
+          "name": "Vitamin D3/K2 (chole)",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Lecanemab",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Duloxetine (Cymbalta)",
+          "dosage": "20 mg tablet",
+          "instructions": "Oral, once daily",
+          "isSOS": false,
+          "type": "Oral tablet"
+        },
+        {
+          "name": "Fluocinolone Acetonide Otic Solution",
+          "dosage": "25 mcg",
+          "instructions": "",
+          "isSOS": true,
+          "type": "Solution"
+        }
+      ],
+      "Evening": [
+        {
+          "name": "Alpha-lipoic acid (ALA)",
+          "dosage": "25 mcg tablet",
+          "instructions": "",
+          "isSOS": false,
+          "type": "Oral tablet"
+        }
+      ]
+    }
+  }
+]

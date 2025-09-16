@@ -116,8 +116,8 @@ export const SupplementsTableHeader = forwardRef<HTMLDivElement, BlockProps>(
 );
 export const SupplementsRow = forwardRef<HTMLDivElement, BlockProps>(
   ({ index: idx, data: med, blockId, setRef }, ref) => {
-    const isEven = idx ? idx % 2 === 0 : true;
-    const rowClass = isEven ? "bg-white" : "bg-gray-100";
+    const isEven = idx ? idx % 2 === 0 : false;
+    const rowClass = isEven ? "bg-gray-100" : "bg-white";
 
     return (
       <div

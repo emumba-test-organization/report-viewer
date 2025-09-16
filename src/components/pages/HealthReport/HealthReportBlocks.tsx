@@ -169,12 +169,20 @@ export const HealthStatusSectionBlock = React.forwardRef<
   const Icon = iconMap[key];
 
   const bgMap: Record<SectionTitle, string> = {
-    "At Risk": "red-800",
-    Caution: "yellow-700",
-    Optimal: "green-600",
-    Unknown: "gray-500",
+    "At Risk": "bg-red-800",
+    Caution: "bg-yellow-700",
+    Optimal: "bg-green-600",
+    Unknown: "bg-gray-500",
   };
   const bgClass = bgMap[key] ?? "";
+
+  const borderMap: Record<SectionTitle, string> = {
+    "At Risk": "border-red-800",
+    Caution: "border-yellow-700",
+    Optimal: "border-green-600",
+    Unknown: "border-gray-500",
+  };
+  const borderClass = borderMap[key] ?? "";
 
   const textMap: Record<SectionTitle, string> = {
     "At Risk": "text-white",
@@ -197,10 +205,10 @@ export const HealthStatusSectionBlock = React.forwardRef<
       ref={setRef ? setRef(blockId) : ref}
       className="health-status-section-block mb-4"
     >
-      <Card className={`p-0 rounded-none border-2 border-${bgClass}`}>
+      <Card className={`p-0 rounded-none border-2 ${borderClass}`}>
         <CardContent className="p-0">
           {/* Section Header */}
-          <div className={`bg-${bgClass} text-white px-2 py-2`}>
+          <div className={`${bgClass} text-white px-2 py-2`}>
             <div className="flex items-center gap-3">
               <div
                 className={`${textClass} pl-1 pr-3  font-bold text-2xl border-r-3`}

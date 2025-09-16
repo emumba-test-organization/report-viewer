@@ -9,10 +9,20 @@ import {
 } from "lucide-react";
 import { forwardRef } from "react";
 
+export const HeadingBlock = forwardRef<HTMLDivElement, BlockProps>(
+  ({ blockId, setRef }, ref) => (
+    <div ref={setRef ? setRef(blockId) : ref}>
+      <h1 className="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-gray-300 pb-2">
+        Nutrition & Diet
+      </h1>
+    </div>
+  )
+);
+
 export const NutritionTitleBlock = forwardRef<HTMLDivElement, BlockProps>(
   ({ data, blockId, setRef }, ref) => (
     <div ref={setRef ? setRef(blockId) : ref}>
-      <h2 className="text-3xl font-bold text-gray-900 mb-8">
+      <h2 className="text-xl font-bold text-gray-900 mb-4">
         {data?.summary?.title}
       </h2>
     </div>
@@ -24,7 +34,7 @@ export const DietaryConsumptionTitleBlock = forwardRef<
   BlockProps
 >(({ data, blockId, setRef }, ref) => (
   <div ref={setRef ? setRef(blockId) : ref}>
-    <h2 className="text-3xl font-bold text-gray-900 mb-8 mt-5">
+    <h2 className="text-xl font-bold text-gray-900 mb-4 mt-5">
       {data?.consumption?.title}
     </h2>
   </div>
@@ -65,7 +75,7 @@ export const DietaryConsumptionHeaderBlock = forwardRef<
   const headers = ["Food Group", "Reported Intake", "Note"];
   return (
     <div
-      className="medication-table-header p-4 flex flex-row text-xs font-bold bg-gray-100 border-b-2 border-gray-300"
+      className="medication-table-header p-4 flex flex-row text-xs font-bold bg-gray-300 border-2 border-b-0 border-gray-300"
       ref={setRef ? setRef(blockId) : ref}
     >
       {headers.map((header, index) => (
@@ -78,12 +88,14 @@ export const DietaryConsumptionHeaderBlock = forwardRef<
 });
 
 export const DietaryConsumptionRow = forwardRef<HTMLDivElement, BlockProps>(
-  ({ section: entry, blockId, setRef }, ref) => {
+  ({ index, section: entry, blockId, setRef }, ref) => {
     const { group, intake, note } = entry;
+    const isEven = index ? index % 2 === 0 : false;
+    const rowClass = isEven ? "bg-white" : "bg-gray-100";
 
     return (
       <div
-        className="medication-row flex flex-row border border-gray-200"
+        className={`medication-row flex flex-row border border-gray-200 ${rowClass}`}
         ref={setRef ? setRef(blockId) : ref}
       >
         {/* Food Group */}
@@ -108,7 +120,7 @@ export const DietaryConsumptionRow = forwardRef<HTMLDivElement, BlockProps>(
 export const DeficienciesHeader = forwardRef<HTMLDivElement, BlockProps>(
   ({ blockId, setRef }, ref) => (
     <div
-      className="medication-table-header p-4 flex flex-row text-xs font-bold bg-gray-100 border-b-2 border-gray-300"
+      className="medication-table-header p-4 flex flex-row text-xs font-bold bg-gray-300 border-2 border-b-0 border-gray-300"
       ref={setRef ? setRef(blockId) : ref}
     >
       <div className="flex-1">Nutrient</div>
@@ -118,19 +130,16 @@ export const DeficienciesHeader = forwardRef<HTMLDivElement, BlockProps>(
 );
 
 export const DeficienciesRow = forwardRef<HTMLDivElement, BlockProps>(
-  ({ section: deficiency, blockId, setRef }, ref) => {
+  ({ index, section: deficiency, blockId, setRef }, ref) => {
     const {
       nutrient,
       nutrient_sub,
       normal_range,
       result: { severity, desc, reading },
     } = deficiency;
-    // const isEven = idx % 2 === 0;
+    const isEven = index ? index % 2 === 0 : false;
+    const rowClass = isEven ? "bg-white" : "bg-gray-100";
 
-    // Alternate background color for rows
-    // const rowClass = isEven ? "bg-white" : "bg-gray-100";
-    // const isLastRow = idx === deficiencies.length - 1;
-    // const lastRowClass = !isLastRow ? "border-b border-gray-300" : "";
     const severityClassMap = {
       "very high": "text-red-700",
       high: "text-yellow-700",
@@ -145,7 +154,7 @@ export const DeficienciesRow = forwardRef<HTMLDivElement, BlockProps>(
 
     return (
       <div
-        className="medication-row flex flex-row border border-gray-200"
+        className={`medication-row flex flex-row border border-gray-200 ${rowClass}`}
         ref={setRef ? setRef(blockId) : ref}
       >
         {/* Food Group */}

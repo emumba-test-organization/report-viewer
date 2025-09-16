@@ -114,6 +114,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -138,4 +139,17 @@
 @page {
   size: A4;
   margin: 20mm 10mm;
+}
+
+@media print {
+  .print-landscape {
+    width: 297mm;
+    /* A4 height */
+    height: 210mm;
+    /* A4 width */
+    page-break-before: always;
+    page-break-after: always;
+    transform: rotate(90deg) translateY(-100%) scale(0.9);
+    transform-origin: top left;
+  }
 }

@@ -13,6 +13,7 @@ import {
   DietaryConsumptionRow,
   DietaryConsumptionTitleBlock,
   DietaryWarningBlock,
+  HeadingBlock,
   MindDietIntroBlock,
   NutritionTitleBlock,
   RecommendationsHeaderBlock,
@@ -46,6 +47,7 @@ const NutritionAndDiet = ({ data }: { data: any }) => {
   };
 
   const createNutritionBlocks = (data: any): BlockConfig[] => [
+    { id: "heading", type: "heading", data: data },
     { id: "nutritionTitle", type: "nutritionTitle", data: data },
     { id: "dietaryWarning", type: "dietaryWarning", data: data },
     { id: "deficiencyHeader", type: "deficiency-header" }, // Add header block
@@ -80,7 +82,7 @@ const NutritionAndDiet = ({ data }: { data: any }) => {
     { id: "recommendationsHeader", type: "recommendations-header", data: data },
     ...createRecommendationBlocks(data),
   ];
-  const renderNutritionBlock: BlockRenderer = (block, key) => {
+  const renderNutritionBlock: BlockRenderer = (block, key, index) => {
     const commonProps = {
       key,
       blockId: block.id,
@@ -88,6 +90,8 @@ const NutritionAndDiet = ({ data }: { data: any }) => {
     };
 
     switch (block.type) {
+      case "heading":
+        return <HeadingBlock data={undefined} {...commonProps} />;
       case "nutritionTitle":
         return <NutritionTitleBlock {...commonProps} data={block.data} />;
       case "dietaryWarning":
@@ -97,6 +101,7 @@ const NutritionAndDiet = ({ data }: { data: any }) => {
       case "deficiency-row":
         return (
           <DeficienciesRow
+            index={index}
             data={undefined}
             {...commonProps}
             section={block.data}
@@ -117,6 +122,7 @@ const NutritionAndDiet = ({ data }: { data: any }) => {
       case "dietary-consumption-row":
         return (
           <DietaryConsumptionRow
+            index={index}
             data={undefined}
             {...commonProps}
             section={block.data}
