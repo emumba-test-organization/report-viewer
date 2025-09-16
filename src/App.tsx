@@ -23,8 +23,10 @@ import {
   type DietaryRecommendationsData,
 } from "./components/pages/DietaryRecommendations";
 import { Footnotes, type FootnotesData } from "./components/pages/Footnotes";
-import { MedicationPlanner } from "./components/pages/MedicationPlanner";
-import { MedicationChecklist } from "./components/pages/MedicationChecklist";
+// import { MedicationPlanner } from "./components/pages/MedicationPlanner";
+// import { MedicationChecklist } from "./components/pages/MedicationChecklist";
+import GoalTracker from "./components/pages/GoalTracker";
+import ActivityPlanner from "./components/pages/ActivityPlanner";
 
 export type Report = {
   preface: PrefaceData;
@@ -68,8 +70,10 @@ function App() {
       <CognitionPage data={report?.cognitiveFunction} />
       <KnownMedicalConditions data={report} />
       <Footnotes data={report?.footnotes} />
-      <MedicationPlanner />
-      <MedicationChecklist />
+      {/* <MedicationPlanner /> */}
+      {/* <MedicationChecklist /> */}
+      <GoalTracker />
+      <ActivityPlanner />
     </div>
   );
 }
