@@ -12,7 +12,6 @@ export default function CurrentMedicationTables({
   preContentHeightPx: number;
   preContentHeightMm: number;
 }) {
-  console.log("CurrentMedicationTables data:", data);
   const { medications } = data;
 
   // Refs to measure each row and the container height

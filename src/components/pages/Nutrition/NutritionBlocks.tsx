@@ -209,7 +209,6 @@ export const BalancedNutritionTitleBlock = forwardRef<
   HTMLDivElement,
   BlockProps
 >(({ data, blockId, setRef }, ref) => {
-  console.log("BalancedNutritionTitleBlock data:", data);
   return (
     <div ref={setRef ? setRef(blockId) : ref}>
       <h2 className="text-xl font-bold text-gray-900 mb-4 border-b-2 border-gray-300 pb-2 mt-5">

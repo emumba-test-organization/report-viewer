@@ -74,7 +74,6 @@ const CognitionPage = ({ data }: { data: CognitionData }) => {
     factors.forEach((factor, sectionIndex) => {
       // Add header block for each section
       const classColor = severityColor(factor);
-      console.log(classColor);
       blocks.push({
         id: `factor-header-${sectionIndex}`,
         type: `factor-header-${sectionIndex}`,

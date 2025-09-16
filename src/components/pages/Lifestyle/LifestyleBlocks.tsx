@@ -18,9 +18,6 @@ export const LifestyleRecommendationBlock = forwardRef<
   HTMLDivElement,
   BlockProps
 >(({ index, data: rec, blockId, setRef }, ref) => {
-  console.log("Index: ", index);
-  console.log("Data: ", rec.task);
-
   const { area, task, instructions } = rec;
   const splitIconPath = area?.image.split("/");
   const iconName = splitIconPath[splitIconPath.length - 1].split(".")[0] || "";

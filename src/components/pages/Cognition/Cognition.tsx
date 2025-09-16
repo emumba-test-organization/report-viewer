@@ -47,7 +47,6 @@ const functionLimits = {
 
 const Cognition = ({ data }: Props) => {
   const { title, intro, factors } = data;
-  console.log("Factors:", factors);
   return (
     <div className="w-[210mm] mx-auto p-6 bg-white">
       <div className="mb-8">

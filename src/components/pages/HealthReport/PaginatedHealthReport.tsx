@@ -48,7 +48,6 @@ const PaginatedHealthReport = ({ data }: { data: any }) => {
   // Calculate pages based on measured heights
   useEffect(() => {
     if (Object.keys(heights).length === blocks.length && blocks.length > 0) {
-      console.log("Measured Heights:", heights);
       const calculatedPages = [];
       let currentPage: any[] = [];
       let currentPageHeight = 0;

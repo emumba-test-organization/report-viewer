@@ -14,7 +14,6 @@ import {
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const SupplementPlan = ({ data }: { data: any }) => {
-  console.log("SupplementPlan data:", data);
   const createSupplementBlocks = (data: any): BlockConfig[] => [
     {
       id: "supplementPlanOverview",
