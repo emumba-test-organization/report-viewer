@@ -1,4 +1,3 @@
-import type { Report } from "@/App";
 import {
   createAllergiesBlocks,
   tableConfigs as allergiesTableConfig,
@@ -24,6 +23,7 @@ import {
   AllergiesTableRowBlock,
   AllergiesTitleBlock,
 } from "../Allergies/Allergies.blocks";
+import type { Report } from "@/ParticipantReport";
 
 type Props = {
   data: Report;
