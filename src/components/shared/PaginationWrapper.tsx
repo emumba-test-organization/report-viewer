@@ -23,12 +23,14 @@ export interface BlockRenderer {
   (block: BlockConfig, key: string | number, index?: number): ReactNode;
 }
 
-// Types for table configuration
+// Enhanced types for nested table configuration
 export interface TableConfig {
   headerType: string; // The block type for the header (e.g., 'medication-header')
   rowTypes: string[]; // Array of block types that belong to this table (e.g., ['medication-row'])
   headerId: string; // Base ID for the header block
   headerData?: any; // Optional data for the header block
+  parentHeaders?: string[]; // Array of parent header types that should be included when this table continues on a new page
+  priority?: number; // Priority for header placement (higher number = placed first)
 }
 
 interface PaginationWrapperProps {
@@ -41,7 +43,6 @@ interface PaginationWrapperProps {
 
 // Default page dimensions and measurements
 const DEFAULT_PAGE_HEIGHT = 1122.52;
-// const DEFAULT_MARGIN = 40;
 const DEFAULT_HEADER_HEIGHT = 36;
 const DEFAULT_SAFETY_MARGIN = 180;
 
@@ -75,6 +76,15 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
     );
   };
 
+  // Helper function to find all parent tables for a given table
+  const findParentTables = (tableConfig: TableConfig): TableConfig[] => {
+    if (!tableConfig.parentHeaders) return [];
+
+    return tables
+      .filter((table) => tableConfig.parentHeaders!.includes(table.headerType))
+      .sort((a, b) => (b.priority || 0) - (a.priority || 0)); // Sort by priority (highest first)
+  };
+
   // Helper function to check if current page needs a header for a specific table
   const pageNeedsTableHeader = (
     currentPage: BlockConfig[],
@@ -105,6 +115,46 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
     };
   };
 
+  // Helper function to get all required headers for a table (including parents)
+  const getRequiredHeaders = (
+    tableConfig: TableConfig,
+    pageIndex: number,
+    currentPage: BlockConfig[]
+  ): BlockConfig[] => {
+    const requiredHeaders: BlockConfig[] = [];
+
+    // Get parent headers first
+    const parentTables = findParentTables(tableConfig);
+    for (const parentTable of parentTables) {
+      const hasParentHeader = currentPage.some(
+        (block) => block.type === parentTable.headerType
+      );
+
+      if (!hasParentHeader) {
+        requiredHeaders.push(createHeaderBlock(parentTable, pageIndex));
+      }
+    }
+
+    // Add the table's own header
+    const hasOwnHeader = currentPage.some(
+      (block) => block.type === tableConfig.headerType
+    );
+
+    if (!hasOwnHeader) {
+      requiredHeaders.push(createHeaderBlock(tableConfig, pageIndex));
+    }
+
+    return requiredHeaders;
+  };
+
+  // Calculate total height of required headers
+  const calculateHeadersHeight = (requiredHeaders: BlockConfig[]): number => {
+    return requiredHeaders.reduce((total, header) => {
+      const headerConfig = findTableForBlock(header.type);
+      return total + (heights[headerConfig?.headerId || ""] || 0);
+    }, 0);
+  };
+
   // Calculate pages based on measured heights
   useEffect(() => {
     if (Object.keys(heights).length === blocks.length && blocks.length > 0) {
@@ -119,17 +169,14 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
 
         // Special handling for table rows
         if (tableConfig && tableConfig.rowTypes.includes(block.type)) {
-          const headerHeight = heights[tableConfig.headerId] || 0;
-
-          // Check if we need to add header
-          const needsHeader = !currentPage.some(
-            (b) => b.type === tableConfig.headerType
+          // Get all required headers (including parent headers)
+          const requiredHeaders = getRequiredHeaders(
+            tableConfig,
+            calculatedPages.length,
+            currentPage
           );
-
-          let totalHeightNeeded = blockHeight;
-          if (needsHeader) {
-            totalHeightNeeded += headerHeight;
-          }
+          const headersHeight = calculateHeadersHeight(requiredHeaders);
+          const totalHeightNeeded = blockHeight + headersHeight;
 
           // If this would overflow and we have content, start new page
           if (
@@ -140,36 +187,42 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
             currentPage = [];
             currentPageHeight = 0;
 
-            // Add header to new page since we're starting with a table row
-            const headerBlock = createHeaderBlock(
+            // Add all required headers to new page
+            const newPageHeaders = getRequiredHeaders(
               tableConfig,
-              calculatedPages.length
+              calculatedPages.length,
+              currentPage
             );
-            currentPage.push(headerBlock);
-            currentPageHeight += headerHeight;
-          } else if (needsHeader) {
-            // Check if header + first row can fit on current page
-            // If not, move both to next page to avoid orphaned header
+            for (const header of newPageHeaders) {
+              currentPage.push(header);
+              const headerConfig = findTableForBlock(header.type);
+              currentPageHeight += heights[headerConfig?.headerId || ""] || 0;
+            }
+          } else if (requiredHeaders.length > 0) {
+            // Check if headers + first row can fit on current page
             if (currentPageHeight + totalHeightNeeded > contentHeight) {
-              // Start new page with header + row
+              // Start new page with all headers + row
               calculatedPages.push([...currentPage]);
               currentPage = [];
               currentPageHeight = 0;
 
-              const headerBlock = createHeaderBlock(
+              const newPageHeaders = getRequiredHeaders(
                 tableConfig,
-                calculatedPages.length
+                calculatedPages.length,
+                currentPage
               );
-              currentPage.push(headerBlock);
-              currentPageHeight += headerHeight;
+              for (const header of newPageHeaders) {
+                currentPage.push(header);
+                const headerConfig = findTableForBlock(header.type);
+                currentPageHeight += heights[headerConfig?.headerId || ""] || 0;
+              }
             } else {
-              // Add header to current page
-              const headerBlock = createHeaderBlock(
-                tableConfig,
-                calculatedPages.length
-              );
-              currentPage.push(headerBlock);
-              currentPageHeight += headerHeight;
+              // Add headers to current page
+              for (const header of requiredHeaders) {
+                currentPage.push(header);
+                const headerConfig = findTableForBlock(header.type);
+                currentPageHeight += heights[headerConfig?.headerId || ""] || 0;
+              }
             }
           }
 
@@ -201,7 +254,7 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
       const finalPages = calculatedPages.map((page, pageIndex) => {
         let processedPage = [...page];
 
-        // For each table configuration, check if this page needs a header
+        // For each table configuration, check if this page needs headers
         tables.forEach((tableConfig) => {
           if (pageNeedsTableHeader(processedPage, tableConfig)) {
             // Find the first row of this table type
@@ -210,9 +263,17 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
             );
 
             if (firstRowIndex !== -1) {
-              // Insert header before the first row
-              const headerBlock = createHeaderBlock(tableConfig, pageIndex);
-              processedPage.splice(firstRowIndex, 0, headerBlock);
+              // Get all required headers for this table
+              const requiredHeaders = getRequiredHeaders(
+                tableConfig,
+                pageIndex,
+                processedPage
+              );
+
+              // Insert headers before the first row (in reverse order to maintain hierarchy)
+              for (let j = requiredHeaders.length - 1; j >= 0; j--) {
+                processedPage.splice(firstRowIndex, 0, requiredHeaders[j]);
+              }
             }
           }
         });
@@ -223,15 +284,35 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
 
           // If this is a header block
           if (tableConfig && block.type === tableConfig.headerType) {
-            // Check if there are any rows of this table type after this header on this page
-            const hasRowsAfter = processedPage
-              .slice(index + 1)
-              .some((laterBlock) =>
-                tableConfig.rowTypes.includes(laterBlock.type)
-              );
+            // For parent headers, check if any child table has rows
+            const isParentHeader = tables.some((table) =>
+              table.parentHeaders?.includes(tableConfig.headerType)
+            );
 
-            // Keep the header only if it has rows after it
-            return hasRowsAfter;
+            if (isParentHeader) {
+              // Check if any child table has rows after this header
+              const hasChildRows = processedPage
+                .slice(index + 1)
+                .some((laterBlock) => {
+                  const laterTableConfig = findTableForBlock(laterBlock.type);
+                  return (
+                    laterTableConfig &&
+                    laterTableConfig.parentHeaders?.includes(
+                      tableConfig.headerType
+                    ) &&
+                    laterTableConfig.rowTypes.includes(laterBlock.type)
+                  );
+                });
+              return hasChildRows;
+            } else {
+              // For regular headers, check if there are rows of this table type after
+              const hasRowsAfter = processedPage
+                .slice(index + 1)
+                .some((laterBlock) =>
+                  tableConfig.rowTypes.includes(laterBlock.type)
+                );
+              return hasRowsAfter;
+            }
           }
 
           // Keep all non-header blocks

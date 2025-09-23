@@ -27,6 +27,8 @@ import { Footnotes, type FootnotesData } from "./components/pages/Footnotes";
 // import { MedicationChecklist } from "./components/pages/MedicationChecklist";
 import GoalTracker from "./components/pages/GoalTracker";
 import ActivityPlanner from "./components/pages/ActivityPlanner";
+import { MedicationPlannerPage } from "./components/pages/MedicationPlanner";
+import type { MedicationItemData } from "./components/pages/MedicationPlanner/types";
 
 export type Report = {
   preface: PrefaceData;
@@ -44,6 +46,7 @@ export type Report = {
   allergies: AllergiesData;
   reportedProblems: ComorbiditiesData;
   footnotes: FootnotesData;
+  medicationPlanner: MedicationItemData;
 };
 
 function App() {
@@ -70,6 +73,7 @@ function App() {
       <CognitionPage data={report?.cognitiveFunction} />
       <KnownMedicalConditions data={report} />
       <Footnotes data={report?.footnotes} />
+      <MedicationPlannerPage data={report?.medicationPlanner} />
       {/* <MedicationPlanner /> */}
       {/* <MedicationChecklist /> */}
       <GoalTracker />

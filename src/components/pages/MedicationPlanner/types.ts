@@ -17,3 +17,14 @@ export type MedicationPlannerItem = {
 };
 
 export type MedicationPlannerData = MedicationPlannerItem[];
+
+type MedicationItemType = {
+  date: string;
+  medicines: {
+    morning: string[];
+    afternoon: string[];
+    evening: string[];
+  };
+};
+
+export type MedicationItemData = MedicationItemType[];

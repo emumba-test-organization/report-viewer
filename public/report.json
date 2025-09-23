@@ -968,5 +968,270 @@
       "Chung, Frances, Hairil R. Abdullah, and Pu Liao.\r\n                                                                \"STOP\u2013Bang questionnaire: a practical\r\n                                                                approach to screen for obstructive sleep apnea.\" Chest 149, no. 3 (2016): 631-638.",
       "Farney, Robert J., Brandon S. Walker, Robert M. Farney,\r\n                                                                Gregory L. Snow, and James M. Walker. \"The\r\n                                                                STOP\u2013Bang equivalent model and prediction of\r\n                                                                severity of obstructive sleep apnea: relation to\r\n                                                                polysomnographic measurements of the apnea/hypopnea\r\n                                                                index.\" Journal of clinical sleep medicine:\r\n                                                                    JCSM: official publication of the American Academy\r\n                                                                    of Sleep Medicine 7, no. 5 (2011): 459."
     ]
-  }
+  },
+  "medicationPlanner": [
+    {
+        "date": "2024-07-09",
+        "medicines": {
+            "morning": ["Methylcobalaminsssssssssssssssssssssss", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri...", "Metformin", "Duloxetine (Cymbalta)"],
+            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "ooga", "Lecanemab", "Fish Oil (Omega-3)", "CoQ10 (Ubiquinol)", "Magnesium (Citrate)", "Zinc (Picolinate)", "Curcumin (Meriva)", "NAC (N-Acetyl Cysteine)", "Probiotic", "Vitamin B Complex", "Vitamin C (Ascorbic Acid)"],
+            "evening": [
+              "Alpha-lipoic acid (ALA)",
+              "Berberine",
+              "Magnesium glycinate",
+              "Coenzyme Q10 (CoQ10)",
+              "Melatonin",
+              "Ashwagandha",
+              "Valerian root",
+              "Omega-3 fatty acids (Fish Oil)",
+              "Vitamin D3",
+              "Vitamin B12",
+              "Calcium citrate",
+              "Zinc picolinate",
+              "Turmeric (Curcumin)",
+              "GABA",
+              "L-Theanine",
+              "5-HTP",
+              "N-Acetylcysteine (NAC)",
+              "Resveratrol",
+              "Milk thistle",
+              "Chromium picolinate",
+              "Probiotic blend",
+              "Evening primrose oil"
+            ]
+        }
+    },
+    {
+        "date": "2024-07-10",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri...", "Duloxetine (Cymbalta)"],
+            "afternoon": [],
+            "evening": ["Alpha-lipoic acid (ALA)"]
+        }
+    },
+    {
+        "date": "2024-07-11",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
+            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
+            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
+        }
+    },
+    {
+        "date": "2024-07-12",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
+            "afternoon": [],
+            "evening": ["Alpha-lipoic acid (ALA)"]
+        }
+    },
+    {
+        "date": "2024-07-13",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
+            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
+            "evening": ["Berberine"]
+        }
+    },
+    {
+        "date": "2024-07-14",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
+            "afternoon": ["Duloxetine (Cymbalta)"],
+            "evening": ["Alpha-lipoic acid (ALA)", "Fluocinonide Acetonide Otic..."]
+        }
+    },
+    {
+        "date": "2024-07-15",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
+            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
+            "evening": ["Berberine"]
+        }
+    },
+    {
+        "date": "2024-07-16",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
+            "afternoon": [],
+            "evening": ["Alpha-lipoic acid (ALA)", "Fluticasone (Florase) Inhalant"]
+        }
+    },
+    {
+        "date": "2024-07-17",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
+            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
+            "evening": ["Berberine"]
+        }
+    },
+    {
+        "date": "2024-07-18",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
+            "afternoon": ["Duloxetine (Cymbalta)"],
+            "evening": ["Alpha-lipoic acid (ALA)"]
+        }
+    },
+    {
+        "date": "2024-07-19",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
+            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
+            "evening": ["Berberine", "Fluocinonide Acetonide Otic..."]
+        }
+    },
+    {
+        "date": "2024-07-20",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
+            "afternoon": [],
+            "evening": ["Alpha-lipoic acid (ALA)"]
+        }
+    },
+    {
+        "date": "2024-07-21",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
+            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
+            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
+        }
+    },
+    {
+        "date": "2024-07-22",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
+            "afternoon": ["Duloxetine (Cymbalta)"],
+            "evening": ["Alpha-lipoic acid (ALA)"]
+        }
+    },
+    {
+        "date": "2024-07-23",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
+            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
+            "evening": ["Berberine"]
+        }
+    },
+    {
+        "date": "2024-07-24",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
+            "afternoon": [],
+            "evening": ["Alpha-lipoic acid (ALA)", "Fluocinonide Acetonide Otic..."]
+        }
+    },
+    {
+        "date": "2024-07-25",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
+            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
+            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
+        }
+    },
+    {
+        "date": "2024-07-26",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
+            "afternoon": ["Duloxetine (Cymbalta)"],
+            "evening": ["Alpha-lipoic acid (ALA)"]
+        }
+    },
+    {
+        "date": "2024-07-27",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
+            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
+            "evening": ["Berberine"]
+        }
+    },
+    {
+        "date": "2024-07-28",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
+            "afternoon": [],
+            "evening": ["Alpha-lipoic acid (ALA)", "Fluocinonide Acetonide Otic..."]
+        }
+    },
+    {
+        "date": "2024-07-29",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
+            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
+            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
+        }
+    },
+    {
+        "date": "2024-07-30",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
+            "afternoon": ["Duloxetine (Cymbalta)"],
+            "evening": ["Alpha-lipoic acid (ALA)"]
+        }
+    },
+    {
+        "date": "2024-07-31",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
+            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
+            "evening": ["Berberine"]
+        }
+    },
+    {
+        "date": "2024-08-01",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
+            "afternoon": [],
+            "evening": ["Alpha-lipoic acid (ALA)", "Fluocinonide Acetonide Otic..."]
+        }
+    },
+    {
+        "date": "2024-08-02",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
+            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
+            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
+        }
+    },
+    {
+        "date": "2024-08-03",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
+            "afternoon": ["Duloxetine (Cymbalta)"],
+            "evening": ["Alpha-lipoic acid (ALA)"]
+        }
+    },
+    {
+        "date": "2024-08-04",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
+            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
+            "evening": ["Berberine"]
+        }
+    },
+    {
+        "date": "2024-08-05",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
+            "afternoon": [],
+            "evening": ["Alpha-lipoic acid (ALA)", "Fluocinonide Acetonide Otic..."]
+        }
+    },
+    {
+        "date": "2024-08-06",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
+            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
+            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
+        }
+    },
+    {
+        "date": "2024-08-07",
+        "medicines": {
+            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
+            "afternoon": ["Duloxetine (Cymbalta)"],
+            "evening": ["Alpha-lipoic acid (ALA)"]
+        }
+    }
+  ]
 }
