@@ -1,3 +1,4 @@
+import type { TableComponentProps } from "@/components/shared/PaginatedTable";
 import Spectrum from "@/components/shared/Spectrum";
 import { Badge } from "@/components/ui/badge";
 import { usePdfLayout } from "@/utils/PdfLayoutHelper/PdfLayoutHook";
@@ -7,15 +8,17 @@ export type CognitionData = {
   intro: string;
   factors: {
     section: string;
-    entries: {
-      description: string;
-      severity: string;
-      measurement: string;
-      currentLevel: string;
-      targetLevel: string;
-      image: string | null;
-    }[];
+    entries: Factor[];
   }[];
+};
+
+type Factor = {
+  description: string;
+  severity: string;
+  measurement: string;
+  currentLevel: string;
+  targetLevel: string;
+  image: string | null;
 };
 
 type Props = {
@@ -61,9 +64,11 @@ const functionLimits = {
   },
 };
 
-const Cognition = ({ data }: Props) => {
+const CognitionPaginated = ({ index,headers, pageRows, containerRef, headerRef, rowRefs }: TableComponentProps<Factor>) => {
   const { title, intro, factors } = data;
+  const { currentPageOccupied } = usePdfLayout();
 
+  console.log("currentPageOccupied: cognition", currentPageOccupied);
   return (
     <div className="break-inside-auto">
       <div className="mb-8 break-inside-auto">
@@ -230,4 +235,4 @@ const Cognition = ({ data }: Props) => {
   );
 };
 
-export default Cognition;
+export default CognitionPaginated;

@@ -77,11 +77,11 @@ export default function CurrentMedicationTables({
         <div
           key={pageIndex}
           className={`w-[210mm] mx-auto p-6 bg-white overflow-hidden`}
-          style={{
-            height: pageIndex === 0 ? `${297 - preContentHeightMm}mm` : "297mm",
-          }}
+          // style={{
+          //   height: pageIndex === 0 ? `${297 - preContentHeightMm}mm` : "297mm",
+          // }}
         >
-          {pageIndex !== 0 && <Header />}
+          {/* {pageIndex !== 0 && <Header />} */}
           <table className="w-full border-collapse border-1 border-gray-400">
             <thead className="bg-gray-300 font-bold text-xs text-gray-900">
               <tr>
@@ -95,10 +95,11 @@ export default function CurrentMedicationTables({
               </tr>
             </thead>
             <tbody>
-              {pageRows.map((idx) => {
+              {pageRows.map((_, idx) => {
                 const med = medications[idx];
                 const isEven = idx % 2 === 0;
                 const rowClass = isEven ? "bg-white" : "bg-gray-100";
+                console.log("Medication row:", med);
                 return (
                   <tr key={idx} className={`${rowClass} print-table-row`}>
                     <td className="p-3 align-top text-xs border-r-1 border-gray-400">

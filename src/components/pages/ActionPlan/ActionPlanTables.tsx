@@ -21,11 +21,16 @@ export default function ActionPlanTables({
   const headerRef = useRef<HTMLTableRowElement>(null);
 
   const [pages, setPages] = useState<number[][]>([]);
+  const [headerHeight, setHeaderHeight] = useState<number>(0);
   const [measured, setMeasured] = useState(false);
   const heights = useRef<number[]>([]);
   const { setCurrentPageOccupied, currentPageOccupied } = usePdfLayout();
 
-  console.log("preContentHeightPx inside", preContentHeightPx, currentPageOccupied);
+  console.log(
+    "preContentHeightPx inside",
+    preContentHeightPx,
+    currentPageOccupied
+  );
 
   useEffect(() => {
     heights.current = rowRefs.current.map((r) => r?.clientHeight || 0);
@@ -36,13 +41,16 @@ export default function ActionPlanTables({
     // now uses the margin-trimmed height
     const newPages = paginate(heights.current, preContentHeightPx);
     setPages(newPages);
+
+    if (headerRef.current?.clientHeight && headerRef.current.clientHeight > 0)
+      setHeaderHeight(headerRef.current?.clientHeight);
     setMeasured(true);
   }, [measured, preContentHeightPx]);
+
   useEffect(() => {
     const lastPage = pages[pages.length - 1];
     const lastPageHeight = lastPage
-      ? lastPage.reduce((a, b) => a + b, 0) +
-        (headerRef.current?.clientHeight || 0)
+      ? lastPage.reduce((a, b) => a + b, 0) + (headerHeight || 0)
       : 0;
     setCurrentPageOccupied((current) => {
       const newOccupied = [...current];
@@ -57,7 +65,10 @@ export default function ActionPlanTables({
   // While measuring, render the full table off-screen
   if (!measured) {
     return (
-      <div ref={containerRef} className={`w-[210mm] screen:mx-auto screen:p-6 bg-white`}>
+      <div
+        ref={containerRef}
+        className={`w-[210mm] screen:mx-auto screen:p-6 bg-white`}
+      >
         <table className="table-auto w-full border-collapse">
           <thead ref={headerRef}>
             <tr>
@@ -121,10 +132,10 @@ export default function ActionPlanTables({
           <div
             key={pageIndex}
             className={`w-[210mm] screen:mx-auto screen:p-6 bg-white`}
-            style={{
-              height:
-                pageIndex === 0 ? `${297 - preContentHeightMm}mm` : "297mm",
-            }}
+            // style={{
+            //   height:
+            //     pageIndex === 0 ? `${297 - preContentHeightMm}mm` : /* "297mm" */"auto",
+            // }}
           >
             {/* {pageIndex !== 0 && <Header />} */}
             {/* <Header /> */}

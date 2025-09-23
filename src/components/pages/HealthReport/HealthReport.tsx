@@ -2,9 +2,6 @@
 import { AlertTriangle, Diamond, Check, HelpCircle } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-// import A4Page from "../../shared/A4Page";
-import { useEffect, useRef } from "react";
-import { usePdfLayout } from "@/utils/PdfLayoutHelper/PdfLayoutHook";
 
 export type HealthReportData = {
   title: string;
@@ -36,23 +33,6 @@ type SectionTitle = keyof typeof iconMap;
 const HealthReport = ({ data }: { data: any }) => {
   const { currentStatus, healthStatusSections } = data;
   const overview = currentStatus?.overview;
-  const containerRef = useRef<HTMLElement>(null);
-  const { analyzeLayout, overflowingElements, currentPageOccupied } =
-    usePdfLayout();
-
-  console.log("overflow: ", currentPageOccupied);
-  overflowingElements.forEach((el) => {
-    console.log(el);
-  });
-
-  const currentPageOccupiedValue = currentPageOccupied[0];
-
-  useEffect(() => {
-    console.log("currentPageHeight start start", currentPageOccupiedValue);
-    if (containerRef.current && currentPageOccupiedValue !== undefined) {
-      analyzeLayout(containerRef, 1);
-    }
-  }, [currentPageOccupiedValue]);
 
   const overviewEntries = [
     {
@@ -85,8 +65,7 @@ const HealthReport = ({ data }: { data: any }) => {
 
   return (
     <div
-      className="w-[210mm] screen:mx-auto screen:p-6 bg-white break-inside-auto"
-      ref={containerRef}
+      className="break-inside-auto"
     >
       {/* Current Status Title */}
       <h2 className="text-3xl font-bold text-gray-900 mb-8 break-inside-avoid break-after-avoid">

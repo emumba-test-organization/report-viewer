@@ -1,6 +1,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { usePdfLayout } from "@/utils/PdfLayoutHelper/PdfLayoutHook";
 interface ContentWithTablesProps {
+  index?: number;
   data: any;
   tablesComponent: React.ComponentType<{
     data: any;
@@ -15,15 +16,21 @@ function pixelsToMm(pixels: number, dpi: number = 96): number {
 }
 
 export default function ContentWithTables({
+  index,
   data,
   tablesComponent: TablesComponent,
 }: ContentWithTablesProps) {
   const { currentPageOccupied } = usePdfLayout();
 
+  if (index === undefined) {
+    return null;
+  }
+
+  const prevIndex = index - 1;
   return (
     <TablesComponent
-      preContentHeightPx={currentPageOccupied[2] || 0}
-      preContentHeightMm={pixelsToMm(currentPageOccupied[2] || 0)}
+      preContentHeightPx={currentPageOccupied[prevIndex] || 0}
+      preContentHeightMm={pixelsToMm(currentPageOccupied[prevIndex] || 0)}
       data={data}
     />
   );

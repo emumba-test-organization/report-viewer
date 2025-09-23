@@ -1,9 +1,6 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { Brain, FileText, Clock, CheckCircle } from "lucide-react";
-import A4Page from "../../shared/A4Page";
-import { useEffect, useRef } from "react";
-import { usePdfLayout } from "@/utils/PdfLayoutHelper/PdfLayoutHook";
 
 export type PrefaceData = {
   title: string;
@@ -17,20 +14,10 @@ export type PrefaceData = {
 
 const Preface = ({ data }: { data: PrefaceData }) => {
   const { purposeParagraphs, aboutParagraphs, reading } = data;
-  const containerRef = useRef<HTMLElement>(null);
-  const { analyzeLayout, overflowingElements, currentPageOccupied } =
-    usePdfLayout();
-
-  useEffect(() => {
-    if (containerRef.current) {
-      analyzeLayout(containerRef, 0);
-    }
-  }, []);
 
   return (
     <div
-      className="w-[210mm] screen:mx-auto screen:p-6 bg-white break-inside-auto break"
-      ref={containerRef}
+      className="break-inside-auto"
     >
       {/* Preface Title */}
       <h2 className="text-3xl font-bold text-gray-900 mb-8 break-inside-avoid break-after-avoid">
