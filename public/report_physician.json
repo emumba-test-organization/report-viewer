@@ -1,1237 +1,556 @@
 {
-  "preface": {
-    "header": {
-      "name": "Doe, Jane A.",
-      "createdOn": "11/02/2024",
-      "doctor": "Virginia N. Smith, M.D.",
-      "clinic": "Precision Medical Center",
-      "client": "uMETHOD"
+  "intro": {
+    "titles": [
+      "RestoreU METHOD",
+      "Physician Summary"
+    ],
+    "participant": {
+      "Participant Name": "Doe, Jane A.",
+      "Participant identifier": "JANEADOE",
+      "Care plan number": "1.00"
     },
-    "title": "Preface",
-    "purposeParagraphs": [
-      "Based on the information you've provided \u2014\r\n                    blood test results, your medical history, your family history, or other indicators \u2014\r\n                    it makes sense to initiate a program that addresses the factors that drive cognitive impairment.\r\n                    Symptoms of cognitive impairment may include the inability to focus,\r\n                    make decisions, find words, or remember names, faces, or places.\r\n                    40% of all adults over the age of 65 have some memory loss \u2014 so you are not alone.\r\n                    However, there is hope for those concerned about experiencing some memory loss.",
-      "This report contains an assessment of where you stand now and\r\n                    has been created specifically for you."
-    ],
-    "statisticCallout": "Based on the information you've provided \u2014\r\n                    blood test results, your medical history, your family history, or other indicators \u2014\r\n                    it makes sense to initiate a program that addresses the factors that drive cognitive impairment.\r\n                    Symptoms of cognitive impairment may include the inability to focus,\r\n                    make decisions, find words, or remember names, faces, or places.\r\n                    40% of all adults over the age of 65 have some memory loss \u2014 so you are not alone.\r\n                    However, there is hope for those concerned about experiencing some memory loss.",
-    "aboutParagraphs": [
-      "Multiple medical issues often contribute to memory loss.\r\n                    The\r\n                    care plan\r\n                    uses information such as your\r\n                    lab results, medical history, diet, and lifestyle to identify issues\r\n                    that may be causing your memory concerns.\r\n                    Your medical information is combined with medical research to create a\r\n                    customized treatment plan designed to address your specific issues.\r\n                    Your plan may help slow memory decline and stabilize memory function\r\n                    associated with mild cognitive impairment (MCI) or\r\n                    early dementia [ 1-4 ] ."
-    ],
-    "reading": {
-      "intro": [
-        "Let's get started on a path to lasting brain health!",
-        "As noted above, many medical factors can often contribute to memory loss,\r\n                    including your lab results, medical history, medications, diet, and lifestyle.\r\n                    Here is what this report covers:"
-      ],
-      "steps": [
-        {
-          "title": "Overview of Risk Factors",
-          "description": "It gives a brief overview of the risk factors that are within an optimal range, as well as the\r\n                        factors that are not in a good range and may be contributing to cognitive impairment or memory\r\n                        loss."
-        },
-        {
-          "title": "Personalized Action Plan",
-          "description": "Next, it presents a personalized action plan for reducing the impact of these risk factors."
-        },
-        {
-          "title": "In-Depth Insights",
-          "description": "Lastly, for those interested in the details, it describes how the risk factors related to your\r\n                        blood tests can contribute to cognitive impairment or memory loss."
-        }
-      ]
+    "practice": {
+      "Physician": "Virginia N. Smith, M.D.",
+      "Practice": "Precision Medical Center",
+      "Created On": "11/02/2024,",
+      "Valid Until:": "5/02/2025"
+    },
+    "overview": {
+      "Gender": {
+        "value": "Female",
+        "annotations": []
+      },
+      "Age": {
+        "value": "69",
+        "annotations": []
+      },
+      "DOB": {
+        "value": "3/02/1955",
+        "annotations": []
+      },
+      "BP": {
+        "value": "121/61",
+        "annotations": [
+          "old"
+        ]
+      },
+      "Height": {
+        "value": "5'2\"",
+        "annotations": []
+      },
+      "Weight": {
+        "value": "193 lbs",
+        "annotations": [
+          "old"
+        ]
+      },
+      "BMI": {
+        "value": "35.3",
+        "annotations": [
+          "old"
+        ]
+      },
+      "Girth": {
+        "value": "44.2\"",
+        "annotations": [
+          "est.",
+          "old"
+        ]
+      },
+      "Post-menopausal": {
+        "value": "Yes",
+        "annotations": []
+      }
     }
   },
-  "healthReport": {
-    "header": {
-      "name": "Doe, Jane A.",
-      "createdOn": "11/02/2024",
-      "doctor": "Virginia N. Smith, M.D.",
-      "clinic": "Precision Medical Center",
-      "client": "uMETHOD"
-    },
-    "title": "Current Status",
-    "currentStatus": {
-      "overview": {
-        "Gender": {
-          "value": "Female",
-          "annotations": []
-        },
-        "Age": {
-          "value": "69",
-          "annotations": []
-        },
-        "DOB": {
-          "value": "3/02/1955",
-          "annotations": []
-        },
-        "BP": {
-          "value": "121/61",
-          "annotations": [
-            "old"
-          ]
-        },
-        "Height": {
-          "value": "5'2\"",
-          "annotations": []
-        },
-        "Weight": {
-          "value": "193 lbs",
-          "annotations": [
-            "old"
-          ]
-        },
-        "BMI": {
-          "value": "35.3",
-          "annotations": [
-            "old"
-          ]
-        },
-        "Girth": {
-          "value": "44.2\"",
-          "annotations": [
-            "est.",
-            "old"
-          ]
-        },
-        "Post-menopausal": {
-          "value": "Yes",
-          "annotations": []
-        }
+  "cognitive_assessment": {
+    "1. Cognition-focused evaluation": [
+      {
+        "text": "MoCA score \n\n (on 2/15/2021)",
+        "value": 22,
+        "checkbox": false
+      },
+      {
+        "text": "SF-36 mental health score \n\n (on 2/01/2022)",
+        "value": 74,
+        "checkbox": false
       }
-    },
-    "healthStatusSections": [
+    ],
+    "2. Medical decision making": [
       {
-        "title": "Optimal",
-        "count": 11,
-        "description": "These factors are within optimal range,\r\n                            unlikely to be contributing to cognitive impairment or memory loss",
-        "factors": [
-          "no inflammation",
-          "no infections",
-          "no diabetes type 2",
-          "vitamin E level",
-          "sodium level",
-          "hormonal balance",
-          "diet",
-          "non-smoker",
-          "no atrial fibrillation",
-          "no heart disease",
-          "liver function"
-        ]
+        "text": "Patient is able to make their own medical decisions.",
+        "checkbox": true
       },
       {
-        "title": "Caution",
-        "count": 10,
-        "description": "These factors may be contributing somewhat to\r\n                            cognitive impairment or memory loss",
-        "factors": [
-          "kidney disease",
-          "obesity",
-          "homocysteine level",
-          "vitamin D level",
-          "hearing loss",
-          "essential metals imbalance",
-          "depression",
-          "high blood pressure",
-          "thyroid level",
-          "blood sugar level"
-        ]
+        "text": "Patient is not able to make their own medical decisions.",
+        "checkbox": true
       },
       {
-        "title": "At Risk",
-        "count": 7,
-        "description": "These factors are likely to be significantly\r\n                            contributing to cognitive impairment or memory loss",
-        "factors": [
-          "multimorbidity",
-          "poor sleep quality",
-          "inadequate exercise",
-          "cholesterol level",
-          "insulin level",
-          "insulin resistance",
-          "anticholinergic cognitive burden"
-        ]
+        "text": "Uncertain, may require additional testing.",
+        "checkbox": true
       },
       {
-        "title": "Unknown",
-        "count": 1,
-        "description": "There is not enough data to determine if this\r\n                            factor is contributing to cognitive impairment",
-        "factors": [
-          "stress"
-        ]
+        "text": "Notes:",
+        "checkbox": false
+      }
+    ],
+    "3. Functional assessment, including ADLs": [
+      {
+        "text": "Write checks, pay bills, and/or balance a checkbook",
+        "checkbox": true
+      },
+      {
+        "text": "Assemble tax records, business affairs, or papers",
+        "checkbox": true
+      },
+      {
+        "text": "Shop alone for clothes, household necessities, or groceries",
+        "checkbox": true
+      },
+      {
+        "text": "Play a game of skill or work on a hobby",
+        "checkbox": true
+      },
+      {
+        "text": "Heat water, make a cup of coffee, turn off the stove after use",
+        "checkbox": true
+      },
+      {
+        "text": "Prepare a balanced meal",
+        "checkbox": true
+      },
+      {
+        "text": "Keep track of current events, holidays",
+        "checkbox": true
+      },
+      {
+        "text": "Pay attention to & understand TV, books, magazines",
+        "checkbox": true
+      },
+      {
+        "text": "Remember appointments, family occasions, medications",
+        "checkbox": true
+      },
+      {
+        "text": "Notes:",
+        "checkbox": false
+      }
+    ],
+    "4. High-risk-medication review & reconciliation": [
+      {
+        "text": "Anticholinergic cognitive burden (ACB) score",
+        "value": 7,
+        "checkbox": false
+      },
+      {
+        "text": "Opioid Morphine Milligram Equivalent (MME) score",
+        "value": 0,
+        "checkbox": false
+      },
+      {
+        "text": "Fall-risk med score \n\n, with 4 conditions that increase risk",
+        "value": 7,
+        "checkbox": false
+      },
+      {
+        "text": "Medications that can worsen cognitive-decline factors",
+        "value": 5,
+        "checkbox": false
+      },
+      {
+        "text": "DDIs that can worsen cognitive-decline factors",
+        "value": 0,
+        "checkbox": false
+      },
+      {
+        "text": "DDIs in risk category \nX",
+        "value": 0,
+        "checkbox": false
+      },
+      {
+        "text": "DDIs in risk category \nC\n \n\nName of person administering medications",
+        "value": 13,
+        "checkbox": false
+      }
+    ],
+    "5. Neuropsychiatric & behavioral evaluation": [
+      {
+        "text": "PHQ-2 score \n\n (on 2/15/2021)",
+        "value": 3,
+        "checkbox": false
+      }
+    ],
+    "6. Safety evaluation": [
+      {
+        "text": "Travel out of neighborhood, drive, use public transportation?",
+        "checkbox": true
+      },
+      {
+        "text": "Is the patient still driving?",
+        "checkbox": true
+      },
+      {
+        "text": "Is the patient still taking medications as prescribed?",
+        "checkbox": true
+      },
+      {
+        "text": "Are there concerns about safety in the home?",
+        "checkbox": true
+      },
+      {
+        "text": "Has the patient gotten lost in familiar places or wandered?",
+        "checkbox": true
+      },
+      {
+        "text": "Are firearms present in the home?",
+        "checkbox": true
+      },
+      {
+        "text": "Has the patient experienced unsteadiness or sustained falls?",
+        "checkbox": true
+      },
+      {
+        "text": "Does the patient live alone?",
+        "checkbox": true
+      },
+      {
+        "text": "Notes:",
+        "checkbox": false
+      }
+    ],
+    "7. Caregiver identification": [
+      {
+        "text": "They do not understand dementia or Alzheimer's disease.",
+        "checkbox": true
+      },
+      {
+        "text": "They are not able to provide care and/or assistance.",
+        "checkbox": true
+      },
+      {
+        "text": "They need additional information.",
+        "checkbox": true
+      },
+      {
+        "text": "They need additional support.",
+        "checkbox": true
+      },
+      {
+        "text": "No additional support needed.",
+        "checkbox": true
+      },
+      {
+        "text": "Name of caregiver(s):",
+        "checkbox": false
+      }
+    ],
+    "8. Advance care planning": [
+      {
+        "text": "Patient has a healthcare power-of-attorney (POA).",
+        "checkbox": true
+      },
+      {
+        "text": "Patient has advanced directives.",
+        "checkbox": true
+      },
+      {
+        "text": "Needs resources.",
+        "checkbox": true
+      },
+      {
+        "text": "Notes:",
+        "checkbox": false
       }
     ]
   },
-  "actionPlan": {
-    "title": "Your Action Plan - Start Today!",
-    "intro": [
-      "The previous sections identified risk factors that may be contributing to cognitive impairment or\r\n                    memory loss. This section is your action plan for reducing the impact of some of those risk factors,\r\n                    broken up into these areas:",
-      "The more of this action plan you follow, the better your likelihood of positively impacting your\r\n                    brain health."
+  "stopbang": {
+    "title": "STOP-Bang Risk Index for Obstructive Sleep Apnea",
+    "preface": {
+      "definition": "Obstructive sleep apnea (OSA) [ 26 ] is the most prevalent sleep-breathing disturbance, \r\n                                affecting about 34% of men and 17% of women.\r\n                                A sleep apnea episode is a cessation of breathing (apnea) or \r\n                                a marked reduction in airflow (hypopnea) during sleep.\r\n                                An episode is considered clinically relevant if it lasts more than 10 seconds; \r\n                                episodes of apneas and hypopneas often persist for 30-60 seconds.\r\n                                It is estimated that the average life span of someone with untreated OSA is 58 years.",
+      "risk_intro": "The STOP-Bang index [ 27,28 ] estimates the risk for OSA as follows:",
+      "risk_rules": {
+        "High risk": "5 or more Yes answers, or 2 or more Yes answers to the STOP questions and Yes for 'B', or 2 or more Yes answers to the STOP questions and Yes for 'N', or 2 or more Yes answers to the STOP questions and Yes for 'G'",
+        "Intermediate risk": "3 or 4 \r\n                                Yes answers",
+        "Low risk": "0, 1, or 2 \r\n                                Yes answers"
+      }
+    },
+    "headers": [
+      "Question",
+      "Answer",
+      "Explanation"
     ],
-    "steps": [
-      "prescription medications and supplements",
-      "lifestyle, and",
-      "what you eat."
-    ],
-    "medications": [
+    "table": [
       {
-        "medication": "methylcobalamin 1 mg in 1 mL intramuscular injection",
-        "dosageDetails": "1 mg/1 mL, intramuscular",
-        "alreadyTaking": "",
-        "reasoning": [
-          {
-            "action": "To raise your level of",
-            "reasons": [
-              {
-                "name": "Vitamin B12",
-                "currentLevel": "139\u00a0pg/mL"
-              }
-            ]
-          }
-        ],
-        "guidance": "Repeat as needed during the first 2 weeks, if vitamin B12 level remains below 200 pg/mL."
+        "code": "S",
+        "question": "Do you Snore Loudly (loud enough to be heard through closed doors or your \r\nbed-partner elbows you for snoring at night)?",
+        "answer": "Yes",
+        "explanation": "Sleep attribute Snore Loudly reported as \"y\" in Personal Medical History."
       },
       {
-        "medication": "levothyroxine",
-        "dosageDetails": "25 mcg, tablet, every day",
-        "alreadyTaking": "",
-        "reasoning": [
-          {
-            "action": "To raise your level of",
-            "reasons": [
-              {
-                "name": "fT3",
-                "currentLevel": "2.3\u00a0pg/mL"
-              }
-            ]
-          },
-          {
-            "action": "To lower your level of",
-            "reasons": [
-              {
-                "name": "TSH",
-                "currentLevel": "3.0\u00a0\ufffdIU/mL"
-              }
-            ]
-          }
-        ],
-        "guidance": "Take on an empty stomach, 1/2 to 1 hour before breakfast. Avoid taking supplements or\r\n                            medications that contain calcium, magnesium, or zinc (such as antacids) for 4 hours\r\n                            afterwards."
+        "code": "T",
+        "question": "Do you often feel Tired , Fatigued, or Sleepy during the daytime (such as \r\nfalling asleep during driving or talking to someone)?",
+        "answer": "Yes",
+        "explanation": "Sleep attribute Drowsy reported as \"y\" in Personal Medical History. Sleep attribute Fall Asleep Midday reported as \"2/week\" in Lifestyle Review."
       },
       {
-        "medication": "lecanemab",
-        "dosageDetails": "Assess eligibility",
-        "alreadyTaking": "",
-        "reasoning": [
-          {
-            "action": "Likely mild Cognitive Impairment (taking donepezil).",
-            "reasons": []
-          }
-        ],
-        "guidance": "Discuss appropriateness & eligibility for lecanemab with your doctor."
+        "code": "O",
+        "question": "Has anyone Observed you Stop Breathing or Choking/Gasping during your sleep?",
+        "answer": "Yes",
+        "explanation": "Sleep attribute Observed Gasping reported as \"y\" in Personal Medical History."
+      },
+      {
+        "code": "P",
+        "question": "Do you have or are you being treated for High Blood Pressure ?",
+        "answer": "Yes",
+        "explanation": "High blood pressure reported as a problem."
+      },
+      {
+        "code": "B",
+        "question": "Is your Body Mass Index (BMI) more than 35 kg/m 2 ?",
+        "answer": "Yes",
+        "explanation": "35.3 kg/m 2 (old)"
+      },
+      {
+        "code": "A",
+        "question": "Is your Age over 50?",
+        "answer": "Yes",
+        "explanation": "69 years"
+      },
+      {
+        "code": "N",
+        "question": "Is your Neck size large? (measured around Adam's apple)",
+        "answer": "Yes",
+        "explanation": "Neck circumference is 43.3 cm (est.), optimal value is 41 cm or less."
+      },
+      {
+        "code": "G",
+        "question": "Is your Gender male?",
+        "answer": "No",
+        "explanation": "female"
       }
     ],
-    "supplements": {
-      "title": "Supplements and How To Take Them",
-      "intro": [
-        "Five\r\n                        new recommended supplements are shown below in prioritized order",
-        "Start at the top and work down the list",
-        "Slowly ramp up the number of new supplements;\r\n                        consider starting with just the first one\r\n                        \u2014 vitamin D3/K2 \u2014\r\n                        and watching carefully for any side effects",
-        "Five\r\n                        days later, if okay, add the next\r\n\r\n                        recommended supplement"
+    "postface": "The OSA risk is \r\n                                high (7 Yes answers).",
+    "score": 7,
+    "risk_level": "High",
+    "calculated_score": 7
+  },
+  "acb": {
+    "title": "Anticholinergic Cognitive Burden (ACB)",
+    "root_preface": "Many medications can induce \"brain fog,\"\r\n                                an additional layer of impairment that may mask actual cognitive decline.\r\n                                In particular, the additive effects of anticholinergic medications, \r\n                                known as their Anticholinergic Cognitive Burden (ACB),\r\n                                have been well studied. [ 4-7 ] The total ACB score evaluates the degree of impairment induced by someone's\r\n                                current medications.\r\n                                Each medication is scored from 0 to 3, and these scores are summed.\r\n                                The criteria for these \"0 to 3\" values are:",
+    "criteria": {
+      "preface": "The total ACB score evaluates the degree of impairment induced by someone's\r\n                                current medications.\r\n                                Each medication is scored from 0 to 3, and these scores are summed.\r\n                                The criteria for these \"0 to 3\" values are:",
+      "items": [
+        {
+          "score": 0,
+          "description": "A medication with no anticholinergic effect.  (best)"
+        },
+        {
+          "score": 1,
+          "description": "Termed a possible anticholinergic.\r\n                                Evidence from in vitro data that chemical entity has antagonist\r\n                                activity at muscarinic receptor."
+        },
+        {
+          "score": 2,
+          "description": "A definite anticholinergic.\r\n                                Evidence from literature, prescriber's information, or expert opinion\r\n                                of clinical anticholinergic effect."
+        },
+        {
+          "score": 3,
+          "description": "A definite anticholinergic.\r\n                                Evidence from literature, prescriber's information, or expert opinion\r\n                                that the medication may cause delirium.  (worst)"
+        }
+      ]
+    },
+    "medications": {
+      "headers": [
+        "Medication",
+        "ACB Score",
+        "Potential alternatives offering a lower ACB Score"
       ],
-      "meds": [
+      "data": [
         {
-          "medication": "vitamin D3/K2 cholecalciferol;menatetrenone",
-          "dosageDetails": "4000 IU/600 mcg, 1 capsule, every day",
-          "reasoning": [
-            {
-              "action": "To raise your level of",
-              "reasons": [
-                {
-                  "name": "Vitamin D",
-                  "currentLevel": "24.8\u00a0ng/mL"
-                }
-              ]
-            },
-            {
-              "action": "Vitamin K2 enhances absorption of\r\n                                cholecalciferol.",
-              "reasons": []
-            }
-          ],
-          "guidance": "Best taken at the largest meal of the day, and along with calcium and magnesium (if\r\n                                those are among current medications)."
+          "medication": "chlorpheniramine",
+          "dosage": "4 mg, 1 pill, PO, p.r.n.",
+          "score": 3,
+          "alternatives": [
+            "desloratadine",
+            "loratadine",
+            "fexofenadine",
+            "cetirizine"
+          ]
         },
         {
-          "medication": "N-acetylcysteine (NAC)",
-          "dosageDetails": "500 mg, 1 capsule, every day",
-          "reasoning": [
-            {
-              "action": "To lower your levels of",
-              "reasons": [
-                {
-                  "name": "Homocysteine",
-                  "currentLevel": "13\u00a0\ufffdmol/L"
-                },
-                {
-                  "name": "Glucose",
-                  "currentLevel": "96\u00a0mg/dL"
-                },
-                {
-                  "name": "Insulin",
-                  "currentLevel": "15.7\u00a0\ufffdIU/mL"
-                }
-              ]
-            }
-          ],
-          "guidance": "Best taken either 30 minutes before, or two hours after, eating to avoid competing with\r\n                                protein for absorption."
+          "medication": "fesoterodine",
+          "dosage": "8 mg, 1 pill, PO, q.d.",
+          "score": 3,
+          "alternatives": [
+            "dosulepin",
+            "mirabegron"
+          ]
         },
         {
-          "medication": "resveratrol",
-          "dosageDetails": "100 mg, 1 capsule, twice daily",
-          "reasoning": [
-            {
-              "action": "ApoE gene indicates increased risk of Alzheimer's disease.",
-              "reasons": []
-            }
-          ],
-          "guidance": "Best taken with a fatty meal, to increase absorption."
-        },
-        {
-          "medication": "alpha-lipoic acid (ALA)",
-          "dosageDetails": "500 mg, 1 tablet, every day",
-          "reasoning": [
-            {
-              "action": "To lower your levels of",
-              "reasons": [
-                {
-                  "name": "Glucose",
-                  "currentLevel": "96\u00a0mg/dL"
-                },
-                {
-                  "name": "Insulin",
-                  "currentLevel": "15.7\u00a0\ufffdIU/mL"
-                }
-              ]
-            }
-          ],
-          "guidance": "Best taken on an empty stomach: 1 hour before or 2 hours after eating."
-        },
-        {
-          "medication": "berberine",
-          "dosageDetails": "500 mg, twice daily",
-          "reasoning": [
-            {
-              "action": "To lower your level of",
-              "reasons": [
-                {
-                  "name": "Glucose",
-                  "currentLevel": "96\u00a0mg/dL"
-                }
-              ]
-            }
-          ],
-          "guidance": "Ramp up slowly: 1 capsule/day the 1st week; then 2 capsules/day."
-        }
-      ]
-    }
-  },
-  "lifestyle": {
-    "title": "Your Lifestyle",
-    "intro": "You've gotten a start with any new medications and supplements.\r\n                                Great job!\r\n                                Continue to take them on their recommended schedule.\r\n                                Let's improve on\r\n                                your quality of sleep,\r\n                                moving your body,\r\n                                keeping stress low,\r\n                                maintaining great hygiene,\r\n                                and\r\n                                exercising your brain.\r\n                                You can do all these steps together if you want\r\n                                or\r\n                                add them at your own pace. [ 5-7 ]",
-    "recommendations": [
-      {
-        "area": {
-          "title": "Stress Relief",
-          "image": "../../brand_resources/Common/Icons/Stress Icon2.png"
-        },
-        "task": "Find at least 30 minutes of relaxing activity each day.",
-        "instructions": [
-          "Spend some time with people you enjoy and those who support you",
-          "Include walks, music, meditation, naps, yoga,\r\n                                            or whatever provides relaxation, at least once a day",
-          "The importance of a positive attitude cannot be overstated",
-          "People who are often stressed are more likely\r\n                                            to experience brain shrinkage and increased production of the amyloid beta\r\n                                            peptide",
-          "Some stresses are unavoidable,\r\n                                            but low stress levels are important for delaying or avoiding symptom onset"
-        ]
-      },
-      {
-        "area": {
-          "title": "Restful Sleep",
-          "image": "../../brand_resources/Common/Icons/Sleep Icon2.png"
-        },
-        "task": "",
-        "instructions": [
-          "Seek treatment for\r\n                                            Obstructive sleep apnea, which can reduce the quality of your sleep",
-          "One\r\n                                            medication may be disrupting your sleep",
-          "Discuss this with your\r\n                                            physician",
-          "Focus on earlier bedtime (the time at which you go to bed),\r\n                                            not wake time (not how late you sleep)",
-          "Bedtime before midnight is preferable"
-        ]
-      },
-      {
-        "area": {
-          "title": "Overnight Fasting",
-          "image": "../../brand_resources/Common/Icons/Fasting Icon.png"
-        },
-        "task": "Fast every night for at least 12 hours,\r\n                                            between the last food in the evening and the first in the morning.\r\n                                            Begin the fasting at least 3 hours before bedtime.",
-        "instructions": [
-          "Autophagy is a process by which cells break down and\r\n                                            recycle their own damaged or unnecessary components",
-          "Autophagy may assist in clearing the accumulation of beta-amyloid,\r\n                                            a protein that is a hallmark of Alzheimer's disease,\r\n                                            as well as clear the accumulation of tau,\r\n                                            another protein associated with neurodegenerative diseases",
-          "Occasional daytime fasts are also helpful,\r\n                                            such as fasting for a day (or most of a day) every few months"
-        ]
-      },
-      {
-        "area": {
-          "title": "Appropriate Exercise",
-          "image": "../../brand_resources/Common/Icons/Exercise Icon2.png"
-        },
-        "task": "3 to 4 times a week, for 30 to 45 minutes each time (with doctor's approval)",
-        "instructions": [
-          "Mix both cardio & resistance (weight) training each week"
-        ]
-      },
-      {
-        "area": {
-          "title": "Brain Exercise",
-          "image": "../../brand_resources/Common/Icons/Brain Exercise2.png"
-        },
-        "task": "Push your mental abilities hard!\r\n                                            Give your brain a tough workout every day.",
-        "instructions": [
-          "Examples:\r\n                                            become a tutor,\r\n                                            learn a new language or new field,\r\n                                            take dance lessons & dance often,\r\n                                            learn to play a musical instrument,\r\n                                            memorize poems,\r\n                                            even do math problems in your head",
-          "Read books (rather than short articles)",
-          "Do crossword puzzles or Sudoku;\r\n                                            computerized crossword puzzles have been shown to slow cognitive\r\n                                            decline",
-          "[ 8 ] Good social activities include bridge & chess,\r\n                                            and walking & talking with friends"
-        ]
-      }
-    ]
-  },
-  "nutrition": {
-    "recommendations": {
-      "header": "Balanced Nutrition",
-      "header_intro": "Dietary patterns characterized by higher intake of\r\n                                        vegetables,\r\n                                        fruits,\r\n                                        fish,\r\n                                        nuts, and\r\n                                        legumes,\r\n                                        and lower intake of\r\n                                        meats,\r\n                                        high fat dairy, and\r\n                                        sweets are related to lower odds of cognitive decline.\r\n                                        The place to start is with the eating guidelines in the well-studied MIND diet.",
-      "mind_diet_intro": "The Mediterranean-DASH Intervention for Neurogenerative Delay (MIND) diet is\r\n                                            a hybrid of two successful eating plans, but with modifications to reflect\r\n                                            the scientific literature on foods and nutrients that are specific to brain\r\n                                            health. It emphasizes ten foods that have been shown to slow cognitive\r\n                                            decline in clinical studies. It also names five food groups to avoid, due to\r\n                                            their adverse effects on the brain.",
-      "recommended_instructions": "Focus on choosing from among these ten recommended food groups.",
-      "recommended_diet": {
-        "headers": [
-          "Food Group",
-          "How Often?"
-        ],
-        "entries": [
-          {
-            "foodGroup": "Green leafy vegetables (like spinach or salad greens)",
-            "frequency": "At least 6 servings a week"
-          },
-          {
-            "foodGroup": "Other vegetables",
-            "frequency": "At least once a day"
-          },
-          {
-            "foodGroup": "Nuts",
-            "frequency": "5 servings a week"
-          },
-          {
-            "foodGroup": "Berries",
-            "frequency": "2 or more servings a week"
-          },
-          {
-            "foodGroup": "Beans",
-            "frequency": "At least 3 servings a week"
-          },
-          {
-            "foodGroup": "Whole grains",
-            "frequency": "3 or more servings a day"
-          },
-          {
-            "foodGroup": "Fish",
-            "frequency": "Once a week"
-          },
-          {
-            "foodGroup": "Poultry (like chicken or turkey)",
-            "frequency": "2 times a week"
-          },
-          {
-            "foodGroup": "Olive oil, avocado oil",
-            "frequency": "Use these as your main cooking oils"
-          }
-        ]
-      },
-      "discouraged_instructions": "Foods to limit:\r\n                                        the MIND diet discourages eating from these five unhealthy food groups.",
-      "discouraged_diet": {
-        "headers": [
-          "Food Group",
-          "How Often?"
-        ],
-        "entries": [
-          {
-            "foodGroup": "Red meat (like beef, lamb, or pork)",
-            "frequency": "Fewer than 4 servings a week"
-          },
-          {
-            "foodGroup": "Stick margarine or butter",
-            "frequency": "Less than a tablespoon daily"
-          },
-          {
-            "foodGroup": "Cheese",
-            "frequency": "Avoid more than one serving a week"
-          },
-          {
-            "foodGroup": "Pastries and sweets",
-            "frequency": "Fewer than 5 servings a week"
-          },
-          {
-            "foodGroup": "Fried or fast food",
-            "frequency": "Avoid more than one serving weekly, if at all"
-          }
-        ]
-      }
-    },
-    "mind_diet_title": "MIND Diet: Recommendations and Progress",
-    "summary": {
-      "title": "Dietary Overview",
-      "warning": "Three potential dietary issues were identified in the most\r\n                                                            recent blood serum results",
-      "deficiencies": [
-        {
-          "nutrient": "hyperinsulinemia",
-          "normal_range": "",
-          "result": {
-            "severity": "very high",
-            "desc": "fasting Insulin",
-            "reading": "15.7"
-          },
-          "nutrient_sub": ""
-        },
-        {
-          "nutrient": "Vitamin B12 Deficiency",
-          "normal_range": "50.0-149.9",
-          "result": {
-            "severity": "very low",
-            "desc": "Vitamin B12",
-            "reading": "139"
-          },
-          "nutrient_sub": "cobalamins"
-        },
-        {
-          "nutrient": "Vitamin D Deficiency",
-          "normal_range": "20.0-29.9",
-          "result": {
-            "severity": "low",
-            "desc": "Vitamin D",
-            "reading": "24.8"
-          },
-          "nutrient_sub": "25-hydroxy"
+          "medication": "HCTZ",
+          "dosage": "12.5 mg, 1 pill, PO, q.d.",
+          "score": 1,
+          "alternatives": [
+            "metolazone"
+          ]
         }
       ]
     },
-    "consumption": {
-      "advice": "Further discussion and follow-up with a dietitian or nutritional\r\n                                            professional is recommended.",
-      "title": "Dietary consumption",
-      "entries": [
-        {
-          "group": "refined carbs",
-          "intake": "about 0 servings/week",
-          "note": ""
-        },
-        {
-          "group": "seed oil use",
-          "intake": "0\r\n                                                                servings/week",
-          "note": ""
-        },
-        {
-          "group": "alcohol",
-          "intake": "not\r\n                                                                reported",
-          "note": ""
-        },
-        {
-          "group": "coffee",
-          "intake": "not\r\n                                                                reported",
-          "note": "Slow caffeine metabolism\r\n                                                                is indicated by the CYP1A2 genes,\r\n                                                                so drink no more than two cups of coffee each day (200mg\r\n                                                                of caffeine) and finish them by noon.\r\n                                                                Although there is caffeine in green tea,\r\n                                                                it contains less caffeine than black tea,\r\n                                                                and in turn black tea has less caffeine than coffee.\r\n\r\n                                                                Wait two hours after taking the medication\r\n                                                                levothyroxine\r\n                                                                before drinking any coffee."
-        },
-        {
-          "group": "tea",
-          "intake": "not reported",
-          "note": ""
-        }
+    "totals": {
+      "total_acb_score": 7,
+      "definite_anticholinergics": 2,
+      "mmse_effect": 2
+    },
+    "postface": {
+      "text": "The total ACB score is 7 . This cognitive burden adds a layer of masking atop any existing\r\n                                cognitive decline, making it difficult to determine someone's actual status.    Notes: Each definite anticholinergic,\r\n                                of which there are currently 2 ,\r\n                                may increase the risk of cognitive impairment\r\n                                by 46% over 6 years. For each one-point increase in the total ACB score, \r\n                                a decline in someone's Mini-Mental State Examination (MMSE) score\r\n                                of 0.33 points over 2 years has been suggested. \r\n                                \r\n                                Thus, the current anticholinergic burden may be lowering an MMSE score by 2 points.",
+      "mights": [
+        "Might medications be discontinued?",
+        "Might medications be replaced with others with lower ACB scores?",
+        "Might dosages be reduced?"
+      ],
+      "notes": [
+        "Each definite anticholinergic,\r\n                                of which there are currently 2 ,\r\n                                may increase the risk of cognitive impairment\r\n                                by 46% over 6 years.",
+        "For each one-point increase in the total ACB score, \r\n                                a decline in someone's Mini-Mental State Examination (MMSE) score\r\n                                of 0.33 points over 2 years has been suggested. \r\n                                \r\n                                Thus, the current anticholinergic burden may be lowering an MMSE score by 2 points."
       ]
     }
   },
-  "currentMedication": {
-    "title": "Current Medications",
-    "intro": "These are the medications you told us about.\r\n                                                    These include your prescriptions, vitamins, supplements,\r\n                                                    over-the-counter drugs,\r\n                                                    regular injections, eye drops, and so on.\r\n                                                    Let us know if there's anything you'd like to add, change, or\r\n                                                    remove.",
+  "leqembi": {
+    "heading": "Assessing Eligibility for Leqembi",
+    "legend_preface": "A genetic analysis, amyloid positivity, and a brain MRI scan are required \r\n    to be eligible for these treatments,\r\n    after first satisfying a number of initial criteria, shown below. [ 29 ]",
+    "preface": [
+      "Leqembi (generic name: lecanemab )\r\n    is a prescription medication designed to treat Alzheimer's disease (AD).\r\n    It is a monoclonal antibody that can\r\n    reduce buildup of aggregated forms of amyloid beta, \r\n    which is frequently seen in the brains of those with AD.\r\n    Leqembi\r\n    is likely to be most effective in early stages of cognitive decline, \r\n    that is,\r\n    for those diagnosed with mild cognitive impairment (MCI) \r\n    or \r\n    mild Alzheimer's disease.\r\n    It is administered via a series of monthly intravenous (IV) infusions."
+    ],
+    "conclusion": "This patient does not meet the initial eligibility requirements for \r\n    Leqembi. Microhemorrhages occurred in 34.0% of ApoE4 homozygotes; \r\n    amyloid-related imaging anomalies (ARIA) \r\n    occurred in 32.6%.",
+    "legend": [
+      "\u2022 Met (green) \u2014 the criterion is satisfied",
+      "\u2022 unknown (yellow) \u2014 information is missing or is out of date",
+      "\u2022 Not recommended (red) \u2014 the criterion is not met, which rules out a treatment recommendation. All red & yellow items must be addressed before moving to the next steps."
+    ],
+    "headers": [
+      "Criterion to be met",
+      "Status",
+      "Reasoning"
+    ],
+    "criteria": [
+      {
+        "criterion": "Age: 50 to 90",
+        "status": "Met",
+        "reasoning": "69 years old"
+      },
+      {
+        "criterion": "BMI: 17 to 35",
+        "status": "Not recommended",
+        "reasoning": "BMI 35.3 is higher than the recommended range. Physician judgment may be used for a BMI value outside the range."
+      },
+      {
+        "criterion": "Genotyping, ApoE4 risk",
+        "status": "Not recommended",
+        "reasoning": "ApoE e4/e4.  For those with this ApoE value, the ARIA risk during MRIs is 32.6% and the risk of microhemorrhages is 34.0%."
+      },
+      {
+        "criterion": "Existing diagnosis of MCI or early AD",
+        "status": "Met",
+        "reasoning": [
+          "\u2022\u00a0likely mild Cognitive Impairment (taking donepezil)",
+          "\u2022\u00a0AD-Detect\u2122 A\u03b242/40 0.159 suggests an intermediate risk of AD pathology"
+        ]
+      },
+      {
+        "criterion": "Recent cognitive assessment",
+        "status": "unknown",
+        "reasoning": "MoCA score 22, but not recent (2/15/2021)"
+      },
+      {
+        "criterion": "Recent blood lab testing",
+        "status": "Not recommended",
+        "reasoning": [
+          "\u2022\u00a0Insulin is far above target, at 15.7\u00a0\u00b5IU/mL.",
+          "\u2022\u00a0Vitamin B12 is far below target, at 139\u00a0pg/mL.",
+          "\u2022\u00a0<u>blood tests that are not recent</u>:  Hematocrit; Hemoglobin; MCH; MCHC; MCV; Platelets; RBC; WBC; Alkaline Phosphatase; ALT; AST; Bilirubin, Direct; Bilirubin, Total; BUN; Calcium; Carbon Dioxide; Chloride; Creatine Kinase; Creatinine; eGFR; Glucose; GGT; LDH; Phosphorus; Potassium; Sodium; Uric Acid; hs-CRP; HDL cholesterol; LDL cholesterol; Total cholesterol; Triglycerides; Hemoglobin A1c; Homocysteine; Vitamin B12; Vitamin B9; Vitamin D; Vitamin E; Copper; Magnesium, RBC; Selenium; Zinc; Cortisol; Insulin; Pregnenolone; Iron; Ferritin; TSH; fT3; and fT4"
+        ]
+      },
+      {
+        "criterion": "Stable cardiovascular conditions",
+        "status": "Met",
+        "reasoning": "no cardiovascular disease currently being reported or observed"
+      },
+      {
+        "criterion": "Stable medical conditions",
+        "status": "Not recommended",
+        "reasoning": "probable Obstructive Sleep Apnea"
+      },
+      {
+        "criterion": "Stable psychiatric conditions",
+        "status": "Met",
+        "reasoning": "no psychiatric disorders reported or observed"
+      },
+      {
+        "criterion": "No major depression",
+        "status": "Not recommended",
+        "reasoning": "PHQ-2 score 3 (on 2/15/2021)"
+      },
+      {
+        "criterion": "No non-AD neurological disorders",
+        "status": "Met",
+        "reasoning": "no other neurological disorders reported or observed"
+      },
+      {
+        "criterion": "No active immunologic disease",
+        "status": "Met",
+        "reasoning": "not taking a systemic medication for immunlogic disease"
+      },
+      {
+        "criterion": "Not taking anticoagulant medications",
+        "status": "Met",
+        "reasoning": "not taking a prescription anticoagulant"
+      },
+      {
+        "criterion": "Able to have an MRI",
+        "status": "unknown",
+        "reasoning": "<i>example exclusions</i>: a pacemaker incompatible with an MRI, a titanium stapes prosthesis, a metallic brain vessel aneurysm clip, or a metallic object in an eye"
+      }
+    ],
+    "eligibility": "Ineligible"
+  },
+  "fall_risk": {
+    "heading": "Medications That May Increase Fall Risk",
+    "preface": [
+      "These existing conditions may raise the likelihood of falling: Obstructive sleep apnea ; Depression ; Lower Back Pain ; and Occasional Abdominal Pain .  In addition, five current medications are identified as fall-risk increasing drugs (FRIDs).  Their total score of 7 signifies that these medications may increase the likelihood of a fall, and further evaluation is warranted. [ 15,16 ] The STOPPFall guidelines can assist in stopping, switching, or reducing the dosage of these medications. [ 17 ] Target a total score of 5 or less."
+    ],
+    "columnTypes": [
+      "alpha",
+      "numeric"
+    ],
     "headers": [
       "Medication",
-      "Dosage Details",
-      "Class / Indication",
-      "Date Started"
+      "Fall-risk med score"
     ],
     "medications": [
       {
-        "medication": "lisinopril",
-        "dosageDetails": "10 mg, 1 pill / orally / every day",
-        "indication": "Angiotensin Converting Enzyme Inhibitor",
-        "dateStarted": "4/01/2014"
+        "name": "duloxetine",
+        "dosage": "20 mg, 1 pill, PO, q.d.",
+        "score": "2"
       },
       {
-        "medication": "duloxetine",
-        "dosageDetails": "20 mg, 1 pill / orally / every day",
-        "indication": "Serotonin and Norepinephrine Reuptake Inhibitor",
-        "dateStarted": "8/01/2014"
+        "name": "lisinopril",
+        "dosage": "10 mg, 1 pill, PO, q.d.",
+        "score": "2"
       },
       {
-        "medication": "donepezil",
-        "dosageDetails": "10 mg, 1 pill / orally / every day",
-        "indication": "Cholinesterase Inhibitor",
-        "dateStarted": "7/01/2021"
+        "name": "chlorpheniramine",
+        "dosage": "4 mg, 1 pill, PO, p.r.n.",
+        "score": "1"
       },
       {
-        "medication": "chlorpheniramine, Chlor-Trimeton",
-        "dosageDetails": "4 mg, 1 pill / orally / as needed",
-        "indication": "Histamine-1 Receptor Antagonist / for allergies",
-        "dateStarted": "11/01/2020"
+        "name": "donepezil",
+        "dosage": "10 mg, 1 pill, PO, q.d.",
+        "score": "1"
       },
       {
-        "medication": "HCTZ",
-        "dosageDetails": "12.5 mg, 1 pill / orally / every day",
-        "indication": "Thiazide Diuretic",
-        "dateStarted": "2/01/2016"
-      },
-      {
-        "medication": "fluocin acet otic",
-        "dosageDetails": "0.01%, 3 gtts / both ears / every other day",
-        "indication": "Corticosteroid, Otic",
-        "dateStarted": "2/01/2016"
-      },
-      {
-        "medication": "fluticasone inhalant",
-        "dosageDetails": "50 mcg, 2 sprays / inhaled / every day",
-        "indication": "Corticosteroid, Inhaled",
-        "dateStarted": "12/01/2015"
-      },
-      {
-        "medication": "fesoterodine, Toviaz",
-        "dosageDetails": "8 mg, 1 pill / orally / every day",
-        "indication": "Benzhydryl Compounds",
-        "dateStarted": "4/01/2019"
-      },
-      {
-        "medication": "erythromycin, Ery-Tab",
-        "dosageDetails": "orally / twice daily",
-        "indication": "Macrolide Antimicrobial",
-        "dateStarted": "2/15/2022"
+        "name": "HCTZ",
+        "dosage": "12.5 mg, 1 pill, PO, q.d.",
+        "score": "1"
       }
-    ]
-  },
-  "cognitiveFunction": {
-    "title": "Factors Related to Cognitive Decline",
-    "intro": "This section describes how certain risk factors identified in your\r\n                                                    blood tests may contribute\r\n                                                    to cognitive impairment or memory loss\r\n                                                    \u2014\r\n                                                    and gives you targets to aim for, working with your doctor.\r\n                                                    Discuss other risk factors,\r\n                                                    such as those related to medications and genetics,\r\n                                                    thoroughly with your doctor.",
-    "factors": [
-      {
-        "section": "Multimorbidity",
-        "entries": [
-          {
-            "description": "Chronic conditions: hypertension; osteoarthritis; likely\r\n                                                            obesity; probable poor sleep quality; possible depression;\r\n                                                            possible kidney disease; possible lipid disorders; and\r\n                                                            possible thrombocytopenia\nHaving multiple\r\n                                                                chronic conditions is associated with a greater risk of\r\n                                                                mild cognitive impairment and dementia.",
-            "severity": "",
-            "measurement": "",
-            "currentLevel": "",
-            "targetLevel": "",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Homocysteine Concerns",
-        "entries": [
-          {
-            "description": "\nThis level of homocysteine is above target.\r\n                                                                Elevated levels are associated with atrophy of a key\r\n                                                                area in the brain for memory, called the hippocampus.\r\n                                                                High homocysteine can also facilitate a buildup of\r\n                                                                undesirable components in the brain, known as\r\n                                                                beta-amyloid plaques and tau proteins. Without adequate\r\n                                                                intake of the right B vitamins, homocysteine can\r\n                                                                accumulate and contribute to memory problems.",
-            "severity": "High",
-            "measurement": "homocysteine",
-            "currentLevel": "13 \ufffdmol/L",
-            "targetLevel": "< 7.0 \ufffdmol/L",
-            "image": null
-          },
-          {
-            "description": "\nThis very low vitamin B12 level may be linked\r\n                                                                to the break down of myelin (the protective sheath\r\n                                                                around nerve cells), brain cell atrophy, increased\r\n                                                                inflammation, and high homocysteine levels. All of these\r\n                                                                can contribute to memory problems. Further evaluation as\r\n                                                                to its cause is recommended.",
-            "severity": "Very low",
-            "measurement": "vitamin B12",
-            "currentLevel": "139\r\n                                                                            pg/mL",
-            "targetLevel": "\u2265 500 pg/mL",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Insulin Concerns",
-        "entries": [
-          {
-            "description": "\nElevated insulin levels, including the high\r\n                                                                insulin associated with type 2 diabetes, are associated\r\n                                                                with key drivers of cognitive decline: brain\r\n                                                                inflammation, amyloid plaques, and tau tangles. In\r\n                                                                particular, high insulin increases beta-amyloid\r\n                                                                accumulation. This insulin level, far above target, may\r\n                                                                significantly accelerate the progression of cognitive\r\n                                                                decline, so further evaluation is recommended.",
-            "severity": "Very high",
-            "measurement": "insulin",
-            "currentLevel": "15.7\r\n                                                                            \ufffdIU/mL",
-            "targetLevel": "< 4.5 \ufffdIU/mL",
-            "image": null
-          },
-          {
-            "description": "\nThe formula known as the Homeostatic Model\r\n                                                                Assessment for Insulin Resistance (HOMA-IR) estimates\r\n                                                                insulin resistance using your fasting glucose and\r\n                                                                insulin levels. The high level seen here can occur when\r\n                                                                your body cannot readily absorb glucose from the\r\n                                                                bloodstream. The body thus needs higher levels of\r\n                                                                insulin to help glucose enter cells. Insulin resistance\r\n                                                                may contribute to fatigue, and can lead to brain\r\n                                                                inflammation, amyloid plaques, and tau tangles, so\r\n                                                                further evaluation is recommended.",
-            "severity": "Very high",
-            "measurement": "HOMA-IR",
-            "currentLevel": "3.7",
-            "targetLevel": "<\r\n                                                                        1.9",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Blood Sugar Imbalance",
-        "entries": [
-          {
-            "description": "\nA level of 100 to 125 mg/dL indicates\r\n                                                                impaired fasting glucose, a type of prediabetes. This\r\n                                                                increases the risk of developing type 2 diabetes.\r\n                                                                Insulin resistance can lead to brain inflammation,\r\n                                                                amyloid plaques, and tau tangles \u2014 each a driver\r\n                                                                of cognitive decline.",
-            "severity": "Moderately high",
-            "measurement": "glucose",
-            "currentLevel": "96\r\n                                                                            mg/dL",
-            "targetLevel": "< 91 mg/dL",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Cholesterol Imbalance",
-        "entries": [
-          {
-            "description": "\nThis value for total cholesterol is\r\n                                                                considered far above target, which can lead to vascular\r\n                                                                disease. Factors associated with vascular disease are\r\n                                                                associated with cognitive decline in aging, and they\r\n                                                                also include previous heart attacks, narrowing of the\r\n                                                                cerebral arteries, hypertension, and diabetes.",
-            "severity": "Very high",
-            "measurement": "total cholesterol",
-            "currentLevel": "273\r\n                                                                            mg/dL",
-            "targetLevel": "< 225 mg/dL",
-            "image": null
-          },
-          {
-            "description": "\nThis level of LDL (known as the bad\r\n                                                                cholesterol) is above target. Increased LDL cholesterol\r\n                                                                levels are linked to increased likelihood of developing\r\n                                                                beta-amyloid plaques, an indicator of Alzheimer's\r\n                                                                disease. Additionally, high LDL can lead to\r\n                                                                atherosclerosis.",
-            "severity": "High",
-            "measurement": "LDL cholesterol",
-            "currentLevel": "183\r\n                                                                            mg/dL",
-            "targetLevel": "< 135 mg/dL",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Abnormal Thyroid Function",
-        "entries": [
-          {
-            "description": "\nThyroid hormone balance is important for\r\n                                                                synaptic balance and cognitive optimization.\r\n                                                                Hypothyroidism (as indicated by analyzing TSH, T3 and T4\r\n                                                                levels) are known to cause cognitive impairment.\r\n                                                                Clinical guidelines recommend screening for thyroid\r\n                                                                abnormalities in those showing symptoms of cognitive\r\n                                                                impairment.",
-            "severity": "Moderately high",
-            "measurement": "thyroid stimulating hormone",
-            "currentLevel": "3.0 \ufffdIU/mL",
-            "targetLevel": "< 2.2 \ufffdIU/mL",
-            "image": null
-          },
-          {
-            "description": "\nThyroid hormone balance is important for\r\n                                                                synaptic balance and cognitive optimization. The thyroid\r\n                                                                produces \u201cinactive\u201d thyroxine (T4), which is\r\n                                                                converted into \u201cactive\u201d triiodothyronine\r\n                                                                (T3). T3 helps regulate the body's temperature,\r\n                                                                metabolism, and heart rate. The T3 that doesn't\r\n                                                                otherwise bind to protein is called free T3. Higher\r\n                                                                levels of free T3 are desirable to prevent cognitive\r\n                                                                decline.",
-            "severity": "Low",
-            "measurement": "free T3",
-            "currentLevel": "2.3 pg/mL",
-            "targetLevel": "\u2265\r\n                                                                        2.9 pg/mL",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Essential Metals Imbalance",
-        "entries": [
-          {
-            "description": "\nWithin the brain, zinc plays a key role in\r\n                                                                reducing inflammation. Brain inflammation is often seen\r\n                                                                in those with cognitive decline, and may directly impact\r\n                                                                its progression. This low level may also be an indicator\r\n                                                                of metal toxicity, such as elevated levels of mercury or\r\n                                                                lead in the blood.",
-            "severity": "Low",
-            "measurement": "zinc",
-            "currentLevel": "71 \ufffdg/dL",
-            "targetLevel": "\u2265 90\r\n                                                                        \ufffdg/dL",
-            "image": null
-          },
-          {
-            "description": "\nThis ratio between copper and zinc is far\r\n                                                                above target. High copper is linked to a decline of\r\n                                                                cognitive abilities, whereas zinc is neuroprotective and\r\n                                                                has been shown to reduce inflammation and to lower\r\n                                                                copper levels. The relationship between these two is out\r\n                                                                of balance; a target ratio is 1.0 (that is,\r\n                                                                approximately one-to-one), each with a value near\r\n                                                                100.",
-            "severity": "Very high",
-            "measurement": "copper/zinc ratio",
-            "currentLevel": "1.7",
-            "targetLevel": "< 1.2",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Vitamin Imbalance",
-        "entries": [
-          {
-            "description": "\nThose with low vitamin D levels may lose\r\n                                                                memory and thinking abilities faster than those with\r\n                                                                optimal levels. Vitamin D affects bone metabolism,\r\n                                                                reduces inflammation, appears to inhibit the development\r\n                                                                of Alzheimer's disease, and affects cardiovascular\r\n                                                                disease.",
-            "severity": "Low",
-            "measurement": "vitamin D",
-            "currentLevel": "24.8 ng/mL",
-            "targetLevel": "\u2265 55 ng/mL",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Kidney Function",
-        "entries": [
-          {
-            "description": "\nThis value for estimated glomerular\r\n                                                                filtration rate (eGFR) is low, indicating possible\r\n                                                                chronic kidney disease (CKD). eGFR signals how well\r\n                                                                kidneys are filtering blood and getting rid of waste. A\r\n                                                                normal reading for eGFR ranges from 90 to 130 ml/min,\r\n                                                                with no protein in the urine. A reading of 60 to 89 may\r\n                                                                indicate a mild decrease in kidney function. Values\r\n                                                                under 60 imply stage 3 CKD.",
-            "severity": "Low",
-            "measurement": "eGFR",
-            "currentLevel": "51 mL/min",
-            "targetLevel": "\u2265 60\r\n                                                                        mL/min",
-            "image": null
-          },
-          {
-            "description": "\nCreatinine clearance (CrCl) is a measure of\r\n                                                                the flow rate through the kidneys, and that rate is\r\n                                                                below target. This indicates possible stage 3 chronic\r\n                                                                kidney disease (CKD). The Gault-Cockcroft equation is\r\n                                                                used to calculate creatinine clearance. It takes four\r\n                                                                values: 1) a person's blood creatinine level, 2)\r\n                                                                their age, 3) their gender, and 4) their body weight\r\n                                                                (unlike eGFR, where weight is not a component).\r\n                                                                Creatinine clearance provides a repeatable measure of\r\n                                                                renal filtering capability which takes all of these\r\n                                                                factors into account.",
-            "severity": "Low",
-            "measurement": "creatinine clearance",
-            "currentLevel": "48.1\r\n                                                                            mL/min",
-            "targetLevel": "\u2265 60 mL/min",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Lifestyle Concerns",
-        "entries": [
-          {
-            "description": "Sleep apnea\nSleep apnea accelerates cognitive\r\n                                                                decline in two ways: it deprives the brain of necessary\r\n                                                                oxygen, and it reduces the amount and quality of sleep.\r\n                                                                Urgently assure it is addressed thoroughly.",
-            "severity": "",
-            "measurement": "",
-            "currentLevel": "",
-            "targetLevel": "",
-            "image": null
-          },
-          {
-            "description": "High sleep duration 9.0 hours/night\n",
-            "severity": "",
-            "measurement": "",
-            "currentLevel": "",
-            "targetLevel": "",
-            "image": null
-          },
-          {
-            "description": "Very low exercise duration (how long each session): 5\r\n                                                            minutes/week\n",
-            "severity": "",
-            "measurement": "",
-            "currentLevel": "",
-            "targetLevel": "",
-            "image": null
-          }
-        ]
-      }
-    ]
-  },
-  "allergies": {
-    "title": "Known Allergies",
-    "description": "People can have allergies to what they take in (like certain\r\n                                                    medications or foods)\r\n                                                    and to things around them (like pets, pollen, or mold).\r\n                                                    These are the allergies you told us about, if any.\r\n                                                    Let us know if there's anything you'd like to add, change, or\r\n                                                    remove.",
-    "headers": [
-      "Type",
-      "Allergen",
-      "Reaction or Symptom"
     ],
-    "rows": [
-      {
-        "type": "Medication",
-        "allergen": "codeine",
-        "reaction": ""
-      },
-      {
-        "type": "Medication",
-        "allergen": "fluorometholone",
-        "reaction": ""
-      },
-      {
-        "type": "Non-medication",
-        "allergen": "pollen",
-        "reaction": "runny nose"
-      },
-      {
-        "type": "Non-medication",
-        "allergen": "mold",
-        "reaction": "coughing"
-      }
-    ]
-  },
-  "reportedProblems": {
-    "title": "Current Comorbidities",
-    "description": "Active medical conditions are known as comorbidities. These include\r\n                                                    any diseases, ongoing infections,\r\n                                                    problems that cause you pain, and anything you consider a problem\r\n                                                    you'd discuss with your\r\n                                                    doctor. Let your doctor know if there's anything you'd like to\r\n                                                    add, change, or remove.",
-    "headers": [
-      "Comorbidity",
-      "Date Diagnosed"
-    ],
-    "rows": [
-      {
-        "comorbidity": "Wearing Hearing Aids",
-        "dateDiagnosed": "3/24/2015"
-      },
-      {
-        "comorbidity": "Occasional Abdominal Pain",
-        "dateDiagnosed": "2/15/2022"
-      },
-      {
-        "comorbidity": "Lower Back Pain",
-        "dateDiagnosed": "11/01/2020"
-      }
-    ]
-  },
-  "dietaryRecommendations": {
-    "heading": "Your Dietary Recommendations",
-    "items": [
-      {
-        "title": "good fats",
-        "description": "\r\n                                            Enjoy  good fats, which include monounsaturated and polyunsaturated\r\n                                            fats,\r\n                                            and medium-chain triglycerides (MCTs).\r\n\r\n                                            ",
-        "inclusionType": "include",
-        "table": [
-          {
-            "label": "Monounsaturated fats",
-            "value": "Include\r\n\r\n                                                    nuts,\r\n\r\n                                                    avocados and avocado oil,\r\n\r\n                                                    extra-virgin olive oil,\r\n\r\n                                                    and olives weekly.\r\n                                                    Use olive oil for low-heat cooking\r\n                                                    and\r\n\r\n                                                    coconut oil for baking and high-heat cooking.\r\n\r\n                                                    Avoid canola oil. Polyunsaturated fats:\r\n                                                    Eat foods rich in omega-3, such as\r\n\r\n                                                    walnuts,\r\n\r\n                                                    ground flaxseed,\r\n\r\n                                                    wild salmon,\r\n\r\n                                                    mackerel (chub or north Atlantic),\r\n                                                    and sardines,\r\n\r\n                                                    at least three times a week.\r\n\r\n                                                    Omega-3 from food sources is far better absorbed than from taking\r\n                                                    supplements. MCT oils:\r\n                                                    Take organic extra-virgin coconut oil, just one tablespoon each day\r\n                                                    (as it is also a saturated fat).",
-            "inclusionType": "include"
-          },
-          {
-            "label": "Polyunsaturated fats",
-            "value": "Eat foods rich in omega-3, such as\r\n\r\n                                                    walnuts,\r\n\r\n                                                    ground flaxseed,\r\n\r\n                                                    wild salmon,\r\n\r\n                                                    mackerel (chub or north Atlantic),\r\n                                                    and sardines,\r\n\r\n                                                    at least three times a week.\r\n\r\n                                                    Omega-3 from food sources is far better absorbed than from taking\r\n                                                    supplements. MCT oils:\r\n                                                    Take organic extra-virgin coconut oil, just one tablespoon each day\r\n                                                    (as it is also a saturated fat).",
-            "inclusionType": "include"
-          },
-          {
-            "label": "MCT oils",
-            "value": "Take organic extra-virgin coconut oil, just one tablespoon each day\r\n                                                    (as it is also a saturated fat).",
-            "inclusionType": "include"
-          }
-        ]
-      },
-      {
-        "title": "bad fats",
-        "description": "\r\n                                            Reduce  bad fats, which include saturated fats and trans-fats, as well\r\n                                            as seed oils.\r\n                                            ",
-        "inclusionType": "avoid",
-        "table": [
-          {
-            "label": "Saturated fats",
-            "value": "Where possible, avoid high-fat dairy items (such as whole milk or\r\n                                                    whole-fat cheese).\r\n\r\n                                                    Consume animal proteins no more than twice a week.\r\n                                                    Keep serving sizes palm-sized.\r\n\r\n                                                    If eating beef, focus on grass-fed organic beef.\r\n\r\n                                                    Poultry should be pastured.\r\n                                                    Fish should be fresh-caught or wild, not farmed.\r\n                                                    Minimize processed, pre-packaged foods.",
-            "inclusionType": "avoid"
-          },
-          {
-            "label": "Trans fats",
-            "value": "Avoid foods that contain hydrogenated or partially-hydrogenated oils\r\n                                                    (like shortening and stick margarine), and decline fried foods.\r\n                                                    Read the ingredient list in packaged food\r\n                                                    (verify labels stating \u201c0g trans-fat per serving\u201d).",
-            "inclusionType": "avoid"
-          },
-          {
-            "label": null,
-            "value": "Seed oils, which are heated\r\n                                                        (as opposed to being cold-pressed as olive oil is),\r\n                                                        have lost much of their vitamin E due to the heating process,\r\n                                                        making them synaptic-damaging agents.\r\n                                                        Avoid heat-processed oils altogether.",
-            "inclusionType": "avoid"
-          }
-        ]
-      },
-      {
-        "title": "Start with the eating guidelines in the MIND study.",
-        "description": "Start with the eating guidelines in the MIND study. The foods and servings in the\r\n                                                \u201cMediterranean-DASH Intervention for Neurodegenerative Delay\r\n                                                (MIND)\u201d\r\n                                                study\r\n                                                are further personalized below, using observations from\r\n\r\n                                                genes,\r\n\r\n                                                lab results,\r\n                                                allergies,\r\n                                                medications,\r\n                                                and history. [ 10 ]"
-      },
-      {
-        "title": "ApoE-e4",
-        "description": "Eating in a way that favors the ApoE-e4 gene\r\n                                                focuses on increasing intake of vegetables and fruits,\r\n                                                good fats,\r\n                                                soluble fiber,\r\n                                                lean protein,\r\n                                                incorporating probiotic- and prebiotic-rich foods,\r\n                                                and\r\n                                                drinking green tea. [ 11 ] In addition, limit bad fats and foods that have a high glycemic load.\r\n                                                The brain thrives on dietary fats, but there is a distinction between\r\n                                                good and bad fats."
-      },
-      {
-        "title": "soluble fiber",
-        "description": "Good sources of soluble fiber include:\r\n\r\n                                                apples,\r\n                                                blueberries,\r\n                                                carrots,\r\n                                                celery,\r\n                                                cucumbers,\r\n                                                dried peas,\r\n                                                chia seeds,\r\n\r\n                                                flaxseeds,\r\n\r\n                                                lentils and other beans,\r\n\r\n                                                nuts,\r\n\r\n                                                oat bran,\r\n                                                oat cereal and oatmeal,\r\n\r\n                                                oranges,\r\n                                                pears,\r\n                                                psyllium, and\r\n                                                strawberries."
-      },
-      {
-        "title": "Foods with low-glycemic load",
-        "description": "Foods with low-glycemic load have the positive effect of reducing\r\n                                                the spike of rapidly-changing insulin levels.\r\n\r\n                                                So, focus on avoiding food with high glycemic load.\r\n                                                Avoid foods and drinks\r\n                                                with white sugar, white flour, or high-fructose corn syrup\r\n                                                \u2014\r\n                                                as well as honey, maple syrup, and molasses.\r\n                                                Cut out sugar candies, sweets, and sugary soda.\r\n                                                Stick with fist-sized portion sizes (or a half-cup when cut up)\r\n                                                of fruits and carbohydrate-rich foods like\r\n\r\n                                                white rice,\r\n\r\n                                                white potatoes, corn, and green peas.\r\n\r\n\r\n                                                Aim to keep each food item to a glycemic load of 10 or lower,\r\n                                                with a total daily load under 100.\r\n\r\n                                                Consume\r\n                                                a quarter teaspoon\r\n                                                of powdered\r\n\r\n                                                Ceylon cinnamon (cinnamomum verum)\r\n\r\n                                                5 days a week, as\r\n                                                Glucose is above target, at 96\u00a0mg/dL.\r\n                                                (Avoid the formulations with\r\n                                                Cassia or Saigon cinnamon.)"
-      },
-      {
-        "title": "vegetables and fruits",
-        "description": "Among vegetables and fruits ,\r\n                                                focus on fresh or frozen (plain, without seasoning).\r\n                                                Eat three servings of fresh fruit and three-to-five servings of fresh\r\n                                                vegetables daily.\r\n\r\n                                                Over every three days, consume fruits and vegetables from all colors of\r\n                                                the rainbow.\r\n                                                Limit fruits to one serving per meal or snack,\r\n                                                and avoid commercial fruit juices.\r\n\r\n                                                Rather than making homemade fruit juices,\r\n                                                stick with smoothies and include whole fruit,\r\n                                                to avoid the high glycemic load of pure juice.\r\n\r\n                                                For inflammation,\r\n                                                eat a teaspoon of freshly-grated ginger rhizome regularly with your\r\n                                                meals,\r\n                                                or take a\r\n                                                500 mg\r\n\r\n                                                ginger extract supplement\r\n\r\n                                                every day, as\r\n                                                to reduce inflammation.\r\n                                                While the pesticide DDT\r\n                                                (which has a toxic metabolite of DDE)\r\n                                                has been banned in\r\n                                                the USA and Canada\r\n                                                since the 1970s,\r\n                                                it may still be in use in other countries.\r\n                                                Studies have shown that AD risk increases for those\r\n                                                with both ApoE4 and elevated serum levels of DDE.\r\n                                                Minimize eating any fruits or vegetables grown outside of\r\n                                                the USA or Canada\r\n                                                unless they are organic.\r\n\r\n                                                The EWG organization maintains two lists titled\r\n                                                the Dirty Dozen and the Clean Fifteen.\r\n                                                Fruits and vegetables in the Dirty Dozen list should be always purchased\r\n                                                in organic form;\r\n\r\n                                                foods in the Clean Fifteen need not be organic\r\n                                                (if grown in the USA or Canada). https://www.ewg.org/foodnews/summary.php"
-      },
-      {
-        "title": "Lean protein",
-        "description": "Lean protein can improve satiety and blood sugar regulation,\r\n                                                and should be part of each meal and snack.\r\n                                                Additionally, one's ability to build muscle mass deteriorates as they\r\n                                                age,\r\n                                                so protein requirements increase even as intake and appetite may wane.\r\n                                                Supplementing with protein powder can increase lean body mass and\r\n                                                muscle.\r\n                                                Mix 20 to 30 grams of protein powder into a daily shake.\r\n                                                Consume beans as an alternative protein source weekly.\r\n\r\n                                                Good dietary sources of lean protein include:\r\n\r\n                                                grass-fed organic beef or bison,\r\n\r\n                                                low-fat dairy products,\r\n\r\n                                                eggs,\r\n\r\n                                                fish (free of mercury),\r\n\r\n                                                nuts,\r\n\r\n                                                organic poultry,\r\n\r\n                                                seeds,\r\n\r\n                                                soy products (such as tofu and tempeh),\r\n\r\n                                                and\r\n                                                beans and legumes."
-      },
-      {
-        "title": "Prebiotics and probiotics",
-        "description": "help maintain a healthy immune system and\r\n                                                digestive health.\r\n                                                While food sources are the preferred choice,\r\n                                                recommendations for high-quality probiotic supplementation are Lactobacillus acidophilus and Bifidobacterium lactis at a dose of\r\n                                                4 to 8 billion colonies, one to three times a day.\r\n                                                Among probiotic food sources, consider:\r\n\r\n                                                live cultures in dairy products (such as plain yogurt, buttermilk, &\r\n                                                kefir),\r\n\r\n                                                tempeh,\r\n\r\n                                                miso soup,\r\n\r\n                                                natto,\r\n\r\n                                                kimchi, and\r\n\r\n                                                freshly-made pickles or sauerkraut.\r\n\r\n                                                Prebiotics are non-digestible fiber compounds in foods that promote the\r\n                                                growth and activity of beneficial microorganisms in the gut.\r\n                                                Good prebiotic sources include:\r\n\r\n                                                asparagus,\r\n\r\n                                                under-ripe bananas,\r\n\r\n                                                flaxseeds,\r\n\r\n                                                garlic,\r\n\r\n                                                Jerusalem artichoke,\r\n\r\n                                                jicama,\r\n\r\n                                                leafy greens,\r\n\r\n                                                leeks,\r\n\r\n                                                legumes, and\r\n\r\n                                                onions.\r\n\r\n                                                The word prebiotic is seldom used on the label, so look for:\r\n                                                galactooligosaccharides (GOS),\r\n                                                fructooligosaccharides (FOS),\r\n                                                oligofructose (OF),\r\n                                                chicory fiber, or\r\n                                                inulin.\r\n                                                Discuss specific recommendations with a dietitian."
-      },
-      {
-        "title": "CYP1A2",
-        "description": "Epidemiologic studies have identified coffee and green tea\r\n                                                as protective against cognitive impairment,\r\n                                                as well as having antioxidant properties.\r\n                                                Slow caffeine metabolism is indicated by the CYP1A2 genes,\r\n                                                so drink no more than two cups of coffee each day (200mg of caffeine)\r\n                                                and finish them by noon.\r\n                                                Although there is caffeine in green tea,\r\n                                                it contains less caffeine than black tea,\r\n                                                and in turn black tea has less caffeine than coffee.\r\n\r\n                                                Wait two hours after taking the medication\r\n                                                levothyroxine\r\n                                                before drinking any coffee.\r\n\r\n                                                Avoid using coffee as a way to introduce hidden sugar into your daily\r\n                                                intake."
-      },
-      {
-        "title": "targeting a body mass index (BMI) under 25",
-        "description": "Weight loss is essential, targeting a body mass index (BMI) under 25 over time. [ 12,13 ] Your genes indicate that you are part of the 39% of the population who might find they lose 2.5 times as much weight on a low-fat diet\r\n                                                (as opposed to a low-carb diet)."
-      }
-    ]
-  },
-  "footnotes": {
-    "heading": "Footnotes",
-    "footnotes": [
-      "Yu, Jin-Tai, Wei Xu, et al .\r\n                                                                \"Evidence\u2013based prevention of\r\n                                                                Alzheimer's disease: systematic review and\r\n                                                                meta\u2013analysis of 243 observational prospective\r\n                                                                studies and 153 randomised controlled trials.\" Journal of Neurology, Neurosurgery &\r\n                                                                    Psychiatry 91, no. 11 (2020): 1201-1209.",
-      "Livingston, Gill, Jonathan Huntley, et al .\r\n                                                                \"Dementia prevention, intervention, and care: 2024\r\n                                                                report of the Lancet standing Commission.\" The\r\n                                                                    Lancet 404, no. 10452 (2024): 572-628.",
-      "Keine, Dorothy, John Q. Walker, Brian K. Kennedy, and\r\n                                                                Marwan N. Sabbagh. \"Development, Application, and\r\n                                                                Results from a Precision\u2013medicine Platform that\r\n                                                                Personalizes Multi\u2013modal Treatment Plans for Mild\r\n                                                                Alzheimer's Disease and At\u2013risk\r\n                                                                Individuals.\" Current aging science 11, no.\r\n                                                                3 (2018): 173-181.",
-      "Kivipelto, Miia, and Krister Hakansson. \"A rare\r\n                                                                success against Alzheimer's.\" Scientific\r\n                                                                    American 316, no. 4 (2017): 32-7.",
-      "Ornish, Dean, Catherine Madison, et al .\r\n                                                                \"Effects of intensive lifestyle changes on the\r\n                                                                progression of mild cognitive impairment or early\r\n                                                                dementia due to Alzheimer's disease: a randomized,\r\n                                                                controlled clinical trial.\" Alzheimer's\r\n                                                                    Research & Therapy 16, no. 1 (2024): 122.",
-      "Restak, Richard. The Complete Guide to Memory: The\r\n                                                                    Science of Strengthening Your Mind. Skyhorse,\r\n                                                                2022.",
-      "Carper, Jean. 100 Simple Things You Can Do to Prevent\r\n                                                                    Alzheimer's (and Age\u2013related Memory\r\n                                                                    Loss) Random House, 2011.",
-      "Devanand, DP, Terry E. Goldberg, et al .\r\n                                                                \"Computerized Games versus Crosswords Training in\r\n                                                                Mild Cognitive Impairment.\" NEJM Evidence (2022): EVIDoa2200121.",
-      "Weatherby, Dicken, and Scott Ferguson. Blood\r\n                                                                    chemistry and CBC analysis. Weatherby &\r\n                                                                Associates, LLC, 2002.",
-      "Morris, Martha Clare, Christy C. Tangney, Yamin Wang,\r\n                                                                Frank M. Sacks, David A. Bennett, and Neelum T.\r\n                                                                Aggarwal. \"MIND diet associated with reduced\r\n                                                                incidence of Alzheimer's disease.\" Alzheimer's & dementia: the journal of the\r\n                                                                    Alzheimer's Association 11, no. 9 (2015):\r\n                                                                1007-1014.",
-      "Sabbagh, Marwan, and Beau MacMillan. The\r\n                                                                    Alzheimer's Prevention Cookbook: 100 Recipes to\r\n                                                                    Boost Brain Health. Ten Speed Press, 2012.",
-      "Anand, Sonia S., Matthias G. Friedrich, et al .\r\n                                                                \"Evaluation of Adiposity and Cognitive Function in\r\n                                                                Adults.\" JAMA Network Open 5, no. 2 (2022):\r\n                                                                e2146324-e2146324.",
-      "Morys, Filip, Olivier Potvin, Yashar Zeighami, Jacob\r\n                                                                Vogel, R\u00e9mi Lamontagne-Caron, Simon Duchesne, and\r\n                                                                Alain Dagher. \"Obesity\u2013Associated\r\n                                                                Neurodegeneration Pattern Mimics Alzheimer's\r\n                                                                Disease in an Observational Cohort Study.\" Journal of Alzheimer's Disease (2022): 1-11.",
-      "Tsai, Ming-Shao, Hsueh-Yu Li, et al . \"Risk\r\n                                                                of Alzheimer's disease in obstructive sleep apnea\r\n                                                                patients with or without treatment: Real\u2013world\r\n                                                                evidence.\" The Laryngoscope 130, no. 9\r\n                                                                (2020): 2292-2298.",
-      "Chung, Frances, Hairil R. Abdullah, and Pu Liao.\r\n                                                                \"STOP\u2013Bang questionnaire: a practical\r\n                                                                approach to screen for obstructive sleep apnea.\" Chest 149, no. 3 (2016): 631-638.",
-      "Farney, Robert J., Brandon S. Walker, Robert M. Farney,\r\n                                                                Gregory L. Snow, and James M. Walker. \"The\r\n                                                                STOP\u2013Bang equivalent model and prediction of\r\n                                                                severity of obstructive sleep apnea: relation to\r\n                                                                polysomnographic measurements of the apnea/hypopnea\r\n                                                                index.\" Journal of clinical sleep medicine:\r\n                                                                    JCSM: official publication of the American Academy\r\n                                                                    of Sleep Medicine 7, no. 5 (2011): 459."
-    ]
-  },
-  "medicationPlanner": [
-    {
-        "date": "2024-07-09",
-        "medicines": {
-            "morning": ["Methylcobalaminsssssssssssssssssssssss", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri...", "Metformin", "Duloxetine (Cymbalta)"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "ooga", "Lecanemab", "Fish Oil (Omega-3)", "CoQ10 (Ubiquinol)", "Magnesium (Citrate)", "Zinc (Picolinate)", "Curcumin (Meriva)", "NAC (N-Acetyl Cysteine)", "Probiotic", "Vitamin B Complex", "Vitamin C (Ascorbic Acid)"],
-            "evening": [
-              "Alpha-lipoic acid (ALA)",
-              "Berberine",
-              "Magnesium glycinate",
-              "Coenzyme Q10 (CoQ10)",
-              "Melatonin",
-              "Ashwagandha",
-              "Valerian root",
-              "Omega-3 fatty acids (Fish Oil)",
-              "Vitamin D3",
-              "Vitamin B12",
-              "Calcium citrate",
-              "Zinc picolinate",
-              "Turmeric (Curcumin)",
-              "GABA",
-              "L-Theanine",
-              "5-HTP",
-              "N-Acetylcysteine (NAC)",
-              "Resveratrol",
-              "Milk thistle",
-              "Chromium picolinate",
-              "Probiotic blend",
-              "Evening primrose oil"
-            ]
-        }
-    },
-    {
-        "date": "2024-07-10",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri...", "Duloxetine (Cymbalta)"],
-            "afternoon": [],
-            "evening": ["Alpha-lipoic acid (ALA)"]
-        }
-    },
-    {
-        "date": "2024-07-11",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
-            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
-        }
-    },
-    {
-        "date": "2024-07-12",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": [],
-            "evening": ["Alpha-lipoic acid (ALA)"]
-        }
-    },
-    {
-        "date": "2024-07-13",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
-            "evening": ["Berberine"]
-        }
-    },
-    {
-        "date": "2024-07-14",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": ["Duloxetine (Cymbalta)"],
-            "evening": ["Alpha-lipoic acid (ALA)", "Fluocinonide Acetonide Otic..."]
-        }
-    },
-    {
-        "date": "2024-07-15",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
-            "evening": ["Berberine"]
-        }
-    },
-    {
-        "date": "2024-07-16",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": [],
-            "evening": ["Alpha-lipoic acid (ALA)", "Fluticasone (Florase) Inhalant"]
-        }
-    },
-    {
-        "date": "2024-07-17",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
-            "evening": ["Berberine"]
-        }
-    },
-    {
-        "date": "2024-07-18",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": ["Duloxetine (Cymbalta)"],
-            "evening": ["Alpha-lipoic acid (ALA)"]
-        }
-    },
-    {
-        "date": "2024-07-19",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
-            "evening": ["Berberine", "Fluocinonide Acetonide Otic..."]
-        }
-    },
-    {
-        "date": "2024-07-20",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": [],
-            "evening": ["Alpha-lipoic acid (ALA)"]
-        }
-    },
-    {
-        "date": "2024-07-21",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
-            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
-        }
-    },
-    {
-        "date": "2024-07-22",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": ["Duloxetine (Cymbalta)"],
-            "evening": ["Alpha-lipoic acid (ALA)"]
-        }
-    },
-    {
-        "date": "2024-07-23",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
-            "evening": ["Berberine"]
-        }
-    },
-    {
-        "date": "2024-07-24",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": [],
-            "evening": ["Alpha-lipoic acid (ALA)", "Fluocinonide Acetonide Otic..."]
-        }
-    },
-    {
-        "date": "2024-07-25",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
-            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
-        }
-    },
-    {
-        "date": "2024-07-26",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": ["Duloxetine (Cymbalta)"],
-            "evening": ["Alpha-lipoic acid (ALA)"]
-        }
-    },
-    {
-        "date": "2024-07-27",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
-            "evening": ["Berberine"]
-        }
-    },
-    {
-        "date": "2024-07-28",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": [],
-            "evening": ["Alpha-lipoic acid (ALA)", "Fluocinonide Acetonide Otic..."]
-        }
-    },
-    {
-        "date": "2024-07-29",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
-            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
-        }
-    },
-    {
-        "date": "2024-07-30",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": ["Duloxetine (Cymbalta)"],
-            "evening": ["Alpha-lipoic acid (ALA)"]
-        }
-    },
-    {
-        "date": "2024-07-31",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
-            "evening": ["Berberine"]
-        }
-    },
-    {
-        "date": "2024-08-01",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": [],
-            "evening": ["Alpha-lipoic acid (ALA)", "Fluocinonide Acetonide Otic..."]
-        }
-    },
-    {
-        "date": "2024-08-02",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
-            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
-        }
-    },
-    {
-        "date": "2024-08-03",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": ["Duloxetine (Cymbalta)"],
-            "evening": ["Alpha-lipoic acid (ALA)"]
-        }
-    },
-    {
-        "date": "2024-08-04",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
-            "evening": ["Berberine"]
-        }
-    },
-    {
-        "date": "2024-08-05",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": [],
-            "evening": ["Alpha-lipoic acid (ALA)", "Fluocinonide Acetonide Otic..."]
-        }
-    },
-    {
-        "date": "2024-08-06",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
-            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
-        }
-    },
-    {
-        "date": "2024-08-07",
-        "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": ["Duloxetine (Cymbalta)"],
-            "evening": ["Alpha-lipoic acid (ALA)"]
-        }
-    }
-  ]
+    "totalScore": 7
+  }
 }

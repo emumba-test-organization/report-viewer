@@ -17,6 +17,7 @@ export type BlockProps<T = any> = {
   blockId: string;
   setRef?: (id: string) => (element: HTMLElement | null) => void;
   className?: string;
+  slots?: { [key: string]: ReactNode };
 };
 
 export interface BlockRenderer {

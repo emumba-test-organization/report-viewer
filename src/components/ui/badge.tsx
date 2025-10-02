@@ -11,12 +11,17 @@ const badgeVariants = cva(
       variant: {
         default:
           "border-transparent bg-primary text-primary-foreground [a&]:hover:bg-primary/90",
-        secondary:
+          secondary:
           "border-transparent bg-secondary text-secondary-foreground [a&]:hover:bg-secondary/90",
-        destructive:
+          destructive:
           "border-transparent bg-destructive text-white [a&]:hover:bg-destructive/90 focus-visible:ring-destructive/20 dark:focus-visible:ring-destructive/40 dark:bg-destructive/60",
         outline:
           "text-foreground [a&]:hover:bg-accent [a&]:hover:text-accent-foreground border-gray-300",
+        warning: "bg-yellow-700 text-white border-transparent",
+        success: "bg-green-100 text-green-700 border-transparent",
+        successEmphasis:
+        "bg-green-700 text-white border-transparent",
+        info: "bg-blue-100 text-blue-700 border-transparent",
       },
     },
     defaultVariants: {
@@ -24,6 +29,7 @@ const badgeVariants = cva(
     },
   }
 )
+type badgeVariants = VariantProps<typeof badgeVariants>
 
 function Badge({
   className,
@@ -44,3 +50,4 @@ function Badge({
 }
 
 export { Badge, badgeVariants }
+export type { badgeVariants as BadgeVariantsType }
