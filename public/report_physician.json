@@ -1403,5 +1403,210 @@
         "date_started": "2/15/2022"
       }
     ]
+  },
+  "immuneScore": {
+    "title": "uMETHOD Immune Score\u2122",
+    "preface": "This score indicates an immune system that is significantly compromised.  Vulnerability to illnesses and infections is very high.  Consider applying urgent attention to improvement of the contributors prioritized in the graph on the next page.",
+    "score": "49/100",
+    "headers": [
+      "Immune Score Factors",
+      "November 02, 2024",
+      "Target"
+    ],
+    "factors": [
+      {
+        "factor": "<small>White blood cell count (WBC)</small>",
+        "severity": "",
+        "score": "5.4",
+        "target": "\u2265 3.8 K/\u00b5L"
+      },
+      {
+        "factor": "<small>Neutrophils (absolute)</small>",
+        "severity": "",
+        "score": "3.4",
+        "target": "\u2265 1.6 K/\u00b5L"
+      },
+      {
+        "factor": "<small>Lymphocytes (absolute)</small>",
+        "severity": "",
+        "score": "1.4",
+        "target": "< 5.5 K/\u00b5L"
+      },
+      {
+        "factor": "<small>Neutrophil/Lymphocyte ratio (NLR)</small>",
+        "severity": "",
+        "score": "2.4",
+        "target": "< 7.0"
+      },
+      {
+        "factor": "<small>Hematocrit (HCT) %</small>",
+        "severity": "Slightly high",
+        "score": "45.2a",
+        "target": "\u2265 35%"
+      },
+      {
+        "factor": "<small>AST (SGOT)</small>",
+        "severity": "",
+        "score": "22",
+        "target": "< 35 IU/L"
+      },
+      {
+        "factor": "<small>ALT (SGPT)</small>",
+        "severity": "",
+        "score": "12",
+        "target": "< 29 IU/L"
+      },
+      {
+        "factor": "<small>HOMA-IR<sup>b</sup>, <i>calculated</i></small>",
+        "severity": "Very high",
+        "score": "3.7",
+        "target": "< 1.9"
+      },
+      {
+        "factor": "<small>Albumin (Alb)</small>",
+        "severity": "",
+        "score": "4.5",
+        "target": "\u2265 4.1 g/dL"
+      },
+      {
+        "factor": "<small>Globulin</small>",
+        "severity": "",
+        "score": "2.1",
+        "target": "\u2265 1.9 g/dL"
+      },
+      {
+        "factor": "<small>A/G ratio</small>",
+        "severity": "",
+        "score": "2.1",
+        "target": "\u2265 1.6"
+      },
+      {
+        "factor": "<small>High-sensitivity C-reactive protein (hs-CRP)</small>",
+        "severity": "",
+        "score": "0.59",
+        "target": "< 3.0 mg/L"
+      },
+      {
+        "factor": "<small>Estimated glomerular filtration rate (eGFR)</small>",
+        "severity": "Moderately low",
+        "score": "51",
+        "target": "\u2265 60 mL/min"
+      },
+      {
+        "factor": "<small>Creatinine Clearance, <i>calculated</i> (CrCl)</small>",
+        "severity": "Low",
+        "score": "48.1",
+        "target": "\u2265 60 mL/min"
+      },
+      {
+        "factor": "<small>Anti-nuclear antibody (ANA) screen</small>",
+        "severity": "",
+        "score": "(no data)",
+        "target": ""
+      },
+      {
+        "factor": "<small>Vitamin B12 (cobalamins)</small>",
+        "severity": "Very low",
+        "score": "139",
+        "target": "\u2265 500 pg/mL"
+      },
+      {
+        "factor": "<small>Vitamin D (25-hydroxy)</small>",
+        "severity": "Low",
+        "score": "24.8",
+        "target": "\u2265 50 ng/mL"
+      },
+      {
+        "factor": "<small>Uric Acid</small>",
+        "severity": "",
+        "score": "6.0",
+        "target": "< 7.0 mg/dL"
+      },
+      {
+        "factor": "<small>Cortisol</small>",
+        "severity": "",
+        "score": "12.3",
+        "target": "< 15 \u00b5g/dL"
+      },
+      {
+        "factor": "<small>Total cholesterol</small>",
+        "severity": "Very high",
+        "score": "273",
+        "target": "< 200 mg/dL"
+      },
+      {
+        "factor": "<small>LDL cholesterol</small>",
+        "severity": "Very high",
+        "score": "183",
+        "target": "< 100 mg/dL"
+      },
+      {
+        "factor": "<small>HDL cholesterol</small>",
+        "severity": "",
+        "score": "68",
+        "target": "\u2265 50 mg/dL"
+      },
+      {
+        "factor": "<small>Triglycerides</small>",
+        "severity": "",
+        "score": "146",
+        "target": "< 150 mg/dL"
+      },
+      {
+        "factor": "<small>Iron</small>",
+        "severity": "",
+        "score": "136",
+        "target": "\u2265 45 \u00b5g/dL"
+      },
+      {
+        "factor": "<small>Zinc</small>",
+        "severity": "Low",
+        "score": "71",
+        "target": "\u2265 90 \u00b5g/dL"
+      },
+      {
+        "factor": "<small>BMI</small>",
+        "severity": "Very high",
+        "score": "35.3",
+        "target": ""
+      }
+    ],
+    "highValues": [
+      {
+        "factor": "<small>HOMA-IR<sup>b</sup>, <i>calculated</i></small>",
+        "severity": "Very high",
+        "score": "3.7",
+        "target": "< 1.9"
+      },
+      {
+        "factor": "<small>Vitamin B12 (cobalamins)</small>",
+        "severity": "Very low",
+        "score": "139",
+        "target": "\u2265 500 pg/mL"
+      },
+      {
+        "factor": "<small>Total cholesterol</small>",
+        "severity": "Very high",
+        "score": "273",
+        "target": "< 200 mg/dL"
+      },
+      {
+        "factor": "<small>LDL cholesterol</small>",
+        "severity": "Very high",
+        "score": "183",
+        "target": "< 100 mg/dL"
+      },
+      {
+        "factor": "<small>BMI</small>",
+        "severity": "Very high",
+        "score": "35.3",
+        "target": ""
+      }
+    ],
+    "postface": [
+      "<sup>a</sup> Value is out of range and may indicate a medical problem that does not directly impact the immune system.",
+      "<sup>b</sup> Homeostatic Model Assessment of Insulin Resistance (HOMA-IR), calculated using fasting insulin &amp; glucose."
+    ],
+    "disclaimer": "This report provides analyses intended to aid \r\nin understanding the status of the\r\nimmune system\r\nof the above-named person.\r\nIt is focused on the assessment of a weakened or deficient immune system;\r\nit does not identify an immune system that is overactive or \r\nin the midst of high response."
   }
 }

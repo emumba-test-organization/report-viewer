@@ -7,8 +7,8 @@ type Props = {
 };
 
 const getRiskIcon = (risk: string) => {
-  const lowArr = ["low", "none", "negative", "no", "below"];
-  const highArr = ["high", "elevated", "positive", "severe", "critical", "above"];
+  const lowArr = ["low", "none", "negative", "no", "below", "moderately low"];
+  const highArr = ["high", "elevated", "positive", "severe", "critical", "above", "slightly high"];
 
   if (lowArr.some((term) => risk.toLowerCase().includes(term))) {
     return <MoveDown className="text-red-500" />;
