@@ -27,7 +27,7 @@ const AdditionalDiagnostics = ({ data }: Props) => {
       <div className="relative shrink-0 w-full" data-node-id="731:14871">
         <div className="content-stretch flex flex-col isolate items-start overflow-clip relative w-full">
           <div
-            className="grid grid-cols-[1fr_1fr] w-full z-[9]"
+            className="grid grid-cols-[1fr_1.5fr] w-full z-[9]"
             data-node-id="731:14872"
           >
             {headers.map((header, index) => (
@@ -66,7 +66,7 @@ const AdditionalDiagnostics = ({ data }: Props) => {
                   {tests.map((row, rowIndex) => (
                     <div
                       key={rowIndex}
-                      className={`relative grid grid-cols-[1fr_1fr] w-full z-[8] ${
+                      className={`relative grid grid-cols-[1fr_1.5fr] w-full z-[8] ${
                         rowIndex % 2 === 0 ? "bg-white" : "bg-neutral-50"
                       }`}
                       data-node-id="731:14879"
