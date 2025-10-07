@@ -552,5 +552,631 @@
       }
     ],
     "totalScore": 7
+  },
+  "additional_diagnostics": {
+    "heading": "Additional Diagnostics to Consider",
+    "segments": {
+      "Blood Tests": [
+        {
+          "test": "Anion Gap",
+          "explanation": "Metabolic acidosis is possible, and should be further evaluated (low Carbon Dioxide 23)."
+        },
+        {
+          "test": "Arrays 2, 3, and 20, from Cyrex Laboratories",
+          "explanation": "Screen for intestinal antigenic permeability (2), wheat/gluten proteome reactivity and autoimmunity (3), and blood brain barrier permeability (20), as indicated by cognitive symptoms and elevated genetic risk."
+        },
+        {
+          "test": "Creatinine",
+          "explanation": "Chronic kidney disease is possible, and should be further evaluated (stage 3a, eGFR 51).  Refresh the most recent result."
+        },
+        {
+          "test": "Cystatin C",
+          "explanation": "Chronic kidney disease is possible, and should be further evaluated (stage 3a, eGFR 51)."
+        },
+        {
+          "test": "Glucose",
+          "explanation": "Hyperinsulinemia is probable, and should be further evaluated (very high fasting Insulin 15.7).  Refresh the most recent result."
+        },
+        {
+          "test": "Hemoglobin A1c",
+          "explanation": "Hyperinsulinemia is probable, and should be further evaluated (very high fasting Insulin 15.7).  Refresh the most recent result."
+        },
+        {
+          "test": "Immunoglobulin E (IgE)",
+          "explanation": "Rhinitis is likely to be an active condition.  Also consider follow-up testing for mold and microtoxins."
+        },
+        {
+          "test": "Lactate dehydrogenase (LDH) isoenzyme fraction study (all 5 isoforms)",
+          "explanation": "Urinary tract congestion (e.g., uterine hypertrophy, uterine inflammation, or UTI) is possible, and should be further evaluated (elevated Creatinine 1.1, high Monocytes 8.0%, normal BUN 16)."
+        },
+        {
+          "test": "MPV (Mean Platelet Volume)",
+          "explanation": "Thrombocytopenia is possible, and should be further evaluated (low platelet count 137)."
+        },
+        {
+          "test": "Platelets",
+          "explanation": "Thrombocytopenia is possible, and should be further evaluated (low platelet count 137).  Refresh the most recent result."
+        },
+        {
+          "test": "rT3 (Reverse T3)",
+          "explanation": "Consider ordering.  TSH is high at 3.0."
+        }
+      ],
+      "CSF Tests": [
+        {
+          "test": "Lumbar puncture to assess cerebrospinal fluid (CSF) biomarkers:  A\u03b2 42, A\u03b2 40, total tau, & phosphorylated tau [p-tau]",
+          "explanation": "AD-Detect\u2122 p-tau181 is far above target, at 2.07\u00a0pg/mL."
+        }
+      ],
+      "Sleep Tests": [
+        {
+          "test": "Sleep study, polysomnography (PSG)",
+          "explanation": "STOP-Bang suggests a high risk for obstructive sleep apnea (OSA)."
+        }
+      ],
+      "Urine Tests": [
+        {
+          "test": "24-hour urine collection",
+          "explanation": "Chronic kidney disease is possible, and should be further evaluated (stage 3a, eGFR 51)."
+        },
+        {
+          "test": "Bacterial urine culture",
+          "explanation": "Urinary tract congestion (e.g., uterine hypertrophy, uterine inflammation, or UTI) is possible, and should be further evaluated (elevated Creatinine 1.1, high Monocytes 8.0%, normal BUN 16)."
+        },
+        {
+          "test": "Schilling test, to assess vitamin B12 absorption",
+          "explanation": "Vitamin B12 (cobalamins) is far below target, at 139\u00a0pg/mL."
+        },
+        {
+          "test": "Urinalysis, with screening for hematuria and albuminuria",
+          "explanation": "Chronic kidney disease is possible, and should be further evaluated (stage 3a, eGFR 51)."
+        }
+      ],
+      "Vital Signs": [
+        {
+          "test": "Blood Pressure",
+          "explanation": "Measurement is not recent (2/23/2024).  Obtain a more recent measurement."
+        },
+        {
+          "test": "Body Weight",
+          "explanation": "Measurement is not recent (2/23/2024).  Obtain a more recent measurement."
+        }
+      ],
+      "Other Tests": [
+        {
+          "test": "Audiometry evaluation, resulting in an updated audiogram",
+          "explanation": "Wearing Hearing Aids."
+        },
+        {
+          "test": "Brain MRI original data (a DICOM or NIFTI file)",
+          "explanation": "It is reported that a baseline brain MRI is available.  Its data file can be used to quantify volumes of multiple CNS structures."
+        }
+      ]
+    },
+    "headers": [
+      "Lab Test",
+      "Explanation"
+    ]
+  },
+  "cognitiveFactors": {
+    "title": "Analysis of Cognitive Factors",
+    "healthStatusSections": [
+      {
+        "title": "Optimal",
+        "count": 11,
+        "description": "These factors are withinoptimalrange, unlikely to be contributing to cognitive impairment or memory loss",
+        "factors": [
+          "no inflammation",
+          "no infections",
+          "no diabetes type 2",
+          "vitamin E level",
+          "sodium level",
+          "hormonal balance",
+          "diet",
+          "non-smoker",
+          "no atrial fibrillation",
+          "no heart disease",
+          "liver function"
+        ]
+      },
+      {
+        "title": "Caution",
+        "count": 10,
+        "description": "These factors may be contributing somewhat to cognitive impairment or memory loss",
+        "factors": [
+          "kidney disease",
+          "obesity",
+          "homocysteine level",
+          "vitamin D level",
+          "hearing loss",
+          "essential metals imbalance",
+          "depression",
+          "high blood pressure",
+          "thyroid level",
+          "blood sugar level"
+        ]
+      },
+      {
+        "title": "At Risk",
+        "count": 7,
+        "description": "These factors are likely to be significantly contributing to cognitive impairment or memory loss",
+        "factors": [
+          "multimorbidity",
+          "poor sleep quality",
+          "inadequate exercise",
+          "cholesterol level",
+          "insulin level",
+          "insulin resistance",
+          "anticholinergic cognitive burden"
+        ]
+      },
+      {
+        "title": "Unknown",
+        "count": 1,
+        "description": "There is not enough data to determine if this factor is contributing to cognitive impairment",
+        "factors": [
+          "stress"
+        ]
+      }
+    ]
+  },
+  "medicalIssues": {
+    "title": "Additional Medical Issues",
+    "issues": [
+      {
+        "issueName": "Plaques and Tangles",
+        "warnings": [
+          "This is a very high level of plasma p-tau181. Such high levels are seen in those with MCI and dementia due to Alzheimer's disease. Additionally, p-tau181 can be elevated in patients with amyotrophic lateral sclerosis (ALS) and is associated with lower motor neuron disease. Further evaluation is recommended[18,19].",
+          "The low A\u03b242/40 ratio returned by AD-Detect\u2122 indicates that the amyloid count is likely to be high. In the context of Alzheimer's disease and other forms of dementia, a high amyloid count usually refers to a high concentration of amyloid-beta proteins in the brain. These proteins clump together to form plaques that are a hallmark of Alzheimer's disease. Further assessment by a neurologist is recommended."
+        ],
+        "recommendations": [
+          {
+            "issue": "AD-Detect\u2122 p-tau181",
+            "value": "2.07\u00a0pg/mL",
+            "sentence": "AD-Detect\u2122 p-tau181 is far above target, at 2.07\u00a0pg/mL."
+          },
+          {
+            "issue": "AD-Detect\u2122 A\u03b242/40",
+            "value": "0.159",
+            "sentence": "AD-Detect\u2122 A\u03b242/40 is below target, at 0.159."
+          }
+        ]
+      },
+      {
+        "issueName": "Insulin Resistance",
+        "warnings": [
+          "Further assessment by an endocrinologist is recommended, as value indicates elevated likelihood of insulin resistance. Insulin resistance can lead to brain inflammation, amyloid plaques, and tau tangles.",
+          "Further assessment by an endocrinologist is recommended, as the value indicates elevated likelihood of insulin resistance. Insulin resistance can lead to brain inflammation, amyloid plaques, and tau tangles.",
+          "Very high fasting Insulin 15.7"
+        ],
+        "recommendations": [
+          {
+            "issue": "HOMA-IR",
+            "value": "3.7",
+            "sentence": "HOMA-IR is far above target, at 3.7."
+          },
+          {
+            "issue": "Insulin",
+            "value": "15.7\u00a0\u00b5IU/mL",
+            "sentence": "Insulin is far above target, at 15.7\u00a0\u00b5IU/mL."
+          },
+          {
+            "sentence": "Hyperinsulinemia is probable."
+          }
+        ]
+      },
+      {
+        "issueName": "Dyslipidemia",
+        "warnings": [
+          "Further assessment of lipid status and appropriate therapeutics is recommended, as their careful balance is essential for cognitive & mental health, and out-of-range serum values may indicate additional medical issues.",
+          "High  LDLc 183"
+        ],
+        "recommendations": [
+          {
+            "issue": "Total cholesterol",
+            "value": "273\u00a0mg/dL",
+            "sentence": "Total cholesterol is far above target, at 273\u00a0mg/dL."
+          },
+          {
+            "sentence": "Pure hypercholesterolemia is possible."
+          }
+        ]
+      },
+      {
+        "issueName": "Vitamin Imbalance",
+        "warnings": [
+          "Further assessment by a physician is recommended as the test result is not normal and may indicate the existence of a medical issue beyond the scope of cognitive & mental health."
+        ],
+        "recommendations": [
+          {
+            "issue": "Vitamin B12 (cobalamins)",
+            "value": "139\u00a0pg/mL",
+            "sentence": "Vitamin B12 (cobalamins) is far below target, at 139\u00a0pg/mL."
+          }
+        ]
+      },
+      {
+        "issueName": "Renal Insufficiency",
+        "warnings": [
+          "Stage 3a, eGFR 51",
+          "Further assessment by a physician is recommended as the test result is not normal and may indicate the existence of a medical issue beyond the scope of cognitive & mental health.",
+          "Elevated Creatinine 1.1; high Monocytes 8.0%; normal BUN 16"
+        ],
+        "recommendations": [
+          {
+            "sentence": "Chronic kidney disease, stage 3a is possible."
+          },
+          {
+            "issue": "Creatinine Clearance",
+            "value": "48.1",
+            "sentence": "Creatinine Clearance calculated at 48.1 indicates possiblestage 3akidney disease."
+          },
+          {
+            "sentence": "Urinary tract congestion is possible."
+          }
+        ]
+      },
+      {
+        "issueName": "Imbalance in Essential Metals",
+        "warnings": [
+          "Further assessment by a physician is recommended as the test result is not normal and may indicate the existence of a medical issue beyond the scope of cognitive & mental health."
+        ],
+        "recommendations": [
+          {
+            "issue": "Copper/Zinc ratio",
+            "value": "1.7",
+            "sentence": "Copper/Zinc ratio is far above target, at 1.7."
+          }
+        ]
+      },
+      {
+        "issueName": "Hormonal Imbalance",
+        "warnings": [
+          "Further assessment by a gynecologist is recommended as the test result is not normal and may indicate the existence of a medical issue beyond the scope of cognitive & mental health."
+        ],
+        "recommendations": [
+          {
+            "issue": "Progesterone",
+            "value": "4.0\u00a0ng/mL",
+            "sentence": "Progesterone is far above target, at 4.0\u00a0ng/mL."
+          }
+        ]
+      },
+      {
+        "issueName": "Clinical Conditions",
+        "warnings": [
+          "STOP-Bang Risk Index is high",
+          "High body mass index (BMI) 35.3; high girth 44.2 inches",
+          "PHQ-2 score is 3",
+          "Low platelet count 137"
+        ],
+        "recommendations": [
+          {
+            "sentence": "Obstructive sleep apnea is probable."
+          },
+          {
+            "sentence": "Adult obesity is likely."
+          },
+          {
+            "sentence": "Depression is possible."
+          },
+          {
+            "sentence": "Grade 1 thrombocytopenia is possible."
+          }
+        ]
+      }
+    ],
+    "intro": "The root cause of the following potential issues should be determined and addressed, before continuing with this care plan.  \r\n                    Physician should prioritize resolution of the\r\n                    seven\r\n                    high-priority marked issues.\r\n                    Recommendations in this report should then be reviewed and \r\n                    applied within the context of steps to resolve these."
+  },
+  "comorbidities": {
+    "title": "Current Comorbidities",
+    "comorbidities": [
+      {
+        "comorbidity": "Wearing Hearing Aids",
+        "dateDiagnosed": "3/24/2015"
+      },
+      {
+        "comorbidity": "Occasional Abdominal Pain",
+        "dateDiagnosed": "2/15/2022"
+      },
+      {
+        "comorbidity": "Lower Back Pain",
+        "dateDiagnosed": "11/01/2020"
+      }
+    ]
+  },
+  "reportedAndInferredComorbidities": {
+    "title": "Reported and Inferred Comorbidities",
+    "v28_implementation_plan": {
+      "paragraph": "CMS is phasing in V28 over three years:[30]",
+      "v24_v28_data": [
+        {
+          "year": "2024",
+          "V24": "67%",
+          "V28": "33%"
+        },
+        {
+          "year": "2025",
+          "V24": "33%",
+          "V28": "67%"
+        },
+        {
+          "year": "2026",
+          "V24": "0%",
+          "V28": "100%"
+        }
+      ]
+    },
+    "reported_comorbidities": {
+      "paragraph": "The following comorbidities were reported.  The ICD-10 codes shown are each billable.",
+      "reported_comorbidities_data": [
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "M54.50",
+          "Possible Comorbidity": "Lower Back Pain",
+          "Explanation": "11/01/2020"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "R10.9",
+          "Possible Comorbidity": "Occasional Abdominal Pain",
+          "Explanation": "2/15/2022"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "Z97.4",
+          "Possible Comorbidity": "Wearing Hearing Aids",
+          "Explanation": "3/24/2015"
+        }
+      ]
+    },
+    "inferred_comorbidities": {
+      "paragraph": "The following possible comorbidities have been inferred from lab results, current medications, genomic data, and vital signs.",
+      "inferred_comorbidities_data": [
+        {
+          "HCC V24": "23",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "E72.12",
+          "Possible Comorbidity": "MTHFR Mutations, Snps C677t & A1298c",
+          "Explanation": "C677T(AG), heterozygousA1298C(GT), heterozygous"
+        },
+        {
+          "HCC V24": "47",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "D84.9",
+          "Possible Comorbidity": "Immunodeficiency, unspecified",
+          "Explanation": "very low uMETHOD Immune Score\u2122 49/100"
+        },
+        {
+          "HCC V24": "48",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "D69.6",
+          "Possible Comorbidity": "Grade 1 thrombocytopenia",
+          "Explanation": "low platelet count 137"
+        },
+        {
+          "HCC V24": "138",
+          "HCC V28": "329",
+          "ICD-10 Code": "N18.31",
+          "Possible Comorbidity": "Chronic kidney disease, stage 3a",
+          "Explanation": "stage 3a, eGFR 51"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "E16.1",
+          "Possible Comorbidity": "Hyperinsulinemia",
+          "Explanation": "very high fasting Insulin 15.7"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "E53.8",
+          "Possible Comorbidity": "Vitamin B12 Deficiency, 50.0-149.9",
+          "Explanation": "very low Vitamin B12 (cobalamins) 139"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "E55.9",
+          "Possible Comorbidity": "Vitamin D Deficiency, 20.0-29.9",
+          "Explanation": "low Vitamin D (25-hydroxy) 24.8"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "E66.9",
+          "Possible Comorbidity": "Adult obesity",
+          "Explanation": "high body mass index (BMI) 35.3high girth 44.2 inches"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "E78.00",
+          "Possible Comorbidity": "Pure hypercholesterolemia",
+          "Explanation": "high  LDLc 183"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "E88.819",
+          "Possible Comorbidity": "Insulin Resistance",
+          "Explanation": "very high HOMA-IR 3.7"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "F32.A",
+          "Possible Comorbidity": "Depression",
+          "Explanation": "PHQ-2 score is 3"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "G31.84",
+          "Possible Comorbidity": "Mild Cognitive Impairment",
+          "Explanation": "taking donepezil"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "G47.33",
+          "Possible Comorbidity": "Obstructive sleep apnea",
+          "Explanation": "STOP-Bang Risk Index is high"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "J30.1",
+          "Possible Comorbidity": "Allergic Rhinitis Due to Pollen",
+          "Explanation": "allergen: pollen"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "J30.89",
+          "Possible Comorbidity": "Other Allergic Rhinitis",
+          "Explanation": "allergen: mold"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "N39.9",
+          "Possible Comorbidity": "Urinary tract congestion",
+          "Explanation": "elevated Creatinine 1.1high Monocytes 8.0%normal BUN 16"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "Z79.2",
+          "Possible Comorbidity": "Long-term (Current) Use of Antibiotics",
+          "Explanation": "Ery-Tab (erythromycin)"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "Z79.51",
+          "Possible Comorbidity": "Long-term (Current) Use of Inhaled Steroids",
+          "Explanation": "fluticasone inhalant"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "Z79.899",
+          "Possible Comorbidity": "Other Long-term (Current) Drug Therapy",
+          "Explanation": "Chlor-Trimeton (chlorpheniramine)Toviaz (fesoterodine)donepezilduloxetinehydrochlorothiazide"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "Z88.5",
+          "Possible Comorbidity": "Allergy Status to Narcotic Agent",
+          "Explanation": "allergen: codeine"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "Z88.8",
+          "Possible Comorbidity": "Allergy Status to Other Drugs Medicaments and Biological Substances",
+          "Explanation": "allergen: fluorometholone"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "Z91.81",
+          "Possible Comorbidity": "At Risk for Falls",
+          "Explanation": "Fall-risk med score:7, with 4 conditions that increase risk"
+        },
+        {
+          "HCC V24": "\u2014",
+          "HCC V28": "\u2014",
+          "ICD-10 Code": "Z92.240",
+          "Possible Comorbidity": "Personal History of Inhaled Steroid Therapy",
+          "Explanation": "fluticasone inhalant"
+        }
+      ]
+    }
+  },
+  "currentMedications": {
+    "currentMedicationstitle": "Current Medications",
+    "medications": [
+      {
+        "medication": "lisinopril",
+        "dosage": "10 mg, 1 pill / PO / q.d.",
+        "class_indication": "Angiotensin Converting Enzyme Inhibitor",
+        "date_started": "4/01/2014",
+        "risks": {
+          "fall_risk_score": 2
+        }
+      },
+      {
+        "medication": "duloxetine",
+        "dosage": "20 mg, 1 pill / PO / q.d.",
+        "class_indication": "Serotonin and Norepinephrine Reuptake Inhibitor",
+        "date_started": "8/01/2014",
+        "risks": {
+          "fall_risk_score": 2
+        }
+      },
+      {
+        "medication": "donepezil",
+        "dosage": "10 mg, 1 pill / PO / q.d.",
+        "class_indication": "Cholinesterase Inhibitor",
+        "date_started": "7/01/2021",
+        "risks": {
+          "fall_risk_score": 1
+        }
+      },
+      {
+        "medication": "chlorpheniramine, Chlor-Trimeton",
+        "dosage": "4 mg, 1 pill / PO / p.r.n.",
+        "class_indication": "Histamine-1 Receptor Antagonist / for allergies",
+        "date_started": "11/01/2020",
+        "risks": {
+          "fall_risk_score": 1,
+          "acb_score": 3
+        }
+      },
+      {
+        "medication": "HCTZ",
+        "dosage": "12.5 mg, 1 pill / PO / q.d.",
+        "class_indication": "Thiazide Diuretic",
+        "date_started": "2/01/2016",
+        "risks": {
+          "fall_risk_score": 1,
+          "acb_score": 1
+        }
+      },
+      {
+        "medication": "fluocin acet otic",
+        "dosage": "0.01%, 3 gtts / AU / q.o.d.",
+        "class_indication": "Corticosteroid, Otic",
+        "date_started": "2/01/2016"
+      },
+      {
+        "medication": "fluticasone inhalant",
+        "dosage": "50 mcg, 2 sprays / INH / q.d.",
+        "class_indication": "Corticosteroid, Inhaled",
+        "date_started": "12/01/2015"
+      },
+      {
+        "medication": "fesoterodine, Toviaz",
+        "dosage": "8 mg, 1 pill / PO / q.d.",
+        "class_indication": "Benzhydryl Compounds",
+        "date_started": "4/01/2019",
+        "risks": {
+          "acb_score": 3
+        }
+      },
+      {
+        "medication": "erythromycin, Ery-Tab",
+        "dosage": "PO / b.i.d.",
+        "class_indication": "Macrolide Antimicrobial",
+        "date_started": "2/15/2022"
+      }
+    ]
   }
 }

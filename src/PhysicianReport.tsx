@@ -18,6 +18,10 @@ import {
   type FallRiskData,
 } from "./components/pages/PhysicianPages/FallRisk";
 
+import { CognitiveFactorsSummary } from "./components/pages/CognitiveFactorsSummary";
+import ComorbiditiesAssessment from "./components/pages/ComorbiditiesAssessment";
+import MedicationsManagement from "./components/pages/MedicationsManagement";
+
 export type Report = {
   intro: IntroData;
   cognitive_assessment: CognitiveAssessmentData;
@@ -25,6 +29,12 @@ export type Report = {
   acb: AcbData;
   leqembi: LeqembiData;
   fall_risk: FallRiskData;
+  preface: object;
+  cognitiveFactors: object;
+  medicalIssues: object;
+  comorbidities: object;
+  reportedAndInferredComorbidities: object;
+  currentMedications: object;
 };
 
 function PhysicianReport() {
@@ -37,16 +47,32 @@ function PhysicianReport() {
       .catch((err) => console.error("Failed to load report:", err));
   }, []);
 
+  useEffect(() => {
+    console.log(report);
+  }, [report]);
+
   if (!report) return <p>Loading report…</p>;
 
   return (
     <div>
-      <Intro data={report.intro} />
-      <CognitiveAssessment data={report.cognitive_assessment} />
-      <Stopbang data={report.stopbang} />
-      <Acb data={report.acb} />
-      <Leqembi data={report.leqembi} />
-      <FallRisk data={report.fall_risk} />
+      <div className="w-[210mm] mx-auto p-6 bg-white mb-8">
+        <Intro data={report.intro} />
+        <CognitiveAssessment data={report.cognitive_assessment} />
+        <Stopbang data={report.stopbang} />
+        <Acb data={report.acb} />
+        <Leqembi data={report.leqembi} />
+        <FallRisk data={report.fall_risk} />
+      </div>
+      <CognitiveFactorsSummary data={report?.cognitiveFactors} />
+      <ComorbiditiesAssessment
+        data={{
+          medicalIssues: report?.medicalIssues,
+          comorbidities: report?.comorbidities,
+          reportedAndInferredComorbidities:
+            report?.reportedAndInferredComorbidities,
+        }}
+      />
+      <MedicationsManagement data={report?.currentMedications} />
     </div>
   );
 }
