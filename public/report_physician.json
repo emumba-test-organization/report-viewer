@@ -559,97 +559,322 @@
       "Blood Tests": [
         {
           "test": "Anion Gap",
-          "explanation": "Metabolic acidosis is possible, and should be further evaluated (low Carbon Dioxide 23)."
+          "explanation": "Metabolic acidosis is possible, and should be further evaluated (low Carbon Dioxide 23).",
+          "tokens": [
+            {
+              "name": "carbon dioxide",
+              "value": "23",
+              "unit": null,
+              "risk": "low",
+              "stage": null
+            }
+          ]
         },
         {
           "test": "Arrays 2, 3, and 20, from Cyrex Laboratories",
-          "explanation": "Screen for intestinal antigenic permeability (2), wheat/gluten proteome reactivity and autoimmunity (3), and blood brain barrier permeability (20), as indicated by cognitive symptoms and elevated genetic risk."
+          "explanation": "Screen for intestinal antigenic permeability (2), wheat/gluten proteome reactivity and autoimmunity (3), and blood brain barrier permeability (20), as indicated by cognitive symptoms and elevated genetic risk.",
+          "tokens": []
         },
         {
           "test": "Creatinine",
-          "explanation": "Chronic kidney disease is possible, and should be further evaluated (stage 3a, eGFR 51).  Refresh the most recent result."
+          "explanation": "Chronic kidney disease is possible, and should be further evaluated (stage 3a, eGFR 51).  Refresh the most recent result.",
+          "tokens": [
+            {
+              "name": "chronic kidney disease",
+              "value": null,
+              "unit": null,
+              "risk": "possible",
+              "stage": "3a"
+            },
+            {
+              "name": "egfr",
+              "value": "51",
+              "unit": null,
+              "risk": null,
+              "stage": "3a"
+            }
+          ]
         },
         {
           "test": "Cystatin C",
-          "explanation": "Chronic kidney disease is possible, and should be further evaluated (stage 3a, eGFR 51)."
+          "explanation": "Chronic kidney disease is possible, and should be further evaluated (stage 3a, eGFR 51).",
+          "tokens": [
+            {
+              "name": "chronic kidney disease",
+              "value": null,
+              "unit": null,
+              "risk": "possible",
+              "stage": "3a"
+            },
+            {
+              "name": "egfr",
+              "value": "51",
+              "unit": null,
+              "risk": null,
+              "stage": "3a"
+            }
+          ]
         },
         {
           "test": "Glucose",
-          "explanation": "Hyperinsulinemia is probable, and should be further evaluated (very high fasting Insulin 15.7).  Refresh the most recent result."
+          "explanation": "Hyperinsulinemia is probable, and should be further evaluated (very high fasting Insulin 15.7).  Refresh the most recent result.",
+          "tokens": [
+            {
+              "name": "fasting insulin",
+              "value": "15.7",
+              "unit": null,
+              "risk": "high",
+              "stage": null
+            }
+          ]
         },
         {
           "test": "Hemoglobin A1c",
-          "explanation": "Hyperinsulinemia is probable, and should be further evaluated (very high fasting Insulin 15.7).  Refresh the most recent result."
+          "explanation": "Hyperinsulinemia is probable, and should be further evaluated (very high fasting Insulin 15.7).  Refresh the most recent result.",
+          "tokens": [
+            {
+              "name": "fasting insulin",
+              "value": "15.7",
+              "unit": null,
+              "risk": "high",
+              "stage": null
+            }
+          ]
         },
         {
           "test": "Immunoglobulin E (IgE)",
-          "explanation": "Rhinitis is likely to be an active condition.  Also consider follow-up testing for mold and microtoxins."
+          "explanation": "Rhinitis is likely to be an active condition.  Also consider follow-up testing for mold and microtoxins.",
+          "tokens": []
         },
         {
           "test": "Lactate dehydrogenase (LDH) isoenzyme fraction study (all 5 isoforms)",
-          "explanation": "Urinary tract congestion (e.g., uterine hypertrophy, uterine inflammation, or UTI) is possible, and should be further evaluated (elevated Creatinine 1.1, high Monocytes 8.0%, normal BUN 16)."
+          "explanation": "Urinary tract congestion (e.g., uterine hypertrophy, uterine inflammation, or UTI) is possible, and should be further evaluated (elevated Creatinine 1.1, high Monocytes 8.0%, normal BUN 16).",
+          "tokens": [
+            {
+              "name": "urinary tract congestion",
+              "value": null,
+              "unit": null,
+              "risk": null,
+              "stage": null
+            },
+            {
+              "name": "uti",
+              "value": null,
+              "unit": null,
+              "risk": "possible",
+              "stage": null
+            },
+            {
+              "name": "creatinine",
+              "value": "1.1",
+              "unit": null,
+              "risk": "elevated",
+              "stage": null
+            },
+            {
+              "name": "monocytes",
+              "value": "8.0",
+              "unit": "%",
+              "risk": "high",
+              "stage": null
+            },
+            {
+              "name": "bun",
+              "value": "16",
+              "unit": null,
+              "risk": "normal",
+              "stage": null
+            }
+          ]
         },
         {
           "test": "MPV (Mean Platelet Volume)",
-          "explanation": "Thrombocytopenia is possible, and should be further evaluated (low platelet count 137)."
+          "explanation": "Thrombocytopenia is possible, and should be further evaluated (low platelet count 137).",
+          "tokens": [
+            {
+              "name": "platelet count",
+              "value": "137",
+              "unit": null,
+              "risk": "low",
+              "stage": null
+            }
+          ]
         },
         {
           "test": "Platelets",
-          "explanation": "Thrombocytopenia is possible, and should be further evaluated (low platelet count 137).  Refresh the most recent result."
+          "explanation": "Thrombocytopenia is possible, and should be further evaluated (low platelet count 137).  Refresh the most recent result.",
+          "tokens": [
+            {
+              "name": "platelet count",
+              "value": "137",
+              "unit": null,
+              "risk": "low",
+              "stage": null
+            }
+          ]
         },
         {
           "test": "rT3 (Reverse T3)",
-          "explanation": "Consider ordering.  TSH is high at 3.0."
+          "explanation": "Consider ordering.  TSH is high at 3.0.",
+          "tokens": [
+            {
+              "name": "tsh",
+              "value": "3.0",
+              "unit": null,
+              "risk": "high",
+              "stage": null
+            }
+          ]
         }
       ],
       "CSF Tests": [
         {
           "test": "Lumbar puncture to assess cerebrospinal fluid (CSF) biomarkers:  A\u03b2 42, A\u03b2 40, total tau, & phosphorylated tau [p-tau]",
-          "explanation": "AD-Detect\u2122 p-tau181 is far above target, at 2.07\u00a0pg/mL."
+          "explanation": "AD-Detect\u2122 p-tau181 is far above target, at 2.07\u00a0pg/mL.",
+          "tokens": [
+            {
+              "name": "ad-detect",
+              "value": "181",
+              "unit": "pg/mL",
+              "risk": "far above target",
+              "stage": null
+            }
+          ]
         }
       ],
       "Sleep Tests": [
         {
           "test": "Sleep study, polysomnography (PSG)",
-          "explanation": "STOP-Bang suggests a high risk for obstructive sleep apnea (OSA)."
+          "explanation": "STOP-Bang suggests a high risk for obstructive sleep apnea (OSA).",
+          "tokens": [
+            {
+              "name": "obstructive sleep apnea",
+              "value": null,
+              "unit": null,
+              "risk": "high",
+              "stage": null
+            }
+          ]
         }
       ],
       "Urine Tests": [
         {
           "test": "24-hour urine collection",
-          "explanation": "Chronic kidney disease is possible, and should be further evaluated (stage 3a, eGFR 51)."
+          "explanation": "Chronic kidney disease is possible, and should be further evaluated (stage 3a, eGFR 51).",
+          "tokens": [
+            {
+              "name": "chronic kidney disease",
+              "value": null,
+              "unit": null,
+              "risk": "possible",
+              "stage": "3a"
+            },
+            {
+              "name": "egfr",
+              "value": "51",
+              "unit": null,
+              "risk": null,
+              "stage": "3a"
+            }
+          ]
         },
         {
           "test": "Bacterial urine culture",
-          "explanation": "Urinary tract congestion (e.g., uterine hypertrophy, uterine inflammation, or UTI) is possible, and should be further evaluated (elevated Creatinine 1.1, high Monocytes 8.0%, normal BUN 16)."
+          "explanation": "Urinary tract congestion (e.g., uterine hypertrophy, uterine inflammation, or UTI) is possible, and should be further evaluated (elevated Creatinine 1.1, high Monocytes 8.0%, normal BUN 16).",
+          "tokens": [
+            {
+              "name": "urinary tract congestion",
+              "value": null,
+              "unit": null,
+              "risk": null,
+              "stage": null
+            },
+            {
+              "name": "uti",
+              "value": null,
+              "unit": null,
+              "risk": "possible",
+              "stage": null
+            },
+            {
+              "name": "creatinine",
+              "value": "1.1",
+              "unit": null,
+              "risk": "elevated",
+              "stage": null
+            },
+            {
+              "name": "monocytes",
+              "value": "8.0",
+              "unit": "%",
+              "risk": "high",
+              "stage": null
+            },
+            {
+              "name": "bun",
+              "value": "16",
+              "unit": null,
+              "risk": "normal",
+              "stage": null
+            }
+          ]
         },
         {
           "test": "Schilling test, to assess vitamin B12 absorption",
-          "explanation": "Vitamin B12 (cobalamins) is far below target, at 139\u00a0pg/mL."
+          "explanation": "Vitamin B12 (cobalamins) is far below target, at 139\u00a0pg/mL.",
+          "tokens": [
+            {
+              "name": "vitamin b12",
+              "value": "139",
+              "unit": "pg/mL",
+              "risk": "far below target",
+              "stage": null
+            }
+          ]
         },
         {
           "test": "Urinalysis, with screening for hematuria and albuminuria",
-          "explanation": "Chronic kidney disease is possible, and should be further evaluated (stage 3a, eGFR 51)."
+          "explanation": "Chronic kidney disease is possible, and should be further evaluated (stage 3a, eGFR 51).",
+          "tokens": [
+            {
+              "name": "chronic kidney disease",
+              "value": null,
+              "unit": null,
+              "risk": "possible",
+              "stage": "3a"
+            },
+            {
+              "name": "egfr",
+              "value": "51",
+              "unit": null,
+              "risk": null,
+              "stage": "3a"
+            }
+          ]
         }
       ],
       "Vital Signs": [
         {
           "test": "Blood Pressure",
-          "explanation": "Measurement is not recent (2/23/2024).  Obtain a more recent measurement."
+          "explanation": "Measurement is not recent (2/23/2024).  Obtain a more recent measurement.",
+          "tokens": []
         },
         {
           "test": "Body Weight",
-          "explanation": "Measurement is not recent (2/23/2024).  Obtain a more recent measurement."
+          "explanation": "Measurement is not recent (2/23/2024).  Obtain a more recent measurement.",
+          "tokens": []
         }
       ],
       "Other Tests": [
         {
           "test": "Audiometry evaluation, resulting in an updated audiogram",
-          "explanation": "Wearing Hearing Aids."
+          "explanation": "Wearing Hearing Aids.",
+          "tokens": []
         },
         {
           "test": "Brain MRI original data (a DICOM or NIFTI file)",
-          "explanation": "It is reported that a baseline brain MRI is available.  Its data file can be used to quantify volumes of multiple CNS structures."
+          "explanation": "It is reported that a baseline brain MRI is available.  Its data file can be used to quantify volumes of multiple CNS structures.",
+          "tokens": []
         }
       ]
     },

@@ -17,6 +17,8 @@ import {
   FallRisk,
   type FallRiskData,
 } from "./components/pages/PhysicianPages/FallRisk";
+import AdditionalDiagnostics from "./components/pages/PhysicianPages/AdditionalDiagnostics/AdditionalDiagnostics";
+import type { AdditionalDiagnosticsData } from "./components/pages/PhysicianPages/AdditionalDiagnostics/types";
 
 import { CognitiveFactorsSummary } from "./components/pages/CognitiveFactorsSummary";
 import ComorbiditiesAssessment from "./components/pages/ComorbiditiesAssessment";
@@ -35,6 +37,7 @@ export type Report = {
   comorbidities: object;
   reportedAndInferredComorbidities: object;
   currentMedications: object;
+  additional_diagnostics: AdditionalDiagnosticsData;
 };
 
 function PhysicianReport() {
@@ -62,6 +65,7 @@ function PhysicianReport() {
         <Acb data={report.acb} />
         <Leqembi data={report.leqembi} />
         <FallRisk data={report.fall_risk} />
+        <AdditionalDiagnostics data={report.additional_diagnostics} />
       </div>
       <CognitiveFactorsSummary data={report?.cognitiveFactors} />
       <ComorbiditiesAssessment
