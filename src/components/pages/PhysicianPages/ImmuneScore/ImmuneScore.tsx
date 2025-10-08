@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Badge } from "@/components/ui/badge";
 import type { ImmuneScoreData } from "./types";
 import {
@@ -6,7 +7,9 @@ import {
   ChevronsUp,
   ChevronUp,
   InfoIcon,
+  TriangleAlert,
 } from "lucide-react";
+import { Progress } from "@/components/ui/progress";
 
 type Props = {
   data: ImmuneScoreData;
@@ -46,7 +49,17 @@ const getRiskIcon = (risk: string) => {
 };
 
 const ImmuneScore = ({ data }: Props) => {
-  const { title, preface, score, headers, factors, postface } = data;
+  const {
+    title,
+    preface,
+    score,
+    headers,
+    factors,
+    postface,
+    highValues,
+    immunoactive_meds,
+    immunoactive_conditions,
+  } = data;
   return (
     <div className="size-full" data-name="Body">
       <div
@@ -243,6 +256,183 @@ const ImmuneScore = ({ data }: Props) => {
             </div>
           </div>
         </div>
+      </div>
+
+      {/* High Values Section */}
+      <div>
+        <div className="grid grid-cols-[32px_1fr] bg-[#AA1E31] text-white p-2 mt-4">
+          <TriangleAlert className="text-white m-2" />
+          <p className="text-white m-2">
+            Consider applying urgent attention to improvement of the
+            contributors prioritized in the graph below.
+          </p>
+        </div>
+        <div className="p-4 bg-neutral-100 w-full flex justify-center">
+          <div className="grid grid-cols-[1fr_1fr] items-baseline gap-x-4 gap-1">
+            {highValues.map((item, index) => (
+              <Fragment key={index}>
+                <div key={index} className="">
+                  <p
+                    className="font-semibold"
+                    dangerouslySetInnerHTML={{ __html: item.factor }}
+                  />
+                </div>
+                <div className="flex w-full">
+                  <Progress
+                    value={(100 / highValues.length) * (index + 1)}
+                    max={100}
+                    className="bg-transparent "
+                  />
+                </div>
+              </Fragment>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* Immunoactive Medications */}
+      <div className="relative shrink-0 w-full mt-6" data-node-id="731:14871">
+        <div className="content-stretch flex flex-col isolate items-start overflow-clip relative w-full">
+          <div
+            className="grid grid-cols-[1fr] w-full z-[9]"
+            data-node-id="731:14872"
+          >
+            {immunoactive_meds.headers.map((header, index) => (
+              <div
+                key={index}
+                className={`bg-neutral-200 p-[16px] relative border-neutral-300 border-[1px_1px_1px_0px] border-solid`}
+                data-node-id="731:14873"
+              >
+                <div
+                  className="font-bold text-md text-nowrap"
+                  data-node-id="731:14874"
+                >
+                  <p
+                    className="leading-[25px] whitespace-pre"
+                    dangerouslySetInnerHTML={{ __html: header }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+          <div
+            className="relative grid grid-cols-[1fr_3fr] w-full z-[8]"
+            data-node-id="731:14872"
+          >
+            {immunoactive_meds.data.map(({ name, conditions }, rowIndex) => (
+              <Fragment key={rowIndex}>
+                <div
+                  className={`font-bold text-md text-nowrap p-[8px_16px] ${
+                    rowIndex % 2 === 0 ? "bg-white" : "bg-neutral-50"
+                  }`}
+                  data-node-id="731:14874"
+                >
+                  <p className="leading-[25px] whitespace-pre">{name}</p>
+                </div>
+                <div
+                  className={`relative w-full p-[8px_16px] ${
+                    rowIndex % 2 === 0 ? "bg-white" : "bg-neutral-50"
+                  }`}
+                >
+                  {conditions ? (
+                    conditions.map((row, condIndex) => (
+                      <div className="flex" key={condIndex}>
+                        <Badge
+                          variant="outline"
+                          className="flex items-center text-xs p-0.5 rounded justify-center border-r-0 rounded-tr-none rounded-br-none"
+                        >
+                          Stage
+                        </Badge>
+                        <Badge
+                          variant="outline"
+                          className="flex items-center text-xs p-0.5 rounded justify-center rounded-tl-none rounded-bl-none"
+                        >
+                          {row}
+                        </Badge>
+                      </div>
+                    ))
+                  ) : (
+                    <p>none found</p>
+                  )}
+                </div>
+              </Fragment>
+            ))}
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          className="absolute border-gray-300 border-[0px_2px_2px] border-solid inset-0 pointer-events-none"
+        />
+      </div>
+
+      {/* Immunoactive Conditions */}
+      {/* Immunoactive Medications */}
+      <div className="relative shrink-0 w-full mt-6" data-node-id="731:14871">
+        <div className="content-stretch flex flex-col isolate items-start overflow-clip relative w-full">
+          <div
+            className="grid grid-cols-[1fr] w-full z-[9]"
+            data-node-id="731:14872"
+          >
+            {immunoactive_conditions.headers.map((header, index) => (
+              <div
+                key={index}
+                className={`bg-neutral-200 p-[16px] relative border-neutral-300 border-[1px_1px_1px_0px] border-solid`}
+                data-node-id="731:14873"
+              >
+                <div
+                  className="font-bold text-md text-nowrap"
+                  data-node-id="731:14874"
+                >
+                  <p
+                    className="leading-[25px] whitespace-pre"
+                    dangerouslySetInnerHTML={{ __html: header }}
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+          <div
+            className="relative grid grid-cols-[1fr_3fr] w-full z-[8]"
+            data-node-id="731:14872"
+          >
+            {immunoactive_conditions.data.map(({ name, conditions }, rowIndex) => (
+              <Fragment key={rowIndex}>
+                <div
+                  className={`font-bold text-md text-nowrap p-[8px_16px] ${
+                    rowIndex % 2 === 0 ? "bg-white" : "bg-neutral-50"
+                  }`}
+                  data-node-id="731:14874"
+                >
+                  <p className="leading-[25px] whitespace-pre">{name}</p>
+                </div>
+                <div
+                  className={`flex gap-1 relative w-full p-[8px_16px] ${
+                    rowIndex % 2 === 0 ? "bg-white" : "bg-neutral-50"
+                  }`}
+                >
+                  {conditions ? (
+                    conditions.map((row, condIndex) => (
+                      <div className="" key={condIndex}>
+                        <Badge
+                          variant="outline"
+                          className="flex items-center text-xs p-0.5 rounded justify-center"
+                        >
+                          {row}
+                        </Badge>
+                      </div>
+                    ))
+                  ) : (
+                    <p>none found</p>
+                  )}
+                </div>
+              </Fragment>
+            ))}
+          </div>
+        </div>
+        <div
+          aria-hidden="true"
+          className="absolute border-gray-300 border-[0px_2px_2px] border-solid inset-0 pointer-events-none"
+        />
       </div>
     </div>
   );

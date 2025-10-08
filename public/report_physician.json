@@ -1607,6 +1607,68 @@
       "<sup>a</sup> Value is out of range and may indicate a medical problem that does not directly impact the immune system.",
       "<sup>b</sup> Homeostatic Model Assessment of Insulin Resistance (HOMA-IR), calculated using fasting insulin &amp; glucose."
     ],
-    "disclaimer": "This report provides analyses intended to aid \r\nin understanding the status of the\r\nimmune system\r\nof the above-named person.\r\nIt is focused on the assessment of a weakened or deficient immune system;\r\nit does not identify an immune system that is overactive or \r\nin the midst of high response."
+    "disclaimer": "This report provides analyses intended to aid \r\nin understanding the status of the\r\nimmune system\r\nof the above-named person.\r\nIt is focused on the assessment of a weakened or deficient immune system;\r\nit does not identify an immune system that is overactive or \r\nin the midst of high response.",
+    "immunoactive_meds": {
+      "headers": [
+        "Immunoactive Medications<small> (as of November 02, 2024)</small>"
+      ],
+      "data": [
+        {
+          "name": "Antineoplastics (cancer drugs)",
+          "conditions": null
+        },
+        {
+          "name": "Immunosuppressants",
+          "conditions": null
+        },
+        {
+          "name": "NSAIDs",
+          "conditions": null
+        },
+        {
+          "name": "Systemic corticosteroids/glucocorticoids",
+          "conditions": null
+        },
+        {
+          "name": "Proton pump inhibitors",
+          "conditions": null
+        },
+        {
+          "name": "Statins",
+          "conditions": null
+        }
+      ]
+    },
+    "immunoactive_conditions": {
+      "headers": [
+        "Potentially Immunoactive Conditions<small> (as of November 02, 2024)</small>"
+      ],
+      "data": [
+        {
+          "name": "Oncology history",
+          "conditions": null
+        },
+        {
+          "name": "Immunodeficiency disorders",
+          "conditions": null
+        },
+        {
+          "name": "Autoimmune diseases",
+          "conditions": null
+        },
+        {
+          "name": "Active infections",
+          "conditions": null
+        },
+        {
+          "name": "Chronic disorders",
+          "conditions": [
+            "Chronic Kidney Disease, Stage 3a",
+            "High Blood Pressure",
+            "Insulin Resistance"
+          ]
+        }
+      ]
+    }
   }
 }
