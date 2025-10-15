@@ -1670,5 +1670,41 @@
         }
       ]
     }
+  },
+  "lifestyleRecommendation": {
+    "title": "Lifestyle Recommendations",
+    "preface": "The recommendations below tailor those published in the FINGER study.\r\n                In a notable cover story,Scientific Americansummarized the study results:\r\n                \u201cA gold-standard clinical trial provides evidence that diet, exercise and\r\n                an active social life can help prevent cognitive decline.\u201d[20]",
+    "headers": [
+      "Topic",
+      "Details",
+      "Comments"
+    ],
+    "recommendations": [
+      {
+        "topic": "Stress Reduction",
+        "details": "Include walks, music, meditation, naps, yoga, qigong, \r\nor whatever provides relaxation, at least once each day.\r\nAvoid highly stress-inducing behaviors, such as \r\nstaying up all night,\r\nred-eye or international flights, \r\nunceasingly-stressful jobs, or \r\nstaying in chronically-bad relationships.\r\nThe importance of a positive attitude cannot be overstated.",
+        "comments": "People who are often stressed are more likely \r\nto experience brain shrinkage and increased production of the amyloid beta peptide.\r\nSome stresses are unavoidable, \r\nbut low stress levels are important for delaying or avoiding symptom onset."
+      },
+      {
+        "topic": "Sleep",
+        "details": "Bedtime, \r\nrather than wake time,\r\nmakes a big difference.\r\nBedtime before midnight is preferable.",
+        "comments": "Seek treatment for\r\nObstructive sleep apnea, which can cause poor sleep quality.  This medication may be disrupting sleep: donepezil. Is an alternative appropriate?"
+      },
+      {
+        "topic": "Fasting (to Induce Autophagy)",
+        "details": "Fast every night for at least 12 hours, \r\nbetween the last food in the evening and the first in the morning.\r\nBegin the fasting at least 3 hours before bedtime.",
+        "comments": "Memory loss is observed in people producing too much amyloid beta peptide, \r\nwhich oligomerizes readily and can induce toxicity.\r\nA key mechanism for clearing amyloid beta isautophagy.  \r\nNightly fasts (and an occasional daytime fast) can \r\ninhibit the mTOR pathway, \r\ninduce autophagy, and \r\nclean up amyloid beta, \r\ndamaged mitochondria (via mitophagy), and \r\ndamaged or insoluble proteins."
+      },
+      {
+        "topic": "Physical Activity",
+        "details": "Physical exercise has an anti-aging effect on the hippocampus region of the brain.\r\nExercise at a moderate activity level 4 to 5 times each week, \r\nfor 30 to 60 minutes each time.\r\nHeart rate should be raised \r\n(but not so much as to create too much stress, \r\ninduce vascular problems, \r\nor damage joints).\r\nInclude both cardiovascular exercise and \r\nresistance training (weight-bearing or weight-lifting strength exercises).\r\nLosing more than 10% of muscle mass disrupts function of the immune system.",
+        "comments": "Effective exercise to enhance neuroplasticity includes a vigorous aerobic component \r\n(such as dancing or brisk walking) and\r\nalternates with resistance training.\r\nStudies also show that novelty is helpful.  \r\nFor example, \r\nit is better to be playing during exercise than simply doing a treadmill.  \r\nNovelty can be introduced through \r\ngames, \r\nplay with family members or friends, \r\nor activities with pets.\r\n\r\nYour genes indicate that you are part of the 12% of the population\r\nfor whom any exercise should work for weight loss."
+      },
+      {
+        "topic": "Brain Stimulation",
+        "details": "Find ways to push mental abilities: \r\nbecome a tutor,\r\nlearn a new language, \r\ntake dance lessons & dance often,\r\nlearn to play a musical instrument,\r\nmemorize poems,\r\neven do math problems mentally.\r\nRead books (rather than short articles).\r\n\r\nGood social activities include bridge & chess,\r\nand walking & talking with friends.",
+        "comments": "Do crossword puzzles or Sudoku;\r\ncomputerized crossword puzzles have been shown to slow cognitive decline.[21]Participate in activities like these 4 or more times a week, \r\nfor at least 30 minutes each time.\r\nThese all support the promotion of neuronal connections."
+      }
+    ]
   }
 }

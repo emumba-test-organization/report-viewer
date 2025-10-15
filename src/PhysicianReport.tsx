@@ -23,7 +23,14 @@ import type { AdditionalDiagnosticsData } from "./components/pages/PhysicianPage
 import { CognitiveFactorsSummary } from "./components/pages/CognitiveFactorsSummary";
 import ComorbiditiesAssessment from "./components/pages/ComorbiditiesAssessment";
 import MedicationsManagement from "./components/pages/MedicationsManagement";
-import { ImmuneScore, type ImmuneScoreData  } from "./components/pages/PhysicianPages/ImmuneScore";
+import {
+  ImmuneScore,
+  type ImmuneScoreData,
+} from "./components/pages/PhysicianPages/ImmuneScore";
+import {
+  LifestyleRecommendation,
+  type LifestyleRecommendationsData,
+} from "./components/pages/PhysicianPages/LifestyleRecommendation";
 
 export type Report = {
   intro: IntroData;
@@ -40,6 +47,7 @@ export type Report = {
   currentMedications: object;
   additional_diagnostics: AdditionalDiagnosticsData;
   immuneScore: ImmuneScoreData;
+  lifestyleRecommendation: LifestyleRecommendationsData;
 };
 
 function PhysicianReport() {
@@ -68,6 +76,7 @@ function PhysicianReport() {
         <Leqembi data={report.leqembi} />
         <FallRisk data={report.fall_risk} />
         <AdditionalDiagnostics data={report.additional_diagnostics} />
+        <LifestyleRecommendation data={report.lifestyleRecommendation} />
         <ImmuneScore data={report.immuneScore} />
       </div>
       <CognitiveFactorsSummary data={report?.cognitiveFactors} />
