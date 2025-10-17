@@ -8,6 +8,7 @@ export interface BlockConfig {
   id: string;
   type: string;
   data?: any;
+  index?: number;
 }
 
 export type BlockProps<T = any> = {
@@ -15,13 +16,14 @@ export type BlockProps<T = any> = {
   data: T;
   section?: T;
   blockId: string;
+  positionInPage?: number | "first" | "last";
   setRef?: (id: string) => (element: HTMLElement | null) => void;
   className?: string;
   slots?: { [key: string]: ReactNode };
 };
 
 export interface BlockRenderer {
-  (block: BlockConfig, key: string | number, index?: number): ReactNode;
+  (block: BlockConfig, key: string | number, index?: number, positionInPage?: number | "first" | "last"): ReactNode;
 }
 
 // Enhanced types for nested table configuration
@@ -332,9 +334,10 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
   const renderBlockWithProps = (
     block: BlockConfig,
     key: string | number,
-    index?: number
+    index?: number,
+    positionInPage?: number | "first" | "last"
   ) => {
-    return renderBlock(block, key, index);
+    return renderBlock(block, key, index, positionInPage);
   };
 
   return (
@@ -357,13 +360,14 @@ export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({
         <>
           {pages.map((pageContent, pageIndex) => (
             <A4Page key={pageIndex}>
-              {pageContent.map((block, blockIndex) =>
-                renderBlockWithProps(
+              {pageContent.map((block, blockIndex) => {
+                return renderBlockWithProps(
                   block,
                   `${pageIndex}-${blockIndex}`,
-                  blockIndex
-                )
-              )}
+                  block.index,
+                  blockIndex === 0 ? "first" : blockIndex === pageContent.length - 1 ? "last" : blockIndex
+                );
+              })}
             </A4Page>
           ))}
         </>

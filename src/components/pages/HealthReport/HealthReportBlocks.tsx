@@ -18,7 +18,7 @@ type SectionTitle = keyof typeof iconMap;
 export const TitleBlock = React.forwardRef<HTMLDivElement, BlockProps>(
   ({ data, blockId, setRef }, ref) => (
     <div ref={setRef ? setRef(blockId) : ref} className="title-block">
-      <h1 className="text-4xl font-bold text-gray-900 mb-8">{data?.title}</h1>
+      <h1 className="mb-8">{data?.title}</h1>
     </div>
   )
 );
@@ -74,24 +74,24 @@ export const OverviewBlock = React.forwardRef<
     <div ref={setRef ? setRef(blockId) : ref} className="overview-block mb-6">
       <div className="flex gap-3 text-sm">
         {/* Overview */}
-        <div className="grow">
+        <div className="flex flex-col grow">
           <h3 className="font-bold mb-1">Overview</h3>
-          <div className="flex border rounded overflow-hidden divide-x">
+          <div className="flex border overflow-hidden divide-x grow">
             {overviewEntries.map(({ label, value, annotations }) => (
               <div key={label} className="p-2">
-                <span className="text-gray-600 font-semibold block">
+                <span className="">
                   {label}
                 </span>
                 <div className="flex items-center gap-1">
                   <span
                     className={`font-bold ${
-                      label.toLowerCase() === "gender" ? "text-red-700" : ""
+                      label.toLowerCase() === "gender" ? value === "Female" ? "text-[#BF0EA8]" : "text-blue-700" : ""
                     }`}
                   >
                     {value}
                   </span>
                   {annotations.map((ann, idx) => (
-                    <div key={idx} className="text-xs text-gray-500">
+                    <div key={idx} className="text-xs font-light">
                       {ann}
                     </div>
                   ))}
@@ -102,18 +102,18 @@ export const OverviewBlock = React.forwardRef<
         </div>
 
         {/* Body Measurements */}
-        <div className="grow">
+        <div className="flex flex-col grow">
           <h3 className="font-bold mb-1">Body Measurements</h3>
-          <div className="flex border rounded overflow-hidden divide-x">
+          <div className="flex border overflow-hidden divide-x grow">
             {measurementEntries.map(({ label, value, annotations }) => (
               <div key={label} className="p-2">
-                <span className="text-gray-600 font-semibold block">
+                <span className="">
                   {label}
                 </span>
                 <div className="flex items-center gap-1">
                   <span className="font-bold">{value}</span>
                   {annotations.map((ann, idx) => (
-                    <div key={idx} className="text-xs text-gray-500">
+                    <div key={idx} className="text-xs font-light">
                       {ann}
                     </div>
                   ))}
@@ -124,18 +124,18 @@ export const OverviewBlock = React.forwardRef<
         </div>
 
         {/* Vitals */}
-        <div className="grow">
+        <div className="flex flex-col grow">
           <h3 className="font-bold mb-1">Vitals</h3>
-          <div className="flex border rounded overflow-hidden p-2">
+          <div className="flex border overflow-hidden p-2 grow">
             {vitalsEntries.map(({ label, value, annotations }) => (
               <div key={label}>
-                <span className="text-gray-600 font-semibold block">
+                <span className="">
                   {label}
                 </span>
                 <div className="flex items-center gap-1">
                   <span className="font-bold">{value}</span>
                   {annotations.map((ann, idx) => (
-                    <div key={idx} className="text-xs text-gray-500">
+                    <div key={idx} className="text-xs font-light">
                       {ann}
                     </div>
                   ))}
@@ -155,9 +155,9 @@ export const HealthStatusTitleBlock = React.forwardRef<
 >(({ blockId, setRef }, ref) => (
   <div
     ref={setRef ? setRef(blockId) : ref}
-    className="health-status-title-block mb-6  border-b-2 border-gray-300"
+    className="health-status-title-block mb-6"
   >
-    <h3 className="text-xl font-bold text-gray-900">Health Status</h3>
+    <h2>Health Status</h2>
   </div>
 ));
 
@@ -169,18 +169,18 @@ export const HealthStatusSectionBlock = React.forwardRef<
   const Icon = iconMap[key];
 
   const bgMap: Record<SectionTitle, string> = {
-    "At Risk": "bg-red-800",
-    Caution: "bg-yellow-700",
-    Optimal: "bg-green-600",
-    Unknown: "bg-gray-500",
+    "At Risk": "bg-danger",
+    Caution: "bg-warning",
+    Optimal: "bg-success",
+    Unknown: "bg-base",
   };
   const bgClass = bgMap[key] ?? "";
 
   const borderMap: Record<SectionTitle, string> = {
-    "At Risk": "border-red-800",
-    Caution: "border-yellow-700",
-    Optimal: "border-green-600",
-    Unknown: "border-gray-500",
+    "At Risk": "border-danger",
+    Caution: "border-warning",
+    Optimal: "border-success",
+    Unknown: "border-base",
   };
   const borderClass = borderMap[key] ?? "";
 
@@ -193,10 +193,10 @@ export const HealthStatusSectionBlock = React.forwardRef<
   const textClass = textMap[key] ?? "";
 
   const iconColorMap: Record<SectionTitle, string> = {
-    "At Risk": "text-red-800",
-    Caution: "text-yellow-800",
-    Optimal: "text-green-800",
-    Unknown: "text-gray-500",
+    "At Risk": "text-danger",
+    Caution: "text-warning",
+    Optimal: "text-success",
+    Unknown: "text-base",
   };
   const iconColorClass = iconColorMap[key] ?? "";
 
@@ -211,13 +211,13 @@ export const HealthStatusSectionBlock = React.forwardRef<
           <div className={`${bgClass} text-white px-2 py-2`}>
             <div className="flex items-center gap-3">
               <div
-                className={`${textClass} pl-1 pr-3  font-bold text-2xl border-r-3`}
+                className={`${textClass} pl-1 pr-3  font-bold text-2xl border-r-2`}
               >
                 {String(section.count).padStart(2, "0")}
               </div>
               <div>
-                <h4 className="font-bold text-sm">{section.title}</h4>
-                <p className="text-xs opacity-90">{section.description}</p>
+                <h4 className="font-bold text-white text-sm">{section.title}</h4>
+                <p className="text-white text-xs font-light">{section.description}</p>
               </div>
             </div>
           </div>
@@ -229,7 +229,7 @@ export const HealthStatusSectionBlock = React.forwardRef<
                 <Badge
                   key={idx}
                   variant="outline"
-                  className="flex items-center gap-1 text-xs px-3 py-1 rounded border-gray-300 bg-gray-100"
+                  className="flex items-center gap-1 text-xs px-3 py-1 rounded"
                 >
                   {Icon && <Icon size={5} className={`w-4 h-4 ${iconColorClass}`} />}
                   {factor}

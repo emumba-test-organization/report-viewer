@@ -26,6 +26,7 @@ const SupplementPlan = ({ data }: { data: any }) => {
       id: `supplement-row-${index}`,
       type: "supplement-row",
       data: section,
+      index: index,
     })),
     { id: "supplementsTip", type: "supplementsTip" },
   ];

@@ -1,20 +1,21 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { BulbIcon } from "@/components/icons";
 import type { BlockProps } from "@/components/shared/PaginationWrapper";
-import { Badge } from "@/components/ui/badge";
 import {
-  CircleAlertIcon,
-  CircleCheckIcon,
-  CircleXIcon,
-  LightbulbIcon,
-} from "lucide-react";
+  TableCell,
+  TableHeader,
+  TableHeaderCell,
+  TableRow,
+} from "@/components/shared/TableFlex";
+import { Alert, AlertTitle } from "@/components/ui/alert";
+import { Badge } from "@/components/ui/badge";
+import { CircleAlertIcon, CircleCheckIcon, CircleXIcon } from "lucide-react";
 import { forwardRef } from "react";
 
 export const HeadingBlock = forwardRef<HTMLDivElement, BlockProps>(
   ({ blockId, setRef }, ref) => (
     <div ref={setRef ? setRef(blockId) : ref}>
-      <h1 className="text-2xl font-bold text-gray-900 mb-6 border-b-2 border-gray-300 pb-2">
-        Nutrition & Diet
-      </h1>
+      <h2 className="mb-5">Nutrition & Diet</h2>
     </div>
   )
 );
@@ -22,9 +23,7 @@ export const HeadingBlock = forwardRef<HTMLDivElement, BlockProps>(
 export const NutritionTitleBlock = forwardRef<HTMLDivElement, BlockProps>(
   ({ data, blockId, setRef }, ref) => (
     <div ref={setRef ? setRef(blockId) : ref}>
-      <h2 className="text-xl font-bold text-gray-900 mb-4">
-        {data?.summary?.title}
-      </h2>
+      <h3 className="mb-4">{data?.summary?.title}</h3>
     </div>
   )
 );
@@ -34,9 +33,7 @@ export const DietaryConsumptionTitleBlock = forwardRef<
   BlockProps
 >(({ data, blockId, setRef }, ref) => (
   <div ref={setRef ? setRef(blockId) : ref}>
-    <h2 className="text-xl font-bold text-gray-900 mb-4 mt-5">
-      {data?.consumption?.title}
-    </h2>
+    <h3 className="mt-5 mb-4">{data?.consumption?.title}</h3>
   </div>
 ));
 
@@ -44,26 +41,23 @@ export const DietaryConsumptionInsightBlock = forwardRef<
   HTMLDivElement,
   BlockProps
 >(({ data, blockId, setRef }, ref) => (
-  <div ref={setRef ? setRef(blockId) : ref} className="bg-purple-800 p-4 mb-5">
-    <div className="flex items-start gap-3">
-      <LightbulbIcon className="w-5 h-5 text-white mt-0.5 flex-shrink-0" />
-      <p className="text-sm font-bold text-white">
-        {data?.consumption?.advice}
-      </p>
-    </div>
+  <div ref={setRef ? setRef(blockId) : ref}>
+    <Alert variant="info" className="mb-5">
+      <BulbIcon />
+      <AlertTitle>{data?.consumption?.advice}</AlertTitle>
+    </Alert>
   </div>
 ));
 
 export const DietaryWarningBlock = forwardRef<HTMLDivElement, BlockProps>(
   ({ data, blockId, setRef }, ref) => (
-    <div
-      ref={setRef ? setRef(blockId) : ref}
-      className="bg-yellow-600 p-4 mb-5"
-    >
-      <div className="flex items-start gap-3">
-        <CircleAlertIcon className="w-5 h-5 text-white mt-0.5 flex-shrink-0" />
-        <p className="text-sm font-bold text-white">{data.summary.warning}</p>
-      </div>
+    <div ref={setRef ? setRef(blockId) : ref}>
+      <Alert variant="warning" className="mb-5">
+        <CircleAlertIcon className="w-5 h-5 text-white flex-shrink-0" />
+        <AlertTitle className="text-white font-bold">
+          {data.summary.warning}
+        </AlertTitle>
+      </Alert>
     </div>
   )
 );
@@ -74,15 +68,12 @@ export const DietaryConsumptionHeaderBlock = forwardRef<
 >(({ blockId, setRef }, ref) => {
   const headers = ["Food Group", "Reported Intake", "Note"];
   return (
-    <div
-      className="medication-table-header p-4 flex flex-row text-xs font-bold bg-gray-300 border-2 border-b-0 border-gray-300"
-      ref={setRef ? setRef(blockId) : ref}
-    >
-      {headers.map((header, index) => (
-        <div key={index} className="flex-1">
-          {header}
-        </div>
-      ))}
+    <div ref={setRef ? setRef(blockId) : ref}>
+      <TableHeader>
+        {headers.map((header, index) => (
+          <TableHeaderCell key={index}>{header}</TableHeaderCell>
+        ))}
+      </TableHeader>
     </div>
   );
 });
@@ -90,28 +81,26 @@ export const DietaryConsumptionHeaderBlock = forwardRef<
 export const DietaryConsumptionRow = forwardRef<HTMLDivElement, BlockProps>(
   ({ index, section: entry, blockId, setRef }, ref) => {
     const { group, intake, note } = entry;
-    const isEven = index ? index % 2 === 0 : false;
-    const rowClass = isEven ? "bg-white" : "bg-gray-100";
+    const isOdd = index ? index % 2 !== 0 : false;
 
     return (
-      <div
-        className={`medication-row flex flex-row border border-gray-200 ${rowClass}`}
-        ref={setRef ? setRef(blockId) : ref}
-      >
-        {/* Food Group */}
-        <div className="p-4 flex-1 text-xs border-r">
-          <p className="font-medium">{group}</p>
-        </div>
+      <div ref={setRef ? setRef(blockId) : ref}>
+        <TableRow alternate={isOdd}>
+          {/* Food Group */}
+          <TableCell>
+            <p className="font-medium">{group}</p>
+          </TableCell>
 
-        {/* Intake */}
-        <div className="p-4 flex-1 text-xs border-r">
-          <p>{intake}</p>
-        </div>
+          {/* Intake */}
+          <TableCell>
+            <p>{intake}</p>
+          </TableCell>
 
-        {/* Note */}
-        <div className="p-4 flex-1 text-xs border-r">
-          <p>{note}</p>
-        </div>
+          {/* Note */}
+          <TableCell>
+            <p>{note}</p>
+          </TableCell>
+        </TableRow>
       </div>
     );
   }
@@ -119,12 +108,11 @@ export const DietaryConsumptionRow = forwardRef<HTMLDivElement, BlockProps>(
 
 export const DeficienciesHeader = forwardRef<HTMLDivElement, BlockProps>(
   ({ blockId, setRef }, ref) => (
-    <div
-      className="medication-table-header p-4 flex flex-row text-xs font-bold bg-gray-300 border-2 border-b-0 border-gray-300"
-      ref={setRef ? setRef(blockId) : ref}
-    >
-      <div className="flex-1">Nutrient</div>
-      <div className="flex-1">Your Result</div>
+    <div ref={setRef ? setRef(blockId) : ref}>
+      <TableHeader>
+        <TableHeaderCell>Nutrient</TableHeaderCell>
+        <TableHeaderCell>Your Result</TableHeaderCell>
+      </TableHeader>
     </div>
   )
 );
@@ -137,15 +125,14 @@ export const DeficienciesRow = forwardRef<HTMLDivElement, BlockProps>(
       normal_range,
       result: { severity, desc, reading },
     } = deficiency;
-    const isEven = index ? index % 2 === 0 : false;
-    const rowClass = isEven ? "bg-white" : "bg-gray-100";
+    const isOdd = index ? index % 2 !== 0 : false;
 
     const severityClassMap = {
-      "very high": "text-red-700",
-      high: "text-yellow-700",
-      normal: "text-green-700",
-      low: "text-yellow-700",
-      "very low": "text-red-700",
+      "very high": "text-danger",
+      high: "text-warning",
+      normal: "text-success",
+      low: "text-warning",
+      "very low": "text-danger",
     };
     const severityTextClass =
       severityClassMap[
@@ -153,53 +140,56 @@ export const DeficienciesRow = forwardRef<HTMLDivElement, BlockProps>(
       ] || "text-gray-800";
 
     return (
-      <div
-        className={`medication-row flex flex-row border border-gray-200 ${rowClass}`}
-        ref={setRef ? setRef(blockId) : ref}
-      >
-        {/* Food Group */}
-        <div className="p-4 flex-1 text-xs border-r">
-          <div className="font-semibold text-medium">{nutrient}</div>
-          {nutrient_sub && (
-            <div className="text-sm text-gray-600">{nutrient_sub}</div>
-          )}
-        </div>
+      <div ref={setRef ? setRef(blockId) : ref}>
+        <TableRow alternate={isOdd}>
+          {/* Food Group */}
+          <TableCell>
+            <div className="font-semibold text-medium">{nutrient}</div>
+            {nutrient_sub && (
+              <div className="text-sm font-light">{nutrient_sub}</div>
+            )}
+          </TableCell>
 
-        {/* Frequency */}
-        <div className="p-4 flex-1 text-xs">
-          <div className="flex items-center">
-            <p className="text-sm font-medium text-gray-700 mr-1">Currently</p>
-            <Badge
-              variant="outline"
-              className={`flex items-center text-medium font-semibold p-1 rounded justify-center bg-accent border-r-0 rounded-tr-none rounded-br-none ${severityTextClass}`}
-            >
-              {severity
-                .toLowerCase()
-                .replace(/\b\w/g, (char: any) => char.toUpperCase())}
-            </Badge>
-            {desc && (
-              <Badge
-                variant="outline"
-                className="flex items-center text-medium font-semibold p-1 border-r-0 bg-accent rounded-none justify-center"
-              >
-                {desc}
-              </Badge>
+          {/* Frequency */}
+          <TableCell>
+            <div className="flex items-center gap-1">
+              <p className="text-sm font-medium text-muted-foreground mr-0.5">
+                Currently
+              </p>
+              <div className="flex items-center">
+                <Badge
+                  variant="outline"
+                  className={`flex items-center text-medium font-semibold p-1 rounded justify-center bg-accent border-r-0 rounded-tr-none rounded-br-none ${severityTextClass}`}
+                >
+                  {severity
+                    .toLowerCase()
+                    .replace(/\b\w/g, (char: any) => char.toUpperCase())}
+                </Badge>
+                {desc && (
+                  <Badge
+                    variant="outline"
+                    className="flex items-center text-medium font-semibold p-1 border-r-0 bg-accent rounded-none justify-center"
+                  >
+                    {desc}
+                  </Badge>
+                )}
+                {reading && (
+                  <Badge
+                    variant="outline"
+                    className="flex items-center text-medium font-semibold p-1 rounded justify-center bg-accent rounded-tl-none rounded-bl-none"
+                  >
+                    {reading}
+                  </Badge>
+                )}
+              </div>
+            </div>
+            {normal_range && (
+              <p className="text-xs text-muted-foreground mt-1">
+                Normal Range: {normal_range}
+              </p>
             )}
-            {reading && (
-              <Badge
-                variant="outline"
-                className="flex items-center text-medium font-semibold p-1 rounded justify-center bg-accent rounded-tl-none rounded-bl-none"
-              >
-                {reading}
-              </Badge>
-            )}
-          </div>
-          {normal_range && (
-            <p className="text-xs text-gray-600 mt-1">
-              Normal Range: {normal_range}
-            </p>
-          )}
-        </div>
+          </TableCell>
+        </TableRow>
       </div>
     );
   }
@@ -211,7 +201,7 @@ export const BalancedNutritionTitleBlock = forwardRef<
 >(({ data, blockId, setRef }, ref) => {
   return (
     <div ref={setRef ? setRef(blockId) : ref}>
-      <h2 className="text-xl font-bold text-gray-900 mb-4 border-b-2 border-gray-300 pb-2 mt-5">
+      <h2 className="mb-4 mt-5">
         {data.recommendations.header || "Nutrition & Diet"}
       </h2>
     </div>
@@ -223,22 +213,20 @@ export const BalancedNutritionIntroBlock = forwardRef<
   BlockProps
 >(({ data, blockId, setRef }, ref) => (
   <div ref={setRef ? setRef(blockId) : ref}>
-    <h2 className="text-xl font-bold text-gray-900 mb-4 border-b-2 border-gray-300 pb-2 mt-5">
+    <h2 className="mb-4 mt-5">
       {data.recommendations.header || "Nutrition & Diet"}
     </h2>
-    <p className="text-xs text-gray-700 mb-2">
-      {data.recommendations.header_intro || ""}
-    </p>
+    <p className="text-xs mb-2">{data.recommendations.header_intro || ""}</p>
   </div>
 ));
 
 export const MindDietIntroBlock = forwardRef<HTMLDivElement, BlockProps>(
   ({ data, blockId, setRef }, ref) => (
     <div ref={setRef ? setRef(blockId) : ref}>
-      <h3 className="text-md font-semibold text-gray-900 mb-2">
+      <h3 className="mb-2">
         {data.mind_diet_title || "MIND Diet: Recommendations and Progress"}
       </h3>
-      <p className="text-xs text-gray-700 mb-5">
+      <p className="text-xs mb-5">
         {data.recommendations.mind_diet_intro || ""}
       </p>
     </div>
@@ -250,7 +238,7 @@ export const RecommendationsHeaderBlock = forwardRef<
   BlockProps
 >(({ data, blockId, setRef }, ref) => (
   <div ref={setRef ? setRef(blockId) : ref} className="grid grid-cols-2 gap-4">
-    <div className="bg-green-600 flex flex-col justify-between">
+    <div className="bg-success flex flex-col justify-between">
       <div className="grid grid-cols-[22px_1fr] gap-x-3 p-3">
         <CircleCheckIcon
           strokeWidth={2.5}
@@ -263,26 +251,24 @@ export const RecommendationsHeaderBlock = forwardRef<
           {data?.recommendations?.recommended_instructions}
         </p>
       </div>
-      <div className="grid grid-cols-2 bg-gray-300 font-bold text-xs text-gray-900">
+      <TableHeader>
         {data?.recommendations?.recommended_diet?.headers?.map(
-          (header: any, index: any) => {
-            return (
-              <div
-                key={index}
-                className={`p-3 ${
-                  index === 0
-                    ? "border-l-green-600 border-r-gray-400 border-x-1"
-                    : "border-r-green-600 border-r-1"
-                }`}
-              >
-                {header}
-              </div>
-            );
-          }
+          (header: any, index: any) => (
+            <TableHeaderCell
+              key={index}
+              className={`[&]:p-3 ${
+                index === 0
+                  ? "border-l-success border-l"
+                  : "last:border-r border-r-success border-r"
+              }`}
+            >
+              {header}
+            </TableHeaderCell>
+          )
         )}
-      </div>
+      </TableHeader>
     </div>
-    <div className="bg-red-800 flex flex-col justify-between">
+    <div className="bg-danger flex flex-col justify-between">
       <div className="grid grid-cols-[22px_1fr] gap-x-3 p-3">
         <CircleXIcon strokeWidth={2.5} size={22} color="white" className="" />
         <p className="text-white font-bold leading-none">Not Recommended</p>
@@ -290,54 +276,55 @@ export const RecommendationsHeaderBlock = forwardRef<
           {data?.recommendations?.discouraged_instructions || ""}
         </p>
       </div>
-      <div className="grid grid-cols-2 bg-gray-300 font-bold text-xs text-gray-900">
+      <TableHeader>
         {data?.recommendations?.discouraged_diet?.headers?.map(
           (header: any, index: any) => {
             return (
-              <div
+              <TableHeaderCell
                 key={index}
-                className={`p-3 ${
+                className={`[&]:p-3 ${
                   index === 0
-                    ? "border-l-red-600 border-r-gray-400 border-x-1"
-                    : "border-r-red-600 border-r-1"
+                    ? "border-l-danger border-l-1"
+                    : "last:border-r border-r-danger border-r-1"
                 }`}
               >
                 {header}
-              </div>
+              </TableHeaderCell>
             );
           }
         )}
-      </div>
+      </TableHeader>
     </div>
   </div>
 ));
 
 export const RecommendationsRow = forwardRef<HTMLDivElement, BlockProps>(
-  ({ data: recommendation, blockId, setRef }, ref) => {
+  ({ data: recommendation, blockId, positionInPage, setRef }, ref) => {
+    
     return (
       <div
         ref={setRef ? setRef(blockId) : ref}
         className="grid grid-cols-2 gap-4 text-xs"
       >
         {recommendation.recommended.foodGroup && (
-          <div className="grid grid-cols-2">
-            <div className="p-3 border-gray-300 border-1 border-t-0 border-l-green-600 border-r-gray-300">
-              {recommendation.recommended.foodGroup}
-            </div>
-            <div className="p-3 border-gray-300 border-1 border-t-0 border-r-green-600 border-l-gray-300">
-              {recommendation.recommended.frequency}
-            </div>
-          </div>
+          <TableRow className={`border-l-0 border-r-0 ${positionInPage === "last" ? "border-b-success" : ""}`}>
+            <TableCell className="relative [&]:p-3 border-l border-l-success after:absolute after:bottom-[-1px] after:left-[-1px] after:w-[1px] after:h-[1px] after:bg-success">
+              <p className="font-semibold">{recommendation.recommended.foodGroup}</p>
+            </TableCell>
+            <TableCell className="relative [&]:p-3 last:border-r border-r-success after:absolute after:bottom-[-1px] after:right-[-1px] after:w-[1px] after:h-[1px] after:bg-success">
+              <p>{recommendation.recommended.frequency}</p>
+            </TableCell>
+          </TableRow>
         )}
         {recommendation.discouraged?.foodGroup && (
-          <div className="grid grid-cols-2">
-            <div className="p-3 border-gray-300 border-1 border-t-0 border-l-red-800 border-r-gray-300">
-              {recommendation.discouraged?.foodGroup}
-            </div>
-            <div className="p-3 border-gray-300 border-1 border-t-0 border-r-red-800 border-l-gray-300">
-              {recommendation.discouraged?.frequency}
-            </div>
-          </div>
+          <TableRow className="border-l-0 border-r-0">
+            <TableCell className="relative [&]:p-3 border-l border-l-danger after:absolute after:bottom-[-1px] after:left-[-1px] after:w-[1px] after:h-[1px] after:bg-danger">
+              <p className="font-semibold">{recommendation.discouraged?.foodGroup}</p>
+            </TableCell>
+            <TableCell className="relative [&]:p-3 last:border-r border-r-danger after:absolute after:bottom-[-1px] after:right-[-1px] after:w-[1px] after:h-[1px] after:bg-danger">
+              <p>{recommendation.discouraged?.frequency}</p>
+            </TableCell>
+          </TableRow>
         )}
       </div>
     );

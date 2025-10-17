@@ -55,6 +55,7 @@ const NutritionAndDiet = ({ data }: { data: any }) => {
       id: `deficiency-row-${index}`,
       type: "deficiency-row",
       data: section,
+      index,
     })),
     {
       id: "dietaryConsumptionTitle",
@@ -71,6 +72,7 @@ const NutritionAndDiet = ({ data }: { data: any }) => {
       id: `dietary-consumption-row-${index}`,
       type: "dietary-consumption-row",
       data: section,
+      index,
     })),
     {
       id: "balancedNutritionIntro",
@@ -82,10 +84,11 @@ const NutritionAndDiet = ({ data }: { data: any }) => {
     { id: "recommendationsHeader", type: "recommendations-header", data: data },
     ...createRecommendationBlocks(data),
   ];
-  const renderNutritionBlock: BlockRenderer = (block, key, index) => {
+  const renderNutritionBlock: BlockRenderer = (block, key, index, positionInPage) => {
     const commonProps = {
       key,
       blockId: block.id,
+      positionInPage,
       // Don't pass setRef here - it's handled by the wrapper
     };
 

@@ -19,6 +19,7 @@ const ActionPlan = ({ data }: { data: any }) => {
       id: `medication-row-${index}`,
       type: "medication-row",
       data: section,
+      index: index,
     })),
   ];
 
