@@ -9,6 +9,13 @@ import {
   MedicationRow,
   MedicationTableHeader,
 } from "./ActionPlanBlocks";
+import type { Report } from "@/ParticipantReport";
+import { createCurrentMedicationBlocks } from "../CurrentMedication/CurrentMedicationPlan";
+import {
+  CurrentMedicationIntroBlock,
+  CurrentMedicationRow,
+  CurrentMedicationTableHeader,
+} from "../CurrentMedication/CurrentMedicationBlocks";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const ActionPlan = ({ data }: { data: any }) => {
@@ -44,9 +51,33 @@ const ActionPlan = ({ data }: { data: any }) => {
             section={block.data}
           />
         );
+      case "currentMedicationOverview":
+        return (
+          <CurrentMedicationIntroBlock {...commonProps} data={block.data} />
+        );
+      case "current-medication-header":
+        return (
+          <CurrentMedicationTableHeader data={undefined} {...commonProps} />
+        );
+      case "current-medication-row":
+        return (
+          <CurrentMedicationRow
+            index={index}
+            data={block.data}
+            {...commonProps}
+          />
+        );
       default:
         return null;
     }
+  };
+
+  const createBlocks = (data: Report): BlockConfig[] => {
+    const medicationBlocks = createHealthBlocks(data?.actionPlan);
+    const currentMedicationBlocks = createCurrentMedicationBlocks(
+      data?.currentMedication
+    );
+    return [...medicationBlocks, ...currentMedicationBlocks];
   };
 
   const tableConfigs: TableConfig[] = [
@@ -60,7 +91,7 @@ const ActionPlan = ({ data }: { data: any }) => {
   return (
     <PaginationWrapper
       data={data}
-      createBlocks={createHealthBlocks}
+      createBlocks={createBlocks}
       renderBlock={renderHealthBlock}
       tables={tableConfigs}
     />

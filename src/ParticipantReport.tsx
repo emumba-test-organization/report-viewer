@@ -85,10 +85,10 @@ function ParticipantReport() {
         <Cover />
         <Preface data={report!.preface} />
         <HealthReport data={report?.healthReport} />
-        <ActionPlan data={report?.actionPlan} />
+        <ActionPlan data={report} />
         <SupplementPlan data={report?.actionPlan?.supplements} />
-        <NutritionAndDiet data={report?.nutrition} />
         <Lifestyle data={report?.lifestyle} />
+        <NutritionAndDiet data={report?.nutrition} />
         <DietaryRecommendations data={report!.dietaryRecommendations} />
         <CognitionPage data={report!.cognitiveFunction} />
         <KnownMedicalConditions data={report!} />
