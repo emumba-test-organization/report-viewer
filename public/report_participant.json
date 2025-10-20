@@ -1,12 +1,13 @@
 {
+  "header": {
+    "reportFor": "Brain Health",
+    "name": "Doe, Jane A.",
+    "createdOn": "11/02/2024",
+    "doctor": "Virginia N. Smith, M.D.",
+    "clinic": "Precision Medical Center",
+    "client": "uMETHOD"
+  },
   "preface": {
-    "header": {
-      "name": "Doe, Jane A.",
-      "createdOn": "11/02/2024",
-      "doctor": "Virginia N. Smith, M.D.",
-      "clinic": "Precision Medical Center",
-      "client": "uMETHOD"
-    },
     "title": "Preface",
     "purposeParagraphs": [
       "Based on the information you've provided \u2014\r\n                    blood test results, your medical history, your family history, or other indicators \u2014\r\n                    it makes sense to initiate a program that addresses the factors that drive cognitive impairment.\r\n                    Symptoms of cognitive impairment may include the inability to focus,\r\n                    make decisions, find words, or remember names, faces, or places.\r\n                    40% of all adults over the age of 65 have some memory loss \u2014 so you are not alone.\r\n                    However, there is hope for those concerned about experiencing some memory loss.",

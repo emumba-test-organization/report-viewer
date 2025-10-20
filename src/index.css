@@ -46,9 +46,17 @@
   --color-danger: #AA1E31;
   --color-warning: #AA751E;
   --color-info: #5336A2;
+  --color-info-dark: #40248B;
+  --color-link: #0E4CBF;
   --color-base: #767676;
   --color-table-header: #DFDFDF;
   --color-table-header-border: #C8C8C8;
+  --color-alternate-row-dark: #F5F5F5;
+  --color-alternate-table-border: #9C9C9C;
+  --color-box-gray: #F8F8F8;
+  --color-planner-cell: #EAEAEA;
+  --color-planner-cell-alt: #E3E3E3;
+  --color-chip-background-alt: #D4D4D4;
 }
 
 :root {

@@ -17,6 +17,7 @@ const Lifestyle = ({ data }: { data: any }) => {
       id: `lifestyle-section-${index}`,
       type: "lifestyle-section",
       data: section,
+      index,
     })),
   ];
 
@@ -35,6 +36,7 @@ const Lifestyle = ({ data }: { data: any }) => {
             {...commonProps}
             index={index}
             data={block.data}
+            rtl={index ? index % 2 === 1 : false}
           />
         );
       default:

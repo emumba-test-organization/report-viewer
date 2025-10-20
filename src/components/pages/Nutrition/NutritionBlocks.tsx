@@ -298,16 +298,17 @@ export const RecommendationsHeaderBlock = forwardRef<
   </div>
 ));
 
-export const RecommendationsRow = forwardRef<HTMLDivElement, BlockProps>(
-  ({ data: recommendation, blockId, positionInPage, setRef }, ref) => {
-    
+export const RecommendationsRow = forwardRef<HTMLDivElement, BlockProps & { isRecommendedLastRow?: boolean, isDiscouragedLastRow?: boolean }>(
+  ({ data: recommendation, blockId, positionInPage, setRef, isRecommendedLastRow, isDiscouragedLastRow }, ref) => {
+
+    console.log("first", recommendation.discouraged?.foodGroup, isDiscouragedLastRow)
     return (
       <div
         ref={setRef ? setRef(blockId) : ref}
         className="grid grid-cols-2 gap-4 text-xs"
       >
         {recommendation.recommended.foodGroup && (
-          <TableRow className={`border-l-0 border-r-0 ${positionInPage === "last" ? "border-b-success" : ""}`}>
+          <TableRow className={`border-l-0 border-r-0 ${positionInPage === "last" || isRecommendedLastRow ? "border-b-success" : ""}`}>
             <TableCell className="relative [&]:p-3 border-l border-l-success after:absolute after:bottom-[-1px] after:left-[-1px] after:w-[1px] after:h-[1px] after:bg-success">
               <p className="font-semibold">{recommendation.recommended.foodGroup}</p>
             </TableCell>
@@ -317,7 +318,7 @@ export const RecommendationsRow = forwardRef<HTMLDivElement, BlockProps>(
           </TableRow>
         )}
         {recommendation.discouraged?.foodGroup && (
-          <TableRow className="border-l-0 border-r-0">
+          <TableRow className={`border-l-0 border-r-0 ${positionInPage === "last" || isDiscouragedLastRow ? "border-b-danger" : ""}`}>
             <TableCell className="relative [&]:p-3 border-l border-l-danger after:absolute after:bottom-[-1px] after:left-[-1px] after:w-[1px] after:h-[1px] after:bg-danger">
               <p className="font-semibold">{recommendation.discouraged?.foodGroup}</p>
             </TableCell>

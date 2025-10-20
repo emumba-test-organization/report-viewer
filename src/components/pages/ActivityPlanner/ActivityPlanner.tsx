@@ -6,15 +6,15 @@ export default function ActivityPlanner() {
     <A4Page>
       {/* Title and QR Code */}
       <div className="flex justify-between items-start mb-8">
-        <h2 className="text-3xl font-bold text-gray-900">
+        <h1 className="text-3xl">
           Your Activity Planner
-        </h2>
+        </h1>
         <div className="flex items-center gap-4">
           <div className="text-right text-xs text-gray-600">
             <p>Scan to download your next month's planner</p>
-            <p className="text-blue-600">
+            <a className="text-blue-600" href="https://umethod.com/planner/medication">
               https://umethod.com/planner/medication
-            </p>
+            </a>
           </div>
           <div className="w-16 h-16 border-2 border-gray-300 flex items-center justify-center">
             <QrCode className="w-12 h-12" />
@@ -51,7 +51,7 @@ export default function ActivityPlanner() {
                   09:30 AM
                 </div>
                 <div className="flex-1">
-                  <span className="bg-purple-600 text-white text-xs px-2 py-1 rounded mr-2">
+                  <span className="bg-info text-white text-xs px-2 py-1 rounded mr-2">
                     Exercise
                   </span>
                   <span className="text-sm font-medium">Daily</span>
@@ -67,7 +67,7 @@ export default function ActivityPlanner() {
                   12:30 PM
                 </div>
                 <div className="flex-1">
-                  <span className="bg-green-600 text-white text-xs px-2 py-1 rounded mr-2">
+                  <span className="bg-success text-white text-xs px-2 py-1 rounded mr-2">
                     Mental
                   </span>
                   <span className="text-sm font-medium">Alternating Days</span>
@@ -83,7 +83,7 @@ export default function ActivityPlanner() {
                   05:00 PM
                 </div>
                 <div className="flex-1">
-                  <span className="bg-orange-500 text-white text-xs px-2 py-1 rounded mr-2">
+                  <span className="bg-warning text-white text-xs px-2 py-1 rounded mr-2">
                     Relaxation
                   </span>
                   <span className="text-sm font-medium">Daily</span>
@@ -99,7 +99,7 @@ export default function ActivityPlanner() {
                   07:00 PM
                 </div>
                 <div className="flex-1">
-                  <span className="bg-blue-600 text-white text-xs px-2 py-1 rounded mr-2">
+                  <span className="bg-link text-white text-xs px-2 py-1 rounded mr-2">
                     Group B
                   </span>
                   <span className="text-sm font-medium">Fridays</span>

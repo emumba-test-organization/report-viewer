@@ -55,13 +55,13 @@ const CognitionPage = ({ data }: { data: CognitionData }) => {
         case "very low":
         case "very high":
           // return "border-2 border-red-800 bg-red-800";
-          return "red-800";
+          return "danger";
         case "moderately high":
         case "moderately low":
-          return "yellow-700";
+          return "warning";
         // return "border-2 border-yellow-700 bg-yellow-700";
         default:
-          return "red-800";
+          return "warning";
         // return "border-2 border-red-800 bg-red-800";
       }
     },
@@ -90,11 +90,13 @@ const CognitionPage = ({ data }: { data: CognitionData }) => {
         blocks.push({
           id: `factor-row-${sectionIndex}-${entryIndex}`,
           type: `factor-row-${sectionIndex}`,
+          index: entryIndex,
           data: {
             ...entry,
             sectionName: factor.section,
             entryIndex: entryIndex,
-            className: `${className} border-2 border-${classColor}`,
+            className: `${className} border-${classColor}`,
+            isLastSection: entryIndex === factor.entries.length - 1,
           },
         });
       });
@@ -104,13 +106,13 @@ const CognitionPage = ({ data }: { data: CognitionData }) => {
   };
 
   // Updated component showing integration
-  const createHealthBlocks = (data: CognitionData): BlockConfig[] => [
+  const createHealthBlocks = (data: CognitionData, ): BlockConfig[] => [
     { id: "cognitionOverview", type: "cognitionOverview", data: data },
     // Add the factor blocks
     ...createFactorBlocks(data.factors),
   ];
 
-  const renderHealthBlock: BlockRenderer = (block, key) => {
+  const renderHealthBlock: BlockRenderer = (block, key, _, positionInPage) => {
     const commonProps = {
       key,
       blockId: block.id,
@@ -128,7 +130,13 @@ const CognitionPage = ({ data }: { data: CognitionData }) => {
 
     // Handle factor rows (any section)
     if (block.type.startsWith("factor-row")) {
-      return <CognitionFactorRow {...commonProps} data={block.data} />;
+      return (
+        <CognitionFactorRow
+          {...commonProps}
+          data={block.data}
+          isLastSection={block.data.isLastSection || positionInPage === "last"}
+        />
+      );
     }
 
     return null;

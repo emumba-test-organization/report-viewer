@@ -40,6 +40,7 @@ const NutritionAndDiet = ({ data }: { data: any }) => {
           recommended: data.recommendations.recommended_diet.entries[i] || null,
           discouraged: data.recommendations.discouraged_diet.entries[i] || null,
         },
+        index: i,
       });
     }
 
@@ -84,7 +85,12 @@ const NutritionAndDiet = ({ data }: { data: any }) => {
     { id: "recommendationsHeader", type: "recommendations-header", data: data },
     ...createRecommendationBlocks(data),
   ];
-  const renderNutritionBlock: BlockRenderer = (block, key, index, positionInPage) => {
+  const renderNutritionBlock: BlockRenderer = (
+    block,
+    key,
+    index,
+    positionInPage
+  ) => {
     const commonProps = {
       key,
       blockId: block.id,
@@ -142,7 +148,20 @@ const NutritionAndDiet = ({ data }: { data: any }) => {
           <RecommendationsHeaderBlock data={block.data} {...commonProps} />
         );
       case "diet-recommendation-row":
-        return <RecommendationsRow data={block.data} {...commonProps} />;
+        return (
+          <RecommendationsRow
+            data={block.data}
+            {...commonProps}
+            isDiscouragedLastRow={
+              index ===
+                data?.recommendations?.discouraged_diet?.entries?.length - 1
+            }
+            isRecommendedLastRow={
+              index ===
+                data?.recommendations?.recommended_diet?.entries?.length - 1
+            }
+          />
+        );
       default:
         return null;
     }

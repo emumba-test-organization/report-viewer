@@ -23,7 +23,7 @@ const Preface = ({ data }: { data: PrefaceData }) => {
   return (
     <A4Page>
       {/* Preface Title */}
-      <h1 className="mb-8">{data?.title}</h1>
+      <h1 className="mb-6">{data?.title}</h1>
 
       {/* Two Column Layout */}
       <div className="grid grid-cols-2 gap-8 mb-8">

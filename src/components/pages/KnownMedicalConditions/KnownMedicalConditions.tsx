@@ -55,9 +55,9 @@ export const renderBlock: BlockRenderer = (block, key, index) => {
   switch (block.type) {
     case "knownMedicalConditionsTitle":
       return (
-        <h2 className="text-4xl font-bold mb-8" {...commonProps}>
+        <h1 className="mb-6" {...commonProps}>
           Known Medical Conditions
-        </h2>
+        </h1>
       );
     case "comorbiditiesTitle":
       return <ComorbiditiesTitleBlock {...commonProps} data={block.data} />;

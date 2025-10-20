@@ -229,9 +229,9 @@ export const HealthStatusSectionBlock = React.forwardRef<
                 <Badge
                   key={idx}
                   variant="outline"
-                  className="flex items-center gap-1 text-xs px-3 py-1 rounded"
+                  className="flex items-center gap-1 text-xs p-1 rounded"
                 >
-                  {Icon && <Icon size={5} className={`w-4 h-4 ${iconColorClass}`} />}
+                  {Icon && <Icon size={5} className={`shrink-0 w-5 h-5 ${iconColorClass}`} />}
                   {factor}
                 </Badge>
               ))}

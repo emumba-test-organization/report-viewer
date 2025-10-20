@@ -28,8 +28,10 @@ import GoalTracker from "./components/pages/GoalTracker";
 import ActivityPlanner from "./components/pages/ActivityPlanner";
 import { MedicationPlannerPage } from "./components/pages/MedicationPlanner";
 import type { MedicationItemData } from "./components/pages/MedicationPlanner/types";
+import type { HeaderData } from "./components/shared/Header";
 
 export type Report = {
+  header: HeaderData;
   preface: PrefaceData;
   healthReport: HealthReportData;
   actionPlan: MedicationType;

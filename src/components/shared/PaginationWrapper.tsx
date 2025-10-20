@@ -11,12 +11,13 @@ export interface BlockConfig {
   index?: number;
 }
 
+export type PositionInPage = number | "first" | "last";
 export type BlockProps<T = any> = {
   index?: number;
   data: T;
   section?: T;
   blockId: string;
-  positionInPage?: number | "first" | "last";
+  positionInPage?: PositionInPage;
   setRef?: (id: string) => (element: HTMLElement | null) => void;
   className?: string;
   slots?: { [key: string]: ReactNode };

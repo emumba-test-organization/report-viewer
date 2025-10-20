@@ -84,7 +84,7 @@ const Spectrum = ({
 
   const barHeight = 20;
   const markerLineHeight = 10;
-  const padding = 20;
+  const padding = 30;
 
   const xPos = (value: number) =>
     padding + ((value - min) / (max - min)) * (width - 2 * padding);

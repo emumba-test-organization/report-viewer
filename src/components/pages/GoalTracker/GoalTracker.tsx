@@ -19,18 +19,20 @@ const GoalTracker = () => {
       })),
   ];
 
-  const renderHealthBlock: BlockRenderer = (block, key) => {
+  const renderHealthBlock: BlockRenderer = (block, key, index, positionInPage) => {
     const commonProps = {
       key,
       blockId: block.id,
       // Don't pass setRef here - it's handled by the wrapper
     };
 
+    console.log("mnmn", index)
+
     switch (block.type) {
       case "title":
         return <GoalTrackerTitle {...commonProps} data={undefined} />;
       case "empty-row":
-        return <GoalTrackerEmptyRow {...commonProps} data={block.data} />;
+        return <GoalTrackerEmptyRow {...commonProps} data={block.data} positionInPage={positionInPage || 0} />;
       default:
         return null;
     }
