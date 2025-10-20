@@ -8,6 +8,7 @@ import {
 import { type NutritionSummaryData } from "./components/pages/Nutrition";
 import { useEffect, useState } from "react";
 import { ActionPlan, type MedicationType } from "./components/pages/ActionPlan";
+import { ReportProvider } from "./context";
 import { type HealthReportData } from "./components/pages/HealthReport";
 import HealthReport from "./components/pages/HealthReport/HealthReport";
 import NutritionAndDiet from "./components/pages/Nutrition/NutritionAndDiet";
@@ -29,6 +30,7 @@ import ActivityPlanner from "./components/pages/ActivityPlanner";
 import { MedicationPlannerPage } from "./components/pages/MedicationPlanner";
 import type { MedicationItemData } from "./components/pages/MedicationPlanner/types";
 import type { HeaderData } from "./components/shared/Header";
+import { Cover } from "./components/pages/Cover";
 
 export type Report = {
   header: HeaderData;
@@ -52,34 +54,52 @@ export type Report = {
 
 function ParticipantReport() {
   const [report, setReport] = useState<Report | null>(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
     fetch("/report_participant.json")
-      .then((res) => res.json())
-      .then(setReport)
-      .catch((err) => console.error("Failed to load report:", err));
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Failed to fetch report: ${res.status} ${res.statusText}`);
+        }
+        return res.json();
+      })
+      .then((data) => {
+        setReport(data);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to load report:", err);
+        setError(err.message);
+        setIsLoading(false);
+      });
   }, []);
 
-  if (!report) return <p>Loading report…</p>;
+  if (error) return <p>Error loading report: {error}</p>;
+  if (isLoading) return <p>Loading report…</p>;
 
   return (
-    <div>
-      <Preface data={report?.preface} />
-      <HealthReport data={report?.healthReport} />
-      <ActionPlan data={report?.actionPlan} />
-      <SupplementPlan data={report?.actionPlan?.supplements} />
-      <NutritionAndDiet data={report?.nutrition} />
-      <Lifestyle data={report?.lifestyle} />
-      <DietaryRecommendations data={report?.dietaryRecommendations} />
-      <CognitionPage data={report?.cognitiveFunction} />
-      <KnownMedicalConditions data={report} />
-      <Footnotes data={report?.footnotes} />
-      <MedicationPlannerPage data={report?.medicationPlanner} />
-      {/* <MedicationPlanner /> */}
-      {/* <MedicationChecklist /> */}
-      <GoalTracker />
-      <ActivityPlanner />
-    </div>
+    <ReportProvider report={report} isLoading={isLoading} error={error}>
+      <div>
+        <Cover />
+        <Preface data={report!.preface} />
+        <HealthReport data={report?.healthReport} />
+        <ActionPlan data={report?.actionPlan} />
+        <SupplementPlan data={report?.actionPlan?.supplements} />
+        <NutritionAndDiet data={report?.nutrition} />
+        <Lifestyle data={report?.lifestyle} />
+        <DietaryRecommendations data={report!.dietaryRecommendations} />
+        <CognitionPage data={report!.cognitiveFunction} />
+        <KnownMedicalConditions data={report!} />
+        <Footnotes data={report!.footnotes} />
+        <MedicationPlannerPage data={report?.medicationPlanner} />
+        {/* <MedicationPlanner /> */}
+        {/* <MedicationChecklist /> */}
+        <GoalTracker />
+        <ActivityPlanner />
+      </div>
+    </ReportProvider>
   );
 }
 

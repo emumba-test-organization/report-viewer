@@ -1,4 +1,6 @@
 export type HeaderData = {
+  reportFor: string;
+  coverText: string;
   id?: string;
   name: string;
   createdOn: string;
@@ -7,7 +9,7 @@ export type HeaderData = {
   client: string;
 };
 
-const Header = ({ data }: { data: HeaderData }) => {
+const Header = ({ data }: { data: HeaderData }) => {  
   return (
     <div className="flex justify-between items-start mb-8">
       <div>

@@ -1,6 +1,7 @@
 {
   "header": {
     "reportFor": "Brain Health",
+    "coverText": "This report provides analyses and information intended to aid a physician in assessing and\r\n                    establishing an appropriate care plan\r\n                    for the person named here.\r\n                    The analyses and information contained in this report are based on published guidelines, literature,\r\n                    and data.\r\n                    The presented analysis and recommendations are for convenience only and do not constitute medical\r\n                    advice.\r\n                    Physicians must use appropriate medical judgment before implementing or changing a person's care\r\n                    plan,\r\n                    including those recommendations in this report.",
     "name": "Doe, Jane A.",
     "createdOn": "11/02/2024",
     "doctor": "Virginia N. Smith, M.D.",
