@@ -948,6 +948,189 @@
         "title": "targeting a body mass index (BMI) under 25",
         "description": "Weight loss is essential, targeting a body mass index (BMI) under 25 over time. [ 12,13 ] Your genes indicate that you are part of the 39% of the population who might find they lose 2.5 times as much weight on a low-fat diet\r\n                                                (as opposed to a low-carb diet)."
       }
+    ],
+    "models": [
+      [
+        {
+          "span": "full",
+          "type": "header",
+          "heading": "Choose Healthy Fats Every Day",
+          "preface": "\r\n                                            Enjoy  good fats, which include monounsaturated and polyunsaturated\r\n                                            fats,\r\n                                            and medium-chain triglycerides (MCTs).\r\n\r\n                                            "
+        },
+        {
+          "type": "list-section",
+          "span": "left",
+          "inclusionType": "include",
+          "heading": "Good Fats to Include",
+          "items": [
+            {
+              "label": "Monounsaturated fats",
+              "value": "Include\r\n\r\n                                                    nuts,\r\n\r\n                                                    avocados and avocado oil,\r\n\r\n                                                    extra-virgin olive oil,\r\n\r\n                                                    and olives weekly.\r\n                                                    Use olive oil for low-heat cooking\r\n                                                    and\r\n\r\n                                                    coconut oil for baking and high-heat cooking.\r\n\r\n                                                    Avoid canola oil. Polyunsaturated fats:\r\n                                                    Eat foods rich in omega-3, such as\r\n\r\n                                                    walnuts,\r\n\r\n                                                    ground flaxseed,\r\n\r\n                                                    wild salmon,\r\n\r\n                                                    mackerel (chub or north Atlantic),\r\n                                                    and sardines,\r\n\r\n                                                    at least three times a week.\r\n\r\n                                                    Omega-3 from food sources is far better absorbed than from taking\r\n                                                    supplements. MCT oils:\r\n                                                    Take organic extra-virgin coconut oil, just one tablespoon each day\r\n                                                    (as it is also a saturated fat).",
+              "inclusionType": "include"
+            },
+            {
+              "label": "Polyunsaturated fats",
+              "value": "Eat foods rich in omega-3, such as\r\n\r\n                                                    walnuts,\r\n\r\n                                                    ground flaxseed,\r\n\r\n                                                    wild salmon,\r\n\r\n                                                    mackerel (chub or north Atlantic),\r\n                                                    and sardines,\r\n\r\n                                                    at least three times a week.\r\n\r\n                                                    Omega-3 from food sources is far better absorbed than from taking\r\n                                                    supplements. MCT oils:\r\n                                                    Take organic extra-virgin coconut oil, just one tablespoon each day\r\n                                                    (as it is also a saturated fat).",
+              "inclusionType": "include"
+            },
+            {
+              "label": "MCT oils",
+              "value": "Take organic extra-virgin coconut oil, just one tablespoon each day\r\n                                                    (as it is also a saturated fat).",
+              "inclusionType": "include"
+            }
+          ]
+        },
+        {
+          "type": "list-section",
+          "inclusionType": "avoid",
+          "span": "right",
+          "heading": "Fats to Limit or Avoid",
+          "items": [
+            {
+              "label": "Saturated fats",
+              "value": "Where possible, avoid high-fat dairy items (such as whole milk or\r\n                                                    whole-fat cheese).\r\n\r\n                                                    Consume animal proteins no more than twice a week.\r\n                                                    Keep serving sizes palm-sized.\r\n\r\n                                                    If eating beef, focus on grass-fed organic beef.\r\n\r\n                                                    Poultry should be pastured.\r\n                                                    Fish should be fresh-caught or wild, not farmed.\r\n                                                    Minimize processed, pre-packaged foods.",
+              "inclusionType": "avoid"
+            },
+            {
+              "label": "Trans fats",
+              "value": "Avoid foods that contain hydrogenated or partially-hydrogenated oils\r\n                                                    (like shortening and stick margarine), and decline fried foods.\r\n                                                    Read the ingredient list in packaged food\r\n                                                    (verify labels stating \u201c0g trans-fat per serving\u201d).",
+              "inclusionType": "avoid"
+            },
+            {
+              "label": null,
+              "value": "Seed oils, which are heated\r\n                                                        (as opposed to being cold-pressed as olive oil is),\r\n                                                        have lost much of their vitamin E due to the heating process,\r\n                                                        making them synaptic-damaging agents.\r\n                                                        Avoid heat-processed oils altogether.",
+              "inclusionType": "avoid"
+            }
+          ]
+        }
+      ],
+      [
+        {
+          "type": "header",
+          "heading": "Watch Your Blood Sugar",
+          "subHeading": "Low-Glycemic Foods Only",
+          "preface": "Foods with low-glycemic load have the positive effect of reducing the spike of rapidly-changing insulin levels. So, focus on avoiding food with high glycemic load."
+        },
+        {
+          "span": "right",
+          "type": "chips-section",
+          "inclusionType": "avoid",
+          "heading": "Avoid Foods That Spike Blood Sugar",
+          "items": [
+            "corn",
+            "high-fructose corn syrup",
+            "honey",
+            "maple syrup",
+            "molasses",
+            "saigon cinnamon",
+            "sugar candies",
+            "sugary soda",
+            "sweets",
+            "white flour",
+            "white sugar"
+          ]
+        },
+        {
+          "span": "left",
+          "type": "chips-section",
+          "inclusionType": "include",
+          "heading": "Instead, Take",
+          "items": [
+            "ceylon cinnamon",
+            "corn",
+            "green peas",
+            "white potatoes",
+            "white rice"
+          ]
+        }
+      ],
+      [
+        {
+          "span": "full",
+          "type": "header",
+          "heading": "Your Daily Fruit & Veggie Goals",
+          "preface": "Focus on fresh or frozen (plain, without seasoning)."
+        },
+        {
+          "span": "right",
+          "type": "list-section",
+          "inclusionType": "avoid",
+          "heading": "Avoid Foods That Spike Blood Sugar",
+          "items": [
+            "For inflammation,\r\n                                                eat a teaspoon of freshly-grated ginger rhizome regularly with your\r\n                                                meals,\r\n                                                or take a\r\n                                                500 mg\r\n\r\n                                                ginger extract supplement\r\n\r\n                                                every day, as\r\n                                                to reduce inflammation.",
+            "Limit fruits to one serving per meal or snack,\r\n                                                and avoid commercial fruit juices.",
+            "Minimize eating any fruits or vegetables grown outside of\r\n                                                the USA or Canada\r\n                                                unless they are organic.",
+            "Rather than making homemade fruit juices,\r\n                                                stick with smoothies and include whole fruit,\r\n                                                to avoid the high glycemic load of pure juice."
+          ]
+        },
+        {
+          "span": "left",
+          "type": "list-section",
+          "inclusionType": "include",
+          "heading": "Instead, Take",
+          "items": [
+            "Among vegetables and fruits ,\r\n                                                focus on fresh or frozen (plain, without seasoning).",
+            "Eat three servings of fresh fruit and three-to-five servings of fresh\r\n                                                vegetables daily.",
+            "Over every three days, consume fruits and vegetables from all colors of\r\n                                                the rainbow."
+          ]
+        }
+      ],
+      [
+        {
+          "span": "left",
+          "type": "header",
+          "heading": "Smart Protein Choices"
+        },
+        {
+          "span": "left",
+          "type": "list",
+          "items": [
+            "Lean protein can improve satiety and blood sugar regulation,\r\n                                                and should be part of each meal and snack",
+            "Additionally, one's ability to build muscle mass deteriorates as they\r\n                                                age,\r\n                                                so protein requirements increase even as intake and appetite may wane",
+            "Supplementing with protein powder can increase lean body mass and\r\n                                                muscle",
+            "Mix 20 to 30 grams of protein powder into a daily shake",
+            "Consume beans as an alternative protein source weekly",
+            "Good dietary sources of lean protein include:\r\n\r\n                                                grass-fed organic beef or bison,\r\n\r\n                                                low-fat dairy products,\r\n\r\n                                                eggs,\r\n\r\n                                                fish (free of mercury),\r\n\r\n                                                nuts,\r\n\r\n                                                organic poultry,\r\n\r\n                                                seeds,\r\n\r\n                                                soy products (such as tofu and tempeh),\r\n\r\n                                                and\r\n                                                beans and legumes"
+          ]
+        },
+        {
+          "span": "right",
+          "type": "header",
+          "heading": "Probiotics & Gut Health"
+        },
+        {
+          "span": "right",
+          "type": "list",
+          "items": [
+            "help maintain a healthy immune system and\r\n                                                digestive health",
+            "While food sources are the preferred choice,\r\n                                                recommendations for high-quality probiotic supplementation are Lactobacillus acidophilus and Bifidobacterium lactis at a dose of\r\n                                                4 to 8 billion colonies, one to three times a day",
+            "Among probiotic food sources, consider:\r\n\r\n                                                live cultures in dairy products (such as plain yogurt, buttermilk, &\r\n                                                kefir),\r\n\r\n                                                tempeh,\r\n\r\n                                                miso soup,\r\n\r\n                                                natto,\r\n\r\n                                                kimchi, and\r\n\r\n                                                freshly-made pickles or sauerkraut",
+            "Prebiotics are non-digestible fiber compounds in foods that promote the\r\n                                                growth and activity of beneficial microorganisms in the gut",
+            "Good prebiotic sources include:\r\n\r\n                                                asparagus,\r\n\r\n                                                under-ripe bananas,\r\n\r\n                                                flaxseeds,\r\n\r\n                                                garlic,\r\n\r\n                                                Jerusalem artichoke,\r\n\r\n                                                jicama,\r\n\r\n                                                leafy greens,\r\n\r\n                                                leeks,\r\n\r\n                                                legumes, and\r\n\r\n                                                onions",
+            "The word prebiotic is seldom used on the label, so look for:\r\n                                                galactooligosaccharides (GOS),\r\n                                                fructooligosaccharides (FOS),\r\n                                                oligofructose (OF),\r\n                                                chicory fiber, or\r\n                                                inulin",
+            "Discuss specific recommendations with a dietitian"
+          ]
+        }
+      ],
+      [
+        {
+          "span": "full",
+          "type": "header",
+          "heading": "Coffee & Green Tea",
+          "preface": "These foods are high in antioxidants which help combat oxidative stress and inflammation."
+        },
+        {
+          "span": "full",
+          "type": "list",
+          "items": [
+            "Epidemiologic studies have identified coffee and green tea\r\n                                                as protective against cognitive impairment,\r\n                                                as well as having antioxidant properties",
+            "Slow caffeine metabolism is indicated by the CYP1A2 genes,\r\n                                                so drink no more than two cups of coffee each day (200mg of caffeine)\r\n                                                and finish them by noon",
+            "Although there is caffeine in green tea,\r\n                                                it contains less caffeine than black tea,\r\n                                                and in turn black tea has less caffeine than coffee",
+            "Wait two hours after taking the medication\r\n                                                levothyroxine\r\n                                                before drinking any coffee",
+            "Avoid using coffee as a way to introduce hidden sugar into your daily\r\n                                                intake"
+          ]
+        }
+      ]
     ]
   },
   "footnotes": {

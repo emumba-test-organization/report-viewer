@@ -37,7 +37,7 @@ export const MedicationPlannerOverview = forwardRef<HTMLDivElement, BlockProps>(
       // <div ref={setRef ? setRef(blockId) : ref}>
       <div
         ref={setRef ? setRef(blockId) : ref}
-        className="flex justify-between items-start mb-8"
+        className="flex justify-between items-center mb-8"
       >
         <h1>Your Medication Planner</h1>
         <div className="flex items-center gap-2">
