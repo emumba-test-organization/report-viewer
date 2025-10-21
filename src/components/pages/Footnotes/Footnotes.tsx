@@ -9,7 +9,7 @@ const Footnotes = ({ data }: Props) => {
   return (
     <A4Page>
       <h1 className="mb-8">{data.heading || "Footnotes"}</h1>
-      <ol className="font-semibold list-decimal space-y-2 text-sm">
+      <ol className="font-semibold list-decimal space-y-2 text-sm mx-4">
         {data.footnotes.map((note, index) => (
           <li key={index}>{note}</li>
         ))}
