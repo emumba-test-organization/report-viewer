@@ -57,75 +57,192 @@ const tableIconMap = {
 const DietaryRecommendationsModel = ({ data }: Props) => {
   const { heading, preface, models } = data;
   return (
-    <A4Page>
-      <h3 className="mb-4">{heading}</h3>
-      {preface && preface.length > 0 && (
-        <div className="mb-6">
-          {preface.map((line, index) => (
-            <p key={index} className="mb-4">
-              {line}
-            </p>
+    <>
+      <A4Page>
+        <h3 className="mb-4">{heading}</h3>
+        {preface && preface.length > 0 && (
+          <div className="space-y-4 mb-4">
+            {preface.map((line, index) => (
+              <p key={index} className="">
+                {line}
+              </p>
+            ))}
+          </div>
+        )}
+        <div className="space-y-6">
+          {models.slice(0, 2).map((model, index) => (
+            <div key={index} className="grid grid-cols-[1fr_1fr]  gap-x-2">
+              {model.map((item, idx) => {
+                const rowStart =
+                  item.type === "header" ? `row-start-1` : "row-start-2";
+                const spanClass =
+                  item.span === "full"
+                    ? "col-span-2"
+                    : item.span === "left"
+                    ? `${rowStart} col-start-1`
+                    : item.span === "right"
+                    ? `${rowStart} col-start-2`
+                    : "col-span-1";
+
+                let component: React.ReactNode = null;
+                if (item.type === "header") {
+                  component = (
+                    <HeaderBlock
+                      key={idx}
+                      heading={item.heading}
+                      subHeading={item.subHeading}
+                      preface={item.preface}
+                      itemKey={item.key}
+                    />
+                  );
+                } else if (item.type === "list-section") {
+                  component = (
+                    <ListSectionBlock
+                      key={idx}
+                      heading={item.heading}
+                      inclusionType={item.inclusionType}
+                      items={item.items}
+                    />
+                  );
+                } else if (item.type === "chips-section") {
+                  component = (
+                    <ChipsSectionBlock
+                      key={idx}
+                      heading={item.heading}
+                      inclusionType={item.inclusionType}
+                      items={item.items}
+                    />
+                  );
+                } else if (item.type === "list") {
+                  component = <ListBlock key={idx} items={item.items} />;
+                }
+                return (
+                  <div key={idx} className={`${spanClass}`}>
+                    {component}
+                  </div>
+                );
+              })}
+            </div>
           ))}
         </div>
-      )}
-      <div className="space-y-6">
-        {models.map((model, index) => (
-          <div key={index} className="grid grid-cols-[1fr_1fr]  gap-x-2">
-            {model.map((item, idx) => {
-              const rowStart = item.type === "header"
-                ? `row-start-1`
-                : "row-start-2";
-              const spanClass =
-                item.span === "full"
-                  ? "col-span-2"
-                  : item.span === "left"
-                  ? `${rowStart} col-start-1`
-                  : item.span === "right"
-                  ? `${rowStart} col-start-2`
-                  : "col-span-1";
+      </A4Page>
+      <A4Page>
+        <div className="space-y-6">
+          {models.slice(2, 4).map((model, index) => (
+            <div key={index} className="grid grid-cols-[1fr_1fr]  gap-x-2">
+              {model.map((item, idx) => {
+                const rowStart =
+                  item.type === "header" ? `row-start-1` : "row-start-2";
+                const spanClass =
+                  item.span === "full"
+                    ? "col-span-2"
+                    : item.span === "left"
+                    ? `${rowStart} col-start-1`
+                    : item.span === "right"
+                    ? `${rowStart} col-start-2`
+                    : "col-span-1";
 
-              let component: React.ReactNode = null;
-              if (item.type === "header") {
-                component = (
-                  <HeaderBlock
-                    key={idx}
-                    heading={item.heading}
-                    subHeading={item.subHeading}
-                    preface={item.preface}
-                    itemKey={item.key}
-                  />
+                let component: React.ReactNode = null;
+                if (item.type === "header") {
+                  component = (
+                    <HeaderBlock
+                      key={idx}
+                      heading={item.heading}
+                      subHeading={item.subHeading}
+                      preface={item.preface}
+                      itemKey={item.key}
+                    />
+                  );
+                } else if (item.type === "list-section") {
+                  component = (
+                    <ListSectionBlock
+                      key={idx}
+                      heading={item.heading}
+                      inclusionType={item.inclusionType}
+                      items={item.items}
+                    />
+                  );
+                } else if (item.type === "chips-section") {
+                  component = (
+                    <ChipsSectionBlock
+                      key={idx}
+                      heading={item.heading}
+                      inclusionType={item.inclusionType}
+                      items={item.items}
+                    />
+                  );
+                } else if (item.type === "list") {
+                  component = <ListBlock key={idx} items={item.items} />;
+                }
+                return (
+                  <div key={idx} className={`${spanClass}`}>
+                    {component}
+                  </div>
                 );
-              } else if (item.type === "list-section") {
-                component = (
-                  <ListSectionBlock
-                    key={idx}
-                    heading={item.heading}
-                    inclusionType={item.inclusionType}
-                    items={item.items}
-                  />
+              })}
+            </div>
+          ))}
+        </div>
+      </A4Page>
+      <A4Page>
+        <div className="space-y-6">
+          {models.slice(4, 6).map((model, index) => (
+            <div key={index} className="grid grid-cols-[1fr_1fr]  gap-x-2">
+              {model.map((item, idx) => {
+                const rowStart =
+                  item.type === "header" ? `row-start-1` : "row-start-2";
+                const spanClass =
+                  item.span === "full"
+                    ? "col-span-2"
+                    : item.span === "left"
+                    ? `${rowStart} col-start-1`
+                    : item.span === "right"
+                    ? `${rowStart} col-start-2`
+                    : "col-span-1";
+
+                let component: React.ReactNode = null;
+                if (item.type === "header") {
+                  component = (
+                    <HeaderBlock
+                      key={idx}
+                      heading={item.heading}
+                      subHeading={item.subHeading}
+                      preface={item.preface}
+                      itemKey={item.key}
+                    />
+                  );
+                } else if (item.type === "list-section") {
+                  component = (
+                    <ListSectionBlock
+                      key={idx}
+                      heading={item.heading}
+                      inclusionType={item.inclusionType}
+                      items={item.items}
+                    />
+                  );
+                } else if (item.type === "chips-section") {
+                  component = (
+                    <ChipsSectionBlock
+                      key={idx}
+                      heading={item.heading}
+                      inclusionType={item.inclusionType}
+                      items={item.items}
+                    />
+                  );
+                } else if (item.type === "list") {
+                  component = <ListBlock key={idx} items={item.items} />;
+                }
+                return (
+                  <div key={idx} className={`${spanClass}`}>
+                    {component}
+                  </div>
                 );
-              } else if (item.type === "chips-section") {
-                component = (
-                  <ChipsSectionBlock
-                    key={idx}
-                    heading={item.heading}
-                    inclusionType={item.inclusionType}
-                    items={item.items}
-                  />
-                );
-              } else if (item.type === "list") {
-                component = <ListBlock key={idx} items={item.items} />;
-              }
-              return (
-                <div key={idx} className={`${spanClass}`}>
-                  {component}
-                </div>
-              );
-            })}
-          </div>
-        ))}
-      </div>
-    </A4Page>
+              })}
+            </div>
+          ))}
+        </div>
+      </A4Page>
+    </>
   );
 };
 
@@ -161,9 +278,9 @@ const HeaderBlock = ({
           )}
         </span>
         <div className="flex flex-col">
-          <h3 className="text-lg font-semibold">{heading || ""}</h3>
-          <p className="text-sm font-semibold mb-2">{subHeading || ""}</p>
-          <p className="text-sm font-normal">{preface || ""}</p>
+          <h3 className="text-xl font-semibold">{heading || ""}</h3>
+          <p className="text-lg font-semibold mb-2">{subHeading || ""}</p>
+          <p className="font-normal">{preface || ""}</p>
         </div>
       </div>
     </div>
@@ -192,11 +309,11 @@ const ListSectionBlock = ({
       >
         <div className=" flex items-center gap-x-3 p-3">
           {tableIconMap[inclusionType as keyof typeof tableIconMap]}
-          <p className="text-white font-bold leading-none">{heading}</p>
+          <p className="text-white font-bold leading-none text-lg">{heading}</p>
         </div>
       </div>
       <div className="overflow-hidden py-4 pl-8 pr-6">
-        <ul className="list-disc space-y-2 text-sm">
+        <ul className="list-disc space-y-2">
           {/* Data Rows */}
           {items.map((row, idx) => {
             if (typeof row === "string") {
@@ -236,18 +353,18 @@ const ChipsSectionBlock = ({
       >
         <div className=" flex items-center gap-x-3 p-3">
           {tableIconMap[inclusionType as keyof typeof tableIconMap]}
-          <p className="text-white font-bold leading-none">{heading}</p>
+          <p className="text-white font-bold leading-none text-lg">{heading}</p>
         </div>
       </div>
       <div className="overflow-hidden p-2">
-        <div className="flex flex-wrap gap-1 text-sm">
+        <div className="flex flex-wrap gap-1">
           {/* Data Rows */}
           {items.map((item, idx) => {
             return (
               <Badge
                 key={idx}
                 variant="outline"
-                className="flex items-center gap-1 text-xs p-1 rounded"
+                className="flex items-center gap-1 p-1 rounded"
               >
                 {inclusionType === "avoid" && (
                   <XIcon size={5} className={`shrink-0 w-5 h-5 text-danger`} />
@@ -277,7 +394,7 @@ const ListBlock = ({ items }: ListBlockProps) => {
     return (
       <div className="bg-box-gray">
         <div className="overflow-hidden px-6 pb-6 pt-0">
-          <p className="text-sm">
+          <p className="">
             {/* Data Rows */}
             {items}
           </p>
@@ -289,7 +406,7 @@ const ListBlock = ({ items }: ListBlockProps) => {
   return (
     <div className="bg-box-gray">
       <div className="overflow-hidden px-10 pb-6 pt-0">
-        <ul className="list-disc space-y-2 text-sm">
+        <ul className="list-disc space-y-2">
           {/* Data Rows */}
           {items.map((item, idx) => {
             return <li key={idx}>{item}</li>;

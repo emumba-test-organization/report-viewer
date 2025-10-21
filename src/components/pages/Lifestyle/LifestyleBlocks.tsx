@@ -8,7 +8,7 @@ export const LifeStyleIntro = forwardRef<HTMLDivElement, BlockProps>(
       <h2 className="mb-4">{data.heading || "Lifestyle"}</h2>
 
       {/* Introduction */}
-      <p className="text-xs mb-2">{data.intro || ""}</p>
+      <p className="mb-2">{data.intro || ""}</p>
     </div>
   )
 );
@@ -53,11 +53,11 @@ export const LifestyleRecommendationBlock = forwardRef<
         </div>
         {task && (
           <div className="bg-info p-4 w-full">
-            <p className="pb-0 text-sm font-bold text-white">{task}</p>
+            <p className="pb-0 font-bold text-white">{task}</p>
           </div>
         )}
         {instructions && instructions.length > 0 && (
-          <ul className="list-disc pl-5 text-sm font-medium">
+          <ul className="list-disc pl-5 font-medium">
             {instructions.map((instruction: any, index: any) => (
               <li key={index}>{instruction}</li>
             ))}

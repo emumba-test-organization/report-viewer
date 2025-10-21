@@ -13,10 +13,10 @@ const Header = ({ data }: { data?: HeaderData }) => {
   return (
     <div className="flex justify-between items-start mb-8">
       <div>
-        <h1 className="text-sm">
+        <div className="">
           <span className="font-bold">{data?.name || ""}</span><span className="font-medium"> {data?.id ? `[ID: ${data.id}]` : null}</span>
-        </h1>
-        <p className="text-xs font-light">
+        </div>
+        <p className="text-sm font-light">
           Report generated on {data?.createdOn || ""}
         </p>
       </div>

@@ -16,8 +16,8 @@ export default function ActivitySlots({
 }) {
   return (
     <div>
-      <div className="border border-gray-300">
-        <h3 className="text-sm font-bold bg-table-header p-3">
+      <div className="border border-border">
+        <h3 className="font-bold bg-table-header p-3">
           Activity Slots
         </h3>
 

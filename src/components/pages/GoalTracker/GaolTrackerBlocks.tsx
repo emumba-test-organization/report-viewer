@@ -8,7 +8,7 @@ export const GoalTrackerTitle = forwardRef<HTMLDivElement, BlockProps>(
   ({ blockId, setRef }, ref) => (
     <div ref={setRef ? setRef(blockId) : ref}>
       <h1 className="mb-4 pb-2">Your Goal Tracker</h1>
-      <div className="text-xs text-gray-400 border border-alternate-table-border p-3 w-full h-25">
+      <div className="text-gray-400 border border-alternate-table-border p-3 w-full h-25">
         Write down your goal
       </div>
     </div>

@@ -7,7 +7,7 @@ type TableFlexProps = {
 } & PropsWithChildren
 
 export const TableHeader = ({ children, className }: TableFlexProps) => (
-  <div className={`medication-table-header flex flex-row text-xs font-bold bg-table-header ${className}`}>
+  <div className={`medication-table-header flex flex-row font-bold bg-table-header ${className}`}>
     {children}
   </div>
 );
@@ -30,7 +30,7 @@ export const TableRow = ({ children, className, alternate }: TableFlexProps) => 
 
 export const TableCell = ({ children, className, ratio }: TableFlexProps) => {
   return (
-    <div className={`p-4 flex-1 ${ratio ? `basis-[${ratio}]` : ""} text-xs border-r last:border-0 border-border ${className}`}>
+    <div className={`p-4 flex-1 ${ratio ? `basis-[${ratio}]` : ""} border-r last:border-0 border-border ${className}`}>
       {children}
     </div>
   );

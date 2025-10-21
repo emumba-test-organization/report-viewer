@@ -48,7 +48,7 @@
   --color-info: #5336A2;
   --color-info-dark: #40248B;
   --color-link: #0E4CBF;
-  --color-base: #767676;
+  --color-base-gray: #767676;
   --color-table-header: #DFDFDF;
   --color-table-header-border: #C8C8C8;
   --color-alternate-row-dark: #F5F5F5;
@@ -177,8 +177,8 @@
 }
 
 @page {
-  size: A4;
-  margin: 20mm 10mm;
+  size: A3;
+  margin: 0mm 0mm;
 }
 
 @media print {

@@ -7,7 +7,7 @@ export default function ActivityPlannerHeader() {
         Your Activity Planner
       </h1>
       <div className="flex items-center gap-4">
-        <div className="text-right text-xs text-gray-600">
+        <div className="text-right text-sm text-gray-600">
           <p>Scan to download your next month's planner</p>
           <a className="text-blue-600" href="https://umethod.com/planner/medication">
             https://umethod.com/planner/medication

@@ -172,7 +172,7 @@ export const HealthStatusSectionBlock = React.forwardRef<
     "At Risk": "bg-danger",
     Caution: "bg-warning",
     Optimal: "bg-success",
-    Unknown: "bg-base",
+    Unknown: "bg-base-gray",
   };
   const bgClass = bgMap[key] ?? "";
 
@@ -180,7 +180,7 @@ export const HealthStatusSectionBlock = React.forwardRef<
     "At Risk": "border-danger",
     Caution: "border-warning",
     Optimal: "border-success",
-    Unknown: "border-base",
+    Unknown: "border-base-gray",
   };
   const borderClass = borderMap[key] ?? "";
 
@@ -196,7 +196,7 @@ export const HealthStatusSectionBlock = React.forwardRef<
     "At Risk": "text-danger",
     Caution: "text-warning",
     Optimal: "text-success",
-    Unknown: "text-base",
+    Unknown: "text-base-gray",
   };
   const iconColorClass = iconColorMap[key] ?? "";
 
@@ -211,25 +211,25 @@ export const HealthStatusSectionBlock = React.forwardRef<
           <div className={`${bgClass} text-white px-2 py-2`}>
             <div className="flex items-center gap-3">
               <div
-                className={`${textClass} pl-1 pr-3  font-bold text-2xl border-r-2`}
+                className={`${textClass} pl-1 pr-3 font-bold text-2xl border-r-2`}
               >
                 {String(section.count).padStart(2, "0")}
               </div>
               <div>
-                <h4 className="font-bold text-white text-sm">{section.title}</h4>
-                <p className="text-white text-xs font-light">{section.description}</p>
+                <h4 className="font-bold text-white text-lg">{section.title}</h4>
+                <p className="text-white">{section.description}</p>
               </div>
             </div>
           </div>
 
           {/* Factors */}
-          <div className="p-2">
+          <div className="p-3">
             <div className="flex flex-wrap gap-1">
               {section.factors.map((factor: any, idx: any) => (
                 <Badge
                   key={idx}
                   variant="outline"
-                  className="flex items-center gap-1 text-xs p-1 rounded"
+                  className="flex items-center gap-1 text-sm p-1 rounded"
                 >
                   {Icon && <Icon size={5} className={`shrink-0 w-5 h-5 ${iconColorClass}`} />}
                   {factor}

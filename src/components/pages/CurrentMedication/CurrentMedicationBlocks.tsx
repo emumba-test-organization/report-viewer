@@ -26,7 +26,7 @@ export const CurrentMedicationIntroBlock = forwardRef<
     </Alert>
 
     {/* Introduction */}
-    <p className="text-xs mb-4">{data.intro}</p>
+    <p className="mb-4">{data.intro}</p>
   </div>
 ));
 
@@ -53,18 +53,14 @@ export const CurrentMedicationRow = forwardRef<HTMLDivElement, BlockProps>(
           {/* Medication Name & Dosage */}
           <TableCell>
             <div className="font-semibold">{medication.medication}</div>
-            <div className="text-xs text-light">{medication.dosageDetails}</div>
+            <div className="text-sm text-light">{medication.dosageDetails}</div>
           </TableCell>
 
           {/* Class / Indication */}
-          <TableCell>
-            <div className="text-sm">{medication.indication}</div>
-          </TableCell>
+          <TableCell>{medication.indication}</TableCell>
 
           {/* Date Started */}
-          <TableCell>
-            <div className="text-sm">{medication.dateStarted}</div>
-          </TableCell>
+          <TableCell>{medication.dateStarted}</TableCell>
         </TableRow>
       </div>
     );

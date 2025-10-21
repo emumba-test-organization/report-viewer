@@ -8,7 +8,7 @@ export const CognitionTitleBlock = forwardRef<HTMLDivElement, BlockProps>(
   ({ data, blockId, setRef }, ref) => (
     <div ref={setRef ? setRef(blockId) : ref}>
       <h1 className="mb-6">{data.title || "Cognition"}</h1>
-      <p className="text-sm mb-6">{data.intro || ""}</p>
+      <p className="mb-6">{data.intro || ""}</p>
     </div>
   )
 );
@@ -19,7 +19,7 @@ export const CognitionFactorHeaderBlock = forwardRef<
 >(({ data, blockId, setRef }, ref) => {
   return (
     <div ref={setRef ? setRef(blockId) : ref} className={`${data.className}`}>
-      <h3 className="text-md text-white font-semibold p-3">{data.section}</h3>
+      <h3 className="text-white font-semibold p-3 text-xl">{data.section}</h3>
     </div>
   );
 });
@@ -58,8 +58,8 @@ export const CognitionFactorRow = forwardRef<
               dangerouslySetInnerHTML={{ __html: entry.currentLevel }}
             />
             <div className="flex items-center gap-1">
-              <p className="text-sm font-bold">{entry.severity}</p>
-              <p className="text-sm font-bold">{entry.measurement}</p>
+              <p className="font-bold">{entry.severity}</p>
+              <p className="font-bold">{entry.measurement}</p>
               <div className="flex items-center">
                 <Badge
                   variant="outline"
@@ -115,13 +115,13 @@ export const CognitionFactorRow = forwardRef<
       entry.description.length > 0 ? (
         <ul className="list-disc pl-5 space-y-1">
           {entry.description.map((desc: string, index: number) => (
-            <li key={index} className="text-sm">
+            <li key={index} className="">
               {desc}
             </li>
           ))}
         </ul>
       ) : (
-        <p className="text-sm">{entry.description}</p>
+        <p className="">{entry.description}</p>
       )}
     </div>
   );

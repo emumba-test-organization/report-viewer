@@ -23,7 +23,7 @@ export const ComorbiditiesDescriptionBlock = forwardRef<
   BlockProps<ComorbiditiesData>
 >(({ data, blockId, setRef }, ref) => (
   <div ref={setRef ? setRef(blockId) : ref}>
-    <p className="text-sm leading-tight mb-4">{data?.description || ""}</p>
+    <p className="leading-tight mb-4">{data?.description || ""}</p>
   </div>
 ));
 
@@ -54,7 +54,7 @@ export const ComorbiditiesTableRowBlock = forwardRef<
       <TableRow alternate={isOdd}>
         {/* Comorbidity */}
         <TableCell className="basis-[70%]">
-          <p className="font-medium">{comorbidity}</p>
+          <p>{comorbidity}</p>
         </TableCell>
 
         {/* Date Diagnosed */}

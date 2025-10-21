@@ -146,7 +146,7 @@ export const DeficienciesRow = forwardRef<HTMLDivElement, BlockProps>(
           <TableCell>
             <div className="font-semibold text-medium">{nutrient}</div>
             {nutrient_sub && (
-              <div className="text-sm font-light">{nutrient_sub}</div>
+              <div className="text-sm font-normal">{nutrient_sub}</div>
             )}
           </TableCell>
 
@@ -184,7 +184,7 @@ export const DeficienciesRow = forwardRef<HTMLDivElement, BlockProps>(
               </div>
             </div>
             {normal_range && (
-              <p className="text-xs text-muted-foreground mt-1">
+              <p className="text-sm text-muted-foreground mt-1">
                 Normal Range: {normal_range}
               </p>
             )}
@@ -216,7 +216,7 @@ export const BalancedNutritionIntroBlock = forwardRef<
     <h2 className="mb-4 mt-5">
       {data.recommendations.heading || "Nutrition & Diet"}
     </h2>
-    <p className="text-xs mb-2">{data.recommendations.header_intro || ""}</p>
+    <p className="mb-2">{data.recommendations.header_intro || ""}</p>
   </div>
 ));
 
@@ -226,7 +226,7 @@ export const MindDietIntroBlock = forwardRef<HTMLDivElement, BlockProps>(
       <h3 className="mb-2">
         {data.mind_diet_title || "MIND Diet: Recommendations and Progress"}
       </h3>
-      <p className="text-xs mb-5">
+      <p className="mb-5">
         {data.recommendations.mind_diet_intro || ""}
       </p>
     </div>
@@ -246,8 +246,8 @@ export const RecommendationsHeaderBlock = forwardRef<
           color="white"
           className=""
         />
-        <p className="text-white font-bold leading-none">Recommended</p>
-        <p className="text-white text-sm col-start-2">
+        <p className="text-white font-bold leading-none text-lg">Recommended</p>
+        <p className="text-white col-start-2 font-light">
           {data?.recommendations?.recommended_instructions}
         </p>
       </div>
@@ -271,8 +271,8 @@ export const RecommendationsHeaderBlock = forwardRef<
     <div className="bg-danger flex flex-col justify-between">
       <div className="grid grid-cols-[22px_1fr] gap-x-3 p-3">
         <CircleXIcon strokeWidth={2.5} size={22} color="white" className="" />
-        <p className="text-white font-bold leading-none">Not Recommended</p>
-        <p className="text-white text-sm col-start-2">
+        <p className="text-white font-bold leading-none text-lg">Not Recommended</p>
+        <p className="text-white col-start-2 font-light">
           {data?.recommendations?.discouraged_instructions || ""}
         </p>
       </div>
@@ -304,7 +304,7 @@ export const RecommendationsRow = forwardRef<HTMLDivElement, BlockProps & { isRe
     return (
       <div
         ref={setRef ? setRef(blockId) : ref}
-        className="grid grid-cols-2 gap-4 text-xs"
+        className="grid grid-cols-2 gap-4"
       >
         {recommendation.recommended.foodGroup && (
           <TableRow className={`border-l-0 border-r-0 ${positionInPage === "last" || isRecommendedLastRow ? "border-b-success" : ""}`}>

@@ -25,7 +25,7 @@ export default function ActivitySlot({
         alternate ? "bg-table-header/30" : "bg-transparent"
       }`}
     >
-      <div className="text-xl text-center w-25">{time}</div>
+      <div className="text-2xl text-center w-30 text-nowrap">{time}</div>
       <div className="border-l border-border h-full w-1" />
       <div className="flex-1">
         {category && categoryColor && (
@@ -36,15 +36,15 @@ export default function ActivitySlot({
             {category}
           </Badge>
         )}
-        {title && <div className="text-sm font-medium">{title}</div>}
+        {title && <div className="font-medium">{title}</div>}
         {!title && category && (
           <span className="text-sm font-medium">{frequency}</span>
         )}
         {title && !category && (
-          <div className="text-xs text-gray-600">{frequency}</div>
+          <div className="text-sm">{frequency}</div>
         )}
         {description && (
-          <div className="text-xs text-gray-600 mt-1">{description}</div>
+          <div className="text-sm mt-1">{description}</div>
         )}
       </div>
     </div>

@@ -14,6 +14,9 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { QrCode } from "lucide-react";
 import { forwardRef, type JSX } from "react";
 
+// const SLICE_BOUND = 13; // Limit number of dates shown to fit A4 page
+const SLICE_BOUND = 20; // Limit number of dates shown to fit A3 page
+
 // eslint-disable-next-line @typescript-eslint/no-unused-vars
 const medicineIcons = {
   "Oral tablet": <PillIcon className="w-4 h-4" />,
@@ -44,7 +47,7 @@ export const MedicationPlannerOverview = forwardRef<HTMLDivElement, BlockProps>(
           <div className="w-16 h-16 border-2 border-gray-300 flex items-center justify-center">
             <QrCode className="w-12 h-12" />
           </div>
-          <div className="text-right text-xs text-gray-600">
+          <div className="text-right text-sm text-gray-600">
             <p>Scan to download your next month's planner</p>
             <a
               className="text-blue-600"
@@ -67,7 +70,7 @@ export const MedicationPlannerDatesHeader = forwardRef<
     <div ref={setRef ? setRef(blockId) : ref}>
       <div className="flex text-center font-semibold">
         <div className="border border-r-0 border-border bg-planner-cell-alt w-50 flex-shrink-0"></div>
-        {data.slice(0, 13).map((item: any, index: number) => (
+        {data.slice(0, SLICE_BOUND).map((item: any, index: number) => (
           <div
             style={{ minWidth: "42px", maxWidth: "42px", minHeight: "100px" }}
             className={`${
@@ -89,7 +92,7 @@ export const MedicationPlannerDatesHeader = forwardRef<
             </div>
             <Badge
               variant="outline"
-              className="rounded bg-chip-background-alt border-alternate-table-border text-xs py-0 px-1.5"
+              className="rounded bg-chip-background-alt border-alternate-table-border py-0 px-1.5"
             >
               {new Date(item.date)
                 .toLocaleDateString("en-US", { weekday: "short" })
@@ -112,7 +115,7 @@ export const MedicationPlannerTimeHeader = forwardRef<
         <div className="shrink-0">{timeSlotIcons[data.dayTime]} </div>
         {data.dayTime.charAt(0).toUpperCase() + data.dayTime.slice(1)}
       </div>
-      {data.originalData.slice(0, 13).map((_: any, index: number) => (
+      {data.originalData.slice(0, SLICE_BOUND).map((_: any, index: number) => (
         <div
           key={index}
           style={{
@@ -152,7 +155,7 @@ export const MedicationPlannerTimeRow = forwardRef<HTMLDivElement, BlockProps>(
             <span className="truncate text-sm">{data.medicineName}</span>
           </div>
 
-          {data.originalData.slice(0, 13).map((_: any, index: number) => {
+          {data.originalData.slice(0, 20).map((_: any, index: number) => {
             // Check if this date is in the medicine's scheduled dates
             // const isScheduled = medicineDatesSet.has(item.date);
 

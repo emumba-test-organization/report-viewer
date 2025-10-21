@@ -23,7 +23,7 @@ export const AllergiesDescriptionBlock = forwardRef<
   BlockProps<AllergiesData>
 >(({ data, blockId, setRef }, ref) => (
   <div ref={setRef ? setRef(blockId) : ref}>
-    <p className="text-sm leading-tight mb-4">{data?.description || ""}</p>
+    <p className="leading-tight mb-4">{data?.description || ""}</p>
   </div>
 ));
 
@@ -54,7 +54,7 @@ export const AllergiesTableRowBlock = forwardRef<
       <TableRow alternate={isOdd}>
         {/* Food Group */}
         <TableCell>
-          <p className="font-medium">{allergen}</p>
+          <p className="">{allergen}</p>
         </TableCell>
 
         {/* Intake */}

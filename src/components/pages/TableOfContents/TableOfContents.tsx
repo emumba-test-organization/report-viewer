@@ -1,4 +1,5 @@
 import A4Page from "@/components/shared/A4Page";
+import { useReport } from "@/context";
 import React, { useEffect, useState } from "react";
 
 interface TocItem {
@@ -7,10 +8,11 @@ interface TocItem {
 }
 
 interface JsonData {
-  [key: string]: any;
+  [key: string]: unknown;
 }
 
 const TableOfContents: React.FC = () => {
+  const { report, isLoading } = useReport();
   const [toc, setToc] = useState<TocItem[]>([]);
 
   // Parse only top-level JSON objects
@@ -38,20 +40,15 @@ const TableOfContents: React.FC = () => {
   };
 
   useEffect(() => {
-    const fetchJson = async () => {
+    if (report) {
       try {
-        const response = await fetch("/report_participant.json");
-        if (!response.ok) throw new Error("Failed to load JSON");
-        const jsonData: JsonData = await response.json();
-        const tocList = parseJson(jsonData);
+        const tocList = parseJson(report);
         setToc(tocList);
       } catch (err) {
         console.error("Error loading or parsing JSON:", err);
       }
-    };
-
-    fetchJson();
-  }, []);
+    }
+  }, [isLoading, report]);
 
   return (
     <A4Page>

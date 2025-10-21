@@ -19,11 +19,11 @@ const A4Page: React.FC<A4PageProps> = ({ children }) => {
     return (
       <div
         ref={containerRef}
-        className="w-[297mm] h-[420mm] mx-auto p-6 bg-white relative"
+        className="w-[297mm] h-[420mm] mx-auto p-6 px-12 bg-white flex flex-col"
       >
         <Header data={report?.header} />
         {children}
-        <Footer />
+        {process.env.NODE_ENV !== 'production' && <Footer />}
       </div>
     );
   } else {

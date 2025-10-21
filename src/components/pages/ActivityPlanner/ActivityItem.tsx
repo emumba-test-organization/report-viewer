@@ -7,16 +7,17 @@ interface ActivityItemProps {
 }
 
 export default function ActivityItem({ name, duration, description, isLast = false, isFirst = false }: ActivityItemProps) {
-    const borderBottomClass = isLast ? "rounded-bl-md rounded-br-md" : "border-b";
-    const borderTopClass = isFirst ? "rounded-tl-md rounded-tr-md" : "";
+    const borderBottomClass = isLast ? "rounded-bl-md rounded-br-md pb-2" : "";
+    const borderTopClass = isFirst ? "rounded-tl-md rounded-tr-md pt-2" : "";
     
   return (
-    <div className={`${borderBottomClass} ${borderTopClass}`}>
+    <div className={`bg-white px-2 ${borderBottomClass} ${borderTopClass}`}>
       <div className="font-semibold">{name}</div>
-      <div className="font-semibold">Duration: {duration}</div>
-      <p className="font-light text-sm">
+      <div className="font-semibold text-sm">Duration: {duration}</div>
+      <p className="font-normal text-sm">
         {description}
       </p>
+      {!isLast && <hr className="my-2 border-border" />}
     </div>
   );
 }

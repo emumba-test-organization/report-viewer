@@ -30,7 +30,7 @@ const Preface = ({ data }: { data: PrefaceData }) => {
         {/* Purpose of This Report */}
         <div>
           <h2 className="mb-4">Purpose of This Report</h2>
-          <div className="space-y-4 text-xs leading-relaxed">
+          <div className="space-y-4 leading-relaxed">
             {purposeParagraphs.map((p: any, i: any) => (
               <p key={i}>{p}</p>
             ))}
@@ -39,10 +39,8 @@ const Preface = ({ data }: { data: PrefaceData }) => {
 
         {/* About RestoreU Method */}
         <div>
-          <h2 className="mb-4">
-            About RestoreU Method
-          </h2>
-          <div className="space-y-4 text-xs leading-relaxed">
+          <h2 className="mb-4">About RestoreU Method</h2>
+          <div className="space-y-4 leading-relaxed">
             {aboutParagraphs.map((p: any, i: any) => (
               <p key={i}>{p}</p>
             ))}
@@ -60,16 +58,14 @@ const Preface = ({ data }: { data: PrefaceData }) => {
               <div className="flex flex-col items-center">
                 <div className="flex items-center justify-center flex-col bg-gray-100 w-full py-4 px-6 text-center gap-1">
                   <BrainIcon />
-                  <p className="text-xs font-medium">
-                    Cognitive Assessment
-                  </p>
+                  <p className=" font-medium">Cognitive Assessment</p>
                 </div>
                 <div className="w-2.5 h-2.5 border-2 border-info rounded-full"></div>
                 <div className="w-1 h-5 bg-info bg-gradient-to-b from-white to-info"></div>
 
                 <div className="flex items-center justify-center flex-col bg-gray-100 w-full py-4 px-6 text-center gap-1">
                   <ClipboardHeartIcon />
-                  <p className="text-xs font-medium">
+                  <p className=" font-medium">
                     Medications, Medical History and Lab Reports
                   </p>
                 </div>
@@ -79,16 +75,14 @@ const Preface = ({ data }: { data: PrefaceData }) => {
                 <div className="flex items-center justify-center flex-col bg-gray-100 w-full py-4 px-6 text-center gap-1">
                   {/* <Apple strokeWidth={3} className="w-6 h-6 text-gray-800" /> */}
                   <AppleIcon />
-                  <p className="text-xs font-medium">
-                    Lifestyle and Habits
-                  </p>
+                  <p className=" font-medium">Lifestyle and Habits</p>
                 </div>
                 <div className="w-2.5 h-2.5 border-2 border-info rounded-full"></div>
                 <div className="w-1 h-5 bg-info bg-gradient-to-b from-white to-info"></div>
 
                 <div className="flex items-center justify-center flex-col bg-info w-full py-4 px-6 text-center gap-1">
                   <CircledCheckIcon />
-                  <p className="text-xs font-medium text-white px-3 py-1">
+                  <p className=" font-medium text-white px-3 py-1">
                     Your Personalized Report
                   </p>
                 </div>
@@ -100,21 +94,21 @@ const Preface = ({ data }: { data: PrefaceData }) => {
           <div className="col-span-3">
             <h2 className="mb-4">Reading This Report</h2>
             {reading.intro.map((p: any, i: any) => (
-              <p key={i} className="text-xs mb-4">
+              <p key={i} className="mb-4">
                 {p}
               </p>
             ))}
             <div className="space-y-6">
               {reading.steps.map(({ title, description }: any, idx: any) => (
                 <div key={idx} className="flex gap-4">
-                  <div className="flex-shrink-0 w-6 h-6 border border-info text-info rounded-full flex items-center justify-center text-xs font-bold">
+                  <div className="flex-shrink-0 w-8 h-8 border-2 border-info text-info rounded-full flex items-center justify-center font-bold">
                     {idx + 1}
                   </div>
                   <div>
-                    <h4 className="text-sm font-semibold mb-2 leading-4">
+                    <h4 className="font-semibold mb-2 leading-4">
                       {title}
                     </h4>
-                    <p className="text-xs">{description}</p>
+                    <p className="">{description}</p>
                   </div>
                 </div>
               ))}

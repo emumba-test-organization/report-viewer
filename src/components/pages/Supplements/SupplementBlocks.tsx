@@ -17,7 +17,7 @@ export const SupplementsIntroBlock = forwardRef<HTMLDivElement, BlockProps>(
       <h2 className="mb-4">{data.heading}</h2>
 
       {/* Introduction */}
-      <p className="text-xs mb-2">
+      <p className="mb-2">
         Your doctor will indicate if any changes in treatment are needed. Obtain
         the following supplements and start taking them using the “Instructions”
         column for assistance.
@@ -30,7 +30,7 @@ export const SupplementsIntroBlock = forwardRef<HTMLDivElement, BlockProps>(
         {data.intro.map((line: any, idx: any) => (
           <li
             key={idx}
-            className={`text-xs mb-2 ${
+            className={`mb-2 ${
               data.intro.length <= 1 ? "list-none mr-0" : ""
             }`}
           >
@@ -115,7 +115,7 @@ export const SupplementsRow = forwardRef<HTMLDivElement, BlockProps>(
           {/* Name & Dosage */}
           <TableCell>
             <div className="font-semibold">{med.medication}</div>
-            <div className="text-xs text-light">{med.dosageDetails}</div>
+            <div className="text-sm text-light">{med.dosageDetails}</div>
           </TableCell>
 
           {/* Purpose (Reasoning) */}
@@ -126,7 +126,7 @@ export const SupplementsRow = forwardRef<HTMLDivElement, BlockProps>(
                   <div className="mb-1">{action?.action}</div>
                   <div className="flex flex-wrap items-baseline gap-0.5">
                     {action.reasons.length ? (
-                      <p className="text-muted-foreground">Currently</p>
+                      <p className="text-muted-foreground text-sm">Currently</p>
                     ) : null}
                     {action.reasons.map((reason: any, j: number) => {
                       if (reason.currentLevel) {
@@ -134,7 +134,7 @@ export const SupplementsRow = forwardRef<HTMLDivElement, BlockProps>(
                           <div className="flex" key={j}>
                             <Badge
                               variant="outline"
-                              className="flex items-center text-xs p-0.5 rounded justify-center border-r-0 rounded-tr-none rounded-br-none"
+                              className="flex items-center p-0.5 rounded justify-center border-r-0 rounded-tr-none rounded-br-none"
                             >
                               {reason.name}
                             </Badge>
@@ -142,7 +142,7 @@ export const SupplementsRow = forwardRef<HTMLDivElement, BlockProps>(
                               <Badge
                                 key={j}
                                 variant="outline"
-                                className="flex items-center text-xs p-0.5 rounded justify-center rounded-tl-none rounded-bl-none"
+                                className="flex items-center p-0.5 rounded justify-center rounded-tl-none rounded-bl-none"
                               >
                                 {reason.currentLevel}
                               </Badge>

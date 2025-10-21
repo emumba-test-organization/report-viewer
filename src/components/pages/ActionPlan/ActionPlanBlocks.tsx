@@ -37,7 +37,7 @@ export const ActionPlanBlock = forwardRef<
       {/* <h1 className="text-3xl font-bold mb-6">{title}</h1> */}
       <h1 className="mb-6">Personalized Action Plan</h1>
       {/* Introduction with inline steps */}
-      <div className="mb-4 text-xs leading-relaxed">
+      <div className="mb-4 leading-relaxed">
         {intro[0] && (
           <p className="mb-4">
             {intro[0]} <strong>{formattedSteps}</strong>
@@ -48,7 +48,7 @@ export const ActionPlanBlock = forwardRef<
       {/* Medication Section */}
       <div className="mb-4">
         <h2 className="mb-4">Medication</h2>
-        <p className="text-xs mb-4">
+        <p className="mb-4">
           Your doctor will indicate if any changes in treatment are needed.
           Obtain the following medications and start taking them using the
           "Instructions" column for assistance.
@@ -96,14 +96,14 @@ export const MedicationRow = forwardRef<
       <TableRow alternate={isOdd}>
         <TableCell>
           <div className="font-semibold">{med?.medication}</div>
-          <div className="text-xs font-light">{med?.dosageDetails}</div>
+          <div className="text-sm font-normal">{med?.dosageDetails}</div>
         </TableCell>
         <TableCell>
           {med?.reasoning?.map((action, j: number) => {
             return (
               <div key={j}>
                 <div className="mb-1">{action?.action}</div>
-                <div className="flex flex-wrap items-baseline gap-0.5">
+                <div className="flex flex-wrap items-baseline gap-1">
                   {action.reasons.length ? (
                     <p className="text-muted-foreground">Currently</p>
                   ) : null}
@@ -113,7 +113,7 @@ export const MedicationRow = forwardRef<
                         <div className="flex" key={j}>
                           <Badge
                             variant="outline"
-                            className="flex items-center text-xs p-0.5 rounded justify-center border-r-0 rounded-tr-none rounded-br-none"
+                            className="flex items-center p-0.5 rounded justify-center border-r-0 rounded-tr-none rounded-br-none"
                           >
                             {reason.name}
                           </Badge>
@@ -121,7 +121,7 @@ export const MedicationRow = forwardRef<
                             <Badge
                               key={j}
                               variant="outline"
-                              className="flex items-center text-xs p-0.5 rounded justify-center rounded-tl-none rounded-bl-none"
+                              className="flex items-center p-0.5 rounded justify-center rounded-tl-none rounded-bl-none"
                             >
                               {reason.currentLevel}
                             </Badge>

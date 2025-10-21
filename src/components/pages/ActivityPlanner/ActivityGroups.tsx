@@ -23,7 +23,7 @@ export default function ActivityGroups({
 }) {
   return (
     <div>
-      <h3 className="text-sm font-bold text-gray-900 pb-1">Activity Groups</h3>
+      <h3 className="font-bold pb-1">Activity Groups</h3>
 
       <div className="space-y-2">
         {groups.map(({ tags, activities }, index) => {

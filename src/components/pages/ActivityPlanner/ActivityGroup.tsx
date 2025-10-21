@@ -13,16 +13,11 @@ interface ActivityGroupProps {
     duration: string;
     description: string;
   }>;
-  additionalTags?: Array<{
-    name: string;
-    color: string;
-  }>;
 }
 
 export default function ActivityGroup({
   tags,
   activities,
-  additionalTags,
 }: ActivityGroupProps) {
   return (
     <div>
@@ -33,13 +28,13 @@ export default function ActivityGroup({
           </Badge>
         ))}
       </div>
-      <div className="border-4 border-[#F5F5F5] border-t-0 rounded-bl-md rounded-br-md">
-        <div className="space-y-1 text-sm bg-white rounded-md p-2">
+      <div className="border-4 bg-[#F0F0F0] border-[#F5F5F5] border-t-0 rounded-bl-md rounded-br-md">
+        <div className="bg-white rounded-md">
           {activities.map((activity, index) => (
             <ActivityItem
               key={index}
               isFirst={index === 0}
-              isLast={index === activities.length - 1 && !additionalTags}
+              isLast={index === activities.length - 1}
               name={activity.name}
               duration={activity.duration}
               description={activity.description}
