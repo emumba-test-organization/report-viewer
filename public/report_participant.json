@@ -867,6 +867,10 @@
   },
   "dietaryRecommendations": {
     "heading": "Your Dietary Recommendations",
+    "preface": [
+      "Start with the eating guidelines in the MIND study. The foods and servings in the\r\n                                                \u201cMediterranean-DASH Intervention for Neurodegenerative Delay\r\n                                                (MIND)\u201d\r\n                                                study\r\n                                                are further personalized below, using observations from\r\n\r\n                                                genes,\r\n\r\n                                                lab results,\r\n                                                allergies,\r\n                                                medications,\r\n                                                and history. [ 10 ]",
+      "Eating in a way that favors the ApoE-e4 gene\r\n                                                focuses on increasing intake of vegetables and fruits,\r\n                                                good fats,\r\n                                                soluble fiber,\r\n                                                lean protein,\r\n                                                incorporating probiotic- and prebiotic-rich foods,\r\n                                                and\r\n                                                drinking green tea. [ 11 ] In addition, limit bad fats and foods that have a high glycemic load.\r\n                                                The brain thrives on dietary fats, but there is a distinction between\r\n                                                good and bad fats."
+    ],
     "items": [
       {
         "title": "good fats",
@@ -952,6 +956,7 @@
     "models": [
       [
         {
+          "key": "good fats",
           "span": "full",
           "type": "header",
           "heading": "Choose Healthy Fats Every Day",
@@ -1007,9 +1012,37 @@
       [
         {
           "type": "header",
+          "span": "full",
+          "key": "soluble fiber",
+          "heading": "Fiber-Rich Foods to Support Brain Function"
+        },
+        {
+          "span": "full",
+          "type": "list",
+          "items": "Good sources of soluble fiber include:\r\n\r\n                                                apples,\r\n                                                blueberries,\r\n                                                carrots,\r\n                                                celery,\r\n                                                cucumbers,\r\n                                                dried peas,\r\n                                                chia seeds,\r\n\r\n                                                flaxseeds,\r\n\r\n                                                lentils and other beans,\r\n\r\n                                                nuts,\r\n\r\n                                                oat bran,\r\n                                                oat cereal and oatmeal,\r\n\r\n                                                oranges,\r\n                                                pears,\r\n                                                psyllium, and\r\n                                                strawberries."
+        }
+      ],
+      [
+        {
+          "type": "header",
+          "span": "full",
+          "key": "foods with low-glycemic load",
           "heading": "Watch Your Blood Sugar",
           "subHeading": "Low-Glycemic Foods Only",
           "preface": "Foods with low-glycemic load have the positive effect of reducing the spike of rapidly-changing insulin levels. So, focus on avoiding food with high glycemic load."
+        },
+        {
+          "span": "left",
+          "type": "chips-section",
+          "inclusionType": "include",
+          "heading": "Instead, Take",
+          "items": [
+            "ceylon cinnamon",
+            "corn",
+            "green peas",
+            "white potatoes",
+            "white rice"
+          ]
         },
         {
           "span": "right",
@@ -1029,56 +1062,45 @@
             "white flour",
             "white sugar"
           ]
-        },
-        {
-          "span": "left",
-          "type": "chips-section",
-          "inclusionType": "include",
-          "heading": "Instead, Take",
-          "items": [
-            "ceylon cinnamon",
-            "corn",
-            "green peas",
-            "white potatoes",
-            "white rice"
-          ]
         }
       ],
       [
         {
           "span": "full",
+          "key": "vegetables and fruits",
           "type": "header",
           "heading": "Your Daily Fruit & Veggie Goals",
           "preface": "Focus on fresh or frozen (plain, without seasoning)."
         },
         {
+          "span": "left",
+          "type": "list-section",
+          "inclusionType": "include",
+          "heading": "Your Aim",
+          "items": [
+            "Among vegetables and fruits ,\r\n                                                focus on fresh or frozen (plain, without seasoning).",
+            "Eat three servings of fresh fruit and three-to-five servings of fresh\r\n                                                vegetables daily.",
+            "Over every three days, consume fruits and vegetables from all colors of\r\n                                                the rainbow."
+          ]
+        },
+        {
           "span": "right",
           "type": "list-section",
           "inclusionType": "avoid",
-          "heading": "Avoid Foods That Spike Blood Sugar",
+          "heading": "Limit or Avoid",
           "items": [
             "For inflammation,\r\n                                                eat a teaspoon of freshly-grated ginger rhizome regularly with your\r\n                                                meals,\r\n                                                or take a\r\n                                                500 mg\r\n\r\n                                                ginger extract supplement\r\n\r\n                                                every day, as\r\n                                                to reduce inflammation.",
             "Limit fruits to one serving per meal or snack,\r\n                                                and avoid commercial fruit juices.",
             "Minimize eating any fruits or vegetables grown outside of\r\n                                                the USA or Canada\r\n                                                unless they are organic.",
             "Rather than making homemade fruit juices,\r\n                                                stick with smoothies and include whole fruit,\r\n                                                to avoid the high glycemic load of pure juice."
           ]
-        },
-        {
-          "span": "left",
-          "type": "list-section",
-          "inclusionType": "include",
-          "heading": "Instead, Take",
-          "items": [
-            "Among vegetables and fruits ,\r\n                                                focus on fresh or frozen (plain, without seasoning).",
-            "Eat three servings of fresh fruit and three-to-five servings of fresh\r\n                                                vegetables daily.",
-            "Over every three days, consume fruits and vegetables from all colors of\r\n                                                the rainbow."
-          ]
         }
       ],
       [
         {
           "span": "left",
           "type": "header",
+          "key": "lean protein",
           "heading": "Smart Protein Choices"
         },
         {
@@ -1096,6 +1118,7 @@
         {
           "span": "right",
           "type": "header",
+          "key": "prebiotics and probiotics",
           "heading": "Probiotics & Gut Health"
         },
         {
@@ -1116,6 +1139,7 @@
         {
           "span": "full",
           "type": "header",
+          "key": "cyp1a2",
           "heading": "Coffee & Green Tea",
           "preface": "These foods are high in antioxidants which help combat oxidative stress and inflammation."
         },

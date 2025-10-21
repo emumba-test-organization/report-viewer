@@ -31,6 +31,7 @@ import { MedicationPlannerPage } from "./components/pages/MedicationPlanner";
 import type { MedicationItemData } from "./components/pages/MedicationPlanner/types";
 import type { HeaderData } from "./components/shared/Header";
 import { Cover } from "./components/pages/Cover";
+import DietaryRecommendationsModel from "./components/pages/DietaryRecommendations/DietaryRecommendationsModel";
 
 export type Report = {
   header: HeaderData;
@@ -89,7 +90,8 @@ function ParticipantReport() {
         <SupplementPlan data={report?.actionPlan?.supplements} />
         <Lifestyle data={report?.lifestyle} />
         <NutritionAndDiet data={report?.nutrition} />
-        <DietaryRecommendations data={report!.dietaryRecommendations} />
+        <DietaryRecommendationsModel data={report!.dietaryRecommendations} />
+        {/* <DietaryRecommendations data={report!.dietaryRecommendations} /> */}
         <CognitionPage data={report!.cognitiveFunction} />
         <KnownMedicalConditions data={report!} />
         <Footnotes data={report!.footnotes} />
