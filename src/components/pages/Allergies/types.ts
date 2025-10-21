@@ -5,7 +5,7 @@ export type AllergyRow = {
 };
 
 export type AllergiesData = {
-  title: string;
+  heading: string;
   description: string;
   headers: string[];
   rows: AllergyRow[];

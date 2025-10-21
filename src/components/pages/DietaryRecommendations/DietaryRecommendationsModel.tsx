@@ -194,7 +194,7 @@ const ListSectionBlock = ({
           <p className="text-white font-bold leading-none">{heading}</p>
         </div>
       </div>
-      <div className="overflow-hidden py-4 px-10">
+      <div className="overflow-hidden py-4 pl-8 pr-6">
         <ul className="list-disc space-y-2 text-sm">
           {/* Data Rows */}
           {items.map((row, idx) => {

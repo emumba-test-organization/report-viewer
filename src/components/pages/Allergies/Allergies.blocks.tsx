@@ -14,7 +14,7 @@ export const AllergiesTitleBlock = forwardRef<
   BlockProps<AllergiesData>
 >(({ data, blockId, setRef }, ref) => (
   <div ref={setRef ? setRef(blockId) : ref}>
-    <h2 className="mb-4 mt-6">{data?.title}</h2>
+    <h2 className="mb-4 mt-6">{data?.heading}</h2>
   </div>
 ));
 

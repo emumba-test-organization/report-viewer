@@ -33,6 +33,7 @@ import type { HeaderData } from "./components/shared/Header";
 import { Cover } from "./components/pages/Cover";
 import DietaryRecommendationsModel from "./components/pages/DietaryRecommendations/DietaryRecommendationsModel";
 import type { ActivityPlannerData } from "./components/pages/ActivityPlanner/ActivityPlanner";
+import { TableOfContents } from "./components/pages/TableOfContents";
 
 export type Report = {
   header: HeaderData;
@@ -49,6 +50,9 @@ export type Report = {
   currentMedication: CurrentMedicationData;
   cognitiveFunction: CognitionData;
   allergies: AllergiesData;
+  knownMedicalConditions: {
+    title: string;
+  };
   reportedProblems: ComorbiditiesData;
   footnotes: FootnotesData;
   medicationPlanner: MedicationItemData;
@@ -88,6 +92,7 @@ function ParticipantReport() {
     <ReportProvider report={report} isLoading={isLoading} error={error}>
       <div>
         <Cover />
+        <TableOfContents />
         <Preface data={report!.preface} />
         <HealthReport data={report?.healthReport} />
         <ActionPlan data={report} />

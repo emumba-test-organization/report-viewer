@@ -5,6 +5,7 @@ export type ComorbidityRow = {
 
 export type ComorbiditiesData = {
   title: string;
+  heading: string;
   description: string;
   headers: string[];
   rows: ComorbidityRow[];

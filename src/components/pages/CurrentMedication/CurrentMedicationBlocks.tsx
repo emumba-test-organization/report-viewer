@@ -14,7 +14,7 @@ export const CurrentMedicationIntroBlock = forwardRef<
   BlockProps
 >(({ data, blockId, setRef }, ref) => (
   <div ref={setRef ? setRef(blockId) : ref}>
-    <h2 className="mb-4 mt-6">{data.title}</h2>
+    <h2 className="mb-4 mt-6">{data.heading}</h2>
 
     {/* Warning Box */}
     <Alert variant="info" className="mb-4">

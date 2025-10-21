@@ -14,7 +14,7 @@ export const ComorbiditiesTitleBlock = forwardRef<
   BlockProps<ComorbiditiesData>
 >(({ data, blockId, setRef }, ref) => (
   <div ref={setRef ? setRef(blockId) : ref}>
-    <h2 className="mb-4 mt-4">{data?.title}</h2>
+    <h2 className="mb-4 mt-4">{data?.heading}</h2>
   </div>
 ));
 

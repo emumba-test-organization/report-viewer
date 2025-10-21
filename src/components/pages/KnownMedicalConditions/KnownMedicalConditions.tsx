@@ -37,7 +37,7 @@ const createBlocks = (data: Report): BlockConfig[] => {
     {
       id: "knownMedicalConditionsTitle",
       type: "knownMedicalConditionsTitle",
-      data: "Known Medical Conditions",
+      data: data.knownMedicalConditions,
     },
     ...comorbiditiesBlocks,
     ...allergiesBlocks,
@@ -54,9 +54,10 @@ export const renderBlock: BlockRenderer = (block, key, index) => {
 
   switch (block.type) {
     case "knownMedicalConditionsTitle":
+      console.log("BLOCK:", block);
       return (
         <h1 className="mb-6" {...commonProps}>
-          Known Medical Conditions
+          {block.data.title}
         </h1>
       );
     case "comorbiditiesTitle":

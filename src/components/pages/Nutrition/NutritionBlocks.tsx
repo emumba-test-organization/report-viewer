@@ -214,7 +214,7 @@ export const BalancedNutritionIntroBlock = forwardRef<
 >(({ data, blockId, setRef }, ref) => (
   <div ref={setRef ? setRef(blockId) : ref}>
     <h2 className="mb-4 mt-5">
-      {data.recommendations.header || "Nutrition & Diet"}
+      {data.recommendations.heading || "Nutrition & Diet"}
     </h2>
     <p className="text-xs mb-2">{data.recommendations.header_intro || ""}</p>
   </div>

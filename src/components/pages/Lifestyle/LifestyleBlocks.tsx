@@ -5,7 +5,7 @@ import { forwardRef } from "react";
 export const LifeStyleIntro = forwardRef<HTMLDivElement, BlockProps>(
   ({ data, blockId, setRef }, ref) => (
     <div ref={setRef ? setRef(blockId) : ref} className="mb-8">
-      <h2 className="mb-4">{data.title || "Lifestyle"}</h2>
+      <h2 className="mb-4">{data.heading || "Lifestyle"}</h2>
 
       {/* Introduction */}
       <p className="text-xs mb-2">{data.intro || ""}</p>

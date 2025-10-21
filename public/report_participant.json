@@ -219,7 +219,7 @@
       }
     ],
     "supplements": {
-      "title": "Supplements and How To Take Them",
+      "heading": "Supplements and How To Take Them",
       "intro": [
         "Five\r\n                        new recommended supplements are shown below in prioritized order",
         "Start at the top and work down the list",
@@ -321,8 +321,176 @@
       ]
     }
   },
+  "currentMedication": {
+    "heading": "Current Medications",
+    "intro": "These are the medications you told us about.\r\n                                                    These include your prescriptions, vitamins, supplements,\r\n                                                    over-the-counter drugs,\r\n                                                    regular injections, eye drops, and so on.\r\n                                                    Let us know if there's anything you'd like to add, change, or\r\n                                                    remove.",
+    "headers": [
+      "Medication",
+      "Dosage Details",
+      "Class / Indication",
+      "Date Started"
+    ],
+    "medications": [
+      {
+        "medication": "lisinopril",
+        "dosageDetails": "10 mg, 1 pill / orally / every day",
+        "indication": "Angiotensin Converting Enzyme Inhibitor",
+        "dateStarted": "4/01/2014"
+      },
+      {
+        "medication": "duloxetine",
+        "dosageDetails": "20 mg, 1 pill / orally / every day",
+        "indication": "Serotonin and Norepinephrine Reuptake Inhibitor",
+        "dateStarted": "8/01/2014"
+      },
+      {
+        "medication": "donepezil",
+        "dosageDetails": "10 mg, 1 pill / orally / every day",
+        "indication": "Cholinesterase Inhibitor",
+        "dateStarted": "7/01/2021"
+      },
+      {
+        "medication": "chlorpheniramine, Chlor-Trimeton",
+        "dosageDetails": "4 mg, 1 pill / orally / as needed",
+        "indication": "Histamine-1 Receptor Antagonist / for allergies",
+        "dateStarted": "11/01/2020"
+      },
+      {
+        "medication": "HCTZ",
+        "dosageDetails": "12.5 mg, 1 pill / orally / every day",
+        "indication": "Thiazide Diuretic",
+        "dateStarted": "2/01/2016"
+      },
+      {
+        "medication": "fluocin acet otic",
+        "dosageDetails": "0.01%, 3 gtts / both ears / every other day",
+        "indication": "Corticosteroid, Otic",
+        "dateStarted": "2/01/2016"
+      },
+      {
+        "medication": "fluticasone inhalant",
+        "dosageDetails": "50 mcg, 2 sprays / inhaled / every day",
+        "indication": "Corticosteroid, Inhaled",
+        "dateStarted": "12/01/2015"
+      },
+      {
+        "medication": "fesoterodine, Toviaz",
+        "dosageDetails": "8 mg, 1 pill / orally / every day",
+        "indication": "Benzhydryl Compounds",
+        "dateStarted": "4/01/2019"
+      },
+      {
+        "medication": "erythromycin, Ery-Tab",
+        "dosageDetails": "orally / twice daily",
+        "indication": "Macrolide Antimicrobial",
+        "dateStarted": "2/15/2022"
+      }
+    ]
+  },
+  "supplementPlan": {
+    "heading": "Supplements and How To Take Them",
+    "intro": [
+      "Five\r\n                        new recommended supplements are shown below in prioritized order",
+      "Start at the top and work down the list",
+      "Slowly ramp up the number of new supplements;\r\n                        consider starting with just the first one\r\n                        \u2014 vitamin D3/K2 \u2014\r\n                        and watching carefully for any side effects",
+      "Five\r\n                        days later, if okay, add the next\r\n\r\n                        recommended supplement"
+    ],
+    "meds": [
+      {
+        "medication": "vitamin D3/K2 cholecalciferol;menatetrenone",
+        "dosageDetails": "4000 IU/600 mcg, 1 capsule, every day",
+        "reasoning": [
+          {
+            "action": "To raise your level of",
+            "reasons": [
+              {
+                "name": "Vitamin D",
+                "currentLevel": "24.8\u00a0ng/mL"
+              }
+            ]
+          },
+          {
+            "action": "Vitamin K2 enhances absorption of\r\n                                cholecalciferol.",
+            "reasons": []
+          }
+        ],
+        "guidance": "Best taken at the largest meal of the day, and along with calcium and magnesium (if\r\n                                those are among current medications)."
+      },
+      {
+        "medication": "N-acetylcysteine (NAC)",
+        "dosageDetails": "500 mg, 1 capsule, every day",
+        "reasoning": [
+          {
+            "action": "To lower your levels of",
+            "reasons": [
+              {
+                "name": "Homocysteine",
+                "currentLevel": "13\u00a0\ufffdmol/L"
+              },
+              {
+                "name": "Glucose",
+                "currentLevel": "96\u00a0mg/dL"
+              },
+              {
+                "name": "Insulin",
+                "currentLevel": "15.7\u00a0\ufffdIU/mL"
+              }
+            ]
+          }
+        ],
+        "guidance": "Best taken either 30 minutes before, or two hours after, eating to avoid competing with\r\n                                protein for absorption."
+      },
+      {
+        "medication": "resveratrol",
+        "dosageDetails": "100 mg, 1 capsule, twice daily",
+        "reasoning": [
+          {
+            "action": "ApoE gene indicates increased risk of Alzheimer's disease.",
+            "reasons": []
+          }
+        ],
+        "guidance": "Best taken with a fatty meal, to increase absorption."
+      },
+      {
+        "medication": "alpha-lipoic acid (ALA)",
+        "dosageDetails": "500 mg, 1 tablet, every day",
+        "reasoning": [
+          {
+            "action": "To lower your levels of",
+            "reasons": [
+              {
+                "name": "Glucose",
+                "currentLevel": "96\u00a0mg/dL"
+              },
+              {
+                "name": "Insulin",
+                "currentLevel": "15.7\u00a0\ufffdIU/mL"
+              }
+            ]
+          }
+        ],
+        "guidance": "Best taken on an empty stomach: 1 hour before or 2 hours after eating."
+      },
+      {
+        "medication": "berberine",
+        "dosageDetails": "500 mg, twice daily",
+        "reasoning": [
+          {
+            "action": "To lower your level of",
+            "reasons": [
+              {
+                "name": "Glucose",
+                "currentLevel": "96\u00a0mg/dL"
+              }
+            ]
+          }
+        ],
+        "guidance": "Ramp up slowly: 1 capsule/day the 1st week; then 2 capsules/day."
+      }
+    ]
+  },
   "lifestyle": {
-    "title": "Your Lifestyle",
+    "heading": "Your Lifestyle",
     "intro": "You've gotten a start with any new medications and supplements.\r\n                                Great job!\r\n                                Continue to take them on their recommended schedule.\r\n                                Let's improve on\r\n                                your quality of sleep,\r\n                                moving your body,\r\n                                keeping stress low,\r\n                                maintaining great hygiene,\r\n                                and\r\n                                exercising your brain.\r\n                                You can do all these steps together if you want\r\n                                or\r\n                                add them at your own pace. [ 5-7 ]",
     "recommendations": [
       {
@@ -392,7 +560,7 @@
   },
   "nutrition": {
     "recommendations": {
-      "header": "Balanced Nutrition",
+      "heading": "Balanced Nutrition",
       "header_intro": "Dietary patterns characterized by higher intake of\r\n                                        vegetables,\r\n                                        fruits,\r\n                                        fish,\r\n                                        nuts, and\r\n                                        legumes,\r\n                                        and lower intake of\r\n                                        meats,\r\n                                        high fat dairy, and\r\n                                        sweets are related to lower odds of cognitive decline.\r\n                                        The place to start is with the eating guidelines in the well-studied MIND diet.",
       "mind_diet_intro": "The Mediterranean-DASH Intervention for Neurogenerative Delay (MIND) diet is\r\n                                            a hybrid of two successful eating plans, but with modifications to reflect\r\n                                            the scientific literature on foods and nutrients that are specific to brain\r\n                                            health. It emphasizes ten foods that have been shown to slow cognitive\r\n                                            decline in clinical studies. It also names five food groups to avoid, due to\r\n                                            their adverse effects on the brain.",
       "recommended_instructions": "Focus on choosing from among these ten recommended food groups.",
@@ -538,329 +706,6 @@
         }
       ]
     }
-  },
-  "currentMedication": {
-    "title": "Current Medications",
-    "intro": "These are the medications you told us about.\r\n                                                    These include your prescriptions, vitamins, supplements,\r\n                                                    over-the-counter drugs,\r\n                                                    regular injections, eye drops, and so on.\r\n                                                    Let us know if there's anything you'd like to add, change, or\r\n                                                    remove.",
-    "headers": [
-      "Medication",
-      "Dosage Details",
-      "Class / Indication",
-      "Date Started"
-    ],
-    "medications": [
-      {
-        "medication": "lisinopril",
-        "dosageDetails": "10 mg, 1 pill / orally / every day",
-        "indication": "Angiotensin Converting Enzyme Inhibitor",
-        "dateStarted": "4/01/2014"
-      },
-      {
-        "medication": "duloxetine",
-        "dosageDetails": "20 mg, 1 pill / orally / every day",
-        "indication": "Serotonin and Norepinephrine Reuptake Inhibitor",
-        "dateStarted": "8/01/2014"
-      },
-      {
-        "medication": "donepezil",
-        "dosageDetails": "10 mg, 1 pill / orally / every day",
-        "indication": "Cholinesterase Inhibitor",
-        "dateStarted": "7/01/2021"
-      },
-      {
-        "medication": "chlorpheniramine, Chlor-Trimeton",
-        "dosageDetails": "4 mg, 1 pill / orally / as needed",
-        "indication": "Histamine-1 Receptor Antagonist / for allergies",
-        "dateStarted": "11/01/2020"
-      },
-      {
-        "medication": "HCTZ",
-        "dosageDetails": "12.5 mg, 1 pill / orally / every day",
-        "indication": "Thiazide Diuretic",
-        "dateStarted": "2/01/2016"
-      },
-      {
-        "medication": "fluocin acet otic",
-        "dosageDetails": "0.01%, 3 gtts / both ears / every other day",
-        "indication": "Corticosteroid, Otic",
-        "dateStarted": "2/01/2016"
-      },
-      {
-        "medication": "fluticasone inhalant",
-        "dosageDetails": "50 mcg, 2 sprays / inhaled / every day",
-        "indication": "Corticosteroid, Inhaled",
-        "dateStarted": "12/01/2015"
-      },
-      {
-        "medication": "fesoterodine, Toviaz",
-        "dosageDetails": "8 mg, 1 pill / orally / every day",
-        "indication": "Benzhydryl Compounds",
-        "dateStarted": "4/01/2019"
-      },
-      {
-        "medication": "erythromycin, Ery-Tab",
-        "dosageDetails": "orally / twice daily",
-        "indication": "Macrolide Antimicrobial",
-        "dateStarted": "2/15/2022"
-      }
-    ]
-  },
-  "cognitiveFunction": {
-    "title": "Factors Related to Cognitive Decline",
-    "intro": "This section describes how certain risk factors identified in your\r\n                                                    blood tests may contribute\r\n                                                    to cognitive impairment or memory loss\r\n                                                    \u2014\r\n                                                    and gives you targets to aim for, working with your doctor.\r\n                                                    Discuss other risk factors,\r\n                                                    such as those related to medications and genetics,\r\n                                                    thoroughly with your doctor.",
-    "factors": [
-      {
-        "section": "Multimorbidity",
-        "entries": [
-          {
-            "description": [
-              "Chronic conditions: hypertension; osteoarthritis; likely\r\n                                                            obesity; probable poor sleep quality; possible depression;\r\n                                                            possible kidney disease; possible lipid disorders; and\r\n                                                            possible thrombocytopenia\nHaving multiple\r\n                                                                chronic conditions is associated with a greater risk of\r\n                                                                mild cognitive impairment and dementia."
-            ],
-            "severity": "",
-            "measurement": "",
-            "currentLevel": "",
-            "targetLevel": "",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Homocysteine Concerns",
-        "entries": [
-          {
-            "functionText": "High homocysteine 13 \ufffdmol/L",
-            "description": "\nThis level of homocysteine is above target.\r\n                                                                Elevated levels are associated with atrophy of a key\r\n                                                                area in the brain for memory, called the hippocampus.\r\n                                                                High homocysteine can also facilitate a buildup of\r\n                                                                undesirable components in the brain, known as\r\n                                                                beta-amyloid plaques and tau proteins. Without adequate\r\n                                                                intake of the right B vitamins, homocysteine can\r\n                                                                accumulate and contribute to memory problems.",
-            "severity": "High",
-            "measurement": "homocysteine",
-            "currentLevel": "13 \ufffdmol/L",
-            "targetLevel": "< 7.0 \ufffdmol/L",
-            "image": null
-          },
-          {
-            "functionText": "Very low vitamin B12 139\r\n                                                                            pg/mL",
-            "description": "\nThis very low vitamin B12 level may be linked\r\n                                                                to the break down of myelin (the protective sheath\r\n                                                                around nerve cells), brain cell atrophy, increased\r\n                                                                inflammation, and high homocysteine levels. All of these\r\n                                                                can contribute to memory problems. Further evaluation as\r\n                                                                to its cause is recommended.",
-            "severity": "Very low",
-            "measurement": "vitamin B12",
-            "currentLevel": "139\r\n                                                                            pg/mL",
-            "targetLevel": "\u2265 500 pg/mL",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Insulin Concerns",
-        "entries": [
-          {
-            "functionText": "Very high insulin 15.7\r\n                                                                            \ufffdIU/mL",
-            "description": "\nElevated insulin levels, including the high\r\n                                                                insulin associated with type 2 diabetes, are associated\r\n                                                                with key drivers of cognitive decline: brain\r\n                                                                inflammation, amyloid plaques, and tau tangles. In\r\n                                                                particular, high insulin increases beta-amyloid\r\n                                                                accumulation. This insulin level, far above target, may\r\n                                                                significantly accelerate the progression of cognitive\r\n                                                                decline, so further evaluation is recommended.",
-            "severity": "Very high",
-            "measurement": "insulin",
-            "currentLevel": "15.7\r\n                                                                            \ufffdIU/mL",
-            "targetLevel": "< 4.5 \ufffdIU/mL",
-            "image": null
-          },
-          {
-            "functionText": "Very high HOMA-IR 3.7",
-            "description": "\nThe formula known as the Homeostatic Model\r\n                                                                Assessment for Insulin Resistance (HOMA-IR) estimates\r\n                                                                insulin resistance using your fasting glucose and\r\n                                                                insulin levels. The high level seen here can occur when\r\n                                                                your body cannot readily absorb glucose from the\r\n                                                                bloodstream. The body thus needs higher levels of\r\n                                                                insulin to help glucose enter cells. Insulin resistance\r\n                                                                may contribute to fatigue, and can lead to brain\r\n                                                                inflammation, amyloid plaques, and tau tangles, so\r\n                                                                further evaluation is recommended.",
-            "severity": "Very high",
-            "measurement": "HOMA-IR",
-            "currentLevel": "3.7",
-            "targetLevel": "<\r\n                                                                        1.9",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Blood Sugar Imbalance",
-        "entries": [
-          {
-            "functionText": "Moderately high glucose 96\r\n                                                                            mg/dL",
-            "description": "\nA level of 100 to 125 mg/dL indicates\r\n                                                                impaired fasting glucose, a type of prediabetes. This\r\n                                                                increases the risk of developing type 2 diabetes.\r\n                                                                Insulin resistance can lead to brain inflammation,\r\n                                                                amyloid plaques, and tau tangles \u2014 each a driver\r\n                                                                of cognitive decline.",
-            "severity": "Moderately high",
-            "measurement": "glucose",
-            "currentLevel": "96\r\n                                                                            mg/dL",
-            "targetLevel": "< 91 mg/dL",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Cholesterol Imbalance",
-        "entries": [
-          {
-            "functionText": "Very high total cholesterol 273\r\n                                                                            mg/dL",
-            "description": "\nThis value for total cholesterol is\r\n                                                                considered far above target, which can lead to vascular\r\n                                                                disease. Factors associated with vascular disease are\r\n                                                                associated with cognitive decline in aging, and they\r\n                                                                also include previous heart attacks, narrowing of the\r\n                                                                cerebral arteries, hypertension, and diabetes.",
-            "severity": "Very high",
-            "measurement": "total cholesterol",
-            "currentLevel": "273\r\n                                                                            mg/dL",
-            "targetLevel": "< 225 mg/dL",
-            "image": null
-          },
-          {
-            "functionText": "High LDL cholesterol 183\r\n                                                                            mg/dL",
-            "description": "\nThis level of LDL (known as the bad\r\n                                                                cholesterol) is above target. Increased LDL cholesterol\r\n                                                                levels are linked to increased likelihood of developing\r\n                                                                beta-amyloid plaques, an indicator of Alzheimer's\r\n                                                                disease. Additionally, high LDL can lead to\r\n                                                                atherosclerosis.",
-            "severity": "High",
-            "measurement": "LDL cholesterol",
-            "currentLevel": "183\r\n                                                                            mg/dL",
-            "targetLevel": "< 135 mg/dL",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Abnormal Thyroid Function",
-        "entries": [
-          {
-            "functionText": "Moderately high thyroid stimulating hormone\r\n                                                                            3.0 \ufffdIU/mL",
-            "description": "\nThyroid hormone balance is important for\r\n                                                                synaptic balance and cognitive optimization.\r\n                                                                Hypothyroidism (as indicated by analyzing TSH, T3 and T4\r\n                                                                levels) are known to cause cognitive impairment.\r\n                                                                Clinical guidelines recommend screening for thyroid\r\n                                                                abnormalities in those showing symptoms of cognitive\r\n                                                                impairment.",
-            "severity": "Moderately high",
-            "measurement": "thyroid stimulating hormone",
-            "currentLevel": "3.0 \ufffdIU/mL",
-            "targetLevel": "< 2.2 \ufffdIU/mL",
-            "image": null
-          },
-          {
-            "functionText": "Low free T3 2.3 pg/mL",
-            "description": "\nThyroid hormone balance is important for\r\n                                                                synaptic balance and cognitive optimization. The thyroid\r\n                                                                produces \u201cinactive\u201d thyroxine (T4), which is\r\n                                                                converted into \u201cactive\u201d triiodothyronine\r\n                                                                (T3). T3 helps regulate the body's temperature,\r\n                                                                metabolism, and heart rate. The T3 that doesn't\r\n                                                                otherwise bind to protein is called free T3. Higher\r\n                                                                levels of free T3 are desirable to prevent cognitive\r\n                                                                decline.",
-            "severity": "Low",
-            "measurement": "free T3",
-            "currentLevel": "2.3 pg/mL",
-            "targetLevel": "\u2265\r\n                                                                        2.9 pg/mL",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Essential Metals Imbalance",
-        "entries": [
-          {
-            "functionText": "Low zinc 71 \ufffdg/dL",
-            "description": "\nWithin the brain, zinc plays a key role in\r\n                                                                reducing inflammation. Brain inflammation is often seen\r\n                                                                in those with cognitive decline, and may directly impact\r\n                                                                its progression. This low level may also be an indicator\r\n                                                                of metal toxicity, such as elevated levels of mercury or\r\n                                                                lead in the blood.",
-            "severity": "Low",
-            "measurement": "zinc",
-            "currentLevel": "71 \ufffdg/dL",
-            "targetLevel": "\u2265 90\r\n                                                                        \ufffdg/dL",
-            "image": null
-          },
-          {
-            "functionText": "Very high copper/zinc ratio 1.7",
-            "description": "\nThis ratio between copper and zinc is far\r\n                                                                above target. High copper is linked to a decline of\r\n                                                                cognitive abilities, whereas zinc is neuroprotective and\r\n                                                                has been shown to reduce inflammation and to lower\r\n                                                                copper levels. The relationship between these two is out\r\n                                                                of balance; a target ratio is 1.0 (that is,\r\n                                                                approximately one-to-one), each with a value near\r\n                                                                100.",
-            "severity": "Very high",
-            "measurement": "copper/zinc ratio",
-            "currentLevel": "1.7",
-            "targetLevel": "< 1.2",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Vitamin Imbalance",
-        "entries": [
-          {
-            "functionText": "Low vitamin D 24.8 ng/mL",
-            "description": "\nThose with low vitamin D levels may lose\r\n                                                                memory and thinking abilities faster than those with\r\n                                                                optimal levels. Vitamin D affects bone metabolism,\r\n                                                                reduces inflammation, appears to inhibit the development\r\n                                                                of Alzheimer's disease, and affects cardiovascular\r\n                                                                disease.",
-            "severity": "Low",
-            "measurement": "vitamin D",
-            "currentLevel": "24.8 ng/mL",
-            "targetLevel": "\u2265 55 ng/mL",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Kidney Function",
-        "entries": [
-          {
-            "functionText": "Low eGFR 51 mL/min",
-            "description": "\nThis value for estimated glomerular\r\n                                                                filtration rate (eGFR) is low, indicating possible\r\n                                                                chronic kidney disease (CKD). eGFR signals how well\r\n                                                                kidneys are filtering blood and getting rid of waste. A\r\n                                                                normal reading for eGFR ranges from 90 to 130 ml/min,\r\n                                                                with no protein in the urine. A reading of 60 to 89 may\r\n                                                                indicate a mild decrease in kidney function. Values\r\n                                                                under 60 imply stage 3 CKD.",
-            "severity": "Low",
-            "measurement": "eGFR",
-            "currentLevel": "51 mL/min",
-            "targetLevel": "\u2265 60\r\n                                                                        mL/min",
-            "image": null
-          },
-          {
-            "functionText": "Low creatinine clearance 48.1\r\n                                                                            mL/min",
-            "description": "\nCreatinine clearance (CrCl) is a measure of\r\n                                                                the flow rate through the kidneys, and that rate is\r\n                                                                below target. This indicates possible stage 3 chronic\r\n                                                                kidney disease (CKD). The Gault-Cockcroft equation is\r\n                                                                used to calculate creatinine clearance. It takes four\r\n                                                                values: 1) a person's blood creatinine level, 2)\r\n                                                                their age, 3) their gender, and 4) their body weight\r\n                                                                (unlike eGFR, where weight is not a component).\r\n                                                                Creatinine clearance provides a repeatable measure of\r\n                                                                renal filtering capability which takes all of these\r\n                                                                factors into account.",
-            "severity": "Low",
-            "measurement": "creatinine clearance",
-            "currentLevel": "48.1\r\n                                                                            mL/min",
-            "targetLevel": "\u2265 60 mL/min",
-            "image": null
-          }
-        ]
-      },
-      {
-        "section": "Lifestyle Concerns",
-        "entries": [
-          {
-            "description": [
-              "Sleep apnea\nSleep apnea accelerates cognitive\r\n                                                                decline in two ways: it deprives the brain of necessary\r\n                                                                oxygen, and it reduces the amount and quality of sleep.\r\n                                                                Urgently assure it is addressed thoroughly.",
-              "High sleep duration 9.0 hours/night\n",
-              "Very low exercise duration (how long each session): 5\r\n                                                            minutes/week\n"
-            ],
-            "severity": "",
-            "measurement": "",
-            "currentLevel": "",
-            "targetLevel": "",
-            "image": null
-          }
-        ]
-      }
-    ]
-  },
-  "allergies": {
-    "title": "Known Allergies",
-    "description": "People can have allergies to what they take in (like certain\r\n                                                    medications or foods)\r\n                                                    and to things around them (like pets, pollen, or mold).\r\n                                                    These are the allergies you told us about, if any.\r\n                                                    Let us know if there's anything you'd like to add, change, or\r\n                                                    remove.",
-    "headers": [
-      "Type",
-      "Allergen",
-      "Reaction or Symptom"
-    ],
-    "rows": [
-      {
-        "type": "Medication",
-        "allergen": "codeine",
-        "reaction": ""
-      },
-      {
-        "type": "Medication",
-        "allergen": "fluorometholone",
-        "reaction": ""
-      },
-      {
-        "type": "Non-medication",
-        "allergen": "pollen",
-        "reaction": "runny nose"
-      },
-      {
-        "type": "Non-medication",
-        "allergen": "mold",
-        "reaction": "coughing"
-      }
-    ]
-  },
-  "reportedProblems": {
-    "title": "Current Comorbidities",
-    "description": "Active medical conditions are known as comorbidities. These include\r\n                                                    any diseases, ongoing infections,\r\n                                                    problems that cause you pain, and anything you consider a problem\r\n                                                    you'd discuss with your\r\n                                                    doctor. Let your doctor know if there's anything you'd like to\r\n                                                    add, change, or remove.",
-    "headers": [
-      "Comorbidity",
-      "Date Diagnosed"
-    ],
-    "rows": [
-      {
-        "comorbidity": "Wearing Hearing Aids",
-        "dateDiagnosed": "3/24/2015"
-      },
-      {
-        "comorbidity": "Occasional Abdominal Pain",
-        "dateDiagnosed": "2/15/2022"
-      },
-      {
-        "comorbidity": "Lower Back Pain",
-        "dateDiagnosed": "11/01/2020"
-      }
-    ]
   },
   "dietaryRecommendations": {
     "heading": "Your Dietary Recommendations",
@@ -1154,8 +999,268 @@
       ]
     ]
   },
+  "cognitiveFunction": {
+    "title": "Factors Related to Cognitive Decline",
+    "intro": "This section describes how certain risk factors identified in your\r\n                                                    blood tests may contribute\r\n                                                    to cognitive impairment or memory loss\r\n                                                    \u2014\r\n                                                    and gives you targets to aim for, working with your doctor.\r\n                                                    Discuss other risk factors,\r\n                                                    such as those related to medications and genetics,\r\n                                                    thoroughly with your doctor.",
+    "factors": [
+      {
+        "section": "Multimorbidity",
+        "entries": [
+          {
+            "description": [
+              "Chronic conditions: hypertension; osteoarthritis; likely\r\n                                                            obesity; probable poor sleep quality; possible depression;\r\n                                                            possible kidney disease; possible lipid disorders; and\r\n                                                            possible thrombocytopenia\nHaving multiple\r\n                                                                chronic conditions is associated with a greater risk of\r\n                                                                mild cognitive impairment and dementia."
+            ],
+            "severity": "",
+            "measurement": "",
+            "currentLevel": "",
+            "targetLevel": "",
+            "image": null
+          }
+        ]
+      },
+      {
+        "section": "Homocysteine Concerns",
+        "entries": [
+          {
+            "functionText": "High homocysteine 13 \ufffdmol/L",
+            "description": "\nThis level of homocysteine is above target.\r\n                                                                Elevated levels are associated with atrophy of a key\r\n                                                                area in the brain for memory, called the hippocampus.\r\n                                                                High homocysteine can also facilitate a buildup of\r\n                                                                undesirable components in the brain, known as\r\n                                                                beta-amyloid plaques and tau proteins. Without adequate\r\n                                                                intake of the right B vitamins, homocysteine can\r\n                                                                accumulate and contribute to memory problems.",
+            "severity": "High",
+            "measurement": "homocysteine",
+            "currentLevel": "13 \ufffdmol/L",
+            "targetLevel": "< 7.0 \ufffdmol/L",
+            "image": null
+          },
+          {
+            "functionText": "Very low vitamin B12 139\r\n                                                                            pg/mL",
+            "description": "\nThis very low vitamin B12 level may be linked\r\n                                                                to the break down of myelin (the protective sheath\r\n                                                                around nerve cells), brain cell atrophy, increased\r\n                                                                inflammation, and high homocysteine levels. All of these\r\n                                                                can contribute to memory problems. Further evaluation as\r\n                                                                to its cause is recommended.",
+            "severity": "Very low",
+            "measurement": "vitamin B12",
+            "currentLevel": "139\r\n                                                                            pg/mL",
+            "targetLevel": "\u2265 500 pg/mL",
+            "image": null
+          }
+        ]
+      },
+      {
+        "section": "Insulin Concerns",
+        "entries": [
+          {
+            "functionText": "Very high insulin 15.7\r\n                                                                            \ufffdIU/mL",
+            "description": "\nElevated insulin levels, including the high\r\n                                                                insulin associated with type 2 diabetes, are associated\r\n                                                                with key drivers of cognitive decline: brain\r\n                                                                inflammation, amyloid plaques, and tau tangles. In\r\n                                                                particular, high insulin increases beta-amyloid\r\n                                                                accumulation. This insulin level, far above target, may\r\n                                                                significantly accelerate the progression of cognitive\r\n                                                                decline, so further evaluation is recommended.",
+            "severity": "Very high",
+            "measurement": "insulin",
+            "currentLevel": "15.7\r\n                                                                            \ufffdIU/mL",
+            "targetLevel": "< 4.5 \ufffdIU/mL",
+            "image": null
+          },
+          {
+            "functionText": "Very high HOMA-IR 3.7",
+            "description": "\nThe formula known as the Homeostatic Model\r\n                                                                Assessment for Insulin Resistance (HOMA-IR) estimates\r\n                                                                insulin resistance using your fasting glucose and\r\n                                                                insulin levels. The high level seen here can occur when\r\n                                                                your body cannot readily absorb glucose from the\r\n                                                                bloodstream. The body thus needs higher levels of\r\n                                                                insulin to help glucose enter cells. Insulin resistance\r\n                                                                may contribute to fatigue, and can lead to brain\r\n                                                                inflammation, amyloid plaques, and tau tangles, so\r\n                                                                further evaluation is recommended.",
+            "severity": "Very high",
+            "measurement": "HOMA-IR",
+            "currentLevel": "3.7",
+            "targetLevel": "<\r\n                                                                        1.9",
+            "image": null
+          }
+        ]
+      },
+      {
+        "section": "Blood Sugar Imbalance",
+        "entries": [
+          {
+            "functionText": "Moderately high glucose 96\r\n                                                                            mg/dL",
+            "description": "\nA level of 100 to 125 mg/dL indicates\r\n                                                                impaired fasting glucose, a type of prediabetes. This\r\n                                                                increases the risk of developing type 2 diabetes.\r\n                                                                Insulin resistance can lead to brain inflammation,\r\n                                                                amyloid plaques, and tau tangles \u2014 each a driver\r\n                                                                of cognitive decline.",
+            "severity": "Moderately high",
+            "measurement": "glucose",
+            "currentLevel": "96\r\n                                                                            mg/dL",
+            "targetLevel": "< 91 mg/dL",
+            "image": null
+          }
+        ]
+      },
+      {
+        "section": "Cholesterol Imbalance",
+        "entries": [
+          {
+            "functionText": "Very high total cholesterol 273\r\n                                                                            mg/dL",
+            "description": "\nThis value for total cholesterol is\r\n                                                                considered far above target, which can lead to vascular\r\n                                                                disease. Factors associated with vascular disease are\r\n                                                                associated with cognitive decline in aging, and they\r\n                                                                also include previous heart attacks, narrowing of the\r\n                                                                cerebral arteries, hypertension, and diabetes.",
+            "severity": "Very high",
+            "measurement": "total cholesterol",
+            "currentLevel": "273\r\n                                                                            mg/dL",
+            "targetLevel": "< 225 mg/dL",
+            "image": null
+          },
+          {
+            "functionText": "High LDL cholesterol 183\r\n                                                                            mg/dL",
+            "description": "\nThis level of LDL (known as the bad\r\n                                                                cholesterol) is above target. Increased LDL cholesterol\r\n                                                                levels are linked to increased likelihood of developing\r\n                                                                beta-amyloid plaques, an indicator of Alzheimer's\r\n                                                                disease. Additionally, high LDL can lead to\r\n                                                                atherosclerosis.",
+            "severity": "High",
+            "measurement": "LDL cholesterol",
+            "currentLevel": "183\r\n                                                                            mg/dL",
+            "targetLevel": "< 135 mg/dL",
+            "image": null
+          }
+        ]
+      },
+      {
+        "section": "Abnormal Thyroid Function",
+        "entries": [
+          {
+            "functionText": "Moderately high thyroid stimulating hormone\r\n                                                                            3.0 \ufffdIU/mL",
+            "description": "\nThyroid hormone balance is important for\r\n                                                                synaptic balance and cognitive optimization.\r\n                                                                Hypothyroidism (as indicated by analyzing TSH, T3 and T4\r\n                                                                levels) are known to cause cognitive impairment.\r\n                                                                Clinical guidelines recommend screening for thyroid\r\n                                                                abnormalities in those showing symptoms of cognitive\r\n                                                                impairment.",
+            "severity": "Moderately high",
+            "measurement": "thyroid stimulating hormone",
+            "currentLevel": "3.0 \ufffdIU/mL",
+            "targetLevel": "< 2.2 \ufffdIU/mL",
+            "image": null
+          },
+          {
+            "functionText": "Low free T3 2.3 pg/mL",
+            "description": "\nThyroid hormone balance is important for\r\n                                                                synaptic balance and cognitive optimization. The thyroid\r\n                                                                produces \u201cinactive\u201d thyroxine (T4), which is\r\n                                                                converted into \u201cactive\u201d triiodothyronine\r\n                                                                (T3). T3 helps regulate the body's temperature,\r\n                                                                metabolism, and heart rate. The T3 that doesn't\r\n                                                                otherwise bind to protein is called free T3. Higher\r\n                                                                levels of free T3 are desirable to prevent cognitive\r\n                                                                decline.",
+            "severity": "Low",
+            "measurement": "free T3",
+            "currentLevel": "2.3 pg/mL",
+            "targetLevel": "\u2265\r\n                                                                        2.9 pg/mL",
+            "image": null
+          }
+        ]
+      },
+      {
+        "section": "Essential Metals Imbalance",
+        "entries": [
+          {
+            "functionText": "Low zinc 71 \ufffdg/dL",
+            "description": "\nWithin the brain, zinc plays a key role in\r\n                                                                reducing inflammation. Brain inflammation is often seen\r\n                                                                in those with cognitive decline, and may directly impact\r\n                                                                its progression. This low level may also be an indicator\r\n                                                                of metal toxicity, such as elevated levels of mercury or\r\n                                                                lead in the blood.",
+            "severity": "Low",
+            "measurement": "zinc",
+            "currentLevel": "71 \ufffdg/dL",
+            "targetLevel": "\u2265 90\r\n                                                                        \ufffdg/dL",
+            "image": null
+          },
+          {
+            "functionText": "Very high copper/zinc ratio 1.7",
+            "description": "\nThis ratio between copper and zinc is far\r\n                                                                above target. High copper is linked to a decline of\r\n                                                                cognitive abilities, whereas zinc is neuroprotective and\r\n                                                                has been shown to reduce inflammation and to lower\r\n                                                                copper levels. The relationship between these two is out\r\n                                                                of balance; a target ratio is 1.0 (that is,\r\n                                                                approximately one-to-one), each with a value near\r\n                                                                100.",
+            "severity": "Very high",
+            "measurement": "copper/zinc ratio",
+            "currentLevel": "1.7",
+            "targetLevel": "< 1.2",
+            "image": null
+          }
+        ]
+      },
+      {
+        "section": "Vitamin Imbalance",
+        "entries": [
+          {
+            "functionText": "Low vitamin D 24.8 ng/mL",
+            "description": "\nThose with low vitamin D levels may lose\r\n                                                                memory and thinking abilities faster than those with\r\n                                                                optimal levels. Vitamin D affects bone metabolism,\r\n                                                                reduces inflammation, appears to inhibit the development\r\n                                                                of Alzheimer's disease, and affects cardiovascular\r\n                                                                disease.",
+            "severity": "Low",
+            "measurement": "vitamin D",
+            "currentLevel": "24.8 ng/mL",
+            "targetLevel": "\u2265 55 ng/mL",
+            "image": null
+          }
+        ]
+      },
+      {
+        "section": "Kidney Function",
+        "entries": [
+          {
+            "functionText": "Low eGFR 51 mL/min",
+            "description": "\nThis value for estimated glomerular\r\n                                                                filtration rate (eGFR) is low, indicating possible\r\n                                                                chronic kidney disease (CKD). eGFR signals how well\r\n                                                                kidneys are filtering blood and getting rid of waste. A\r\n                                                                normal reading for eGFR ranges from 90 to 130 ml/min,\r\n                                                                with no protein in the urine. A reading of 60 to 89 may\r\n                                                                indicate a mild decrease in kidney function. Values\r\n                                                                under 60 imply stage 3 CKD.",
+            "severity": "Low",
+            "measurement": "eGFR",
+            "currentLevel": "51 mL/min",
+            "targetLevel": "\u2265 60\r\n                                                                        mL/min",
+            "image": null
+          },
+          {
+            "functionText": "Low creatinine clearance 48.1\r\n                                                                            mL/min",
+            "description": "\nCreatinine clearance (CrCl) is a measure of\r\n                                                                the flow rate through the kidneys, and that rate is\r\n                                                                below target. This indicates possible stage 3 chronic\r\n                                                                kidney disease (CKD). The Gault-Cockcroft equation is\r\n                                                                used to calculate creatinine clearance. It takes four\r\n                                                                values: 1) a person's blood creatinine level, 2)\r\n                                                                their age, 3) their gender, and 4) their body weight\r\n                                                                (unlike eGFR, where weight is not a component).\r\n                                                                Creatinine clearance provides a repeatable measure of\r\n                                                                renal filtering capability which takes all of these\r\n                                                                factors into account.",
+            "severity": "Low",
+            "measurement": "creatinine clearance",
+            "currentLevel": "48.1\r\n                                                                            mL/min",
+            "targetLevel": "\u2265 60 mL/min",
+            "image": null
+          }
+        ]
+      },
+      {
+        "section": "Lifestyle Concerns",
+        "entries": [
+          {
+            "description": [
+              "Sleep apnea\nSleep apnea accelerates cognitive\r\n                                                                decline in two ways: it deprives the brain of necessary\r\n                                                                oxygen, and it reduces the amount and quality of sleep.\r\n                                                                Urgently assure it is addressed thoroughly.",
+              "High sleep duration 9.0 hours/night\n",
+              "Very low exercise duration (how long each session): 5\r\n                                                            minutes/week\n"
+            ],
+            "severity": "",
+            "measurement": "",
+            "currentLevel": "",
+            "targetLevel": "",
+            "image": null
+          }
+        ]
+      }
+    ]
+  },
+  "knownMedicalConditions": {
+    "title": "Known Medical Conditions"
+  },
+  "reportedProblems": {
+    "heading": "Current Comorbidities",
+    "description": "Active medical conditions are known as comorbidities. These include\r\n                                                    any diseases, ongoing infections,\r\n                                                    problems that cause you pain, and anything you consider a problem\r\n                                                    you'd discuss with your\r\n                                                    doctor. Let your doctor know if there's anything you'd like to\r\n                                                    add, change, or remove.",
+    "headers": [
+      "Comorbidity",
+      "Date Diagnosed"
+    ],
+    "rows": [
+      {
+        "comorbidity": "Wearing Hearing Aids",
+        "dateDiagnosed": "3/24/2015"
+      },
+      {
+        "comorbidity": "Occasional Abdominal Pain",
+        "dateDiagnosed": "2/15/2022"
+      },
+      {
+        "comorbidity": "Lower Back Pain",
+        "dateDiagnosed": "11/01/2020"
+      }
+    ]
+  },
+  "allergies": {
+    "heading": "Known Allergies",
+    "description": "People can have allergies to what they take in (like certain\r\n                                                    medications or foods)\r\n                                                    and to things around them (like pets, pollen, or mold).\r\n                                                    These are the allergies you told us about, if any.\r\n                                                    Let us know if there's anything you'd like to add, change, or\r\n                                                    remove.",
+    "headers": [
+      "Type",
+      "Allergen",
+      "Reaction or Symptom"
+    ],
+    "rows": [
+      {
+        "type": "Medication",
+        "allergen": "codeine",
+        "reaction": ""
+      },
+      {
+        "type": "Medication",
+        "allergen": "fluorometholone",
+        "reaction": ""
+      },
+      {
+        "type": "Non-medication",
+        "allergen": "pollen",
+        "reaction": "runny nose"
+      },
+      {
+        "type": "Non-medication",
+        "allergen": "mold",
+        "reaction": "coughing"
+      }
+    ]
+  },
   "footnotes": {
-    "heading": "Footnotes",
+    "title": "Footnotes",
     "footnotes": [
       "Yu, Jin-Tai, Wei Xu, et al .\r\n                                                                \"Evidence\u2013based prevention of\r\n                                                                Alzheimer's disease: systematic review and\r\n                                                                meta\u2013analysis of 243 observational prospective\r\n                                                                studies and 153 randomised controlled trials.\" Journal of Neurology, Neurosurgery &\r\n                                                                    Psychiatry 91, no. 11 (2020): 1201-1209.",
       "Livingston, Gill, Jonathan Huntley, et al .\r\n                                                                \"Dementia prevention, intervention, and care: 2024\r\n                                                                report of the Lancet standing Commission.\" The\r\n                                                                    Lancet 404, no. 10452 (2024): 572-628.",

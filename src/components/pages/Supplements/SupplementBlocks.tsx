@@ -14,7 +14,7 @@ import { forwardRef } from "react";
 export const SupplementsIntroBlock = forwardRef<HTMLDivElement, BlockProps>(
   ({ data, blockId, setRef }, ref) => (
     <div ref={setRef ? setRef(blockId) : ref}>
-      <h2 className="mb-4">{data.title}</h2>
+      <h2 className="mb-4">{data.heading}</h2>
 
       {/* Introduction */}
       <p className="text-xs mb-2">
