@@ -10,7 +10,7 @@ import {
   MedicationTableHeader,
 } from "./ActionPlanBlocks";
 import type { Report } from "@/ParticipantReport";
-import { createCurrentMedicationBlocks } from "../CurrentMedication/CurrentMedicationPlan";
+import { createCurrentMedicationBlocks, tableConfigs as currentMedTableConfigs } from "../CurrentMedication/CurrentMedicationPlan";
 import {
   CurrentMedicationIntroBlock,
   CurrentMedicationRow,
@@ -86,6 +86,7 @@ const ActionPlan = ({ data }: { data: any }) => {
       rowTypes: ["medication-row"],
       headerId: "medicationHeader",
     },
+    ...currentMedTableConfigs,
   ];
 
   return (
