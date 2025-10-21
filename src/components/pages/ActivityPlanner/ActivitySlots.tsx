@@ -1,47 +1,19 @@
 import ActivitySlot from "./ActivitySlot";
 
-const slots = [
-  {
-    time: "08:00 AM",
-    title: "Physiotherapy Exercise",
-    frequency: "Daily",
-  },
-  {
-    time: "09:30 AM",
-    category: "Exercise",
-    categoryColor: "infoEmphasis",
-    frequency: "Daily",
-    description: "Any one activity from Exercise",
-  },
-  {
-    time: "12:30 PM",
-    category: "Mental",
-    categoryColor: "successEmphasis",
-    frequency: "Alternating Days",
-    description: "Any one activity from Mental",
-  },
-  {
-    time: "05:00 PM",
-    category: "Relaxation",
-    categoryColor: "warning",
-    frequency: "Daily",
-    description: "Any five activities from Relaxation",
-  },
-  {
-    time: "07:00 PM",
-    category: "Group B",
-    categoryColor: "blueEmphasis",
-    frequency: "Fridays",
-    description: "Any one activity from Group B",
-  },
-  {
-    time: "09:30 PM",
-    title: "Physiotherapy Exercise",
-    frequency: "Daily",
-  },
-];
+export type ActivitySlotType = {
+  time: string;
+  title?: string;
+  category?: string;
+  categoryColor?: string;
+  frequency: string;
+  description?: string;
+};
 
-export default function ActivitySlots() {
+export default function ActivitySlots({
+  slots,
+}: {
+  slots: ActivitySlotType[];
+}) {
   return (
     <div>
       <div className="border border-gray-300">

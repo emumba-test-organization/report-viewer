@@ -32,6 +32,7 @@ import type { MedicationItemData } from "./components/pages/MedicationPlanner/ty
 import type { HeaderData } from "./components/shared/Header";
 import { Cover } from "./components/pages/Cover";
 import DietaryRecommendationsModel from "./components/pages/DietaryRecommendations/DietaryRecommendationsModel";
+import type { ActivityPlannerData } from "./components/pages/ActivityPlanner/ActivityPlanner";
 
 export type Report = {
   header: HeaderData;
@@ -51,6 +52,7 @@ export type Report = {
   reportedProblems: ComorbiditiesData;
   footnotes: FootnotesData;
   medicationPlanner: MedicationItemData;
+  activityPlanner: ActivityPlannerData;
 };
 
 function ParticipantReport() {
@@ -62,7 +64,9 @@ function ParticipantReport() {
     fetch("/report_participant.json")
       .then((res) => {
         if (!res.ok) {
-          throw new Error(`Failed to fetch report: ${res.status} ${res.statusText}`);
+          throw new Error(
+            `Failed to fetch report: ${res.status} ${res.statusText}`
+          );
         }
         return res.json();
       })
@@ -99,7 +103,7 @@ function ParticipantReport() {
         {/* <MedicationPlanner /> */}
         {/* <MedicationChecklist /> */}
         <GoalTracker />
-        <ActivityPlanner />
+        <ActivityPlanner data={report?.activityPlanner} />
       </div>
     </ReportProvider>
   );

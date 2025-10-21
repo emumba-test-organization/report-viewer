@@ -21,6 +21,8 @@ type Props = {
 const timeSlots = ["Morning", "Afternoon", "Evening"];
 
 const MedicationPlanner = ({ data = schedule }: Props) => {
+  const { title, medications } = data;
+  
   const timeSlotIcons: Record<(typeof timeSlots)[number], JSX.Element> = {
     Morning: <Sunrise className="w-4 h-4" />,
     Afternoon: <SunMedium className="w-4 h-4" />,
@@ -37,7 +39,7 @@ const MedicationPlanner = ({ data = schedule }: Props) => {
   return (
     <div className="break-before-page m-4 w-full print-landscape">
       <h2 className="text-3xl font-bold text-gray-900 mb-6">
-        Your Medication Planner
+        {title || "Medication Planner"}
       </h2>
       <table
         border={1}
@@ -46,7 +48,7 @@ const MedicationPlanner = ({ data = schedule }: Props) => {
       >
         <thead>
           <tr>
-            {data.map((day) => (
+            {medications.map((day) => (
               <th
                 key={day.date}
                 className="bg-neutral-200 border-r-1 border-neutral-300 text-left p-2"
@@ -77,7 +79,7 @@ const MedicationPlanner = ({ data = schedule }: Props) => {
               {/* <td>
                 <strong>{slot}</strong>
               </td> */}
-              {data.map((day) => (
+              {medications.map((day) => (
                 <td key={day.date + slot} className="border-1">
                   <div className="flex items-center gap-1 font-semibold text-xs p-1 bg-neutral-100 border-b border-neutral-200">
                     {timeSlotIcons[slot]} {slot}

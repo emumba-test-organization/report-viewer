@@ -37,13 +37,18 @@ export const CognitionFactorRow = forwardRef<
   const unit = targetMatch ? targetMatch[3] : "";
   const spectrumRef = useRef<HTMLDivElement>(null);
 
-  console.log("spectrum ref: ", spectrumRef)
+  console.log("spectrum ref: ", spectrumRef);
   return (
     <div
       ref={setRef ? setRef(blockId) : ref}
-      className={`${entry.className} bg-white p-4 border-2 ${isLastSection ? "rounded-b-2" : "border-b-0"}`}
+      className={`${entry.className} bg-white p-4 border-2 ${
+        isLastSection ? "rounded-b-2" : "border-b-0"
+      }`}
     >
-      <div className="relative grid grid-cols-[1fr_1fr] items-start gap-1 mb-1" ref={spectrumRef}>
+      <div
+        className="relative grid grid-cols-[1fr_1fr] items-start gap-1 mb-1"
+        ref={spectrumRef}
+      >
         {entry.currentLevel ||
         entry.severity ||
         entry.measurement ||
@@ -99,13 +104,26 @@ export const CognitionFactorRow = forwardRef<
               targetLabel={`Target ${sign || ""} ${target} ${unit}`}
               veryHighLabel="Very High"
               // width={400}
-              width={spectrumRef.current ? spectrumRef.current.offsetWidth / 2 : 300}
+              width={
+                spectrumRef.current ? spectrumRef.current.offsetWidth / 2 : 300
+              }
               height={70}
             />
           </div>
         ) : null}
       </div>
-      <p className="text-sm">{entry.description}</p>
+      {Array.isArray(entry.description) &&
+      entry.description.length > 0 ? (
+        <ul className="list-disc pl-5 space-y-1">
+          {entry.description.map((desc: string, index: number) => (
+            <li key={index} className="text-sm">
+              {desc}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="text-sm">{entry.description}</p>
+      )}
     </div>
   );
 });

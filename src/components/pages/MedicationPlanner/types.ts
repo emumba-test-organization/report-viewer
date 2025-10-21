@@ -16,7 +16,15 @@ export type MedicationPlannerItem = {
   schedule: MedicationSchedule;
 };
 
-export type MedicationPlannerData = MedicationPlannerItem[];
+export type MedicationPlannerData = {
+  title: string;
+  medications: MedicationPlannerItem[];
+};
+
+export type MedicationRoutineData = {
+  title: string;
+  medications: MedicationItemData;
+};
 
 type MedicationItemType = {
   date: string;

@@ -258,8 +258,8 @@ export const RecommendationsHeaderBlock = forwardRef<
               key={index}
               className={`[&]:p-3 ${
                 index === 0
-                  ? "border-l-success border-l"
-                  : "last:border-r border-r-success border-r"
+                  ? "[&]:first:border-l-success border-l"
+                  : "last:border-r [&]:last:border-r-success border-r"
               }`}
             >
               {header}
@@ -284,8 +284,8 @@ export const RecommendationsHeaderBlock = forwardRef<
                 key={index}
                 className={`[&]:p-3 ${
                   index === 0
-                    ? "border-l-danger border-l-1"
-                    : "last:border-r border-r-danger border-r-1"
+                    ? "[&]:first:border-l-danger border-l-1"
+                    : "last:border-r [&]:last:border-r-danger border-r-1"
                 }`}
               >
                 {header}

@@ -39,7 +39,7 @@ const Preface = ({ data }: { data: PrefaceData }) => {
 
         {/* About RestoreU Method */}
         <div>
-          <h2 className="text-lg font-semibold mb-4 border-b-2 border-heading-underline pb-1">
+          <h2 className="mb-4">
             About RestoreU Method
           </h2>
           <div className="space-y-4 text-xs leading-relaxed">

@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import type { MedicationItemData } from "./types";
+import type { MedicationItemData, MedicationPlannerData, MedicationRoutineData } from "./types";
 import {
   PaginationWrapper,
   type BlockConfig,
@@ -60,8 +60,9 @@ function transformMedicineSchedule(medicineData: MedicationItemData) {
   return result;
 }
 
-const MedicationPlannerPage = ({ data }: { data: any }) => {
-  const createHealthBlocks = (data: any): BlockConfig[] => {
+const MedicationPlannerPage = (props: { data: MedicationRoutineData }) => {
+  const { data: { medications: data } } = props;
+  const createHealthBlocks = (data: MedicationItemData): BlockConfig[] => {
     const blocks: BlockConfig[] = [];
 
     // Add the initial dates header

@@ -40,13 +40,6 @@
     }
   },
   "healthReport": {
-    "header": {
-      "name": "Doe, Jane A.",
-      "createdOn": "11/02/2024",
-      "doctor": "Virginia N. Smith, M.D.",
-      "clinic": "Precision Medical Center",
-      "client": "uMETHOD"
-    },
     "title": "Current Status",
     "currentStatus": {
       "overview": {
@@ -620,7 +613,9 @@
         "section": "Multimorbidity",
         "entries": [
           {
-            "description": "Chronic conditions: hypertension; osteoarthritis; likely\r\n                                                            obesity; probable poor sleep quality; possible depression;\r\n                                                            possible kidney disease; possible lipid disorders; and\r\n                                                            possible thrombocytopenia\nHaving multiple\r\n                                                                chronic conditions is associated with a greater risk of\r\n                                                                mild cognitive impairment and dementia.",
+            "description": [
+              "Chronic conditions: hypertension; osteoarthritis; likely\r\n                                                            obesity; probable poor sleep quality; possible depression;\r\n                                                            possible kidney disease; possible lipid disorders; and\r\n                                                            possible thrombocytopenia\nHaving multiple\r\n                                                                chronic conditions is associated with a greater risk of\r\n                                                                mild cognitive impairment and dementia."
+            ],
             "severity": "",
             "measurement": "",
             "currentLevel": "",
@@ -633,6 +628,7 @@
         "section": "Homocysteine Concerns",
         "entries": [
           {
+            "functionText": "High homocysteine 13 \ufffdmol/L",
             "description": "\nThis level of homocysteine is above target.\r\n                                                                Elevated levels are associated with atrophy of a key\r\n                                                                area in the brain for memory, called the hippocampus.\r\n                                                                High homocysteine can also facilitate a buildup of\r\n                                                                undesirable components in the brain, known as\r\n                                                                beta-amyloid plaques and tau proteins. Without adequate\r\n                                                                intake of the right B vitamins, homocysteine can\r\n                                                                accumulate and contribute to memory problems.",
             "severity": "High",
             "measurement": "homocysteine",
@@ -641,6 +637,7 @@
             "image": null
           },
           {
+            "functionText": "Very low vitamin B12 139\r\n                                                                            pg/mL",
             "description": "\nThis very low vitamin B12 level may be linked\r\n                                                                to the break down of myelin (the protective sheath\r\n                                                                around nerve cells), brain cell atrophy, increased\r\n                                                                inflammation, and high homocysteine levels. All of these\r\n                                                                can contribute to memory problems. Further evaluation as\r\n                                                                to its cause is recommended.",
             "severity": "Very low",
             "measurement": "vitamin B12",
@@ -654,6 +651,7 @@
         "section": "Insulin Concerns",
         "entries": [
           {
+            "functionText": "Very high insulin 15.7\r\n                                                                            \ufffdIU/mL",
             "description": "\nElevated insulin levels, including the high\r\n                                                                insulin associated with type 2 diabetes, are associated\r\n                                                                with key drivers of cognitive decline: brain\r\n                                                                inflammation, amyloid plaques, and tau tangles. In\r\n                                                                particular, high insulin increases beta-amyloid\r\n                                                                accumulation. This insulin level, far above target, may\r\n                                                                significantly accelerate the progression of cognitive\r\n                                                                decline, so further evaluation is recommended.",
             "severity": "Very high",
             "measurement": "insulin",
@@ -662,6 +660,7 @@
             "image": null
           },
           {
+            "functionText": "Very high HOMA-IR 3.7",
             "description": "\nThe formula known as the Homeostatic Model\r\n                                                                Assessment for Insulin Resistance (HOMA-IR) estimates\r\n                                                                insulin resistance using your fasting glucose and\r\n                                                                insulin levels. The high level seen here can occur when\r\n                                                                your body cannot readily absorb glucose from the\r\n                                                                bloodstream. The body thus needs higher levels of\r\n                                                                insulin to help glucose enter cells. Insulin resistance\r\n                                                                may contribute to fatigue, and can lead to brain\r\n                                                                inflammation, amyloid plaques, and tau tangles, so\r\n                                                                further evaluation is recommended.",
             "severity": "Very high",
             "measurement": "HOMA-IR",
@@ -675,6 +674,7 @@
         "section": "Blood Sugar Imbalance",
         "entries": [
           {
+            "functionText": "Moderately high glucose 96\r\n                                                                            mg/dL",
             "description": "\nA level of 100 to 125 mg/dL indicates\r\n                                                                impaired fasting glucose, a type of prediabetes. This\r\n                                                                increases the risk of developing type 2 diabetes.\r\n                                                                Insulin resistance can lead to brain inflammation,\r\n                                                                amyloid plaques, and tau tangles \u2014 each a driver\r\n                                                                of cognitive decline.",
             "severity": "Moderately high",
             "measurement": "glucose",
@@ -688,6 +688,7 @@
         "section": "Cholesterol Imbalance",
         "entries": [
           {
+            "functionText": "Very high total cholesterol 273\r\n                                                                            mg/dL",
             "description": "\nThis value for total cholesterol is\r\n                                                                considered far above target, which can lead to vascular\r\n                                                                disease. Factors associated with vascular disease are\r\n                                                                associated with cognitive decline in aging, and they\r\n                                                                also include previous heart attacks, narrowing of the\r\n                                                                cerebral arteries, hypertension, and diabetes.",
             "severity": "Very high",
             "measurement": "total cholesterol",
@@ -696,6 +697,7 @@
             "image": null
           },
           {
+            "functionText": "High LDL cholesterol 183\r\n                                                                            mg/dL",
             "description": "\nThis level of LDL (known as the bad\r\n                                                                cholesterol) is above target. Increased LDL cholesterol\r\n                                                                levels are linked to increased likelihood of developing\r\n                                                                beta-amyloid plaques, an indicator of Alzheimer's\r\n                                                                disease. Additionally, high LDL can lead to\r\n                                                                atherosclerosis.",
             "severity": "High",
             "measurement": "LDL cholesterol",
@@ -709,6 +711,7 @@
         "section": "Abnormal Thyroid Function",
         "entries": [
           {
+            "functionText": "Moderately high thyroid stimulating hormone\r\n                                                                            3.0 \ufffdIU/mL",
             "description": "\nThyroid hormone balance is important for\r\n                                                                synaptic balance and cognitive optimization.\r\n                                                                Hypothyroidism (as indicated by analyzing TSH, T3 and T4\r\n                                                                levels) are known to cause cognitive impairment.\r\n                                                                Clinical guidelines recommend screening for thyroid\r\n                                                                abnormalities in those showing symptoms of cognitive\r\n                                                                impairment.",
             "severity": "Moderately high",
             "measurement": "thyroid stimulating hormone",
@@ -717,6 +720,7 @@
             "image": null
           },
           {
+            "functionText": "Low free T3 2.3 pg/mL",
             "description": "\nThyroid hormone balance is important for\r\n                                                                synaptic balance and cognitive optimization. The thyroid\r\n                                                                produces \u201cinactive\u201d thyroxine (T4), which is\r\n                                                                converted into \u201cactive\u201d triiodothyronine\r\n                                                                (T3). T3 helps regulate the body's temperature,\r\n                                                                metabolism, and heart rate. The T3 that doesn't\r\n                                                                otherwise bind to protein is called free T3. Higher\r\n                                                                levels of free T3 are desirable to prevent cognitive\r\n                                                                decline.",
             "severity": "Low",
             "measurement": "free T3",
@@ -730,6 +734,7 @@
         "section": "Essential Metals Imbalance",
         "entries": [
           {
+            "functionText": "Low zinc 71 \ufffdg/dL",
             "description": "\nWithin the brain, zinc plays a key role in\r\n                                                                reducing inflammation. Brain inflammation is often seen\r\n                                                                in those with cognitive decline, and may directly impact\r\n                                                                its progression. This low level may also be an indicator\r\n                                                                of metal toxicity, such as elevated levels of mercury or\r\n                                                                lead in the blood.",
             "severity": "Low",
             "measurement": "zinc",
@@ -738,6 +743,7 @@
             "image": null
           },
           {
+            "functionText": "Very high copper/zinc ratio 1.7",
             "description": "\nThis ratio between copper and zinc is far\r\n                                                                above target. High copper is linked to a decline of\r\n                                                                cognitive abilities, whereas zinc is neuroprotective and\r\n                                                                has been shown to reduce inflammation and to lower\r\n                                                                copper levels. The relationship between these two is out\r\n                                                                of balance; a target ratio is 1.0 (that is,\r\n                                                                approximately one-to-one), each with a value near\r\n                                                                100.",
             "severity": "Very high",
             "measurement": "copper/zinc ratio",
@@ -751,6 +757,7 @@
         "section": "Vitamin Imbalance",
         "entries": [
           {
+            "functionText": "Low vitamin D 24.8 ng/mL",
             "description": "\nThose with low vitamin D levels may lose\r\n                                                                memory and thinking abilities faster than those with\r\n                                                                optimal levels. Vitamin D affects bone metabolism,\r\n                                                                reduces inflammation, appears to inhibit the development\r\n                                                                of Alzheimer's disease, and affects cardiovascular\r\n                                                                disease.",
             "severity": "Low",
             "measurement": "vitamin D",
@@ -764,6 +771,7 @@
         "section": "Kidney Function",
         "entries": [
           {
+            "functionText": "Low eGFR 51 mL/min",
             "description": "\nThis value for estimated glomerular\r\n                                                                filtration rate (eGFR) is low, indicating possible\r\n                                                                chronic kidney disease (CKD). eGFR signals how well\r\n                                                                kidneys are filtering blood and getting rid of waste. A\r\n                                                                normal reading for eGFR ranges from 90 to 130 ml/min,\r\n                                                                with no protein in the urine. A reading of 60 to 89 may\r\n                                                                indicate a mild decrease in kidney function. Values\r\n                                                                under 60 imply stage 3 CKD.",
             "severity": "Low",
             "measurement": "eGFR",
@@ -772,6 +780,7 @@
             "image": null
           },
           {
+            "functionText": "Low creatinine clearance 48.1\r\n                                                                            mL/min",
             "description": "\nCreatinine clearance (CrCl) is a measure of\r\n                                                                the flow rate through the kidneys, and that rate is\r\n                                                                below target. This indicates possible stage 3 chronic\r\n                                                                kidney disease (CKD). The Gault-Cockcroft equation is\r\n                                                                used to calculate creatinine clearance. It takes four\r\n                                                                values: 1) a person's blood creatinine level, 2)\r\n                                                                their age, 3) their gender, and 4) their body weight\r\n                                                                (unlike eGFR, where weight is not a component).\r\n                                                                Creatinine clearance provides a repeatable measure of\r\n                                                                renal filtering capability which takes all of these\r\n                                                                factors into account.",
             "severity": "Low",
             "measurement": "creatinine clearance",
@@ -785,23 +794,11 @@
         "section": "Lifestyle Concerns",
         "entries": [
           {
-            "description": "Sleep apnea\nSleep apnea accelerates cognitive\r\n                                                                decline in two ways: it deprives the brain of necessary\r\n                                                                oxygen, and it reduces the amount and quality of sleep.\r\n                                                                Urgently assure it is addressed thoroughly.",
-            "severity": "",
-            "measurement": "",
-            "currentLevel": "",
-            "targetLevel": "",
-            "image": null
-          },
-          {
-            "description": "High sleep duration 9.0 hours/night\n",
-            "severity": "",
-            "measurement": "",
-            "currentLevel": "",
-            "targetLevel": "",
-            "image": null
-          },
-          {
-            "description": "Very low exercise duration (how long each session): 5\r\n                                                            minutes/week\n",
+            "description": [
+              "Sleep apnea\nSleep apnea accelerates cognitive\r\n                                                                decline in two ways: it deprives the brain of necessary\r\n                                                                oxygen, and it reduces the amount and quality of sleep.\r\n                                                                Urgently assure it is addressed thoroughly.",
+              "High sleep duration 9.0 hours/night\n",
+              "Very low exercise duration (how long each session): 5\r\n                                                            minutes/week\n"
+            ],
             "severity": "",
             "measurement": "",
             "currentLevel": "",
@@ -1178,269 +1175,687 @@
       "Farney, Robert J., Brandon S. Walker, Robert M. Farney,\r\n                                                                Gregory L. Snow, and James M. Walker. \"The\r\n                                                                STOP\u2013Bang equivalent model and prediction of\r\n                                                                severity of obstructive sleep apnea: relation to\r\n                                                                polysomnographic measurements of the apnea/hypopnea\r\n                                                                index.\" Journal of clinical sleep medicine:\r\n                                                                    JCSM: official publication of the American Academy\r\n                                                                    of Sleep Medicine 7, no. 5 (2011): 459."
     ]
   },
-  "medicationPlanner": [
-    {
+  "goalTracker": {
+    "title": "Your Goal Tracker",
+    "goals": []
+  },
+  "medicationPlanner": {
+    "title": "Your Medication Planner",
+    "medications": [
+      {
         "date": "2024-07-09",
         "medicines": {
-            "morning": ["Methylcobalaminsssssssssssssssssssssss", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri...", "Metformin", "Duloxetine (Cymbalta)"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "ooga", "Lecanemab", "Fish Oil (Omega-3)", "CoQ10 (Ubiquinol)", "Magnesium (Citrate)", "Zinc (Picolinate)", "Curcumin (Meriva)", "NAC (N-Acetyl Cysteine)", "Probiotic", "Vitamin B Complex", "Vitamin C (Ascorbic Acid)"],
-            "evening": [
-              "Alpha-lipoic acid (ALA)",
-              "Berberine",
-              "Magnesium glycinate",
-              "Coenzyme Q10 (CoQ10)",
-              "Melatonin",
-              "Ashwagandha",
-              "Valerian root",
-              "Omega-3 fatty acids (Fish Oil)",
-              "Vitamin D3",
-              "Vitamin B12",
-              "Calcium citrate",
-              "Zinc picolinate",
-              "Turmeric (Curcumin)",
-              "GABA",
-              "L-Theanine",
-              "5-HTP",
-              "N-Acetylcysteine (NAC)",
-              "Resveratrol",
-              "Milk thistle",
-              "Chromium picolinate",
-              "Probiotic blend",
-              "Evening primrose oil"
-            ]
+          "morning": [
+            "Methylcobalamins",
+            "Levothyroxine",
+            "Resveratrol",
+            "Chlorpheniramine / Chlor-Tri...",
+            "Metformin",
+            "Duloxetine (Cymbalta)"
+          ],
+          "afternoon": [
+            "Vitamin D3/K2 (cholecalciferol...)",
+            "ooga",
+            "Lecanemab",
+            "Fish Oil (Omega-3)",
+            "CoQ10 (Ubiquinol)",
+            "Magnesium (Citrate)",
+            "Zinc (Picolinate)",
+            "Curcumin (Meriva)",
+            "NAC (N-Acetyl Cysteine)",
+            "Probiotic",
+            "Vitamin B Complex",
+            "Vitamin C (Ascorbic Acid)"
+          ],
+          "evening": [
+            "Alpha-lipoic acid (ALA)",
+            "Berberine",
+            "Magnesium glycinate",
+            "Coenzyme Q10 (CoQ10)",
+            "Melatonin",
+            "Ashwagandha",
+            "Valerian root",
+            "Omega-3 fatty acids (Fish Oil)",
+            "Vitamin D3",
+            "Vitamin B12",
+            "Calcium citrate",
+            "Zinc picolinate",
+            "Turmeric (Curcumin)",
+            "GABA",
+            "L-Theanine",
+            "5-HTP",
+            "N-Acetylcysteine (NAC)",
+            "Resveratrol",
+            "Milk thistle",
+            "Chromium picolinate",
+            "Probiotic blend",
+            "Evening primrose oil"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-10",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri...", "Duloxetine (Cymbalta)"],
-            "afternoon": [],
-            "evening": ["Alpha-lipoic acid (ALA)"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol",
+            "Chlorpheniramine / Chlor-Tri...",
+            "Duloxetine (Cymbalta)"
+          ],
+          "afternoon": [],
+          "evening": [
+            "Alpha-lipoic acid (ALA)"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-11",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
-            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol"
+          ],
+          "afternoon": [
+            "Vitamin D3/K2 (cholecalciferol...)"
+          ],
+          "evening": [
+            "Berberine",
+            "Fluticasone (Florase) Inhalant"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-12",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": [],
-            "evening": ["Alpha-lipoic acid (ALA)"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol",
+            "Chlorpheniramine / Chlor-Tri..."
+          ],
+          "afternoon": [],
+          "evening": [
+            "Alpha-lipoic acid (ALA)"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-13",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
-            "evening": ["Berberine"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol"
+          ],
+          "afternoon": [
+            "Vitamin D3/K2 (cholecalciferol...)",
+            "Lecanemab"
+          ],
+          "evening": [
+            "Berberine"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-14",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": ["Duloxetine (Cymbalta)"],
-            "evening": ["Alpha-lipoic acid (ALA)", "Fluocinonide Acetonide Otic..."]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol",
+            "Chlorpheniramine / Chlor-Tri..."
+          ],
+          "afternoon": [
+            "Duloxetine (Cymbalta)"
+          ],
+          "evening": [
+            "Alpha-lipoic acid (ALA)",
+            "Fluocinonide Acetonide Otic..."
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-15",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
-            "evening": ["Berberine"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol"
+          ],
+          "afternoon": [
+            "Vitamin D3/K2 (cholecalciferol...)"
+          ],
+          "evening": [
+            "Berberine"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-16",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": [],
-            "evening": ["Alpha-lipoic acid (ALA)", "Fluticasone (Florase) Inhalant"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol",
+            "Chlorpheniramine / Chlor-Tri..."
+          ],
+          "afternoon": [],
+          "evening": [
+            "Alpha-lipoic acid (ALA)",
+            "Fluticasone (Florase) Inhalant"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-17",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
-            "evening": ["Berberine"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol"
+          ],
+          "afternoon": [
+            "Vitamin D3/K2 (cholecalciferol...)",
+            "Lecanemab"
+          ],
+          "evening": [
+            "Berberine"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-18",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": ["Duloxetine (Cymbalta)"],
-            "evening": ["Alpha-lipoic acid (ALA)"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol",
+            "Chlorpheniramine / Chlor-Tri..."
+          ],
+          "afternoon": [
+            "Duloxetine (Cymbalta)"
+          ],
+          "evening": [
+            "Alpha-lipoic acid (ALA)"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-19",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
-            "evening": ["Berberine", "Fluocinonide Acetonide Otic..."]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol"
+          ],
+          "afternoon": [
+            "Vitamin D3/K2 (cholecalciferol...)"
+          ],
+          "evening": [
+            "Berberine",
+            "Fluocinonide Acetonide Otic..."
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-20",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": [],
-            "evening": ["Alpha-lipoic acid (ALA)"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol",
+            "Chlorpheniramine / Chlor-Tri..."
+          ],
+          "afternoon": [],
+          "evening": [
+            "Alpha-lipoic acid (ALA)"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-21",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
-            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol"
+          ],
+          "afternoon": [
+            "Vitamin D3/K2 (cholecalciferol...)",
+            "Lecanemab"
+          ],
+          "evening": [
+            "Berberine",
+            "Fluticasone (Florase) Inhalant"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-22",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": ["Duloxetine (Cymbalta)"],
-            "evening": ["Alpha-lipoic acid (ALA)"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol",
+            "Chlorpheniramine / Chlor-Tri..."
+          ],
+          "afternoon": [
+            "Duloxetine (Cymbalta)"
+          ],
+          "evening": [
+            "Alpha-lipoic acid (ALA)"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-23",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
-            "evening": ["Berberine"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol"
+          ],
+          "afternoon": [
+            "Vitamin D3/K2 (cholecalciferol...)"
+          ],
+          "evening": [
+            "Berberine"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-24",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": [],
-            "evening": ["Alpha-lipoic acid (ALA)", "Fluocinonide Acetonide Otic..."]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol",
+            "Chlorpheniramine / Chlor-Tri..."
+          ],
+          "afternoon": [],
+          "evening": [
+            "Alpha-lipoic acid (ALA)",
+            "Fluocinonide Acetonide Otic..."
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-25",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
-            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol"
+          ],
+          "afternoon": [
+            "Vitamin D3/K2 (cholecalciferol...)",
+            "Lecanemab"
+          ],
+          "evening": [
+            "Berberine",
+            "Fluticasone (Florase) Inhalant"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-26",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": ["Duloxetine (Cymbalta)"],
-            "evening": ["Alpha-lipoic acid (ALA)"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol",
+            "Chlorpheniramine / Chlor-Tri..."
+          ],
+          "afternoon": [
+            "Duloxetine (Cymbalta)"
+          ],
+          "evening": [
+            "Alpha-lipoic acid (ALA)"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-27",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
-            "evening": ["Berberine"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol"
+          ],
+          "afternoon": [
+            "Vitamin D3/K2 (cholecalciferol...)"
+          ],
+          "evening": [
+            "Berberine"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-28",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": [],
-            "evening": ["Alpha-lipoic acid (ALA)", "Fluocinonide Acetonide Otic..."]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol",
+            "Chlorpheniramine / Chlor-Tri..."
+          ],
+          "afternoon": [],
+          "evening": [
+            "Alpha-lipoic acid (ALA)",
+            "Fluocinonide Acetonide Otic..."
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-29",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
-            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol"
+          ],
+          "afternoon": [
+            "Vitamin D3/K2 (cholecalciferol...)",
+            "Lecanemab"
+          ],
+          "evening": [
+            "Berberine",
+            "Fluticasone (Florase) Inhalant"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-30",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": ["Duloxetine (Cymbalta)"],
-            "evening": ["Alpha-lipoic acid (ALA)"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol",
+            "Chlorpheniramine / Chlor-Tri..."
+          ],
+          "afternoon": [
+            "Duloxetine (Cymbalta)"
+          ],
+          "evening": [
+            "Alpha-lipoic acid (ALA)"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-07-31",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
-            "evening": ["Berberine"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol"
+          ],
+          "afternoon": [
+            "Vitamin D3/K2 (cholecalciferol...)"
+          ],
+          "evening": [
+            "Berberine"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-08-01",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": [],
-            "evening": ["Alpha-lipoic acid (ALA)", "Fluocinonide Acetonide Otic..."]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol",
+            "Chlorpheniramine / Chlor-Tri..."
+          ],
+          "afternoon": [],
+          "evening": [
+            "Alpha-lipoic acid (ALA)",
+            "Fluocinonide Acetonide Otic..."
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-08-02",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
-            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol"
+          ],
+          "afternoon": [
+            "Vitamin D3/K2 (cholecalciferol...)",
+            "Lecanemab"
+          ],
+          "evening": [
+            "Berberine",
+            "Fluticasone (Florase) Inhalant"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-08-03",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": ["Duloxetine (Cymbalta)"],
-            "evening": ["Alpha-lipoic acid (ALA)"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol",
+            "Chlorpheniramine / Chlor-Tri..."
+          ],
+          "afternoon": [
+            "Duloxetine (Cymbalta)"
+          ],
+          "evening": [
+            "Alpha-lipoic acid (ALA)"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-08-04",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)"],
-            "evening": ["Berberine"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol"
+          ],
+          "afternoon": [
+            "Vitamin D3/K2 (cholecalciferol...)"
+          ],
+          "evening": [
+            "Berberine"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-08-05",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": [],
-            "evening": ["Alpha-lipoic acid (ALA)", "Fluocinonide Acetonide Otic..."]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol",
+            "Chlorpheniramine / Chlor-Tri..."
+          ],
+          "afternoon": [],
+          "evening": [
+            "Alpha-lipoic acid (ALA)",
+            "Fluocinonide Acetonide Otic..."
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-08-06",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol"],
-            "afternoon": ["Vitamin D3/K2 (cholecalciferol...)", "Lecanemab"],
-            "evening": ["Berberine", "Fluticasone (Florase) Inhalant"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol"
+          ],
+          "afternoon": [
+            "Vitamin D3/K2 (cholecalciferol...)",
+            "Lecanemab"
+          ],
+          "evening": [
+            "Berberine",
+            "Fluticasone (Florase) Inhalant"
+          ]
         }
-    },
-    {
+      },
+      {
         "date": "2024-08-07",
         "medicines": {
-            "morning": ["Methylcobalamin", "Levothyroxine", "Resveratrol", "Chlorpheniramine / Chlor-Tri..."],
-            "afternoon": ["Duloxetine (Cymbalta)"],
-            "evening": ["Alpha-lipoic acid (ALA)"]
+          "morning": [
+            "Methylcobalamin",
+            "Levothyroxine",
+            "Resveratrol",
+            "Chlorpheniramine / Chlor-Tri..."
+          ],
+          "afternoon": [
+            "Duloxetine (Cymbalta)"
+          ],
+          "evening": [
+            "Alpha-lipoic acid (ALA)"
+          ]
         }
-    }
-  ]
+      }
+    ]
+  },
+  "activityPlanner": {
+    "title": "Your Activity Planner",
+    "slots": [
+      {
+        "time": "08:00 AM",
+        "title": "Physiotherapy Exercise",
+        "frequency": "Daily"
+      },
+      {
+        "time": "09:30 AM",
+        "category": "Exercise",
+        "categoryColor": "infoEmphasis",
+        "frequency": "Daily",
+        "description": "Any one activity from Exercise"
+      },
+      {
+        "time": "12:30 PM",
+        "category": "Mental",
+        "categoryColor": "successEmphasis",
+        "frequency": "Alternating Days",
+        "description": "Any one activity from Mental"
+      },
+      {
+        "time": "05:00 PM",
+        "category": "Relaxation",
+        "categoryColor": "warning",
+        "frequency": "Daily",
+        "description": "Any five activities from Relaxation"
+      },
+      {
+        "time": "07:00 PM",
+        "category": "Group B",
+        "categoryColor": "blueEmphasis",
+        "frequency": "Fridays",
+        "description": "Any one activity from Group B"
+      },
+      {
+        "time": "09:30 PM",
+        "title": "Physiotherapy Exercise",
+        "frequency": "Daily"
+      }
+    ],
+    "groups": [
+      {
+        "tags": [
+          {
+            "name": "Exercise",
+            "color": "infoEmphasis"
+          }
+        ],
+        "activities": [
+          {
+            "name": "Side to side Reach",
+            "duration": "5 min",
+            "description": "Reach one arm to the side, then to the other."
+          },
+          {
+            "name": "Neck stretches",
+            "duration": "5 min",
+            "description": "Side-to-side, forward/backward"
+          },
+          {
+            "name": "Shoulder rolls & stretches",
+            "duration": "5 min",
+            "description": "Loosen upper back and shoulders"
+          }
+        ]
+      },
+      {
+        "tags": [
+          {
+            "name": "Relaxation",
+            "color": "warning"
+          }
+        ],
+        "activities": [
+          {
+            "name": "Music",
+            "duration": "30 min",
+            "description": "Listen to calming music to unwind."
+          },
+          {
+            "name": "Yoga",
+            "duration": "15 min",
+            "description": "1. Engage in a calming yoga session focusing on deep breathing and gentle stretches.\r\n2. Hold each pose for at least 30 seconds, allowing your body to relax and release tension."
+          },
+          {
+            "name": "Shoulder rolls & stretches",
+            "duration": "1 min",
+            "description": "Loosen upper back and shoulders"
+          }
+        ]
+      },
+      {
+        "tags": [
+          {
+            "name": "Sleep",
+            "color": "blueEmphasis"
+          }
+        ],
+        "activities": [
+          {
+            "name": "Wind down routine",
+            "duration": "30 min",
+            "description": "Engage in relaxing activities such as reading or listening to soothing music before bedtime."
+          },
+          {
+            "name": "Limit screen time",
+            "duration": "N/A",
+            "description": "Avoid screens at least 1 hour before bed to improve sleep quality."
+          }
+        ]
+      },
+      {
+        "tags": [
+          {
+            "name": "Mental",
+            "color": "successEmphasis"
+          },
+          {
+            "name": "2 People",
+            "color": "dark"
+          }
+        ],
+        "activities": [
+          {
+            "name": "Mindfulness meditation",
+            "duration": "10 min",
+            "description": "Practice mindfulness meditation to enhance mental clarity and emotional resilience."
+          },
+          {
+            "name": "Journaling",
+            "duration": "15 min",
+            "description": "Reflect on your thoughts and feelings by journaling."
+          }
+        ]
+      }
+    ]
+  }
 }
