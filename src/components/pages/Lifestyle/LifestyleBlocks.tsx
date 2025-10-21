@@ -32,7 +32,7 @@ export const LifestyleRecommendationBlock = forwardRef<
       {!rtl && (
         <div className={`flex row-span-3 items-center ${colStartClass}`}>
           <img
-            src={`./${area?.title}.png`}
+            src={`./${area?.title?.toLowerCase().replace(" ", "-")}.png`}
             alt="Lifestyle Card Image"
             className="w-full h-full object-cover"
           />
@@ -42,7 +42,7 @@ export const LifestyleRecommendationBlock = forwardRef<
         <div className="flex justify-start items-center-safe gap-3">
           <div className="flex items-center justify-center w-14 h-14 bg-info-dark rounded-full">
             <img
-              src={iconName ? `${iconName}.svg` : ""}
+              src={iconName ? `${iconName?.toLowerCase().replace(" ", "-")}.svg` : ""}
               alt="Lifestyle Icon"
               className="object-cover w-12 h-12"
             />
@@ -67,7 +67,7 @@ export const LifestyleRecommendationBlock = forwardRef<
       {rtl && (
         <div className={`flex row-span-3 items-center ${colStartClass}`}>
           <img
-            src={`./${area?.title}.png`}
+            src={`./${area?.title?.toLowerCase().replace(" ", "-")}.png`}
             alt="Lifestyle Card Image"
             className="w-full h-full object-cover"
           />

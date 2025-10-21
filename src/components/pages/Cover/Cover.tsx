@@ -18,7 +18,7 @@ const Cover = () => {
       </p>
       <div className="grid grid-cols-3 gap-1.5 mb-8">
         <img
-          src="/Stress Relief.png"
+          src="/stress-relief.png"
           alt="Cover Illustration"
           className="w-full h-auto grayscale rounded-sm"
         />
@@ -38,12 +38,12 @@ const Cover = () => {
           className="w-full h-auto grayscale rounded-sm"
         />
         <img
-          src="/Restful Sleep.png"
+          src="/restful-sleep.png"
           alt="Cover Illustration"
           className="w-full h-auto grayscale rounded-sm"
         />
         <img
-          src="/Overnight Fasting.png"
+          src="/overnight-fasting.png"
           alt="Cover Illustration"
           className="w-full h-auto grayscale rounded-sm"
         />
