@@ -18,6 +18,7 @@ import {
   TeaLeafIcon,
 } from "@/components/icons";
 import { Badge } from "@/components/ui/badge";
+import A4Page from "@/components/shared/A4Page";
 
 type Props = {
   data: DietaryRecommendationsData;
@@ -56,7 +57,7 @@ const tableIconMap = {
 const DietaryRecommendationsModel = ({ data }: Props) => {
   const { heading, preface, models } = data;
   return (
-    <div className="w-[210mm] mx-auto p-6 bg-white">
+    <A4Page>
       <h3 className="mb-4">{heading}</h3>
       {preface && preface.length > 0 && (
         <div className="mb-6">
@@ -124,7 +125,7 @@ const DietaryRecommendationsModel = ({ data }: Props) => {
           </div>
         ))}
       </div>
-    </div>
+    </A4Page>
   );
 };
 

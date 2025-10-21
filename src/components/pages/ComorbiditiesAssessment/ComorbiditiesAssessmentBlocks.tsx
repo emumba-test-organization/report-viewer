@@ -127,7 +127,6 @@ export const ReportedComorbiditiesTableRowBlock = forwardRef<
   HTMLDivElement,
   BlockProps
 >(({ index, data: entry, blockId, setRef }, ref) => {
-  console.log("ReportedComorbiditiesTableRowBlock entry:", entry);
   const isEven = index ? index % 2 === 0 : true;
   const rowClass = isEven ? "bg-gray-100" : "bg-white";
 
@@ -183,7 +182,6 @@ export const InferredComorbiditiesTableRowBlock = forwardRef<
   HTMLDivElement,
   BlockProps
 >(({ index, data: entry, blockId, setRef }, ref) => {
-  console.log("ReportedComorbiditiesTableRowBlock entry:", entry);
   const isEven = index ? index % 2 === 0 : true;
   const rowClass = isEven ? "bg-gray-100" : "bg-white";
 

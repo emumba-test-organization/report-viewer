@@ -18,7 +18,7 @@ const Cover = () => {
       </p>
       <div className="grid grid-cols-3 gap-1.5 mb-8">
         <img
-          src="/stress-relief.jpg"
+          src="/Stress Relief.png"
           alt="Cover Illustration"
           className="w-full h-auto grayscale rounded-sm"
         />
@@ -38,12 +38,12 @@ const Cover = () => {
           className="w-full h-auto grayscale rounded-sm"
         />
         <img
-          src="/restful-sleep.jpg"
+          src="/Restful Sleep.png"
           alt="Cover Illustration"
           className="w-full h-auto grayscale rounded-sm"
         />
         <img
-          src="/fasting.jpg"
+          src="/Overnight Fasting.png"
           alt="Cover Illustration"
           className="w-full h-auto grayscale rounded-sm"
         />
@@ -62,7 +62,7 @@ const Cover = () => {
             <p className="text-sm font-bold">{report?.header.createdOn}</p>
         </div>
       </div>
-      <p className="text-sm mt-6">{report?.header.coverText}</p>
+      <p className="mt-6">{report?.header.coverText}</p>
     </A4Page>
   );
 };

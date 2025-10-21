@@ -54,7 +54,6 @@ export const renderBlock: BlockRenderer = (block, key, index) => {
 
   switch (block.type) {
     case "knownMedicalConditionsTitle":
-      console.log("BLOCK:", block);
       return (
         <h1 className="mb-6" {...commonProps}>
           {block.data.title}

@@ -37,7 +37,6 @@ export const CognitionFactorRow = forwardRef<
   const unit = targetMatch ? targetMatch[3] : "";
   const spectrumRef = useRef<HTMLDivElement>(null);
 
-  console.log("spectrum ref: ", spectrumRef);
   return (
     <div
       ref={setRef ? setRef(blockId) : ref}

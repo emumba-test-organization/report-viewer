@@ -23,10 +23,9 @@ const GoalTracker = () => {
     const commonProps = {
       key,
       blockId: block.id,
+      index,
       // Don't pass setRef here - it's handled by the wrapper
     };
-
-    console.log("mnmn", index)
 
     switch (block.type) {
       case "title":

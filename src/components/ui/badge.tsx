@@ -31,7 +31,7 @@ const badgeVariants = cva(
     },
   }
 );
-type badgeVariants = VariantProps<typeof badgeVariants>;
+type badgeVariantsType = VariantProps<typeof badgeVariants>["variant"];
 
 function Badge({
   className,
@@ -52,4 +52,4 @@ function Badge({
 }
 
 export { Badge, badgeVariants };
-export type { badgeVariants as BadgeVariantsType };
+export type { badgeVariantsType as BadgeVariantsType };

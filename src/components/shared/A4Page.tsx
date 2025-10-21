@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import Header from "./Header";
 import { useReport } from "@/context";
+import { Footer } from "../pages/Footer";
 
 interface A4PageProps {
   children?: React.ReactNode;
@@ -18,10 +19,11 @@ const A4Page: React.FC<A4PageProps> = ({ children }) => {
     return (
       <div
         ref={containerRef}
-        className="w-[210mm] h-[297mm] mx-auto p-6 bg-white"
+        className="w-[297mm] h-[420mm] mx-auto p-6 bg-white relative"
       >
         <Header data={report?.header} />
         {children}
+        <Footer />
       </div>
     );
   } else {

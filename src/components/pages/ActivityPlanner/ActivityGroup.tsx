@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge, type BadgeVariantsType } from "@/components/ui/badge";
 import ActivityItem from "./ActivityItem";
 
 interface ActivityGroupProps {
@@ -28,7 +28,7 @@ export default function ActivityGroup({
     <div>
       <div className="flex gap-1 p-1 bg-[#F0F0F0] border-4 border-[#F5F5F5] border-b-0 rounded-tl-md rounded-tr-md">
         {tags.map(({ name, color }) => (
-          <Badge variant={color} className="px-1">
+          <Badge variant={color as BadgeVariantsType} className="px-1">
             {name}
           </Badge>
         ))}

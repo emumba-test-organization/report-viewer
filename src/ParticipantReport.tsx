@@ -18,17 +18,14 @@ import type { ComorbiditiesData } from "./components/pages/Comorbidities/types";
 import { KnownMedicalConditions } from "./components/pages/KnownMedicalConditions";
 import type { CognitionData } from "./components/pages/Cognition";
 import CognitionPage from "./components/pages/Cognition/CognitionPage";
-import {
-  DietaryRecommendations,
-  type DietaryRecommendationsData,
-} from "./components/pages/DietaryRecommendations";
+import { type DietaryRecommendationsData } from "./components/pages/DietaryRecommendations";
 import { Footnotes, type FootnotesData } from "./components/pages/Footnotes";
 // import { MedicationPlanner } from "./components/pages/MedicationPlanner";
 // import { MedicationChecklist } from "./components/pages/MedicationChecklist";
 import GoalTracker from "./components/pages/GoalTracker";
 import ActivityPlanner from "./components/pages/ActivityPlanner";
 import { MedicationPlannerPage } from "./components/pages/MedicationPlanner";
-import type { MedicationItemData } from "./components/pages/MedicationPlanner/types";
+import type { MedicationRoutineData } from "./components/pages/MedicationPlanner/types";
 import type { HeaderData } from "./components/shared/Header";
 import { Cover } from "./components/pages/Cover";
 import DietaryRecommendationsModel from "./components/pages/DietaryRecommendations/DietaryRecommendationsModel";
@@ -55,7 +52,7 @@ export type Report = {
   };
   reportedProblems: ComorbiditiesData;
   footnotes: FootnotesData;
-  medicationPlanner: MedicationItemData;
+  medicationPlanner: MedicationRoutineData;
   activityPlanner: ActivityPlannerData;
 };
 
@@ -104,11 +101,15 @@ function ParticipantReport() {
         <CognitionPage data={report!.cognitiveFunction} />
         <KnownMedicalConditions data={report!} />
         <Footnotes data={report!.footnotes} />
-        <MedicationPlannerPage data={report?.medicationPlanner} />
+        {report?.medicationPlanner && (
+          <MedicationPlannerPage data={report?.medicationPlanner} />
+        )}
         {/* <MedicationPlanner /> */}
         {/* <MedicationChecklist /> */}
         <GoalTracker />
-        <ActivityPlanner data={report?.activityPlanner} />
+        {report?.activityPlanner && (
+          <ActivityPlanner data={report?.activityPlanner} />
+        )}
       </div>
     </ReportProvider>
   );

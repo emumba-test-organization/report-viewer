@@ -46,12 +46,14 @@ interface PaginationWrapperProps {
 }
 
 // Default page dimensions and measurements
-const DEFAULT_PAGE_HEIGHT = 1122.52;
-const DEFAULT_HEADER_HEIGHT = 36;
+// const DEFAULT_PAGE_HEIGHT = 1122.52;
+const DEFAULT_PAGE_HEIGHT = 1587.39;
+const DEFAULT_HEADER_HEIGHT = 40;
+const DEFAULT_FOOTER_HEIGHT = 72;
 const DEFAULT_SAFETY_MARGIN = 180;
 
 const DEFAULT_CONTENT_HEIGHT =
-  DEFAULT_PAGE_HEIGHT - DEFAULT_HEADER_HEIGHT - DEFAULT_SAFETY_MARGIN;
+  DEFAULT_PAGE_HEIGHT - DEFAULT_HEADER_HEIGHT - DEFAULT_SAFETY_MARGIN - DEFAULT_FOOTER_HEIGHT;
 
 // Generic Pagination Wrapper Component
 export const PaginationWrapper: React.FC<PaginationWrapperProps> = ({

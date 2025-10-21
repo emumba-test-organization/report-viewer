@@ -21,7 +21,6 @@ import {
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const ComorbiditiesAssessment = ({ data }: { data: any }) => {
-  console.log("ComorbiditiesAssessment data:", data);
   const createHealthBlocks = (data: any): BlockConfig[] => [
     { id: "mainTitle", type: "mainTitle", data: data.medicalIssues },
     { id: "intro", type: "intro", data: data.medicalIssues },

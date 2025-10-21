@@ -152,7 +152,7 @@ export const MedicationPlannerTimeRow = forwardRef<HTMLDivElement, BlockProps>(
             <span className="truncate text-sm">{data.medicineName}</span>
           </div>
 
-          {data.originalData.slice(0, 13).map((item: any, index: number) => {
+          {data.originalData.slice(0, 13).map((_: any, index: number) => {
             // Check if this date is in the medicine's scheduled dates
             // const isScheduled = medicineDatesSet.has(item.date);
 

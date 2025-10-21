@@ -13,7 +13,6 @@ import {
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 const MedicationsManagement = ({ data }: { data: any }) => {
-  console.log("ComorbiditiesAssessment data:", data);
   const createHealthBlocks = (data: any): BlockConfig[] => [
     {
       id: "medicationsManagementTitle",

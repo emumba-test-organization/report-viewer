@@ -301,7 +301,6 @@ export const RecommendationsHeaderBlock = forwardRef<
 export const RecommendationsRow = forwardRef<HTMLDivElement, BlockProps & { isRecommendedLastRow?: boolean, isDiscouragedLastRow?: boolean }>(
   ({ data: recommendation, blockId, positionInPage, setRef, isRecommendedLastRow, isDiscouragedLastRow }, ref) => {
 
-    console.log("first", recommendation.discouraged?.foodGroup, isDiscouragedLastRow)
     return (
       <div
         ref={setRef ? setRef(blockId) : ref}

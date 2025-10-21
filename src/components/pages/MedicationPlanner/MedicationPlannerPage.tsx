@@ -1,5 +1,5 @@
 import { useMemo } from "react";
-import type { MedicationItemData, MedicationPlannerData, MedicationRoutineData } from "./types";
+import type { MedicationItemData, MedicationRoutineData } from "./types";
 import {
   PaginationWrapper,
   type BlockConfig,
@@ -120,7 +120,6 @@ const MedicationPlannerPage = (props: { data: MedicationRoutineData }) => {
         });
       }
     });
-    console.log("MedicationPlannerPage blocks:", blocks);
     return blocks;
   };
 

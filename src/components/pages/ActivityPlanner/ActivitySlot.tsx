@@ -1,4 +1,4 @@
-import { Badge } from "@/components/ui/badge";
+import { Badge, type BadgeVariantsType } from "@/components/ui/badge";
 
 interface ActivitySlotProps {
   time: string;
@@ -29,7 +29,10 @@ export default function ActivitySlot({
       <div className="border-l border-border h-full w-1" />
       <div className="flex-1">
         {category && categoryColor && (
-          <Badge variant={categoryColor} className="mr-2 px-1">
+          <Badge
+            variant={categoryColor as BadgeVariantsType}
+            className="mr-2 px-1"
+          >
             {category}
           </Badge>
         )}

@@ -60,10 +60,6 @@ function PhysicianReport() {
       .catch((err) => console.error("Failed to load report:", err));
   }, []);
 
-  useEffect(() => {
-    console.log(report);
-  }, [report]);
-
   if (!report) return <p>Loading report…</p>;
 
   return (

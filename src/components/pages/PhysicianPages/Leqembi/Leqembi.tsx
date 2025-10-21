@@ -8,7 +8,7 @@ type Props = {
 
 const variantMap: Record<
     string,
-    BadgeVariantsType["variant"]
+    BadgeVariantsType
 > = {
     met: "successEmphasis",
     "not recommended": "destructive",
